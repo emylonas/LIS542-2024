@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    
+<!-- comic 1: Peanuts -->
+    
+<Comic id="pn05111957">
+    <!-- Strip Markup-->
+<stripData>
+    
+        <StripCharacters count="2" speakingCount = "2" nonSpeakingCount="0"/>
+        
+        <StripText count="6">
+            
+            <StripOnomatopoeia count="1"/>
+            
+            <StripSpeech count="5" speakers="Charlie Brown, Lucy"/>  
+        
+        </StripText>
+        
+    <ComicSeriesName>Peanuts</ComicSeriesName> by <AuthorName>Charles Schulz</AuthorName>. <pubDate><pubMonth>May</pubMonth> <pubDay>11</pubDay>, <pubYear>1957</pubYear></pubDate>
+    
+</stripData>
+    <strip>
+    
+<!-- Panel 1-->
+
+        <panel>
+            
+           <panelDescription panel="1" description="Charlie Brown(right) and Lucy(left) walk outside. Charlie Speaks"/>
+            
+           <panelCharacters count="2" characters="Charlie Brown, Lucy"/>
+            
+           <panelDialogue count="1">
+               
+               <Dialogue speaker="CharlieBrown" text="PEOPLE COME. AND PEOPLE GO, BUT THE EARTH KEEPS ON SPINNING..."/>
+               
+           </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="BW" setting="Outdoors, Grass"><url>https://drive.google.com/file/d/190VH26zKP6hx3epDbyblRXYF0irQWiBv/view?usp=sharing</url></panelImage>
+            
+        </panel>
+            
+    <!-- Panel 2-->
+            
+        <panel>
+            
+            <panelDescription panel="2" description="Charlie Brown and Lucy stand. Lucy responds to Charlie Brown's panel 1 speech. Charlie Brown responds"/>
+            
+            <panelCharacters count="2" characters="Charlie Brown, Lucy"/>
+            
+            <panelDialogue count="2">
+                
+                <Dialogue speaker="Lucy" text="&quot;SPINNING&quot;? WHAT DO YOU MEAN &quot;SPINNING&quot;?"/>
+                
+                <Dialogue speaker="Charlie Brown" text="SPINNING THROUGH SPACE..THE EARTH KEEPS ON SPINNING THROUGH SPACE..."/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="BW" setting="Outdoors, Structure"><url>https://drive.google.com/file/d/1gCIH2plTZ0b9XvQltmRmG8fmGlxV94mv/view?usp=sharing</url></panelImage>
+            
+        </panel>
+    
+    <!-- Panel 3-->
+        <panel>
+            
+            <panelDescription panel="3" description="Lucy laughs at Charlie Brown. Charlie Brown is confused"/>
+            
+            <panelCharacters count="2" characters="Charlie Brown, Lucy"/>
+            
+            <panelDialogue count="1">
+                
+                <Dialogue speaker="Charlie Brown" text="?"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="1">
+                
+                <Onomatopoeia type="Laughter" cause="Lucy"/>
+                
+            </panelOnomatopoeia>
+            
+            <panelImage color="BW" setting="Blank"><url>https://drive.google.com/file/d/1zkk6gqqtNd1ggy9l22rmr06E9s9fMXLB/view?usp=sharing</url></panelImage>
+            
+        </panel>
+    
+    <!--Panel 4-->
+    
+        <panel>
+            
+            <panelDescription panel="4" description="Lucy continues to laugh at Charlie Brown. Charlie Brown is flustered."/>
+            
+            <panelCharacters count="2" characters="Charlie Brown, Lucy"/>
+            
+            <panelDialogue count="2">
+                
+                <Dialogue speaker="Lucy" text="OH MY, CHARLIE BROWN! YOU MAY NOT BE THE b[BRIGHTEST] PERSON IN THE WORLD, BUT YOU SURE HAVE SOME b[IMAGINATION]"/>
+                
+                <Dialogue speaker="Charlie Brown" text="good grief!"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+                
+            <panelImage color="BW" setting="Blank"><url>https://drive.google.com/file/d/1cPP75V2BrADNMKzDYU8nmpkWtmut6MNz/view?usp=sharing</url></panelImage>
+            
+        </panel>
+    </strip>
+    
+    <stripData>
+        <url>
+            
+        </url>
+    </stripData>
+    
+</Comic>
+
+<!-- comic 2: For Better or For Worse -->
+  
+<Comic id="">
+        
+<!-- Strip Markup-->
+    
+   <stripData>
+       
+        <StripCharacters count="2" speakingCount = "1" nonSpeakingCount="1"/>
+        
+        <StripText count="6">
+            
+            <StripOnomatopoeia count="5"/>
+            
+            <StripSpeech count="1" speakers="Elly"/>  
+            
+        </StripText>
+        
+        <ComicSeriesName>For Better or For Worse</ComicSeriesName> by 
+        
+        <AuthorName>Lynn Johnston</AuthorName>. 
+        
+        <pubDate>
+            
+            <pubMonth>May</pubMonth> 
+            
+            <pubDay>28</pubDay>, 
+            
+            <pubYear>2018</pubYear>
+            
+        </pubDate>
+        
+   </stripData>
+<!-- panel 1 -->    
+   <strip>
+       
+        <panel>
+            
+            <panelDescription panel="1" description="Michael slams a door, while holding papers."/>
+            
+            <panelCharacters count="1" characters="Michael"/>
+            
+            <panelDialogue count="0"/>
+            
+            <panelOnomatopoeia count="1">
+                
+                <Onomatopoeia type="Slam" cause="Michael"/>
+                
+            </panelOnomatopoeia>
+            
+            <panelImage color="Color" setting="Indoors, House"><url>https://drive.google.com/file/d/1eZ0GNd0HkEupgHww1wOWEiBBWgilejlf/view?usp=sharing</url></panelImage>
+            
+        </panel>
+       
+<!-- panel 2 -->     
+       
+        <panel>
+            
+            <panelDescription panel="2" description="Elly hears commotion while in the kitchen making a sandwich. She is surprised."/>
+            
+            <panelCharacters count="1" characters="Elly"/>
+            
+            <panelDialogue count="0"/>
+            
+            <panelOnomatopoeia count="3">
+                
+                <Onomatopoeia type="Commotion" cause="Michael, off panel"/>
+                
+            </panelOnomatopoeia>
+            
+            <panelImage color="Color" setting="Indoors, Kitchen"><url>https://drive.google.com/file/d/1ZAzA3-nlJRJWNwcbqf8HwfT3pCZULKQK/view?usp=sharing</url></panelImage>
+            
+        </panel>
+       
+<!-- panel 3 -->   
+       
+        <panel>
+            
+            <panelDescription panel="3" description="Elly watches Michael slam the door on his way out of the house"/>
+            
+            <panelCharacters count="1" characters="Elly"/>
+            
+            <panelDialogue count="0"/>
+            
+            <panelOnomatopoeia count="1">
+                
+                <Onomatopoeia type="Slam" cause="Michael"/>
+                
+            </panelOnomatopoeia>
+            
+            <panelImage color="Color" setting="Indoors, entryway"><url>https://drive.google.com/file/d/1xe5upYyYoDCMsKQJESvnPx3o4z0A2hkG/view?usp=sharing</url></panelImage>
+            
+        </panel>
+
+<!-- Panel 4 -->
+
+        <panel>
+            
+            <panelDescription panel="4" description="Elly calls out to Michael as he walks from the house. Michael looks unhappy."/>
+            
+            <panelCharacters count="2" characters="Elly, Michael"/>
+            
+            <panelDialogue count="1">
+                
+                <Dialogue speaker="Elly" text="A LITTLE TESTY THIS MORNING, ARE WE?!!"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="Color" setting="Outside of House"><url>https://drive.google.com/file/d/1xe5upYyYoDCMsKQJESvnPx3o4z0A2hkG/view?usp=sharing</url></panelImage>
+            
+        </panel>
+       
+    </strip> 
+        
+    <stripData>
+        
+        <url>
+            https://www.gocomics.com/forbetterorforworse/2018/05/28</url>
+        
+    </stripData>
+        
+</Comic>
+    
+<!-- comic 2: Nancy Classics -->
+
+<Comic id="">
+    
+    <!-- Strip Markup-->
+    
+    <stripData>
+        
+        <StripCharacters count="2" speakingCount = "2" nonSpeakingCount="0"/>
+        
+        <StripText count="3">
+            
+            <StripOnomatopoeia count="0"/>
+            
+            <StripSpeech count="3" speakers="Fritzi, Nancy"/>  
+            
+        </StripText>
+        
+        <ComicSeriesName>Nancy Classics</ComicSeriesName> by 
+        
+        <AuthorName>Ernie Bushmiller</AuthorName>. 
+        
+        <pubDate>
+            
+            <pubMonth>August</pubMonth> 
+            
+            <pubDay>16</pubDay>, 
+            
+            <pubYear>2021</pubYear>
+            
+        </pubDate>
+        
+    </stripData>
+    
+    <strip>
+
+<!-- panel 1 -->
+
+        <panel>
+            
+            <panelDescription panel="1" description="Fritzi gives Nancy a cookie jar. Nancy is quite happy."/>
+            
+            <panelCharacters count="2" characters="Nancy, Fritzi"/>
+            
+            <panelDialogue count="1">
+                
+                <Dialogue speaker="Fritzi" text="NANCY --- I BOUGHT YOU A WHOLE JAR OF COOKIES ALL FOR YOURSELF"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="BW" setting="Indoors"><url>https://drive.google.com/file/d/1o90QUdtGF6eWiltI7MGKnJgdDe1x5y_-/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+<!-- panel 2 -->
+        
+        <panel>
+            
+            <panelDescription panel="2" description="Fritzi watches as Nancy does not eat the cookies, but instead sits and looks at the jar."/>
+            
+            <panelCharacters count="2" characters="Fritzi, Nancy"/>
+            
+            <panelDialogue count="1">
+                
+                <Dialogue speaker="Fritzi" text="THATS ODD --- SHE'S NOT EATING THEM"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="BW" setting="Indoors"><url>https://drive.google.com/file/d/1WQtsJNHlsdnm_VmtmUUAABBBfO3XXI7N/view?usp=sharing</url></panelImage>
+            
+        </panel> 
+        
+<!-- panel 3 -->
+        
+        <panel>
+            
+            <panelDescription panel="3" description="Nancy walks and carries the cookie jar"/>
+            
+            <panelCharacters count="1" characters="Nancy"/>
+            
+            <panelDialogue count="0"/>
+            
+            <panelImage color="BW" setting="Indoors"><url>https://drive.google.com/file/d/1PK79AJFuserysjsutOB5Qrwern5iEaZ_/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+<!-- panel 4 -->
+        
+        <panel>
+            
+            <panelDescription panel="4" description="Nancy stands atop a tower of misc. objects, to reach the cookie jar that she's placed atop a dish cabinet. She eats a cookie and reaches for another as Fritzi looks on, surprised."/>
+            
+            <panelCharacters count="2" characters="Fritzi, Nancy"/>
+            
+            <panelDialogue count="1">
+                
+                <Dialogue speaker="Nancy" text="I ENJOY THEM MORE THIS WAY"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="BW" setting="Indoors, Dining Room"><url>https://drive.google.com/file/d/1i1PoSo9ti1m5591KUfyhU0aZ8omCnLlh/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+    </strip> 
+    
+    <stripData>
+        
+        <url>https://www.gocomics.com/nancy-clssics/2021/08/16</url>
+        
+    </stripData>
+    
+</Comic>
+    
+<!-- comic 4: Spiderman -->
+
+<Comic id="">
+    
+    <!-- Strip Markup-->
+    
+    <stripData>
+        
+        <StripCharacters count="6" speakingCount = "2" nonSpeakingCount="4"/>
+        
+        <StripText count="9">
+            
+            <StripOnomatopoeia count="0"/>
+            
+            <StripSpeech count="9" speakers="Spiderman, Unnamed"/>  
+            
+        </StripText>
+        
+        <ComicSeriesName>Spiderman</ComicSeriesName> by 
+        
+        <AuthorName>Stan Lee and Larry Lieber</AuthorName>.
+        
+        <pubDate>
+            
+            <pubMonth>November</pubMonth> 
+            
+            <pubDay>30</pubDay>, 
+            
+            <pubYear>1980</pubYear>
+            
+        </pubDate>
+        
+    </stripData>
+    
+    <strip>
+        
+<!-- panel 1 -->
+        
+        <panel>
+            
+            <panelDescription panel="1" description="Spiderman and an unnamed character speak. Both are irate."/>
+            
+            <panelCharacters count="2" characters="Spiderman, Unnamed"/>
+            
+            <panelDialogue count="3">
+                
+                <Dialogue speaker="Unnamed" text="ANY bi[IDENTIFICATION?]"/>
+                
+                <Dialogue speaker="Spiderman" text="LOOK AT MY bi[COSTIME!] WHO DO YOU bi[THINK] I AM?!!"/>
+                
+                <Dialogue speaker="Unnamed" text="bi[ANYONE] CAN RENT A COSTUME!"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="Color" setting="Indoors"><url>https://drive.google.com/file/d/1VLv6ra2M_nO0t8C0ruF2HlFFq8V4CnCr/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+<!-- panel 2 -->
+        
+        <panel>
+            
+            <panelDescription panel="2" description="The unnamed character continues to ask Spiderman for identification. Spiderman apparently cannot do so. Framing shifts to reveal that Spiderman is around others."/>
+            
+            <panelCharacters count="4" characters="Unnamed (3), Spiderman"/>
+            
+            <panelDialogue count="2">
+                
+                <Dialogue speaker="Unnamed" text="DRIVERS LICENSE? SOCIAL SECURITY?"/>
+                
+                <Dialogue speaker="Spiderman" text="bi[LOOK!] I'VE A bi[SECRET IDENTITY!] I CANT BLOW MY bi[COVER!]"/>
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="Color" setting="Indoors, Bank"><url>https://drive.google.com/file/d/1UulOcLqeUfeirldtRnqgNKY9ReNBF68W/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+<!-- panel 3 -->
+        
+        <panel>
+            
+            <panelDescription panel="3" description="The unnamed character Spiderman has been speaking with hands a check to spiderman, and the latter turns to see a line of people waiting behind him"/>
+            
+            <panelCharacters count="6" characters="Unnamed (5), Spiderman"/>
+            
+            <panelDialogue count="2">
+                
+                <Dialogue speaker="Unnamed" text="AND bi[WE] CAN'T JUST CASH bi[ANY] OLD CHECK!"/>
+                
+                <Dialogue speaker="Unnamed" text="AND YOU'RE HOLDING UP THE bi[LINE!]"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelImage color="Color" setting="Indoors, Bank"><url>https://drive.google.com/file/d/1CHLkjrQB6MOclMDvT9Ud2MmlXMgS65bu/view?usp=sharing</url></panelImage>
+            
+        </panel>
+        
+<!-- panel 4 -->
+        
+        <panel>
+            
+            <panelDescription panel="4" description="Spiderman sits on a wall outside, dejected. His mask is pulled up, showing his face."/>
+            
+            <panelCharacters count="1" characters="Spiderman"/>
+            
+            <panelDialogue count="2">
+                
+                <Dialogue speaker="Spiderman" text="I FINALLY GET $2,000-- AND bi[I CAN'T CASH THE CHECK!]"/>
+                
+                <Dialogue speaker="Spiderman" text="bi[O.K.!] THERE'S ONLY bi[ONE] THING LEFT TO DO!"/>
+                
+            </panelDialogue>
+            
+            <panelOnomatopoeia count="0"/>
+            
+            <panelSerialIndicator count="1" text="NEXT: bi[THE BREAKING POINT!]"/>
+            
+            <panelImage color="Color" setting="Outdoors, City Rooftops"><url>https://drive.google.com/file/d/1I-gKzd3zR-KoqcSZilxIhP9C6v0eHdA2/view?usp=sharing</url></panelImage>
+            
+        </panel>         
+        
+    </strip> 
+   
+</Comic>
+
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<funeraryInscription language="Latin" alignment="center">
+    <inscription>
+        <line number="1">Publius Oppius filius</line>
+        <translation language="English">P(ublius) Oppi[us, son of...]</translation>
+        <line number="2">Camilia [.3 char. .]</line>
+        <translation language="English">of (the tribe of) Camilia,</translation>
+        <line number="3">CIO Ravenna</line>
+        <translation language="English">...cio, of Ravenna,</translation>
+        <line number="4">miles legionis V</line>
+        <translation language="English">soldier of the Legio V</translation>
+        <line number="5">Macedonicae, optio,</line>
+        <translation language="English">Macedonica, (of the rank of) optio,</translation>
+        <line number="6">vixit annos XXX,</line>
+        <translation language="English">lived 30 years,</translation>
+        <line number="7">militavit annos VIIII.</line>
+        <translation language="English">served in the army nine years</translation>
+        <line number="8">Hic situs est.</line>
+        <translation language="English">(and) is buried here.</translation>
+        <line number="9">Heres fecit.</line>
+        <translation language="English">(His) heir made (this tombstone).</translation>
+    </inscription>
+</funeraryInscription>

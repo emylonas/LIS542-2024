@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<funerary_inscriptions>
+    <funerary_inscription xml:id="1" original_language="la" designs="N">
+        <line_begin line_num="1"/><deceased><name>P(ublius) Oppi[us</name>, son of ..],
+        <line_begin line_num="2"/><title>of (the tribe of) Camilia</title></deceased>
+        <line_begin line_num="3"/>...cio, of <location>Ravenna</location>
+        <line_begin line_num="4"/><occupation>soldier</occupation> of the Legio V
+        <line_begin line_num="5"/>Macedonica, (of the rank of) optio,
+        <line_begin line_num="6"/>lived
+        <line_begin line_num="7"/><age_in_years>30</age_in_years> years, served in the army nine years
+        <line_begin line_num="8"/>(and) is buried here.
+        <line_begin line_num="9"/>(His) heir made (this tombstone). 
+    </funerary_inscription>
+    
+    <funerary_inscription xml:id="2" original_language="en" designs="Y">
+        <line_begin line_num="1"/>IN THE BYRON VAULT BELOW
+        <line_begin line_num="2"/>LIES THE REMAINS OF
+        <line_begin line_num="3"/><deceased><name>AUGUSTA ADA</name></deceased>,
+        <line_begin line_num="4"/>ONLY DAUGHTER OF
+        <line_begin line_num="5"/><familial_relation type="father"><name>GEORGE GORDON NOEL</name>,
+        <line_begin line_num="6"/><title>6TH LORD BYRON</title></familial_relation>,
+        <line_begin line_num="7"/>AND WIFE OF
+        <line_begin line_num="8"/><familial_relation type="husband"><name>WILLIAM</name>, <title>EARL OF LOVELACE</title></familial_relation>.
+        <line_begin line_num="9"/>BORN <birth_date mmddyyyy="12-10-1815">10TH DEC 1815</birth_date>,
+        <line_begin line_num="10"/>DIED <death_date mmddyyyy="11-27-1852">27TH NOV 1852</death_date>.
+        <line_begin line_num="11"/>R.I.P.
+    </funerary_inscription>
+    
+    <funerary_inscription xml:id="3" original_language="en" designs="Y">
+        <line_begin line_num="1"/>Sacred to the Memory
+        <line_begin line_num="2"/>of
+        <line_begin line_num="3"/><deceased><title>Capt.</title> <name>JOSEPH ALGER</name></deceased>
+        <line_begin line_num="4"/>who departed this Life
+        <line_begin line_num="5"/><death_date mmddyyyy="06-21-1794">June 21st 1794</death_date>:
+        <line_begin line_num="6"/>Aged <age_in_years>25</age_in_years> Years,
+        <line_begin line_num="7"/>11 Months &amp;
+        <line_begin line_num="8"/>6 Days.
+    </funerary_inscription>
+    
+    <funerary_inscription xml:id="4" original_language="en" designs="n">
+        <line_begin line_num="1"/><deceased><name>Elizabeth</name></deceased>
+        <line_begin line_num="2"/><birth_date mmddyyyy="??-??-1870">1870</birth_date> - <death_date mmddyyyy="??-??-1952">1952</death_date>
+    </funerary_inscription>
+</funerary_inscriptions>

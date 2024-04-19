@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body>
+<grave>1.Publius Oppius, Roman Soldier</grave>
+    <inscription><transcript language="latin">Transcription: Publius Oppius filius Camilia [.3 char. .] CIO Ravenna miles legionis V 5 Macedonicae, optio, vixit annos XXX, militavit annos VIIII. Hic situs est. Heres fecit.</transcript>
+    <translation language="english">Translation:.cio,,lived (and) .
+    <deceased gender="man">P(ublius) Oppi[us</deceased>
+    <kin>son of...], of (the tribe of) Camilia,</kin>of 
+    <place type="home">Ravenna</place>
+    <occupation>soldier of the Legio V 5 Macedonica, (of the rank of) optio, 30 years, served in the army nine years </occupation>is buried here
+        <epitaph>(His) heir made (this tombstone).</epitaph></translation>
+   </inscription>
+   
+<grave>2. Ada Lovelace</grave>
+    <inscription>In the <place type="tomb">Byron vault</place> below lie the remains of 
+    <deceased gender="woman">Augusta Ada</deceased>, only <kin>daughter of George Gordon Noel, 6th
+        Lord Byron,</kin> and <occupation>wife</occupation> of <kin>William, Earl of Lovelace</kin>
+        Born <birth>10th Dec 1815</birth> Died 
+        <death age="36">27th Nov 1852</death>
+       <epitaph>R.I.P </epitaph>
+   </inscription>
+    
+<grave>3. Captain Joseph Alger</grave>
+  <inscription><epitaph>Sacred to the Memory </epitaph> of <deceased gender="male">
+    <occupation>Capt.</occupation> Joseph Alger </deceased> who departed this life
+      <birth date="7/27/1820"/>
+      <death age="25">June 21st 1794</death>Aged 25 years, 11 months, &amp; 6 days 
+  </inscription>
+    
+<grave>4. Elizabeth</grave>
+    <inscription><deceased gender="woman"> Elizabeth</deceased>
+        <birth>1870</birth> - 
+        <death age="82">1952</death>
+    </inscription> 
+</body> 

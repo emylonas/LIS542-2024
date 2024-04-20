@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Built as if the enterprise only focused on funerary objects -->
+<entry language="en">
+    <entrylvl0 type="item">
+        <headtext type="title">
+            <!-- Given, as in observed or provided, as opposed to a name with a normalized (authority) form -->
+            <personname form="given">
+                Publius Oppius
+            </personname>, Roman Soldier
+        </headtext>
+        <phys>
+            <!-- This element was inspired directly from your comments on last week's assignment, Professor! Thank you! -->
+            <physaspect>
+                Funerial marker
+            </physaspect>
+            <!-- This information would change depending on the controlled vocabularies used for description -->
+            <worktype>
+                Inscribed tombstone
+            </worktype>
+        </phys>
+        <!-- For "linking" the photo (likely stored elsewhere) with the entry; these values are simulated! -->
+        <linkage objectid="003" ref="FL1992"></linkage>
+        <headtext type="subtitle">
+            Transcription:
+            <!-- Where "ln" means Latin -->
+            <text language="ln">
+                Publius Oppius filius
+                Camilia [.3 char. .]
+                CIO Ravenna
+                miles legionis V
+                5 Macedonicae, optio,
+                vixit annos
+                XXX, militavit annos VIIII.
+                Hic situs est.
+                Heres fecit.
+            </text>
+        </headtext>
+        <headtext type="subtitle">
+            Translation:
+            <text>
+                P(ublius) Oppi[us, son of...], of (the tribe of) Camilia, ...cio, of Ravenna,
+                soldier of the Legio V
+                5 Macedonica, (of the rank of) optio, lived
+                30 years, served in the army nine years (and) is buried here.
+                (His) heir made (this tombstone).
+            </text>
+        </headtext>
+    </entrylvl0>
+    <entrylvl0 type="item">
+        <headtext type="title">
+            <personname form="normal">
+                Ada Lovelace
+            </personname>
+        </headtext>
+        <phys>
+            <physaspect>
+                Funerial marker
+            </physaspect>
+            <worktype>
+                Inscribed placard
+            </worktype>
+        </phys>
+        <linkage objectid="004" ref="FL1320"></linkage>
+        <text>
+            In the Byron vault below Lie the remains of Augusta Ada,
+            only daughter of George Gordon Noel, 6th Lord Byron
+            and wife of William, Earl of Lovelace
+            Born <date normal="1815-12-10">10th Dec 1815</date> Died <date normal="1852-11-27">27th Nov 1852</date>
+            R.I.P.
+        </text>
+    </entrylvl0>
+    <entrylvl0 type="item">
+        <headtext type="title">
+            Captain <personname form="normal">Joseph Alger</personname>
+        </headtext>
+        <phys>
+            <physaspect>
+                Funerial marker
+            </physaspect>
+            <worktype>
+                Inscribed headstone
+            </worktype>
+        </phys>
+        <linkage objectid="005" ref="FL1400"></linkage>
+        <text>
+            Sacred to the Memory of
+            Capt. JOSEPH ALGER who departed this Life <date normal="1794-06-21">June 21st 1794</date> Aged 25 Years,
+            11 Months &amp;
+            6 Days
+        </text>
+    </entrylvl0>
+    <entrylvl0 type="item">
+        <headtext style="title">
+            <personname form="given">Elizabeth</personname>
+        </headtext>
+        <phys>
+            <physaspect>
+                Funerial marker
+            </physaspect>
+            <worktype>
+                Inscribed tombstone
+            </worktype>
+        </phys>
+        <linkage objectid="006" ref="FL2900"></linkage>
+        <text>
+            Elizabeth
+            <date>1870</date> ▴ <date>1952</date>
+        </text>
+        <note>
+            From Neighbors, Joy. A Grave Interest. https://agraveinterest.blogspot.com/ 2011/03/womens-history-in-cemetery.html
+        </note>
+    </entrylvl0>
+</entry>

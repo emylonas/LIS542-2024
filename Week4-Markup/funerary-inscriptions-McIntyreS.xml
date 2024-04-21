@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<funeraryInscriptions>
+    
+    <funeraryInscription>
+        <transcription lang="Latin">
+            <firstName>Publius</firstName> <lastName>Oppius</lastName> filius
+            Camilia [.3 char. .]
+            CIO Ravenna
+            miles legionis V
+            5 Macedonicae, optio,
+            <age years="30">vixit</age> annos
+            XXX, militavit annos VIIII
+            .
+            Hic situs est.
+            Heres fecit.</transcription>
+        <translation lang="English">
+            <firstName>P(ublius)</firstName> <lastName> Oppi[us, son of...]</lastName>,
+            of (the tribe of) Camilia,
+            ...cio, of Ravenna,
+            soldier of the Legio V
+            5 Macedonica, (of the rank of) optio,
+            lived
+            <age years="30">30</age> years, served in the army nine years
+            (and) is buried here.
+            (His) heir made (this tombstone).</translation>
+    </funeraryInscription>
+
+    <funeraryInscription>
+        <transcription lang="English">
+            In the Byron vault below
+            Lie the remains of
+            <firstName>Augusta</firstName> <middleName>Ada</middleName>,
+            only daughter of
+            <family member="father">George Gordon Noel</family>,
+            6th Lord <lastName>Byron</lastName>
+            and wife of
+            <family member="husband">William, Earl of Lovelace</family>
+            Born <birth when="1815-12-10">10th Dec 1815</birth>
+            Died <death when="1852-11-27">27th Nov 1852</death>
+            R.I.P.
+        </transcription>
+    </funeraryInscription>
+
+    <funeraryInscription>
+        <transcription lang="English">
+            Sacred to the Memory
+            of
+            <title>Capt.</title> <firstName>JOSEPH</firstName> <lastName>ALGER</lastName>
+            who departed this Life
+            <death when="1794-6-21">June 21st 1794</death>
+            Aged <age years="25" months="11" days="6">25 Years,
+                11 Months &amp;
+                6 Days</age>
+        </transcription>
+    </funeraryInscription>
+    
+    <funeraryInscription>
+        <transcription lang="English">
+            <firstName>ELIZABETH</firstName>
+            <birth when="1870">1870</birth> - <death when="1952">1952</death>
+        </transcription>
+    </funeraryInscription>
+</funeraryInscriptions>

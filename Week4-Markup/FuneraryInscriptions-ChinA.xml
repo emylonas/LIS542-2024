@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tombstones>
+<grave>
+    <name>Publius Oppius</name>
+    <birthdate>N/a</birthdate>
+    <deathdate>N/A</deathdate>
+    <occupation>Soldier of Legio V</occupation> 
+    <tombstoneEngraving>
+        <originalTransciption>Publius Oppius filius
+        Camilia [.3 char. .]
+        CIO Ravenna
+        miles legionis V
+        5 Macedonicae, optio,
+        vixit annos
+        XXX, militavit annos VIIII.
+        Hic situs est.
+        Heres fecit.
+        </originalTransciption>
+        <translationofTranscription> P(ublius) Oppi[us, son of...],
+        of (the tribe of) Camilia,
+        ...cio, of Ravenna,
+        soldier of the Legio V
+        5 Macedonica, (of the rank of) optio,
+        lived
+        30 years, served in the army nine years
+        (and) is buried here.
+        (His) heir made (this tombstone).
+        </translationofTranscription>
+    </tombstoneEngraving>
+    <notes>No note of where grave was buried, age is not noted either</notes>
+</grave>
+
+<grave>
+    <name>Ada Lovelace</name>
+    <birthdate>12/10/1815</birthdate>
+    <deathdate>11/27/1852</deathdate>
+    <Occupation>N/a</Occupation>
+    <tombstoneEngraving>
+        In the Byron vault below
+        Lie the remains of
+        Augusta Ada,
+        only daughter of
+        George Gordon Noel,
+        6th Lord Byron
+        and wife of
+        William, Earl of Lovelace
+        Born 10th Dec 1815
+        Died 27th Nov 1852
+        R.I.P.</tombstoneEngraving>
+    <notes>Location is not provided</notes>
+</grave>
+
+<grave>
+    <name>Captain Joseph Alger</name>
+    <birthdate>N/a</birthdate>
+    <deathdate>06/21/1794</deathdate>
+    <occupation>Captain</occupation>
+    <tombstoneEngraving>
+        Sacred to the Memory
+        of
+        Capt. JOSEPH ALGER
+        who departed this Life
+        June 21st 1794
+        Aged 25 Years,
+        11 Months &
+        6 Days
+    </tombstoneEngraving>
+    <notes>date of birth is not listed but can be derived calculating backwards</notes>
+</grave>
+
+<grave>
+    <name>Elizabeth</name>
+    <birthdate>1870</birthdate>
+    <deathdate>1952</deathdate>
+    <occupation>N/a</occupation>
+    <tombstoneEngraving>
+        Elizabeth
+        1870 - 1952
+    </tombstoneEngraving>
+    <notes>gravestone is minimal and only has the name and date of birth and death</notes>
+</grave>
+</tombstones>

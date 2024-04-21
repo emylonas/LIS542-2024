@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Carrington Powell-->
 <RecipieList>
-    <Recipie>
+    <Recipie recNum="1">
         <Title>Baked Beans</Title>
         <Author>Mrs. A Smith</Author>
         <Ingredients>
-            <Ingredient><Amount>1 pound</Amount>navy beans</Ingredient>
-            <Ingredient><Amount>1/2 pound</Amount>salt pork</Ingredient>
-            <Ingredient><Amount>1/4 cup</Amount>molasses or brown sugar</Ingredient>
-            <Ingredient><Amount>to taste</Amount>salt</Ingredient>
-            <Ingredient>water</Ingredient>
+            <Ingredient foodNum="1"><Amount  foodNum="1">1 pound</Amount>navy beans</Ingredient>
+            <Ingredient foodNum="2"><Amount foodNum="2">1/2 pound</Amount>salt pork</Ingredient>
+            <Ingredient foodNum="3"><Amount foodNum="3">1/4 cup</Amount>molasses or brown sugar</Ingredient>
+            <Ingredient foodNum="4"><Amount foodNum="4">to taste</Amount>salt</Ingredient>
+            <Ingredient foodNum="5">water</Ingredient>
         </Ingredients>
         <Steps>
-            <Step>Wash and soak one pound navy beans over night.</Step>
-            <Step>Boil slowly twenty minutes and drain.</Step>
-            <Step>Add 1/2 pound salt pork cut in thick slices.</Step>
-            <Step>1/4 cup molasses or brown sugar, salt to taste.</Step>
-            <Step>Over with water and bake in slow oven about six hours.</Step>
-            <Step>Add water, a little at a time as needed.</Step>
+            <Step stepNum="1">Wash and soak one pound navy beans over night.</Step>
+            <Step stepNum="2">Boil slowly twenty minutes and drain.</Step>
+            <Step stepNum="3">Add 1/2 pound salt pork cut in thick slices.</Step>
+            <Step stepNum="4">1/4 cup molasses or brown sugar&#44; salt to taste.</Step>
+            <Step stepNum="5">Over with water and bake in slow oven about six hours.</Step>
+            <Step stepNum="6">Add water&#44; a little at a time as needed.</Step>
         </Steps>
-        <Copyright>Order of the Eastern Star. Logan Square Chapter No. 560 (Chicago, Ill.). Original
-            recipes of good things to eat. Chicago, 1919</Copyright>
+        <Copyright>Order of the Eastern Star. Logan Square Chapter No. 560 (Chicago&#44; Ill.). Original
+            recipes of good things to eat. Chicago&#44; 1919</Copyright>
     </Recipie>
-    <Recipie>
-        <Title>Butter Beans, Paprika and Piquillo Peppers (2)</Title>
+    <Recipie recNum="2">
+        <Title>Butter Beans&#44; Paprika and Piquillo Peppers (2)</Title>
         <Author>Selin Kiazim</Author>
-        <Description>These beans are great in salads. Let the mix cool and then toss through a
+        <Description><p>These beans are great in salads. Let the mix cool and then toss through a
             selection of salad leaves and herbs. Perk up the leaves with a little olive oil and
-            vinegar and some crispy lavash on top.</Description>
+            vinegar and some crispy lavash on top.</p></Description>
         <Ingredients>
-            <Ingredient><Amount>3, diced</Amount>red onions</Ingredient>
-            <Ingredient><Amount>125 ml (about ½ cup), divided</Amount> extra-virgin olive
+            <Ingredient foodNum="1"><Amount foodNum="1">3&#44; diced</Amount>red onions</Ingredient>
+            <Ingredient foodNum="2"><Amount foodNum="2">125 ml (about ½ cup)&#44; divided</Amount> extra-virgin olive
                 oil</Ingredient>
-            <Ingredient><Amount>4, finely sliced</Amount>garlic cloves</Ingredient>
-            <Ingredient><Amount>1 Tbsp</Amount>dried chile flakes (preferably pul
+            <Ingredient foodNum="3"><Amount foodNum="3">4&#44; finely sliced</Amount>garlic cloves</Ingredient>
+            <Ingredient foodNum="4"><Amount foodNum="4">1 Tbsp</Amount>dried chile flakes (preferably pul
                 biber)</Ingredient>
-            <Ingredient><Amount>1 1/2 Tbsp</Amount>sweet smoked paprika</Ingredient>
-            <Ingredient><Amount>1 Tbsp</Amount>tomato purée</Ingredient>
-            <Ingredient><Amount>2 14-oz cans, dried and rinsed</Amount>butter beans or lima
+            <Ingredient foodNum="5"><Amount foodNum="5">1 1/2 Tbsp</Amount>sweet smoked paprika</Ingredient>
+            <Ingredient foodNum="6"><Amount foodNum="6">1 Tbsp</Amount>tomato purée</Ingredient>
+            <Ingredient foodNum="7"><Amount foodNum="7">2 14-oz cans&#44; dried and rinsed</Amount>butter beans or lima
                 beans</Ingredient>
-            <Ingredient><Amount>5 Tbsp</Amount>sherry vinegar</Ingredient>
-            <Ingredient><Amount>300g (10 1⁄2-oz.) rinsed and sliced</Amount>jarred piquillo
+            <Ingredient foodNum="8"><Amount foodNum="8">5 Tbsp</Amount>sherry vinegar</Ingredient>
+            <Ingredient foodNum="9"><Amount foodNum="9">300g (10 1⁄2-oz.) rinsed and sliced</Amount>jarred piquillo
                 peppers</Ingredient>
-            <Ingredient>Kosher Salt</Ingredient>
+            <Ingredient foodNum="10">Kosher Salt</Ingredient>
         </Ingredients>
         <Steps>
-            <Step>In a wide-based pan over a medium heat, caramelize the red onions in 5 Tbsp. of
+            <Step stepNum="1">In a wide-based pan over a medium heat&#44; caramelize the red onions in 5 Tbsp. of
                 the olive oil for 15 minutes or until they turn golden and soft. Add a little fine
-                salt, the garlic and spices and continue to cook for 2–3 minutes. Add the tomato
+                salt&#44; the garlic and spices and continue to cook for 2–3 minutes. Add the tomato
                 purée and cook for another minute.</Step>
-            <Step>Add the beans and sherry vinegar and reduce the liquid by half over a medium
+            <Step stepNum="2">Add the beans and sherry vinegar and reduce the liquid by half over a medium
                 heat. Turn the heat off. Add the piquillo peppers and the remaining olive oil and
                 season with salt to serve.</Step>
         </Steps>
         <ServingSize>4</ServingSize>
-        <Copyright>From Three: Acid, Texture, Contrast by Selin Kiazim. Copyright © December 2021 by
+        <Copyright>From Three: Acid&#44; Texture&#44; Contrast by Selin Kiazim. Copyright © December 2021 by
             Selin Kiazim. Excerpted by permission of Quadrille. Buy the book from Amazon or
             Bookshop. </Copyright>
     </Recipie>

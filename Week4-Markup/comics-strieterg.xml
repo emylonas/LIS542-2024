@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+    
+    <comic n="1">
+        <header>
+            <title>Peanuts</title> by <creator>Charles Schulz</creator>. <date when="1957-05-11">May 11, 1957</date>
+        </header>
+        <panel n="1">
+            <graphic>
+                <title>Peanuts</title>
+                <character n="Lucy"/>
+                <character n="Charlie Brown">
+                    <dialogue>PEOPLE COME AND PEOPLE GO, BUT THE EARTH KEEPS ON SPINNING..</dialogue>
+                </character>
+            </graphic>
+        </panel>
+        <panel n="2">
+            <graphic>
+                <character n="Lucy">
+                    <dialogue>"SPINNING"? WHAT DO YOU MEAN "SPINNING"?</dialogue>
+                </character>
+                <character n="Charlie Brown">
+                    <dialogue>SPINNING THROUGH SPACE..THE EARTH KEEPS ON SPINNING THROUGH SPACE..</dialogue>
+                </character>
+                <foreground n="brick wall"/>
+            </graphic>
+        </panel>
+        <panel n="3">
+            <graphic>
+                <character n="Lucy">
+                <soundeffect>HAHAHAHAHA!!!</soundeffect>
+                </character>
+                <character n="Charlie Brown">
+                    <dialogue>?</dialogue>
+                </character>
+            </graphic>
+        </panel>
+        <panel n="4">
+            <graphic>
+                <character n="Lucy">
+                    <dialogue>OH MY CHARLIE BROWN! YOU MAY NOT BE THE <bold>BRIGHTEST</bold> PERSON IN THE WORLD, BUT YOU SURE HAVE SOME <bold>IMAGINATION</bold>!</dialogue>
+                </character>
+                <character n="Charlie Brown">
+                    <dialogue>good grief!</dialogue>
+                </character>
+                <signature/>
+            </graphic>
+        </panel>
+        <footer>
+            <link>https://www.gocomics.com/peanuts/1957/05/11</link>
+        </footer>
+    </comic>
+    
+    <comic n="2">
+        <header><title>For Better or For Worse</title> by <creator>Lynn Johnston</creator>. <date when="2018-05-28">May 28, 2018</date>
+        </header>
+        <panel n="1">
+            <soundeffect>SLAM!</soundeffect>
+            <character n="Michael Patterson"/>
+            <background n="interior door"/>
+        </panel>
+        <gutter>
+            <vertical-text>
+                <date>05-28</date><link>www.fborfw.com</link>
+            </vertical-text>
+        </gutter>
+        <panel n="2">
+            <soundeffect>SLAM! WHAM! BANG!!</soundeffect>
+            <character n="Elly Patterson"/>
+            <foreground n="table and sandwich ingredients"/>
+        </panel>
+        <gutter>
+            <copyright>2018 Lynn Johnston Productions Inc \ Dist. By Andrews McMeel<!-- ? --> Syn...<!--  partially illegible-->
+            </copyright>
+        </gutter>
+        <panel n="3">
+            <soundeffect>SLAM!</soundeffect>
+            <character n="Elly Patterson"/>
+            <background n="exterior door"/>
+        </panel>
+        <panel n="4">
+            <character n="Elly Patterson">
+                <dialogue>A LITTLE TESTY THIS MORNING, ARE WE?!!</dialogue>
+            </character>
+            <background n="house exterior"/>
+            <foreground>
+                <character n="Michael Patterson"/>
+            </foreground>
+        </panel>
+        <footer>
+            <link>https://www.gocomics.com/forbetterorforworse/2018/05/28</link>
+        </footer>
+    </comic>
+    
+    <comic n="3">
+       <header><title>Nancy Classics</title> by <creator>Ernie Bushmiller</creator>.<date when="2021-08-16">August 16, 2021</date>.</header> 
+        <panel n="1">
+            <character n="Fritzi Ritz">
+                <dialogue>NANCY--- I BOUGHT YOU A WHOLE JAR OF COOKIES ALL FOR YOURSELF</dialogue>
+                <item n="cookie jar"/>
+            </character>
+            <character n="Nancy Ritz"/>
+        </panel>
+        <panel n="2">
+            <foreground>
+                <character n="Fritzi Ritz">
+                    <dialogue>THAT'S ODD--- SHE'S NOT EATING THEM</dialogue>
+                </character>
+            </foreground>
+            <background>
+                <character n="Nancy Ritz"/>
+                <item n="cookie jar"/>
+            </background>
+            <date when="12-02">Dec-2</date>
+        </panel>
+        <panel n="3">
+            <signature>-ERNIE BUSHMILLER</signature>
+            <character n="Nancy Ritz">
+                <item n="cookie jar"/>
+            </character>
+            <text><!-- illegible --></text>
+        </panel>
+        <panel n="4">
+            <foreground>
+                <character n="Fritzi Ritz"/>
+            </foreground>
+            <midground n="stack of assorted furniture">
+                <character n="Nancy Fritz">
+                    <dialogue>I ENJOY THEM MORE THIS WAY</dialogue>
+                </character>
+            </midground>
+            <background n="high shelf">
+                <item n="cookie jar"/>
+            </background>
+        </panel>
+        <footer>
+            <link>https://www.gocomics.com/nancy-clssics/2021/08/16</link>
+        </footer>
+    </comic>
+    
+    <comic n="4">
+        <header><title>Spiderman</title> by <creator n="1">Stan Lee</creator> and <creator n="2">Larry Lieber</creator>.<date when="1980-11-30">November 30, 1980</date></header>
+        <panel n="1">
+            <character n="bank teller">
+                <dialogue>
+                    ANY <bold>IDENTIFICATION?</bold>
+                </dialogue>
+                <dialogue>
+                    <bold>ANYONE</bold> CAN RENT A COSTUME!
+                </dialogue>
+            </character>
+            <character n="Spiderman/Peter Parker">
+                <dialogue>
+                    LOOK AT MY <bold>COSTUME!</bold> WHO DO YOU <bold>THINK</bold> I AM?!!
+                </dialogue>
+            </character>
+            <foreground n="white box">
+                <creator-signature>
+                    STAN LEE - LARRY LIEBER <date when="11-30">11-30</date>
+                </creator-signature>
+            </foreground>
+        </panel>
+        <panel n="2">
+            <foreground>
+                <character n="green hat/orange shirt"/>
+                <character n="ginger hair/black jacket"/>
+            </foreground>
+            <background n="bank">
+                <character n="bank teller">
+                    <dialogue>
+                        DRIVER'S LISCENSE? SOCIAL SECURITY?
+                    </dialogue>
+                </character>
+                <character n="Spiderman/Peter Parker">
+                    <dialogue>
+                        <bold>LOOK!</bold> I'VE A <bold>SECRET IDENTITY!</bold> I CAN'T BLOW MY <bold>COVER!</bold>
+                    </dialogue>
+                </character>
+            </background>
+        </panel>
+        <panel n="3">
+            <foreground>
+                <character n="bank teller">
+                    <dialogue>
+                        AND <bold>WE</bold> CAN'T CASH JUST <bold>ANY</bold> OLD CHECK!     
+                    </dialogue>
+                    <dialogue>
+                        AND YOU'RE HOLDING UP THE <bold>LINE!</bold>
+                    </dialogue>
+                    <item n="check"/>
+                </character>
+                <character n="Spiderman/Peter Parker"/>
+            </foreground>
+            <background>
+                <character n="black haired woman"/>
+                <character n="green hat man"/>
+                <character n="ginger man"/>
+                <character n="blonde woman"/>
+            </background>
+        </panel>
+        <panel n="4">
+            <background n="cityscape"/>
+            <midground>
+                <character n="Spiderman/Peter Parker">
+                    <dialogue>
+                        I FINALLY GET $2,000-- AND <bold>I CAN'T CASH THE CHECK! O.K.!</bold> THERE'S ONLY <bold>ONE</bold> THING LEFT TO DO!
+                    </dialogue>
+                </character>
+            </midground>
+            <foreground n="yellow box">
+                <text>
+                    NEXT: <bold>THE BREAKING POINT!</bold>
+                </text>
+            </foreground> 
+        </panel>
+    </comic>
+    
+</document>

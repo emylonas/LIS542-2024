@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <collectionofpostcards> <postcard n= "1"></postcard>
 <!-- Image1: Sailsbury State College, Belltower -->
-    <message>Dear cousins, pleasant having your company. NEXT TIME MAKE IT LONDER SO THAT WE CAN ALL GET OUT EXPLORE THE PENNINSULA TOGETHER. Thanks for all the goodies, I'm sure you managed to show yourselves a goog time in BALTIMORE. BE WELL, LOVE Dorothy Murray</message>
+    <message>Dear cousins, pleasant having your company. NEXT TIME MAKE IT LONDER SO THAT WE CAN ALL GET OUT EXPLORE THE PENNINSULA TOGETHER. Thanks for all the goodies, I'm sure you managed to show yourselves a good time in BALTIMORE. BE WELL, LOVE Dorothy Murray</message>
     <address>Mr. and Mrs. Perry Morgan 1963 Fairview Av. Westbury NY 111590</address>
+    <postmark>null</postmark>
     <postcard n= "2"></postcard>
     <!-- Image2: Nantucket Waterway -->
     <message>From Molly</message>
+    <address>638 E. 224th Street Bronx New York</address>
+    <postmark>8/24/2024</postmark>
+    <postcard n= "3"></postcard>
+    <!-- Image3: An illustration of a newsboy, brandishes newspaper headlined Great Vacation News from Ester Manor Press -->
+    <message>I went visiting in this place last summer. Hope you will like the card</message>
     <address>West Headburg Mass</address>
+    <postmark>5/10/1957</postmark>
+    <postcard  n= "4"></postcard>
+    <!-- Image4: An illustration of solider with a rifle captioned We're all Lit Up, Let Battle Commence-->
+    <message>Dear Nelly, many thanks for PE, hope you aren't all blown away. The weather has been fearful down here. I have been to live all this week and am nearly dead. </message>
+    <address>W.H. Cladwell 257 Clinton Ave Broolyn NYC USA</address>
+    <postmark>4/1/1942</postmark>
+   <postcard n= "5"></postcard>
+    <!-- Image5: Illustration depicting a frog with baby chickens on a lawn, hand written message on the center front, Who Are You? Do you think you are kind of...illegible... -->
+    <backmessage> Dear Nelly, many thanks for PE, hope you aren't all blown away. The weather has been fearful down here. I have been to live all this week and am nearly dead. . </backmessage>
+    <address> Miss Hall, Fern Loge ...illegible...</address>
+    <postmark>5/20/2006</postmark>
+    <postcard n="6"></postcard>
+    <!--image6 realistic painting of a pagoda at night -->
+    <message>What is a WONK? I don't really know... a kind of expert in numbers. Puddles is better, Madalyn's also better; but she had an emergency root canal yesterday-ugh!</message>
+    <address>1550 Highland Lane Delray Beacch FL 33444</address>
+    <postmark> 05/20</postmark>
+    
 </collectionofpostcards>
 
 

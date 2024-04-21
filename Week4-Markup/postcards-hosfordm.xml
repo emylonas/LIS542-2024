@@ -10,12 +10,15 @@
             <stamp><image description="portrait of Margaret Mitchell"/>Margaret Mitchell<linebreak/>USA 1</stamp>
             <stamp><image description="portait of Julia Ward Howe"/>14 USA<linebreak/>Julia Ward Howe</stamp>
             <typed><cardgreeting>The center section of Halloway Hall at Salisbury State College, including the noble bell tower atop which one can scan the historical city of Salisbury in its entirety, was completed in 1929. Students and townspeople alike are enriched by lyrical sounds emanating from the tower’s Carillon of Bells, presented to the College by the Alumni Association on November 5, 1973.</cardgreeting></typed>
-            <handwritten><message>AUG. 5<libreak/>DEAR COUSINS:<linebreak/>PLEASANT HAVING YOUR COMPANY. NEXT TIME MAKE IT LONGER SO THAT WE CAN ALL GET OUT AND EXPLORE THE PENINSULA TOGETHER. THANKS FOR ALL THE GOODIES! AM SURE YOU MANAGED TO SHOW YOURSELF A GOOD TIME IN BALTIMORE, COOLED OFF A MITE (DEGREE OR 2).<linebreak/>BE WELL; AND LOVE,</message><linebreak/><sendername>DOROTHY – MURRAY</sendername></handwritten></orientation>
+            <handwritten><message>AUG. 5<libreak/>DEAR COUSINS:<linebreak/>PLEASANT HAVING YOUR COMPANY. NEXT TIME MAKE IT LONGER SO THAT WE CAN ALL GET OUT AND EXPLORE THE PENINSULA TOGETHER. THANKS FOR ALL THE GOODIES! AM SURE YOU MANAGED TO SHOW YOURSELF A GOOD TIME IN BALTIMORE, COOLED OFF A MITE (DEGREE OR 2).<linebreak/>BE WELL; AND LOVE,</message><linebreak/><sendername>DOROTHY – MURRAY</sendername></handwritten>
+        </orientation>
         <orientation n="vertical">
-            <typed>Pub. by H. K. Barnett. Alison Park, Pa. 15101</typed></orientation>
+            <typed>Pub. by H. K. Barnett. Alison Park, Pa. 15101</typed>
+        </orientation>
         <orientation n="horizontal">
             <typed>SSC-9<linebreak/>90366-D</typed>
             <typed>post card</typed>
-            <handwritten><recipientname>MR – MRS. PERRY MORGAN</recipientname><linebreak/><recipientaddress><streetaddress>653 FAIRVIEW AV.</streetaddress><linebreak/><city control="Westbury">WESTBURY, </city><state control="NY">N.Y.</state><linebreak/><zip>11590</zip></recipientaddress></handwritten></orientation>
+            <handwritten><recipientname>MR – MRS. PERRY MORGAN</recipientname><linebreak/><recipientaddress><streetaddress>653 FAIRVIEW AV.</streetaddress><linebreak/><city control="Westbury">WESTBURY, </city><state control="NY">N.Y.</state><linebreak/><zip>11590</zip></recipientaddress></handwritten>
+        </orientation>
     </back>
 </postcard>

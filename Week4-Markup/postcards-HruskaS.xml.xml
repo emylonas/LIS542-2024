@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<HistoricSociety>
+    <Postcard n="1">
+        <Area side="back" quadrant="left">
+            <ImageDescription>Holloway Bell Tower Salisbury State College Salisbury, Maryland The
+                center section of Holloway Hall at Salisbury State College, include the noble bell
+                tower atop which one can scan the historical city of Salisbury in its entirey, was
+                completed in 1929. Students and townspeople alike are enriched by lyrical sounds
+                emanating from the tower's Carillon of Bells, presented to the College by the Alumni
+                Association on November 5, 1973.</ImageDescription>
+            <SentLocation location="ink stamp">SALISBURY MD</SentLocation>
+            <!-- SentDateTime ink stamp incomplete -->
+            <SentDateTime>M</SentDateTime>
+            <Salutation>DEAR COUSINS:</Salutation>
+            <DiscussionBody>PLEASANT HAVING YOUR COMPANY. NEXT TIME MAKE IT LONGER SO THAT WE CAN
+                ALL GET OUT AND EXPLORE THE PENINSULA TOGETHER. THANKS FOR ALL THE GOODIES. AM SURE
+                YOU MANAGED TO SHOW YOURSELF A GOOD TIME IN BALTIMORE. COOLED OFF A MITE (DEGREE OR
+                2).</DiscussionBody>
+            <Valediction>BE WELL, AND LOVE,</Valediction>
+            <SenderName>DOROTHY-MURRAY</SenderName>
+        </Area>
+        <Area side="back" quadrant="right">
+            <ReceiverName>MR-MRS. PERRY MORGAN</ReceiverName>
+            <ReceiverLocation>653 FAIRVIEW AV. WESTBURY, N.Y. 11590</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+    <Postcard n="2">
+        <Area side="front" quadrant="top">
+            <ImageDescription>ALONG THE WATER FRONT. MATUNUCK, R. I.</ImageDescription>
+        </Area>
+        <Area side="back" quadrant="left">
+            <Valediction>From</Valediction>
+            <SenderName>Molly</SenderName>
+        </Area>
+        <Area side="back" quadrant="right">
+            <!-- SentLocation unclear stamp -->
+            <SentDateTime clock="2024-08-24T10:30:00">AUG 24 1030A</SentDateTime>
+            <ReceiverName>Mrs. Andrew Perry.</ReceiverName>
+            <ReceiverLocation>Wilson Av. Rumford R. I.</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+    <Postcard n="3">
+        <Area side="back" quadrant="left">
+            <!-- ImageDescription not present -->
+            <SenderName>ESTHER MANOR</SenderName>
+            <SentLocation location="printed"> Rt. 17B, Monticello, N.Y. 12701</SentLocation>
+        </Area>
+        <Area side="back" quadrant="right">
+            <SentLocation location="ink stamp">MONTICELLO, NY</SentLocation>
+            <!-- SentDateTime stamp time unclear -->
+            <SentDateTime clock="1967-05-10">MAY 10 PM 1967</SentDateTime>
+            <ReceiverName>Miss Christina Stetina</ReceiverName>
+            <ReceiverLocation>633 E. 224th Street Bronx, New York</ReceiverLocation>
+        </Area>
+        <Area side="front" quadrant="left">
+            <DiscussionBody>Time to pack your tennis racquet, golf clubs, camera, tanning lotion,
+                swim suits, evening attire, anything else you may want--and your best
+                smile!</DiscussionBody>
+        </Area>
+        <Area side="front" quadrant="right">
+            <DiscussionBody>It has been a long, cold, snowy winter. For a wonderful change of pace,
+                plan your Esther Manor vacation now - unlimited fun and pleasure for the entire
+                family! Indoor and outdoor swimming, steam rooms and health club, tennis, handball,
+                golf, baseball, plus top entertainment, dancing and late, late shows await you. The
+                Day Camp is under the alert supervision of trained counsellors. The Teenage Program
+                is better than ever. Hospitality here is as warm and abundant as the rays of the
+                sun. May we suggest that you plan your Esther Manor vacation now?</DiscussionBody>
+        </Area>
+    </Postcard>
+
+    <Postcard n="4">
+        <Area side="front">
+            <Salutation>Dear Sir,</Salutation>
+            <DiscussionBody>Many Thanks, I'll soon be out of here now, then I shall be lit up! God
+                Bless America and F.D.R.</DiscussionBody>
+            <Valediction>yours sincerely</Valediction>
+            <SenderName>Pte Maynard.A.T.</SenderName>
+        </Area>
+        <Area side="back" quadrant="left">
+            <ImageDescription>WE'RE ALL LIT UP - LET BATTLE COMMENCE</ImageDescription>
+            <!-- SentLocation South obfuscated -->
+            <SentLocation location="ink stamp">SOUTH TOTTENHAM</SentLocation>
+            <SentDateTime clock="1942-04-21T19:16:00">7 16 PM 21 APR 1942</SentDateTime>
+        </Area>
+        <Area side="back" quadrant="right">
+            <ReceiverName>W.H.Caldwell Esq.</ReceiverName>
+            <ReceiverLocation>275 Clinton Ave., Brooklyn, N.Y. U.S.A.</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+    <Postcard n="5">
+        <Area side="front" quadrant="top">
+            <ImageDescription>Woonsocket Falls and Sayles Street Bridge, Woonsocket, R.
+                I.</ImageDescription>
+        </Area>
+        <Area side="back" quadrant="left">
+            <DiscussionBody>I went visiting in this place last Summer. Hope you will like the card
+                and answer soon</DiscussionBody>
+            <SenderName>Inez L. White</SenderName>
+            <SentLocation location="written">R #1 Box 32 Western, Mass.</SentLocation>
+            <SentLocation location="ink stamp">WESTERN, MASS</SentLocation>
+            <!-- SentDateTime unclear stamp -->
+            <SentDateTime clock="1914">1914</SentDateTime>
+        </Area>
+        <Area side="back" quadrant="right">
+            <ReceiverName>Mrs. F. G. Bopp</ReceiverName>
+            <ReceiverLocation>West Newbury Mass</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+    <Postcard n="6">
+        <Area side="front" quadrant="bottom">
+            <ImageDescription>Who are you?</ImageDescription>
+            <DiscussionBody>Do you think you can find names for these?</DiscussionBody>
+        </Area>
+        <Area side="back" quadrant="left">
+            <ImageDescription>"CHICKS AND DUCKLINGS"</ImageDescription>
+            <Salutation>Dear Nellie</Salutation>
+            <DiscussionBody>Many thanks for P.G. Hope you are not all blown away. The weather has
+                been fearful down here. I have been to two balls this week so you can guess I am
+                nearly dead. Love to all</DiscussionBody>
+            <SenderName>Lall</SenderName>
+        </Area>
+        <Area side="back" quadrant="right">
+            <!-- SentLocation unclear ink stamp -->
+            <SentLocation location="ink stamp">RTSMOUTH</SentLocation>
+            <!-- SentDateTime unclear ink stamp -->
+            <SentDateTime clock="1906-05-20T22:00:00">10PM MA 20 06</SentDateTime>
+            <ReceiverName>Miss Hall.</ReceiverName>
+            <ReceiverLocation>Fern Lodge. Pulborough.</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+    <Postcard n="7">
+        <Area side="front" quadrant="top">
+            <ImageDescription>R-6 Pagoda, Mt. Penn, Reading Pa</ImageDescription>
+        </Area>
+        <Area side="back" quadrant="left">
+            <ImageDescription>PAGODA READING, PA. 1908. 1939 view, Curt Teich Postcard Collection,
+                Lake Country (Ill.) Museum. From Ducks "&amp;" Diners. © 1988 National Trust for
+                Historical Preservation. The Preservation Press.</ImageDescription>
+            <DiscussionBody>What is a WONK? I don't really know -- a kind of expert in numbers.
+                Puddles is better; Marilyn's ankle is better; but she had an emergency root canal
+                yesterday UGH!</DiscussionBody>
+            <!-- SenderName atypical placement -->
+            <SenderName>Douglas Gomery</SenderName>
+            <SentLocation location="printed">4817 Drummond Ave. Chevy Chase, MD 20815</SentLocation>
+            <SentLocation location="ink stamp">WASHINGTON, DC</SentLocation>
+            <!-- SentDateTime unclear ink stamp -->
+            <SentDateTime clock="1992">PM 1992</SentDateTime>
+        </Area>
+        <Area side="back" quadrant="right">
+            <ReceiverName>The Gomeryz</ReceiverName>
+            <ReceiverLocation>1550 Highland Lane Delray Beach, FL 33444</ReceiverLocation>
+        </Area>
+    </Postcard>
+
+</HistoricSociety>

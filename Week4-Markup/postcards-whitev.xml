@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postcards>
+<postcard1>
+    <front>
+        <orientation n="vertical"><image></image></orientation>
+    </front>
+    <back n="2">
+        <orientation n="horizontal" ></orientation>
+        <imagedescription>"Holloway Hall Bell Tower Salisbury State College Salisbury, Maryland"</imagedescription>
+        <stamps>two USA stamps</stamps>
+        <postofficestamp>Salisbury MD and undecipherable text</postofficestamp>
+        <recipientname>Mr. -Mrs. Perry Morgan</recipientname>
+        <recipientaddress>653 Fairview Av. Westbury, N.Y. 11590</recipientaddress>
+       <sendermessagesample> "Dear Cousins: Pleasant having your company... be well, and love,"</sendermessagesample>
+        <sendername>Dorothy - Murray</sendername>
+        <senderaddress>419 Valleywood Dr. Salisbury, M.D. 21001</senderaddress>
+    </back>
+</postcard1>
+<postcard2>
+    <front>
+        <orientation n="horizontal"><image></image></orientation>
+     </front>
+    <back n="2">
+        <orientation n="horizontal"></orientation>
+        <imagedescription>"Along the water front. Matunuck, R.I." </imagedescription>
+        <stamps>one USA stamp</stamps>
+        <postofficestamp>undecipherable text, Aug 24</postofficestamp>
+        <recipientname>Mrs. Andrew Perry</recipientname>
+        <recipientaddress>Wilson Av, undecipherable text.</recipientaddress>
+        <sendermessagesample>"From Molly"</sendermessagesample>
+        <sendername>Molly</sendername>
+        <senderaddress>none</senderaddress>
+    </back>
+</postcard2>
+</postcards>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<postcard>
+    
+    <front>
+        <image size="full">Photograph of the Holloway Hall Bell Tower at Salisbury State College</image>
+    </front> 
+        
+    <back>    
+    
+        <PostalProcessing style="InkStamp" type="TimeDatePlace" shape="circle" position="um">
+            Salisbury MD 218?1 M
+        </PostalProcessing>
+        
+        <PostalProcessing style="InkStamp" type="cancelation">
+            7 wavy lines over postage stamps
+        </PostalProcessing>
+            
+        <text style="handwritten">
+            <SenderAddress position="um"> 
+                <AddressLine n="1">419 Valleywood Dr.</AddressLine>
+                <AddressLine n="2"><SenderCity>Salisbury</SenderCity>, <SenderState>MD.</SenderState> 21001</AddressLine>
+            </SenderAddress>
+        </text>
+        
+        <text style="print">
+            <ImageDescription>
+                <heading>
+                    <line number="1">Holloway Hall Bell Tower</line>
+                    <line number="2">Salisbury State College</line>
+                    <line number="3">
+                        <PostcardLocation>Salisbury, Maryland</PostcardLocation>
+                    </line>
+                </heading>
+                <body>
+                    The center section of Holloway Hall at Salisbury State College, including the notable bell tower atop which one can scan the historical city of Salisbury in its entirety, was completed in 1929. Students and Townspeople alike are enriched by lyrical sounds emanating from the tower's Carillon of Bells, presented to the College by the Alumni Association on November 5, 1973.                
+                </body>
+            </ImageDescription>
+        </text>
+        
+        <text style="handwritten">
+            <communication position="bl">
+                <salutation>Dear Cousins: </salutation>
+                <message>
+                    <paragraph n="1">
+                        Pleasant having your company. Next time make it longer so that we can all get out and explore the peninsula together.                          
+                    </paragraph>
+                    <paragraph n="2">
+                        Thanks for all the goodies!                        
+                    </paragraph>
+                    <paragraph n="3">
+                        Am sure you managed to show yourself a good time in Baltimore. Cooled off a mite (degree or 2).
+                    </paragraph>
+                </message>
+                <valediction>Be well - and love, 
+                    <SenderName>Dorothy - Murray</SenderName>
+                </valediction>                
+            </communication>
+        </text>
+        
+        <text style="print">
+            <PublicationInformation>
+                (c) KB Pub. by H.K. Barnett, Allison Park, Pa. 15101
+            </PublicationInformation>
+        </text>
+        
+        <text style="handwritten">
+            <RecipientAddress position="br"> 
+                <AddressLine n="1"> 
+                    <addressee>Mr-Mrs. Perry Morgan</addressee></AddressLine>
+                <AddressLine n="2">653 Fairview Av.</AddressLine>
+                <AddressLine n="3"><RecipientCity>Wesbury</RecipientCity>, <RecipientState>N.Y.</RecipientState> 11590</AddressLine>         
+                 </RecipientAddress>
+        </text> 
+    </back>
+   
+</postcard>

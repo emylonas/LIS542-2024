@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<comicStrips>
+    
+    <comic id='1'>
+        <workTitle>Peanuts</workTitle>
+        <author>Charles Schulz</author>
+        <date>1957-05-11</date>
+        <panelCount>4</panelCount>
+        <colorState>bw</colorState>
+        <comedicPacing>
+            <premise>YES</premise>
+            <setup>YES</setup>
+            <punchline>YES</punchline> </comedicPacing>
+        <vlCount>6</vlCount>
+        <source>https://www.gocomics.com/peanuts/1957/05/11</source>
+    </comic>
+   
+    <comic id='2'>
+        <workTitle>For Better or For Worse</workTitle>
+        <author>Lynn Johnston</author>
+        <date>2018-05-28</date>
+        <panelCount>4</panelCount>
+        <colorState>color</colorState>
+        <comedicPacing>
+            <premise>YES</premise>
+            <setup>YES</setup>
+            <punchline>YES</punchline> </comedicPacing>
+        <vlCount>7</vlCount>
+        <source>https://www.gocomics.com/forbetterorforworse/2018/05/28</source>
+    </comic>
+  
+    <comic id='3'>
+        <workTitle>Nancy Classics</workTitle>
+        <author>Ernie Bushmiller</author>
+        <date>2021-08-16</date>
+        <panelCount>4</panelCount>
+        <colorState>bw</colorState>
+        <comedicPacing>
+            <premise>YES</premise>
+            <setup>YES</setup>
+            <punchline>YES</punchline> </comedicPacing>
+        <vlCount>0</vlCount>
+        <source>https://www.gocomics.com/peanuts/2021/08/16</source>
+    </comic>
+   
+    <comic id='4'>
+        <workTitle>Spiderman</workTitle>
+        <author>Stan Lee</author>
+        <author>Larry Lieber</author>
+        <date>1980-11-30</date>
+        <panelCount>4</panelCount>
+        <colorState>color</colorState>
+        <comedicPacing>
+            <premise>YES</premise>
+            <setup>YES</setup>
+            <punchline>YES</punchline> </comedicPacing>
+        <vlCount>1</vlCount>
+        <source>N/A</source>
+    </comic>
+    
+</comicStrips>

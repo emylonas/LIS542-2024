@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2024/main/Week5-Sources/tei_validation_practice.rng" type="application/xml"   schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Practice Validation and Some more XML explanations</title>
+                <author ref="https://orcid.org/0000-0002-0215-4324">Elli Mylonas</author>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    
+    <text>
+     
+        <body>        
+            
+            <div xml:id="div001">
+                
+                <head xml:id="header001">A Silly Memo</head>
+                
+                <opener>From: <name>The Professor</name>
+                To: <name>The Scientist</name>
+                Date: <date when="2022-04-01">April 1, 2022</date></opener>
+                
+                <p xml:id="p001">Good news.</p>
+                
+                <p xml:id="p002">We have discovered the source of the high pitched sound. It glows blue in direct sunlight. We suspect it will taste of blueberries.</p>
+                    <signed>Yours ever, in science</signed>
+                
+            </div>
+           
+            
+        </body>
+    </text>
+</TEI>

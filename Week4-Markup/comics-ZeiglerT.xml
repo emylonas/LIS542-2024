@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ComicIndex>Comic Index
+
+<Peanuts:comic xmlns:Peanuts="https://www.gocomics.com/peanuts/1957/05/11" >
+
+<ComicName>Peanuts</ComicName>
+
+<Creator nickname="Sparky">Charles M. Schulz</Creator>
+
+<artistic_style>Line Drawing</artistic_style>
+
+<ColorVsBnW>Black and White</ColorVsBnW>
+
+<PubDate>May 11, 1957</PubDate>
+
+<LayoutStyle>4 panel</LayoutStyle>
+
+<StoryType>One off gag</StoryType>
+
+<Panel1_PlotMech>Panel 1   Set Up</Panel1_PlotMech>
+
+<VisualBriefP1>Visual: Charlie Brown and Lucy walking and talking</VisualBriefP1>
+
+<CharDialogueP1>Charlie Brown: "People come, and people go, but the earth just keeps on spinning." </CharDialogueP1>
+
+<Panel2_PlotMech>Panel 2   Build Up</Panel2_PlotMech>
+
+<VisualBriefP2>Charlie Brown and Lucy leaning on wall and talking</VisualBriefP2>
+
+<CharDialogueP2>Lucy:  " “Spinning”? What do you mean “spinning”?"</CharDialogueP2>
+
+<CharDialogueP2>Charlie Brown:  "Spinning through space…The earth keeps on spinning through space…"</CharDialogueP2>
+
+<Panel3_PlotMech>Panel 3  Build Up</Panel3_PlotMech>
+
+<VisualBriefP3>Lucy laughing loudly and Charlie Brown confused at her reaction</VisualBriefP3>
+
+<CharDialogueP3>Lucy:  "HA HA HA HA HA!!!"</CharDialogueP3>
+
+<CharDialogueP3>Charlie Brown: "?"</CharDialogueP3>
+
+<Panel4_PlotMech>Panel 4  Punchline and Reaction</Panel4_PlotMech>
+
+<VisualBriefP4>Lucy continuing to laugh, leaning on Charlie Brown</VisualBriefP4>
+
+<CharDialogueP4>Lucy:  "Oh, my, Charlie Brown!  You may not be the brightest person in the world, but you sure have some imagination!"</CharDialogueP4>
+
+<CharDialogueP4>Charlie Brown:  "Good grief!"</CharDialogueP4>
+
+</Peanuts:comic>
+    
+<ForBetterorForWorse:comic xmlns:ForBetterorForWorse="https://www.gocomics.com/forbetterorforworse/2018/05/28">  
+
+<ComicName>For Better or For Worse</ComicName>
+
+<Creator>Lynn Johnston</Creator>
+
+<artistic_style>Line Drawing</artistic_style>
+
+<ColorVsBnW>Color</ColorVsBnW>
+
+<PubDate>May 28, 2018</PubDate>
+
+<LayoutStyle>4 panel</LayoutStyle>
+
+<StoryType>One Off Gag</StoryType>
+
+<Panel1_PlotMech>Panel 1 Set Up</Panel1_PlotMech>
+
+<VisualBriefP1>Panel 1 Visual  Michael Patterson slamming door</VisualBriefP1>
+
+<CharDialogueP1>Panel 1 Dialogue non-verbal. Door “Slam!”</CharDialogueP1>
+
+<Panel2_PlotMech>Panel 2 Build up</Panel2_PlotMech>
+
+<VisualBriefP2>Panel 2 Visual  Elly Patterson making school lunch, reacting to loud noises with startle</VisualBriefP2>
+
+<CharDialogueP2>Panel 2 Dialogue non-verbal “Slam!” “Wham!” “Bang!” from out of frame</CharDialogueP2>
+
+<Panel3_PlotMech>Panel 3 Build up</Panel3_PlotMech>
+
+<VisualBriefP3>Panel 3 Visual Elly Patterson watching door slam as Michael exits house.</VisualBriefP3>
+
+<CharDialogueP3>Panel 3 Dialogue non-verbal “Slam!”</CharDialogueP3>
+
+<Panel4_PlotMech>Panel 4 Punchline/Denouement</Panel4_PlotMech> 
+
+<VisualBriefP4>Panel 4 Visual Michael Patterson walking away from home, looking cross/surly with Elly calling out to him</VisualBriefP4>
+
+<CharDialogueP4>Panel 4 Dialogue  Elly: “A little testy this morning, are we?!!”</CharDialogueP4>
+
+</ForBetterorForWorse:comic>
+
+<Nancy:comic xmlns:Nancy="https://www.gocomics.com/nancy-clssics/2021/08/16">
+    
+<ComicName>Nancy Classics</ComicName>
+
+<Creator>Ernie Bushmiller</Creator>
+    
+<artistic_style>Line Drawing</artistic_style>
+
+<ColorVsBnW>Black and white</ColorVsBnW>
+
+<PubDate>December 2, 1955</PubDate>
+
+<LayoutStyle>4 panel</LayoutStyle>
+
+<StoryType>One off gag</StoryType>
+
+<Panel1_PlotMech>Panel 1 Set up</Panel1_PlotMech>
+
+<VisualBriefP1>Panel 1 visual   Aunt Fritzi Ritz giving Nancy a cookie jar, Nancy smiling</VisualBriefP1>
+
+<CharDialogueP1>Panel 1 dialogue Aunt Fritzi: Nancy—“I bought you a whole jar of cookies all for yourself”</CharDialogueP1>
+
+<Panel2_PlotMech>Panel 2 build up</Panel2_PlotMech>
+
+<VisualBriefP2>Panel 2 visual  Aunt Fritzi watching Nancy stare at cookie jar</VisualBriefP2>
+
+<CharDialogueP2>Aunt Fritzi: “That’s odd—She’s not eating them.</CharDialogueP2> 
+
+<Panel3_PlotMech>Panel 3 build up</Panel3_PlotMech>
+
+<VisualBriefP3>Nancy walking with cooking jar</VisualBriefP3>
+
+<CharDialogueP3>None</CharDialogueP3>
+
+<Panel4_PlotMech>Panel 4 Punchline</Panel4_PlotMech>
+
+<VisualBriefP4>Panel 4 Visual Nancy standing on top of stool on top of box on top of chair reaching into cookie jar on top of bookshelf.  Aunt Fritzi slightly surprised (raised eyebrows)</VisualBriefP4>
+
+<CharDialogueP4>Panel 4 Dialogue   Nancy: “I enjoy them more this way”</CharDialogueP4>
+
+</Nancy:comic>
+    
+
+<comic>
+    
+<ComicName>Spiderman</ComicName>
+
+<Creator>Stan Lee and Larry Lieber</Creator>
+
+<artistic_style>Line Drawing</artistic_style>
+
+<ColorVsBnW>Color</ColorVsBnW>
+
+<PubDate>November 30, 1980</PubDate>
+
+<LayoutStyle>4 panel</LayoutStyle>
+
+<StoryType>Serial</StoryType>
+
+<Panel1_PlotMech>Panel 1 set up</Panel1_PlotMech>
+
+<VisualBriefP1>Panel 1 Visual   Spiderman talking to bank teller in a bank</VisualBriefP1>
+
+<CharDialogueP1>Bank Teller: “ Any identification?”</CharDialogueP1>
+
+<CharDialogueP1>Spiderman: “Look at my costume!  Who do you think I am?!!”</CharDialogueP1>
+
+<CharDialogueP1>Bank Teller: “Anyone can rent a costume!”</CharDialogueP1>
+
+<Panel2_PlotMech>Panel 2 build up</Panel2_PlotMech>
+
+<VisualBriefP2>Panel 2 visual  Spiderman at teller’s window in bank lobby</VisualBriefP2>
+ 
+<CharDialogueP2>Bank Teller: “Driver’s license? Social security?”</CharDialogueP2>
+
+<CharDialogueP2>Spiderman:  “Look I’ve a secret identity!  I can’t blow my cover!”</CharDialogueP2>
+
+<Panel3_PlotMech>Panel 3  Punchline</Panel3_PlotMech>
+
+<VisualBriefP3>Bank Teller speaking to Spiderman with line of impatient bank customers faces in background</VisualBriefP3>
+
+<CharDialogueP3>Bank Teller:  “And we can’t cash just any old check!”</CharDialogueP3>
+
+<CharDialogueP3>Bank Teller:  “And you’re holding up the line!”</CharDialogueP3>
+
+<Panel4_PlotMech>Panel 4 reaction and hook/lead-in</Panel4_PlotMech> 
+
+<VisualBriefP4>Panel 4 visual   Spiderman sitting clinging to a wall with mask off and staring at his uncashed check</VisualBriefP4>
+  
+<CharDialogueP4>Spiderman: “I finally get $2000—and I can’t cash the check!”</CharDialogueP4>
+
+<CharDialogueP4>Spiderman: “O.K. !  There’s only one thing left to do!”</CharDialogueP4>
+
+<CharDialogueP4>Editorial: Lead In: “Next: The Breaking Point!”</CharDialogueP4> 
+
+</comic>
+</ComicIndex>
+

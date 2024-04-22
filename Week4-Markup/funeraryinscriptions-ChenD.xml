@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FuneraryInscriptions>
+    <Inscription>
+        <text language= "Latin">
+        <!-- an attempt to denote missing fragments; since I am not familiar with latin or reading funerary inscriptions from ancient Rome, this is completely based on the given text-->
+            <line number= "1">Publius Oppius filius</line>
+            <line number= "2">Camilia <gap reason= "missing">[.3 char. .]</gap></line>
+            <line number= "3">CIO Ravenna</line>
+            <line number= "4">miles legionis V</line>
+            <line number= "5">5 Macedonicae optio</line>
+            <line number= "6">vixit annos</line>
+            <line number= "7">XXX militavit annos VIIII</line>
+            <line number= "8">Hic situs est</line>
+            <line number= "9">Heres fecit</line>
+        </text>
+        <translation language= "English" Lacuna= "TRUE">
+            <line number= "1">P(ublius) Oppi<gap reason= "missing">[us, son of...]</gap></line>
+            <line number= "2">of (the tribe of) Camilia,</line>
+            <line number= "3">...cio, of Ravenna,</line>
+            <line number= "4">soldier of the Legio V</line>
+            <line number= "5">5 Macedonica, (of the rank of) optio,</line>
+            <line number= "6">lived</line>
+            <line number= "7">30 years, served in the army nine years</line>
+            <line number= "8">(and) is buried here.</line>
+            <line number= "9">(His) heir made (this tombstone).</line>
+        </translation>
+    </Inscription>
+    <Inscription>
+        <text language= "English">
+            <line number= "1">In the Byron vault below</line>
+            <line number= "2">Lie the remains of</line>
+            <line number= "3">AUGUSTA ADA,</line>
+            <line number= "4">only daughter of</line>
+            <line number= "5">GEORGE GORDON NOEL,</line>
+            <line number= "6">6th Lord Byron</line>
+            <line number= "7">and wife of</line>
+            <line number= "8">WILLIAM, EARL OF LOVELACE.</line>
+            <line number= "9"></line>
+            <line number= "10">BORN 10TH DEC 1815.</line>
+            <line number= "11">DIED 27TH NOV 1852.</line>
+            <line number= "12"></line>
+            <line number= "13">R.I.P.</line>
+        </text>
+    </Inscription>
+    <Inscription>
+        <text language= "English">
+            <line number= "1">Sacred to the Memory</line>
+            <line number= "2">of</line>
+            <line number= "3">Capt. JOSEPH ALGER</line>
+            <line number= "4">who departed this Life</line>
+            <line number= "5">June 21st 1794</line>
+            <line number= "6">Aged 25 Years,</line>
+            <line number= "7">11 Months &amp; </line>
+            <line number= "8">6 Days.</line>
+        </text>
+    </Inscription>
+    <Inscription>
+        <text language= "English">
+            <line number= "1">ELIZABETH</line>
+            <line number= "2">1870 - 1952</line>
+        </text>
+    </Inscription>
+</FuneraryInscriptions>

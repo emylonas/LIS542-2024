@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/wwp-store.rng"    type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="schema/wwp-store.isosch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- $Id: common-boilerplate.xml 43994 2021-08-24 19:48:22Z sconnell $ -->
+<TEI xmlns="http://www.wwp.northeastern.edu/ns/textbase">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>WWP Common Metadata Constructs</title>
+      </titleStmt>
+      <editionStmt xml:id="WWPedition">
+        <edition n="2.1">Second edition: version 2.1</edition>
+      </editionStmt>
+      <publicationStmt>
+        <availability status="restricted" xml:id="WWPavailability">
+          <p>This encoded file and the collection of which it is a part (Women
+          Writers Online) are copyrighted by Northeastern University. The source
+          texts from which the files in this collection were transcribed are
+          in the public domain.</p>
+          <p>The Women Writers Online collection is available by license from
+          Northeastern University. Information on licensing is available from
+          the WWP or at <ref target="http://www.wwp.northeastern.edu/">the WWP
+          website</ref>.</p>
+          <p>This file is available for research or teaching purposes by
+          request from the Women Writers Project, and may be downloaded freely
+          for research or teaching purposes by members of institutions holding
+          a current license to the Women Writers Online collection, subject to
+          the User Rules which are part of the Women Writers Online
+          license.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <ab>none</ab>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc xml:id="WWPprojectDescription">
+        <p>The Women Writers Project is an academic project devoted to
+        research on women's writing and text encoding. The project's primary
+        work is the creation of a full-text database of pre-Victorian
+        women's writing in English, encoded in XML using the Guidelines of
+        the Text Encoding Initiative. In addition, the WWP publishes
+        research on text encoding, and supports research and teaching on
+        women's writing.</p>
+      </projectDesc>
+      <samplingDecl xml:id="WWPsamplingDeclaration">
+        <p>Texts in this collection are written in English by women, or
+        translated into English by women, and were published before 1850.
+        They are transcribed in their entirety, including front and back
+        matter, except where a text by a woman is published as part of a
+        longer text mostly by a male author. In such cases, the portion by
+        the female author may be excerpted from the whole. Any omissions
+        from the transcription are encoded with <gi>gap</gi>.</p>
+      </samplingDecl>
+      <listPrefixDef xml:id="WWPlistPrefixDefinitions">
+        <prefixDef ident="p"
+                   matchPattern="([a-z]{2-9}\.[a-z]{3})"
+                   replacementPattern="personography.xml#$1">
+          <p>Private URIs using the <code>p</code>
+          prefix are pointers to <gi>person</gi>
+          elements in the <name type="file">personography.xml</name> file.
+          For example, <code>p:ebuchness.neu</code>
+          dereferences to <code>personography.xml#ebuchness.neu</code>, a reference
+          to Eleanor A. Buchness.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl xml:id="WWPeditorialDeclaration">
+        <correction status="medium" method="markup">
+          <p>The text has received two forms of correction. The first is
+          correction of printers errors occurring within the original
+          document. This is done both during initial transcription and
+          during subsequent proofreading. Correction of simple typographical
+          errors is done using <gi>sic</gi> elements, with the corrected
+          reading recorded as the content of its sibling <gi>corr</gi>
+          element. Broken type is not recorded. Words accidentally omitted
+          by the printer have not been supplied. Portions of text which are
+          difficult or impossible to read are marked using <gi>damage</gi>
+          (where the photocopy or the original text is damaged or torn),
+          <gi>unclear</gi> (where the photocopy or the original text is
+          illegible), <gi>gap</gi>, and <gi>supplied</gi>. Repeated words
+          are marked with <gi>sic</gi>. Manuscript additions and corrections
+          to the text are transcribed using the <gi>add</gi> element.</p>
+          <p>The second form of correction is intended to ensure the
+          accuracy of the transcription, and is done by proofreading and
+          correction subsequent to transcription.</p>
+        </correction>
+        <normalization source="WWP" method="markup">
+          <p>The use of both upper- and lower-case i, j, u, v, and vv has
+          been normalized to modern 20th century typographical practices
+          using a stand-in for the TEI <gi>choice</gi> element:
+          <gi>vuji</gi>. See <ref target="../schema/wwp-store.doc.html#vuji">its documentation</ref>
+          for a table of equivalents in TEI.</p>
+          <p>In addition, regularized values for dates encoded with the
+          <gi>date</gi> element have been encoded using the <att>when</att>
+          attribute, in the format used by the TEI data.temporal datatype
+          (e.g. 'yyyy-mm-dd').</p>
+          <p>All punctuational dashes longer than an em-dash have been
+          regularized to an em-dash. Groups of hyphens or dashes which
+          function punctuationally like an em-dash have been recorded as a
+          sequence of two HORIZONTAL BAR characters (U+2015).</p>
+          <p>Spacing between words and following punctuation has been
+          regularized to zero spaces; spacing between words has been
+          regularized to one space.</p>
+        </normalization>
+        <quotation marks="all">
+          <p>All quotation marks have been encoded using the <att>rend</att>
+          attribute of the element they offset. Marks are recorded
+          faithfully as either single or double, left or right, regardless
+          of whether or not they mirror modern conventions.</p>
+          <p>Apostrophes have been retained as text content using APOSTROPHE
+          character (U+0027), and thus are distinguished from quotation
+          marks.</p>
+        </quotation>
+        <hyphenation eol="all">
+          <p>The encoding distinguishes between hard and soft hyphens. Hard
+          hyphens, whether at the end-of-line or not, are recorded as a
+          plain-text hyphen character. Soft hyphens are recorded using the
+          SOFT HYPHEN character (U+00AD). Hyphens in catchwords are
+          transcribed as hard hyphens.</p>
+        </hyphenation>
+        <p>This is a documentary transcription of the source document.
+        No variants from other copies or editions have been included.
+        Source lineation has been retained, indicated as follows.</p>
+	<p>Line breaks from the original source are represented either
+	with an <gi>lb</gi> (<gi>cb</gi>, or <gi>pb</gi>) element, by
+	an element bearing a <att>rend</att> with an explicit
+	<val>break(yes)</val>, by an element bearing a <att>rend</att>
+	which is indicated as having a default value including
+	<val>break(yes)</val> using the TEI’s default rendition
+	mechanism, or by the following default implications.
+	<list>
+	  <!--
+	      These lists mirror those in
+	      research/publications/documentation/internal/xml/break_narrative.xml.
+	      Any changes made here should be reflected there, and vice-versa.
+	      —Syd, 2021-05-31
+	  -->
+	  <item><label>1</label> Elements which started on a new line
+	  in the source unless otherwise indicated:
+	  <list>
+	    <item><gi>ab</gi></item>
+	    <item><gi>advertisement</gi></item>
+	    <item><gi>argument</gi></item>
+	    <item><gi>castGroup</gi></item>
+	    <item><gi>castItem</gi></item>
+	    <item><gi>castList</gi></item>
+	    <item><gi>cb</gi></item>
+	    <item><gi>closer</gi></item>
+	    <item><gi>dateline</gi></item>
+	    <item><gi>div</gi></item>
+	    <item><gi>docAuthorization</gi></item>
+	    <item><gi>docEdition</gi></item>
+	    <item><gi>docImprint</gi></item>
+	    <item><gi>docSale</gi></item>
+	    <item><gi>epigraph</gi></item>
+	    <item><gi>figDesc</gi></item>
+	    <item><gi>figure</gi></item>
+	    <item><gi>head</gi></item>
+	    <item><gi>imprimatur</gi></item>
+	    <item><gi>item</gi></item>
+	    <item><gi>l</gi></item>
+	    <item><gi>lb</gi></item>
+	    <item><gi>lg</gi></item>
+	    <item><gi>list</gi></item>
+	    <item><gi>note</gi></item>
+	    <item><gi>opener</gi></item>
+	    <item><gi>p</gi></item>
+	    <item><gi>postscript</gi></item>
+	    <item><gi>pb</gi></item>
+	    <item><gi>respLine</gi></item>
+	    <item><gi>row</gi></item>
+	    <item><gi>salute</gi></item>
+	    <item><gi>set</gi></item>
+	    <item><gi>signed</gi></item>	    
+	    <item><gi>speaker</gi></item>
+	    <item><gi>spGrp</gi></item>
+	    <item><gi>table</gi></item>
+	    <item><gi>titleBlock</gi></item>
+	    <item><gi>titlePart</gi></item>
+	    <item><gi>trailer</gi></item>
+	  </list>
+	  </item>
+	  <item><label>2</label> Elements which did not start on a new
+	  line in the source unless otherwise indicated:
+          <list>
+            <item><gi>abbr</gi></item>
+            <item><gi>actor</gi></item>
+            <item><gi>add</gi></item>
+            <item><gi>addSpan</gi></item>
+            <item><gi>anchor</gi></item>
+            <item><gi>author</gi></item>
+            <item><gi>bibl</gi></item>
+            <item><gi>cell</gi></item>
+            <item><gi>choice</gi></item>
+            <item><gi>citedRange</gi></item>
+            <item><gi>corr</gi></item>
+            <item><gi>date</gi></item>
+            <item><gi>del</gi></item>
+            <item><gi>delSpan</gi></item>
+            <item><gi>distinct</gi></item>
+            <item><gi>docDate</gi></item>
+            <item><gi>docRole</gi></item>
+            <item><gi>edition</gi></item>
+            <item><gi>editor</gi></item>
+            <item><gi>elision</gi></item>
+            <item><gi>emph</gi></item>
+            <item><gi>expan</gi></item>
+            <item><gi>foreign</gi></item>
+            <item><gi>g</gi></item>
+            <item><gi>gap</gi></item>
+            <item><gi>gloss</gi></item>
+            <item><gi>hi</gi></item>
+            <item><gi>label</gi></item>
+            <item><gi>mcr</gi></item>
+            <item><gi>measure</gi></item>
+            <item><gi>mentioned</gi></item>
+            <item><gi>name</gi></item>
+            <item><gi>num</gi></item>
+            <item><gi>orgName</gi></item>
+            <item><gi>orig</gi></item>
+            <item><gi>persName</gi></item>
+            <item><gi>placeName</gi></item>
+            <item><gi>publisher</gi></item>
+            <item><gi>pubPlace</gi></item>
+            <item><gi>quote</gi></item>
+            <item><gi>ref</gi></item>
+            <item><gi>reg</gi></item>
+            <item><gi>regMe</gi></item>
+            <item><gi>role</gi></item>
+            <item><gi>roleDesc</gi></item>
+            <item><gi>rs</gi></item>
+            <item><gi>said</gi></item>
+            <item><gi>seg</gi></item>
+            <item><gi>sic</gi></item>
+            <item><gi>soCalled</gi></item>
+            <item><gi>space</gi></item>
+            <item><gi>subst</gi></item>
+            <item><gi>substJoin</gi></item>    
+            <item><gi>supplied</gi></item>
+            <item><gi>surplus</gi></item>
+            <item><gi>term</gi></item>
+            <item><gi>time</gi></item>
+            <item><gi>title</gi></item>
+            <item><gi>translator</gi></item>
+            <item><gi>unclear</gi></item>
+            <item><gi>vuji</gi></item>
+          </list>
+      </item>
+	</list>	
+	</p>
+	<p>For more detailed information on transcription and editorial
+        methodology, please see the WWP's documentation page at
+        <ptr target="http://www.wwp.northeastern.edu/research/publications/documentation/training/"/>.</p>
+      </editorialDecl>
+      <charDecl xml:id="WWPcharacterDeclaration">
+        <!-- WWPabb: special brevigraphs and superscripts, etc., for abbreviations -->
+        <char xml:id="ysupe">
+          <mapping type="PUA" value="U+0FFFFD">󿿽</mapping>
+          <desc>y with a letter 'e' above it, contracting 'the' </desc>
+        </char>
+        <char xml:id="ysupt">
+          <mapping type="PUA" value="U+0FFFFC">󿿼</mapping>
+          <desc>y with a letter 't' above it, contracting 'that' </desc>
+        </char>
+        <char xml:id="ysupu">
+          <mapping type="PUA" value="U+0FFFFB">󿿻</mapping>
+          <desc>y with a letter 'u' above it, contracting 'thou' </desc>
+        </char>
+        <char xml:id="wsupt">
+          <mapping type="PUA" value="U+0FFFFA">󿿺</mapping>
+          <desc>w with a letter 't' above it, contracting 'with' </desc>
+        </char>
+        <char xml:id="wsuph">
+          <mapping type="PUA" value="U+0FFFF9">󿿹</mapping>
+          <desc>w with 'h' above it, contracting 'which' </desc>
+        </char>
+        <char xml:id="iumlig">
+          <mapping type="PUA" value="U+0FFFF8">󿿸</mapping>
+          <desc>u with dot over left leg for i, longer right leg for m </desc>
+        </char>
+        <char xml:id="pmacr">
+          <mapping type="PUA" value="U+0FFFF7">󿿷</mapping>
+          <desc>p with a macron, contracting 'pre' </desc>
+        </char>
+        <char xml:id="phook">
+          <mapping type="PUA" value="U+0FFFF6">󿿶</mapping>
+          <desc>p with a hook through the descender, contracting 'pro' </desc>
+        </char>
+        <char xml:id="pbar">
+          <mapping type="PUA" value="U+0FFFF5">󿿵</mapping>
+          <desc>p with a bar through the descender, contracting 'per' or 'par' </desc>
+        </char>
+        <char xml:id="qthorn">
+          <mapping type="PUA" value="U+0FFFF4">󿿴</mapping>
+          <desc>a blending of 'q' and 'thorn', contracting 'quoth' </desc>
+        </char>
+        <char xml:id="hmacr">
+          <mapping type="PUA" value="U+0FFFF3">󿿳</mapping>
+          <desc>h with a macron </desc>
+          <note><ab>used in kilham.claims</ab></note>
+        </char>
+        <char xml:id="kmacr">
+          <mapping type="PUA" value="U+0FFFF2">󿿲</mapping>
+          <desc>k with a macron</desc>
+          <note><ab>used in kilham.claims</ab></note>
+        </char>
+        <char xml:id="omicronsigma">
+          <mapping value="U+03BF U+03C2">ος</mapping>
+          <desc>a ligature of the Greek lowercase letters ο and ς</desc>
+          <!-- Consider requesting that the Unicode Consortium add this!   -->
+        </char>
+
+        <!-- WWPinv: inverted characters                                      -->
+        <!-- Note: letters and numerals are preceded by "inverted";           -->
+        <!-- punctuation and symbols are preceded by only "i".                -->
+        <char xml:id="inverted0">
+          <mapping type="PUA" value="U+0F3528">󳔨</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted1">
+          <mapping type="PUA" value="U+0F3529">󳔩</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted2">
+          <mapping type="PUA" value="U+0F352A">󳔪</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted3">
+          <mapping type="PUA" value="U+0F352B">󳔫</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted4">
+          <mapping type="PUA" value="U+0F352C">󳔬</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted5">
+          <mapping type="PUA" value="U+0F352D">󳔭</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted6">
+          <mapping type="PUA" value="U+0F352E">󳔮</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted7">
+          <mapping type="PUA" value="U+0F352F">󳔯</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted8">
+          <mapping type="PUA" value="U+0F3530">󳔰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverted9">
+          <mapping type="PUA" value="U+0F3531">󳔱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedA">
+          <mapping type="PUA" value="U+0F3539">󳔹</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedB">
+          <mapping type="PUA" value="U+0F353A">󳔺</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedC">
+          <mapping type="PUA" value="U+0F353B">󳔻</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedD">
+          <mapping type="PUA" value="U+0F353C">󳔼</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedE">
+          <mapping type="PUA" value="U+0F353D">󳔽</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedF">
+          <mapping type="PUA" value="U+0F353E">󳔾</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedG">
+          <mapping type="PUA" value="U+0F353F">󳔿</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedH">
+          <mapping type="PUA" value="U+0F3540">󳕀</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedI">
+          <mapping type="PUA" value="U+0F3541">󳕁</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedJ">
+          <mapping type="PUA" value="U+0F3542">󳕂</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedK">
+          <mapping type="PUA" value="U+0F3543">󳕃</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedL">
+          <mapping type="PUA" value="U+0F3544">󳕄</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedM">
+          <mapping type="PUA" value="U+0F3545">󳕅</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedN">
+          <mapping type="PUA" value="U+0F3546">󳕆</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedO">
+          <mapping type="PUA" value="U+0F3547">󳕇</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedP">
+          <mapping type="PUA" value="U+0F3548">󳕈</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedQ">
+          <mapping type="PUA" value="U+0F3549">󳕉</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedR">
+          <mapping type="PUA" value="U+0F354A">󳕊</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedS">
+          <mapping type="PUA" value="U+0F354B">󳕋</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedT">
+          <mapping type="PUA" value="U+0F354C">󳕌</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedU">
+          <mapping type="PUA" value="U+0F354D">󳕍</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedV">
+          <mapping type="PUA" value="U+0F354E">󳕎</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedW">
+          <mapping type="PUA" value="U+0F354F">󳕏</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedX">
+          <mapping type="PUA" value="U+0F3550">󳕐</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedY">
+          <mapping type="PUA" value="U+0F3551">󳕑</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedZ">
+          <mapping type="PUA" value="U+0F3552">󳕒</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverteda">
+          <mapping type="PUA" value="U+0F3559">󳕙</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedb">
+          <mapping type="PUA" value="U+0F355A">󳕚</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedc">
+          <mapping type="PUA" value="U+0F355B">󳕛</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedd">
+          <mapping type="PUA" value="U+0F355C">󳕜</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertede">
+          <mapping type="PUA" value="U+0F355D">󳕝</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedf">
+          <mapping type="PUA" value="U+0F355E">󳕞</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedg">
+          <mapping type="PUA" value="U+0F355F">󳕟</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedh">
+          <mapping type="PUA" value="U+0F3560">󳕠</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedi">
+          <mapping type="PUA" value="U+0F3561">󳕡</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedj">
+          <mapping type="PUA" value="U+0F3562">󳕢</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedk">
+          <mapping type="PUA" value="U+0F3563">󳕣</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedl">
+          <mapping type="PUA" value="U+0F3564">󳕤</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedm">
+          <mapping type="PUA" value="U+0F3565">󳕥</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedn">
+          <mapping type="PUA" value="U+0F3566">󳕦</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedo">
+          <mapping type="PUA" value="U+0F3567">󳕧</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedp">
+          <mapping type="PUA" value="U+0F3568">󳕨</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedq">
+          <mapping type="PUA" value="U+0F3569">󳕩</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedr">
+          <mapping type="PUA" value="U+0F356A">󳕪</mapping>
+          <desc/>
+        </char>
+        <char xml:id="inverteds">
+          <mapping type="PUA" value="U+0F356B">󳕫</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedt">
+          <mapping type="PUA" value="U+0F356C">󳕬</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedu">
+          <mapping type="PUA" value="U+0F356D">󳕭</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedv">
+          <mapping type="PUA" value="U+0F356E">󳕮</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedw">
+          <mapping type="PUA" value="U+0F356F">󳕯</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedx">
+          <mapping type="PUA" value="U+0F3570">󳕰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedy">
+          <mapping type="PUA" value="U+0F3571">󳕱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="invertedz">
+          <mapping type="PUA" value="U+0F3572">󳕲</mapping>
+          <desc/>
+        </char>
+        <char xml:id="isemi">
+          <mapping type="PUA" value="U+0F3533">󳔳</mapping>
+          <desc>Superscript &amp; subscript digits:                               </desc>
+        </char>
+        <!-- If we use the same pattern as that used in ISONUM, which      -->
+        <!-- declares sup1, sup2, and sup3, we end up with supe & sube,    -->
+        <!-- which are already declared in ISOTECH, and subE & supE, which -->
+        <!-- are already declared in ISOAMSR. Therefore we use a different -->
+        <!-- pattern.                                                      -->
+        <char xml:id="sub-0">
+          <mapping type="PUA" value="U+0FED30">󾴰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-1">
+          <mapping type="PUA" value="U+0FED31">󾴱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-2">
+          <mapping type="PUA" value="U+0FED32">󾴲</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-3">
+          <mapping type="PUA" value="U+0FED33">󾴳</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-4">
+          <mapping type="PUA" value="U+0FED34">󾴴</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-5">
+          <mapping type="PUA" value="U+0FED35">󾴵</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-6">
+          <mapping type="PUA" value="U+0FED36">󾴶</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-7">
+          <mapping type="PUA" value="U+0FED37">󾴷</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-8">
+          <mapping type="PUA" value="U+0FED38">󾴸</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-9">
+          <mapping type="PUA" value="U+0FED39">󾴹</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-0">
+          <mapping type="PUA" value="U+0F0130">󰄰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-1">
+          <mapping type="PUA" value="U+0F0131">󰄱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-2">
+          <mapping type="PUA" value="U+0F0132">󰄲</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-3">
+          <mapping type="PUA" value="U+0F0133">󰄳</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-4">
+          <mapping type="PUA" value="U+0F0134">󰄴</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-5">
+          <mapping type="PUA" value="U+0F0135">󰄵</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-6">
+          <mapping type="PUA" value="U+0F0136">󰄶</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-7">
+          <mapping type="PUA" value="U+0F0137">󰄷</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-8">
+          <mapping type="PUA" value="U+0F0138">󰄸</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-9">
+          <mapping type="PUA" value="U+0F0139">󰄹</mapping>
+          <desc>Similarly, the superscript &amp; subscript letters  </desc>
+        </char>
+        <char xml:id="sub-a">
+          <mapping type="PUA" value="U+0FED61">󾵡</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-b">
+          <mapping type="PUA" value="U+0FED62">󾵢</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-c">
+          <mapping type="PUA" value="U+0FED63">󾵣</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-d">
+          <mapping type="PUA" value="U+0FED64">󾵤</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-e">
+          <mapping type="PUA" value="U+0FED65">󾵥</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-f">
+          <mapping type="PUA" value="U+0FED66">󾵦</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-g">
+          <mapping type="PUA" value="U+0FED67">󾵧</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-h">
+          <mapping type="PUA" value="U+0FED68">󾵨</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-i">
+          <mapping type="PUA" value="U+0FED69">󾵩</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-j">
+          <mapping type="PUA" value="U+0FED6A">󾵪</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-k">
+          <mapping type="PUA" value="U+0FED6B">󾵫</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-l">
+          <mapping type="PUA" value="U+0FED6C">󾵬</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-m">
+          <mapping type="PUA" value="U+0FED6D">󾵭</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-n">
+          <mapping type="PUA" value="U+0FED6E">󾵮</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-o">
+          <mapping type="PUA" value="U+0FED6F">󾵯</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-p">
+          <mapping type="PUA" value="U+0FED70">󾵰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-q">
+          <mapping type="PUA" value="U+0FED71">󾵱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-r">
+          <mapping type="PUA" value="U+0FED72">󾵲</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-s">
+          <mapping type="PUA" value="U+0FED73">󾵳</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-t">
+          <mapping type="PUA" value="U+0FED74">󾵴</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-u">
+          <mapping type="PUA" value="U+0FED75">󾵵</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-v">
+          <mapping type="PUA" value="U+0FED76">󾵶</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-w">
+          <mapping type="PUA" value="U+0FED77">󾵷</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-x">
+          <mapping type="PUA" value="U+0FED78">󾵸</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-y">
+          <mapping type="PUA" value="U+0FED79">󾵹</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-z">
+          <mapping type="PUA" value="U+0FED7A">󾵺</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-A">
+          <mapping type="PUA" value="U+0FED41">󾵁</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-B">
+          <mapping type="PUA" value="U+0FED42">󾵂</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-C">
+          <mapping type="PUA" value="U+0FED43">󾵃</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-D">
+          <mapping type="PUA" value="U+0FED44">󾵄</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-E">
+          <mapping type="PUA" value="U+0FED45">󾵅</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-F">
+          <mapping type="PUA" value="U+0FED46">󾵆</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-G">
+          <mapping type="PUA" value="U+0FED47">󾵇</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-H">
+          <mapping type="PUA" value="U+0FED48">󾵈</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-I">
+          <mapping type="PUA" value="U+0FED49">󾵉</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-J">
+          <mapping type="PUA" value="U+0FED4A">󾵊</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-K">
+          <mapping type="PUA" value="U+0FED4B">󾵋</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-L">
+          <mapping type="PUA" value="U+0FED4C">󾵌</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-M">
+          <mapping type="PUA" value="U+0FED4D">󾵍</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-N">
+          <mapping type="PUA" value="U+0FED4E">󾵎</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-O">
+          <mapping type="PUA" value="U+0FED4F">󾵏</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-P">
+          <mapping type="PUA" value="U+0FED50">󾵐</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-Q">
+          <mapping type="PUA" value="U+0FED51">󾵑</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-R">
+          <mapping type="PUA" value="U+0FED52">󾵒</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-S">
+          <mapping type="PUA" value="U+0FED53">󾵓</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-T">
+          <mapping type="PUA" value="U+0FED54">󾵔</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-U">
+          <mapping type="PUA" value="U+0FED55">󾵕</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-V">
+          <mapping type="PUA" value="U+0FED56">󾵖</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-W">
+          <mapping type="PUA" value="U+0FED57">󾵗</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-X">
+          <mapping type="PUA" value="U+0FED58">󾵘</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-Y">
+          <mapping type="PUA" value="U+0FED59">󾵙</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sub-Z">
+          <mapping type="PUA" value="U+0FED5A">󾵚</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-a">
+          <mapping type="PUA" value="U+0F0161">󰅡</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-b">
+          <mapping type="PUA" value="U+0F0162">󰅢</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-c">
+          <mapping type="PUA" value="U+0F0163">󰅣</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-d">
+          <mapping type="PUA" value="U+0F0164">󰅤</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-e">
+          <mapping type="PUA" value="U+0F0165">󰅥</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-f">
+          <mapping type="PUA" value="U+0F0166">󰅦</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-g">
+          <mapping type="PUA" value="U+0F0167">󰅧</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-h">
+          <mapping type="PUA" value="U+0F0168">󰅨</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-i">
+          <mapping type="PUA" value="U+0F0169">󰅩</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-j">
+          <mapping type="PUA" value="U+0F016A">󰅪</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-k">
+          <mapping type="PUA" value="U+0F016B">󰅫</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-l">
+          <mapping type="PUA" value="U+0F016C">󰅬</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-m">
+          <mapping type="PUA" value="U+0F016D">󰅭</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-n">
+          <mapping type="PUA" value="U+0F016E">󰅮</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-o">
+          <mapping type="PUA" value="U+0F016F">󰅯</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-p">
+          <mapping type="PUA" value="U+0F0170">󰅰</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-q">
+          <mapping type="PUA" value="U+0F0171">󰅱</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-r">
+          <mapping type="PUA" value="U+0F0172">󰅲</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-s">
+          <mapping type="PUA" value="U+0F0173">󰅳</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-t">
+          <mapping type="PUA" value="U+0F0174">󰅴</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-u">
+          <mapping type="PUA" value="U+0F0175">󰅵</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-v">
+          <mapping type="PUA" value="U+0F0176">󰅶</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-w">
+          <mapping type="PUA" value="U+0F0177">󰅷</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-x">
+          <mapping type="PUA" value="U+0F0178">󰅸</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-y">
+          <mapping type="PUA" value="U+0F0179">󰅹</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-z">
+          <mapping type="PUA" value="U+0F017A">󰅺</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-A">
+          <mapping type="PUA" value="U+0F0141">󰅁</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-B">
+          <mapping type="PUA" value="U+0F0142">󰅂</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-C">
+          <mapping type="PUA" value="U+0F0143">󰅃</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-D">
+          <mapping type="PUA" value="U+0F0144">󰅄</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-E">
+          <mapping type="PUA" value="U+0F0145">󰅅</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-F">
+          <mapping type="PUA" value="U+0F0146">󰅆</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-G">
+          <mapping type="PUA" value="U+0F0147">󰅇</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-H">
+          <mapping type="PUA" value="U+0F0148">󰅈</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-I">
+          <mapping type="PUA" value="U+0F0149">󰅉</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-J">
+          <mapping type="PUA" value="U+0F014A">󰅊</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-K">
+          <mapping type="PUA" value="U+0F014B">󰅋</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-L">
+          <mapping type="PUA" value="U+0F014C">󰅌</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-M">
+          <mapping type="PUA" value="U+0F014D">󰅍</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-N">
+          <mapping type="PUA" value="U+0F014E">󰅎</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-O">
+          <mapping type="PUA" value="U+0F014F">󰅏</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-P">
+          <mapping type="PUA" value="U+0F0150">󰅐</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-Q">
+          <mapping type="PUA" value="U+0F0151">󰅑</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-R">
+          <mapping type="PUA" value="U+0F0152">󰅒</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-S">
+          <mapping type="PUA" value="U+0F0153">󰅓</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-T">
+          <mapping type="PUA" value="U+0F0154">󰅔</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-U">
+          <mapping type="PUA" value="U+0F0155">󰅕</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-V">
+          <mapping type="PUA" value="U+0F0156">󰅖</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-W">
+          <mapping type="PUA" value="U+0F0157">󰅗</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-X">
+          <mapping type="PUA" value="U+0F0158">󰅘</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-Y">
+          <mapping type="PUA" value="U+0F0159">󰅙</mapping>
+          <desc/>
+        </char>
+        <char xml:id="sup-Z">
+          <mapping type="PUA" value="U+0F015A">󰅚</mapping>
+          <desc>miscellaneous </desc>
+        </char>
+        <char xml:id="idagger">
+          <mapping type="PUA" value="U+0F015B">󰅛</mapping>
+          <desc/>
+        </char>
+        <char xml:id="ornament">
+          <mapping type="PUA" value="U+FFFC">￼</mapping>
+          <desc/>
+          <!-- a character inappropriate for use in Markup.
+               See http://www.w3.org/TR/unicode-xml/ -->
+        </char>
+      </charDecl>
+      <classDecl xml:id="WWPclassificationDeclaration">
+        <taxonomy>
+          <category xml:id="G.drama">
+            <catDesc>drama</catDesc>
+            <category xml:id="G.drama.mixed">
+              <catDesc>mixed</catDesc>
+            </category>
+            <category xml:id="G.drama.prose">
+              <catDesc>prose</catDesc>
+            </category>
+            <category xml:id="G.drama.verse">
+              <catDesc>verse</catDesc>
+            </category>
+          </category>
+          <category xml:id="G.fiction">
+            <catDesc>fiction</catDesc>
+            <category xml:id="G.fiction.letter">
+              <catDesc>letter</catDesc>
+            </category>
+            <category xml:id="G.fiction.novel">
+              <catDesc>novel</catDesc>
+            </category>
+            <category xml:id="G.fiction.other">
+              <catDesc>other</catDesc>
+            </category>
+            <category xml:id="G.fiction.story">
+              <catDesc>story</catDesc>
+            </category>
+          </category>
+          <category xml:id="G.non-fiction">
+            <catDesc>non-fiction</catDesc>
+            <category xml:id="G.non-fiction.essay">
+              <catDesc>essay</catDesc>
+            </category>
+            <category xml:id="G.non-fiction.letter">
+              <catDesc>letter</catDesc>
+            </category>
+            <category xml:id="G.non-fiction.other">
+              <catDesc>other</catDesc>
+            </category>
+          </category>
+          <category xml:id="G.verse">
+            <catDesc>verse</catDesc>
+            <category xml:id="G.verse.lyric">
+              <catDesc>lyric</catDesc>
+            </category>
+            <category xml:id="G.verse.narrative">
+              <catDesc>narrative</catDesc>
+            </category>
+            <category xml:id="G.verse.other">
+              <catDesc>other</catDesc>
+            </category>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <calendarDesc xml:id="WWPcalendarDescription">
+        <calendar xml:id="cal_Gregorian">
+          <ab>Gregorian (or proleptic Gregorian) calendar; see <ptr target="https://en.wikipedia.org/wiki/Gregorian_calendar"/>
+          and <ptr target="https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar"/>.</ab>
+        </calendar>
+        <calendar xml:id="cal_Hijri">
+          <ab>The Islamic lunar calendar; see <ptr target="https://en.wikipedia.org/wiki/Hijri_year"/>.</ab>
+        </calendar>
+        <calendar xml:id="cal_Hebrew">
+          <ab>The Hebrew calendar; see <ptr target="https://en.wikipedia.org/wiki/Hebrew_calendar"/>.</ab>
+        </calendar>
+        <calendar xml:id="cal_Julian">
+          <ab>Julian calendar, or <soCalled>Old Style</soCalled>
+          dates; see <ptr target="https://en.wikipedia.org/wiki/Julian_calendar"/>.</ab>
+        </calendar>
+        <calendar xml:id="cal_NS">
+          <ab>A date in the Julian calendar but with the start of the
+          year on 01 January (as opposed to 25 March); see <ptr target="https://en.wikipedia.org/wiki/Old_Style_and_New_Style_dates"/>.</ab>
+        </calendar>
+        <calendar xml:id="cal_Mundi">
+          <ab>A date in the Anno Mundi calendar based on the biblical
+          accounts of creation. See <ptr target="https://en.wikipedia.org/wiki/Anno_Mundi"/>
+          </ab>
+        </calendar>
+        <calendar xml:id="cal_undetermined">
+          <ab>undetermined calendar system</ab>
+        </calendar>
+      </calendarDesc>
+      <langUsage xml:id="WWPlangUsage">
+        <language ident="x-grc">Idunno, but probably has something to do with “Ancient Greek (to 1453)”</language>
+        <language ident="x-unk">unknown</language>
+        <language ident="x-car">Based on, but not an accurate representation of, Galibi Carib</language>
+        <language ident="x-am">Based on, but not an accurate representation of, Amharic</language>
+        <language ident="x-kg">Based on, but not an accurate representation of, Kikongo</language>  
+        <language ident="x-din">Based on, but not an accurate representation of, Dinka</language> 
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change who="#sbauman.emt" when="2020-10-27">
+        Per encoding meeting, add <val>x-car</val>.
+      </change>
+      <change who="#sbauman.emt" when="2020-02-20">
+        <list>
+          <item>Added <att>value</att> to each <gi>mapping</gi>. Used
+          stylesheets/one-offs/add_value_to_mapping.xslt for the 201
+          that had only 1 character of content; then did the 1 that
+          had more than 1 character of content by hand.</item>
+          <item>Added this change log.</item>
+        </list>
+      </change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>This document provides common TEI metadata constructs for use
+      in all WWP textbase files.</p>
+    </body>
+  </text>
+</TEI>

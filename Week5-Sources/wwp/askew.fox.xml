@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/schema/wwp-store.rnc"    type="application/relax-ng-compact-syntax"?>
+
+<!-- $Id$ -->
+<TEI xmlns="http://www.wwp.northeastern.edu/ns/textbase">
+  
+  <!-- The header of this file is prepopulated with metadata about the text of Anne Askew and also contains publication information
+        about the Women Writers Project at Northeastern University (in the publicationStmt).The element called <biblStruct>,
+        also in the header, has bilbiographic information about the printed source, and the <encodingDesc> and <profileDesc> link to WWP
+        files that describe their encoding practice and provide other standard boilerplate.
+  -->
+  
+  <teiHeader xml:id="TR00010.hdr">
+    <fileDesc>
+      <titleStmt>
+        <title type="main">The Two Examinations of Anne Askew (Foxe), 1563</title>
+        <author>
+          <persName type="person-female" ref="p:aaskew.wdh">Askew, Anne</persName>
+        </author>
+        <sponsor>Northeastern University</sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.1">Second edition: version 2.1</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Northeastern University Women Writers Project</publisher>
+        <address>
+          <addrLine>SL 213</addrLine>
+          <addrLine>Northeastern University</addrLine>
+          <addrLine>360 Huntington Avenue</addrLine>
+          <addrLine>Boston, MA  02115-5005</addrLine>
+          <addrLine>USA</addrLine>
+          <addrLine>url:mailto:wwp@neu.edu</addrLine>
+          <addrLine>url:https://www.wwp.northeastern.edu/</addrLine>
+          <addrLine>617-373-4435</addrLine>
+        </address>
+        <idno type="WWP">TR00010</idno>
+        <idno type="URL">
+          https://www.wwp.northeastern.edu/texts/askew.fox.html
+        </idno>
+        <include xmlns="http://www.w3.org/2001/XInclude"
+                 href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+                 xpointer="element(WWPavailability)"/>
+        <date when="2199-05-03"><!-- %%%%% when we publish this text, the @when should be corrected to the date of publication, and this comment removed. %%%%% --></date>
+      </publicationStmt>
+      <sourceDesc n="OT00010">
+        <!-- ******************************************************* -->
+        <!-- This auto-generated <sourceDesc> is intended for        -->
+        <!-- independently published texts. If this is an excerpt or -->
+        <!-- a component of a larger published work, you will need   -->
+        <!-- to expand this <sourceDesc> somewhat.                   -->
+        <!-- ******************************************************* -->
+        <biblStruct>
+          <monogr>
+            <author>
+              <persName type="titlePage" ref="p:aaskew.wdh">An Askew</persName>
+              <persName type="regularized" ref="p:aaskew.wdh">Askew, Anne</persName>
+            </author>
+            <title>The two examinations of the worthy servant of God, Maistris An Askew</title>
+            <edition>First edition</edition>
+            <idno type="csmh">RB 59840</idno>
+            <idno type="STC">11222</idno>
+            <imprint>
+              <pubPlace>London</pubPlace>
+              <publisher>
+                <persName type="titlePage" ref="p:?????.!!!">[s.n.]</persName>
+                <persName type="regularized" ref="f00">[s.n.]</persName>
+              </publisher>
+              <date when="1563"/>
+            </imprint>
+            <extent>
+              <measure unit="page" quantity="11"/>
+              <!-- $$$$$ original value was: "11"; if above looks OK, then DELETE this comment -->
+            </extent>
+            <extent>
+              <dimensions>
+                <format>folio</format>
+              </dimensions>
+            </extent>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPprojectDescription)"/>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPsamplingDeclaration)"/>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPeditorialDeclaration)"/>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPcharacterDeclaration)"/>
+      <!-- ************************************************************ -->
+      <!-- If and when you want to create some default values for rend= -->
+      <!-- this is where the <tagsDecl> goes. Delete this comment and   -->
+      <!-- insert the template file 'tagsDecl.xml' here, then make the  -->
+      <!-- changes you need.                                            -->
+      <!-- ************************************************************ -->
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPclassificationDeclaration)"/>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPlistPrefixDefinitions)"/>
+    </encodingDesc>
+    <profileDesc>
+      <textClass>
+        <catRef type="main" target="#G.Prose"/>
+        <catRef type="main" target="#G.non-fiction"/>
+      </textClass>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPcalendarDescription)"/>
+      <include xmlns="http://www.w3.org/2001/XInclude"
+               href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml"
+               xpointer="element(WWPlangUsage)"/>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2020-10-01" who="p:sbauman.emt">
+        This file was created with generate_tadpole.xslt revision 41831,
+        using FMPXMLRESULT data exported from the 'WWP_Transcription' database
+        in FileMaker Pro.
+      </change>
+    </revisionDesc>
+  </teiHeader>
+  
+  
+  <!-- Main text goes in the <front>, <body>, and <back> elements below. If you are working with the Askew text, you will only need to use the 
+  -->
+  <text xml:id="TR00010">
+    
+    <front><!--$$$$$ front matter, if any $$$$$--></front>
+    <body>
+      <p>$$$$$ This paragraph element is here just so this skeleton
+       file is  valid. Delete it. $$$$$</p>
+    </body>
+    <back><!--$$$$$ back matter, if any $$$$$--></back>
+  </text>
+</TEI>

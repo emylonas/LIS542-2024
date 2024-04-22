@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/schema/wwp-store.rnc"    type="application/relax-ng-compact-syntax"?>
+
+<!-- $Id: love.name1663.xml 43779 2021-07-01 23:09:19Z syd $ -->
+<TEI xmlns="http://www.wwp.northeastern.edu/ns/textbase" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+  <teiHeader xml:id="TR00482.hdr">
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Love's Name Lives, 1663</title>
+        <author>
+          <persName ref="p:mlove.uko" type="person-female">Love, Mary (Stone)</persName>
+        </author>
+        <sponsor>Brown University</sponsor>
+        <sponsor>Northeastern University</sponsor>
+        <funder>U.S. National Endowment for the Humanities</funder>
+        <funder>The Andrew W. Mellon Foundation</funder>
+      </titleStmt>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPedition)"/>
+      <publicationStmt>
+        <publisher>Northeastern University Women Writers Project</publisher>
+        <address>
+          <addrLine>SL 213</addrLine>
+          <addrLine>Northeastern University</addrLine>
+          <addrLine>360 Huntington Avenue</addrLine>
+          <addrLine>Boston, MA  02115-5005</addrLine>
+          <addrLine>USA</addrLine>
+          <addrLine>url:mailto:wwp@neu.edu</addrLine>
+          <addrLine>url:http://www.wwp.northeastern.edu/</addrLine>
+        </address>
+        <idno type="WWP">TR00482</idno>
+        <idno type="URL">https://www.wwp.northeastern.edu/texts/love.name1663.html</idno>
+        <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPavailability)"/>
+        <date when="2001-10-11"/>
+      </publicationStmt>
+      <sourceDesc n="OT00482">
+        <biblStruct>
+          <monogr>
+            <author>
+              <persName ref="p:mlove.uko" type="titlePage">Mistris Love</persName>
+              <persName ref="p:mlove.uko" type="regularized">Love, Mary (Stone)</persName>
+            </author>
+            <title>Love's name lives, or, a publication of divers petitions presented by Mistris Love to the Parliament,
+	      in behalf of her husband</title>
+            <edition>Second edition</edition>
+            <idno type="csmh">236961</idno>
+            <idno type="Wing">L3142</idno>
+            <imprint>
+              <pubPlace>London</pubPlace>
+              <publisher>
+                <persName ref="p:unknown.zzx" type="regularized">[s.n.]</persName>
+              </publisher>
+              <date when="1663">1663</date>
+            </imprint>
+            <extent>
+              <measure unit="page" quantity="16"/>
+            </extent>
+            <extent>
+              <dimensions>
+                <format>quarto</format>
+              </dimensions>
+            </extent>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPprojectDescription)"/>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPsamplingDeclaration)"/>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPeditorialDeclaration)"/>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPcharacterDeclaration)"/>
+      <tagsDecl>
+        <rendition xml:id="TR00482_r.it" selector="persName, salute, title">slant(italic)</rendition>
+        <rendition xml:id="TR00482_r.center" selector="head">align(center)</rendition>
+        <rendition xml:id="TR00482_r.rule" selector="div">pre(#rule)</rendition>
+        <rendition xml:id="TR00482_r.mw" selector="mw">break(yes)align(center)</rendition>
+        <rendition xml:id="TR00482_r.para" selector="p">first-indent(1)</rendition>
+      </tagsDecl>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPclassificationDeclaration)"/>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPlistPrefixDefinitions)"/>
+    </encodingDesc>
+    <profileDesc>
+      <handNotes>
+        <handNote xml:id="TR00482_unknown.zzx" scribe="unknown.zzx"/>
+      </handNotes>
+      <textClass>
+        <catRef type="main" target="#G.non-fiction"/>
+        <catRef type="other" target="#G.non-fiction.letter"/>
+      </textClass>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPcalendarDescription)"/>
+      <xi:include href="https://raw.githubusercontent.com/emylonas/LIS542-2022/main/W5-Sources/wwp/common-boilerplate.xml" xpointer="element(WWPlangUsage)"/>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2020-02-14T12:06:30.935-05:00" who="p:aclark.ash">Programmatically added identifiers for 
+        <gi>quote</gi>s, <gi>bibl</gi>s, <gi>title</gi>s; and <code>//rs[@type="title"]</code>s. Existing IDs 
+        and their references were updated.
+        MFR: <ptr target="../stylesheets/enhancement/id-gestures.xq"/>.</change>
+      <change n="RCS:1.49" when="2009-11-17" who="p:jmelson.nep">added name keys</change>
+      <change n="RCS:1.48" when="2009-11-17" who="p:jmelson.nep">added name keys</change>
+      <change n="RCS:1.47" when="2009-11-17" who="p:jmelson.nep">added name keys</change>
+      <change n="RCS:1.46" when="2009-01-26" who="p:mrymszapa.mvu">looked for persname placename nesteds</change>
+      <change n="RCS:1.40" when="2004-01-20" who="p:jflanders.lfw">fixed validation error: moved trailer into body.</change>
+      <change n="RCS:1.31" when="2000-08-21" who="p:pcaton.xzc">Numerous changes to the renditional encoding of CLOSER, SALUTE, and SIGNED. Removed an unnecessary TITLE tag from inside a REGME. Had to change the TRAILER on p5 to a DIV to allow for the LG. Validated against DTD 1.2.6.</change>
+      <change n="RCS:1.30" when="2000-08-21" who="p:pcaton.xzc">Added availability date; moved a comma to inside PUBPLACE; altered the renditional tagging of the final SALUTE. Validated against DTD 1.2.6, and supravalidated.</change>
+      <change n="RCS:1.29" when="2000-08-16" who="p:jflanders.lfw">Corrections entry and checking round; fixed incorrect I/J transcription.</change>
+      <change n="RCS:1.27" when="2000-06-26" who="p:sclark.uvo">entered corrections from checking round</change>
+      <change n="RCS:1.26" when="2000-06-19" who="p:sclark.uvo">entered corrections</change>
+      <change n="RCS:1.25" when="2000-06-01" who="p:jflanders.lfw">finished fixing the Greek on pages 4-5</change>
+      <change n="RCS:1.23" when="2000-05-31" who="p:sclark.uvo">supravalidated file and corrected errors</change>
+      <change n="RCS:1.22" when="2000-05-31" who="p:jflanders.lfw">added Greek</change>
+      <change n="RCS:1.21" when="2000-05-30" who="p:sclark.uvo">fixed persNames</change>
+      <change n="RCS:1.20" when="2000-05-30" who="p:sclark.uvo">finished entering form work and corrected errors</change>
+      <change n="RCS:1.19" when="2000-05-26" who="p:sclark.uvo">finished transcription, began entering forme work</change>
+      <change n="RCS:1.18" when="2000-05-25" who="p:sclark.uvo">continued capture, fixed list errors</change>
+      <change n="RCS:1.17" when="2000-05-24" who="p:sclark.uvo">continued capture and entered marginal notes</change>
+      <change n="RCS:1.16" when="2000-05-22" who="p:sclark.uvo">continued capture</change>
+      <change n="RCS:1.15" when="2000-05-05" who="p:sclark.uvo">continued capture, corrected previous errors</change>
+      <change n="RCS:1.14" when="2000-05-03" who="p:sclark.uvo">corrected previous error, continued capture</change>
+      <change n="RCS:1.13" when="2000-05-02" who="p:sclark.uvo">encoded pages 3 to 5, errors left uncorrected</change>
+      <change n="RCS:1.12" when="2000-04-28" who="p:sclark.uvo">encoded page 2 and half of page 3</change>
+      <change n="RCS:1.11" when="2000-04-26" who="p:sclark.uvo">encoded first page</change>
+      <change n="RCS:1.10" when="2000-04-25" who="p:sclark.uvo">encoded preface</change>
+      <change n="RCS:1.9" when="2000-04-24" who="p:sclark.uvo">entered major divisions of work</change>
+      <change n="RCS:1.8" when="2000-04-21" who="p:sclark.uvo">validated file, corrected errors</change>
+      <change when="1999-05-24" who="p:etawil.rru">Began capture using emacs with psgml on Unix with
+	  version 1.1.29a of wwp-store DTD.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:id="TR00482">
+    <hyperDiv>
+      <notes>
+        <note xml:id="TR00482_n001" rend="place(inset-right)" anchored="false" target="#a001">
+          <bibl source="b:IT50001" xml:id="TR00482_b001">
+            <regMe>1 Cor. 15.18,20.</regMe>
+          </bibl>
+          <bibl source="b:IT50028" xml:id="TR00482_b002">
+            <regMe><lb/>Coloss.1.18.</regMe>
+          </bibl>
+        </note>
+        <note xml:id="TR00482_n002" rend="place(inset-right)" anchored="false" target="#a002">
+          <bibl source="b:IT50032" xml:id="TR00482_b003">
+            <regMe><title xml:id="TR00482_t001">Epheſ.</title> 5.27.</regMe>
+          </bibl>
+          <bibl source="b:IT50051" xml:id="TR00482_b004">
+            <regMe><lb/>Jude 24. <foreign xml:lang="la">vid.</foreign></regMe>
+          </bibl>
+        </note>
+      </notes>
+    </hyperDiv>
+    <front>
+      <pb n="i"/>
+      <milestone unit="sig" n="A1r"/>
+      <titleBlock rend="align(center)">
+        <titlePart rend="case(allcaps)" type="main"><persName ref="p:clove.efe">Love's</persName> Name
+	  <lb/>Lives:</titlePart>
+        <titlePart type="alt"><hi rend="case(allcaps)">or</hi>,
+	      <lb/>A Publication of divers <hi rend="case(smallcaps)">Petitions</hi> preſented by
+	      <lb/>Miſtris <persName rend="case(allcaps)" ref="p:mlove.uko">Love</persName> to the <orgName>Parliament</orgName>, in 
+	      <lb/>behalf of her <hi rend="case(smallcaps)">Husband</hi>.</titlePart>
+        <titlePart type="second"><hi rend="slant(italic)case(allcaps)">With</hi><lb/>Severall <hi rend="case(smallcaps)">Letters</hi> that interchangeably paſs'd
+	      <lb/>between them a little before his Death.</titlePart>
+        <titlePart type="second"><hi rend="slant(italic)case(allcaps)">As Also</hi><lb/>One <hi rend="case(smallcaps)">Letter</hi> written to Maſter 
+<persName ref="p:clove.efe" rend="case(allcaps)">Love</persName> by
+	      <lb/>Mr. <persName ref="p:jaquel.olf">Jaquel</persName>, one of the Witneſſes againſt him.</titlePart>
+        <titlePart type="second"><hi rend="slant(italic)">Together with</hi><lb/>Seven ſeverall <hi rend="case(smallcaps)">Letters</hi> and Notes ſent to him,
+	    <lb/>from <persName ref="p:rdrake.zly"><hi rend="slant(upright)">Dr.</hi> Drake</persName>, <persName ref="p:wjenkyn.zva"><hi rend="slant(upright)">Mr.</hi> Jenkyn</persName>, <persName ref="p:tcase.wpa"><hi rend="slant(upright)">Mr.</hi> Caſe</persName>, and 
+	    <lb/><persName ref="p:rrobinson.esr"><hi rend="slant(upright)">Mr.</hi> Robinſon</persName>, his then fellow-Sufferers.</titlePart>
+        <titlePart type="reason" rend="pre(#rule)">All publiſhed for Publick Good.</titlePart>
+        <epigraph rend="pre(#rule)align(center)">
+          <bibl source="b:IT50072" xml:id="TR00482_b005">
+            <regMe>Psal. 112.6.</regMe>
+          </bibl>
+          <lb/>
+          <quote rend="slant(italic)" source="b:IT50072" xml:id="TR00482_q001">The Righteous ſhall be had in everlasting remembrance.</quote>
+        </epigraph>
+        <docImprint rend="pre(#rule)"><pubPlace rend="slant(italic)">London,</pubPlace> Printed in the Year <docDate>1663</docDate>  
+	  </docImprint>
+      </titleBlock>
+      <pb n="ii"/>
+      <milestone unit="sig" n="A1v"/>
+      <pb n="iii"/>
+      <milestone unit="sig" n="A2r"/>
+      <div type="prefatory" rend="pre(#ornament)slant(italic)" author="p:unknown-male">
+        <head rend="slant(upright)">To the <hi rend="case(allcaps)">Reader</hi>.</head>
+        <opener>
+          <salute rend="slant(upright)indent(1)">Reader, take notice,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>ere are ſeverall Letters publiſhed, entituled 
+          <title rend="slant(upright)" ref="b:IT01365" xml:id="TR00482_t002">Love's Letters</title>, pretended to have paſt be­
+<lb/>tween <persName ref="p:clove.efe"><choice><abbr>M.</abbr><expan>Master</expan></choice><hi rend="slant(upright)">Love</hi></persName> and his Wife: 
+Which Letters are not Printed by true and exact Copies,
+<lb/>having in them both more and leſs than they ſhould have. Now to prevent the like incon­
+<lb/>venience for the future, theſe Letters and Petitions are here publiſhed. The publiſhing of
+<lb/>which, will (I hope) give no offence; I am ſure can, give no juſt offence to any: and if
+<lb/>any ſhall take offence thereat, certain I am, they'll take that which is not given them;
+<lb/>and that they cannot do, unleſs they will be injurious both to themſelves and others. But whether offended,
+<lb/>or not offended, I am not, need not be ſollicitous; the rather, for that I can truly ſay, it is at as great a distance
+<lb/>from any intention in the leaſt to give offence, as 'tis from my apprehenſion to imagine that the publiſhing of theſe
+<lb/>ſhould give juſt offence to any.</p>
+        <p>The Petitions are ſome of thoſe (and thoſe very affectionate ones) which <persName ref="p:mlove.uko">Miſtris 
+<hi rend="slant(upright)">Love</hi></persName> preſented to the 
+<lb/><orgName>Parliament</orgName>, in the behalf of that bleſſed Saint and Miniſter of Chriſt, 
+her dear Husband <persName ref="p:clove.efe">Maſter <hi rend="slant(upright)">Love</hi></persName>; and
+<lb/>that either for the taking off the ſentence of death, which he then lay under, and ſo wholly to remit it; or if not
+<lb/>that, for his baniſhment; and if neither of them, for his reprieve till her delivery (ſhe being then big with
+<lb/>child) that ſo ſhe might with greater hope and probability of ſafety, both to her ſelf and unborn babe, under­
+<lb/>go ſo ſad and ſore an affliction.</p>
+        <p>The Letters are, ſome from <persName ref="p:mlove.uko">Miſtris <hi rend="slant(upright)">Love</hi></persName> to her husband, 
+which again occaſioned others from him to her.
+<lb/>Now <persName ref="p:clove.efe">Maſter <hi rend="slant(upright)">Love</hi></persName> having his wife frequently with him in priſon, 
+after his tryall was ordered, had thereby
+<lb/>opportunity, as to open his very heart unto her, in reference to his own eſtate and condition, and the apprehen­
+<lb/>ſions which he had, both of it, and of his ſufferings, (which accordingly he did, to her exceeding great ſatiſ­
+<lb/>faction and comfort) ſo alſo to speak that to her, that might be, and that afterwards did prove to be, a great
+<lb/>means of her ſupport, under thoſe trying and preſſing afflictions with which ſhe did encounter: and upon that
+<lb/>account, did not, and indeed did not need to write unto her ſo fully and largly, as otherwiſe he would have
+<lb/>done: And yet theſe brief Notes of his (for ſo they would rather be called than Letters) which were not by
+<lb/>him intended to be publiſhed, do clearly and abundantly evidence, what, and how indeared his affections
+<lb/>were both to his wife and children: and will (I doubt not) be an anſwer ſufficient to that charge of 
+unna<unclear reason="obscured">t</unclear>u­
+<lb/>ralneſs that is in print againſt him: Though I may ſay, as to thoſe that knew him, or have but the leaſt de­
+<lb/>gree of that charity that is called common, remaining in them; that unchriſtian charge, and moſt malicious
+<lb/>ſlander (invented by the father of lyes himſelf, with many more of the ſame Satanical production) of that
+<lb/>foul-mouth'd, falſe-mouth'd Animadverter and impudent Detractour, needs no anſwer. And notwithſtand­
+<lb/>ing all that hath been ſaid by that <mcr rend="slant(upright)">Doctor of the Chair of Scorners</mcr>, 
+(whoſe deſign ſeems to be to fright
+<lb/>men more with the rabble of his words, than with the reaſon of them; the former being not more formidable,
+<lb/>than the latter feeble,) <persName ref="p:clove.efe">Maſter <hi rend="slant(upright)">Love</hi></persName>, though dead, yet is not dead; for 
+<emph rend="case(smallcaps)slant(upright)">His Good Name Lives</emph>,
+<lb/>and the remembrance of it to the godly, is, and will never ceaſe to be, even to perpetual generations, as a box
+<lb/>of moſt precious and costly syntment, broken or poured forth, the pleaſant ſavour and ſweet perfume wherof,
+<lb/>spreads it ſelf every way, even to the ſcattering and overcoming of all that noiſome and unſavoury breath of
+<lb/>reproach and calumny, that by the ſons, yea, and daughters too, of ſlander, with great indeavour would be, but
+<lb/>by no means whatſoever can be cast upon it, and to the refreſh<choice><sic>␣</sic><corr>i</corr></choice>ng and reviving of every one 
+who is within the
+<lb/>reach of its fragrant and perfuming odour.</p>
+        <p>The other Letters, are, one from <persName ref="p:jaquel.olf"><choice><abbr>M.</abbr><expan>Master</expan></choice><hi rend="slant(upright)">Jaquel</hi></persName> to 
+<persName ref="p:clove.efe"><choice><abbr>M.</abbr><expan>Master</expan></choice><hi rend="slant(upright)">Love</hi></persName>, which <persName rend="slant(upright)" ref="p:jaquel.olf">Jaquel</persName> 
+was one of the witneſſes againſt him.
+<lb/>The reſt, from ſeveral of thoſe Miniſters, who (as to impriſonment) were his fellow-ſufferers; which Letters
+<lb/>do ſufficiently demonſtrate, what their thoughts and apprehenſions were of <persName ref="p:clove.efe"><choice><abbr>M.</abbr><expan>Master</expan></choice><hi rend="slant(upright)">Loves</hi></persName> ſufferings, and do all con­
+          <lb/>tain in them very precious and spirituall matter, that may be of conſiderable <vuji>v</vuji>ſe, as in general to any that ſhall
+<lb/>peruſe them, ſo especially to thoſe who are, or hereafter may be in a ſuffering condition.</p>
+        <p>Reader, They are intended for thy benefit, which that thou maiſt reap by them, is the deſire of</p>
+        <mw type="sig"><hi rend="slant(italic)">A</hi>2</mw>
+        <closer>
+          <signed rend="align(right)slant(upright)post(#ornament)break(no)">The Publiſher</signed>
+        </closer>
+      </div>
+    </front>
+    <body>
+      <pb n="01"/>
+      <milestone unit="sig" n="A2v"/>
+      <mw type="pageNum">1</mw>
+      <div type="petition" rend="pre(#ornament)">
+        <head>To the Supreme Authority, the <orgName rend="case(smallcaps)">Parliament</orgName>
+<lb/>of the Common-Wealth of <placeName rend="case(allcaps)">England</placeName>.</head>
+        <lb/>
+        <head type="sub" rend="slant(italic)">The humble Petition of <persName rend="case(smallcaps)slant(upright)" ref="p:mlove.uko">Mary</persName>, 
+the diſtreſſed Wife of
+<lb/><persName rend="case(smallcaps)slant(upright)" ref="p:clove.efe">Christopher Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Sheweth,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>at whereas, the <orgName>High Court of Juſtice</orgName> 
+hath lately ſentenced to death her dear and 
+<lb/>tender Husband, in whoſe life, the life of your Petitioner is bound up; in the exe­
+<lb/>cution of which ſentence, your poor hand-maid ſhould become an unhappy wi­
+<lb/>dow, and the miſerable mother of two young fatherleſs children: And ſhe being ſo
+<lb/>near to her appointed hour, having ſorrow upon ſorrow, be forced, through unex­
+<lb/>preſſable grief, to bow down in travell, and give up the ghoſt; and ſo with one
+<lb/>blow, there be deſtroyed, both Father, and Mother, and Babe in one day.</p>
+        <p>Yet her ſpirit is ſomewhat revived with the thought that there is hope in <placeName rend="slant(italic)">Iſrael</placeName> 
+concerning this
+<lb/>thing, when ſhe conſiders, that her humble Petition is this day preſented before ſo many profeſſing
+<lb/>godlineſs, who have taſted abundantly how gracious the Lord is, and who through mercy are called
+<lb/>of God to inherit a bleſſing, and to be a bleſſing to the afflicted in the midſt of the Land.</p>
+        <p rend="indent(2)first-indent(-1)">Therefore your diſtreſſed hand-maid, throwing her ſelf in all humility at your feet, 
+beſeecheth you
+<lb/>by the womb that bare you, and breſts that gave you ſuck, in the bowels of the Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus 
+<lb/>Chriſt</persName>, mercifully to interpoſe, that this fatall blow may be prevented: which act of compaſſion
+<lb/>in you, will be to your poor hand-maid as reſurrection from the dead; and not only all the ten­
+<lb/>der-hearted Mothers in <placeName rend="slant(italic)">England</placeName>, but even the Babe yet unborn ſhall riſe up 
+and call you bleſſed;
+<lb/>and this will be to you a glory, and crown of rejoycing in the ſight of the Nation, when the
+<lb/>bleſſing of them that are ready to periſh ſhall come upon yo<choice><sic>n</sic><corr>u</corr></choice>. And your poor hand-maid hum­
+<lb/>bly conceives, That your mercy herein will be no danger to the State, for that your poor Petiti­
+<lb/>oners Friends are willing to give all ſufficient ſecurity, that her Husband ſhall live peaceably and
+<lb/>quietly for the time to come, and never act any thing to the prejudice of this Common-wealth,
+<lb/>and preſent Government.</p>
+        <closer rend="align(right)">
+          <salute>Now the God of heaven 
+bow your hearts to ſhew mercy:
+<lb rend="indent(1)"/>And your Petitioner ſhall pray, &amp;c.</salute>
+          <signed><persName rend="slant(upright)case(allcaps)" ref="p:mlove.uko">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="petition">
+        <head>To the Supreme Authority, the <orgName rend="case(allcaps)">Parliament</orgName> of the Common-
+<lb/>wealth of <placeName rend="slant(italic)case(allcaps)">England</placeName>.</head>
+        <head type="sub" rend="slant(italic)">The humble Petition of <persName rend="slant(upright)" ref="p:mlove.uko">Mary</persName>, the Wife of 
+<persName rend="slant(upright)" ref="p:clove.efe">Chriſtopher Love</persName>,
+<lb/>Condemned to dye.</head>
+        <opener rend="indent(1)">
+          <salute>Sheweth<choice><sic>.</sic><corr>,</corr></choice></salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>at whereas your diſtreſſed hand-maid hath in all humility, 
+in the exceeding great bitterneſs of
+<lb/>her ſpirit, poured out her very ſoul to this Honourable Houſe, for the life of her condemned Huſ­
+<lb/>band: which Petition was mercifully received and read in <orgName>Parliament</orgName> (as your Petitioner is informed.)
+<lb/>For which high favour ſhe deſireth to bleſs God, and be thankfull to your Honours. And although
+<lb/>ſhe hath great cauſe to be very ſensible of your High diſpleaſure againſt her Husband, for which ſhe
+<lb/>is heartily ſorry; Nevertheleſs ſhe hoping that your bowels yearn towards her in this her ſad condi­
+<lb/>tion, adventures once more to make her humble ſupplication, and doth pray,</p>
+        <p rend="indent(1)">That if your poor Petitioners Husband hath provoked you ſo far, 
+as to render him utterly unca­
+<lb/>pable of your full pardon; yet you would graciouſly be pleaſed to let your hand-maid find ſo
+<lb/><mw type="catch" rend="align(right)">much</mw>
+
+<pb n="02"/>
+<milestone unit="sig" n="A3r"/>
+<mw type="pageNum">2</mw>
+<lb/>much favour in your eyes, as that you will ſay of your Petitioners dear Husband as <persName ref="p:solomon.yer">Solomon</persName> ſaid 
+<lb/>of <persName ref="p:abiathar.hel">Abiathar</persName>, though thou art worthy of death, we will not <emph rend="slant(italic)">at this Time</emph> 
+put thee to death. Oh par­
+<lb/>don your perplexed hand-maid, if ſhe again beſeech you by the wombs that bare you, and the 
+<lb/>breſts that gave you ſuck, in the bowels of the Lord <persName ref="p:jchrist.hjn">Jeſus Chriſt</persName>, reprieve him for a time, till ſhe
+<lb/>may recover her ſtrength, before he depart hence and be ſeen no more; leſt at one terrible ſtroke
+<lb/>in his execution, the lives of him, her and the tender babe in her womb be cut off, and two poor
+<lb/>innocent Orphans be left behind to begin and end their dayes in miſery. And though he may not
+<lb/>be thought worthy to breath in Engliſh aire (which God forbid) yet give him, Oh give him leave
+<lb/>to ſigh out his ſorrows under your diſpleasure in the utmoſt parts of the Earth, whereſoever 
+<lb/>you ſhall think fit to baniſh him: Which although it be a very great puniſhment in it ſelf; yet
+<lb/>your hand-maid and her dying Husband ſhall acknowledg even this to be a great mercy, and
+<lb/>ſhall thankfully receive it at your hands.</p>
+        <closer rend="align(right)">
+          <salute rend="right-indent(1)">And ſhall pray, <hi rend="slant(upright)">&amp;c.</hi></salute>
+          <signed><persName rend="slant(upright)case(allcaps)" ref="p:mlove.uko">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="petition">
+        <head>To the Supreme Authority, the <orgName rend="case(allcaps)">Parliament</orgName> of the
+<lb/>Common-Wealth of <placeName rend="slant(italic)case(allcaps)">England</placeName>.</head>
+        <lb/>
+        <head type="sub" rend="slant(italic)">The humble Petition of <persName rend="slant(upright)" ref="p:mlove.uko">Mary</persName>, the Wife of 
+<persName rend="slant(upright)" ref="p:clove.efe">Chriſtopher Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Sheweth,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>at your poor Petitioner hath great cauſe to ſay, bleſſed be God, 
+and bleſſed be you, for your mer­
+<lb/>cifull Vote the <date when="1651-07-15">15<hi rend="sup()">th</hi> of <name rend="slant(italic)">July</name></date>, 
+(a day never to be forgotten) 
+in adding a moneth to the life of her
+<lb/>dear Husband, which hath opened a door of hope to her in the midſt of the valley of 
+<name rend="slant(italic)">Achor</name>, and made 
+<lb/>her glad, though ſhe be a woman of a ſorrowfull ſpirit; yet your diſtreſſed hand-maid is overwhel­
+<lb/>med with grief and anguiſh of ſoul, and cannot be comforted, when ſhe remembers the dolefull day,
+<lb/>the <date when="1651-08-15">15<hi rend="sup()">th</hi> of <name rend="slant(italic)">August</name></date> ſo near approaching, 
+her heart doth almoſt dye within her, and ſhe is as one giving
+<lb/>up the ghoſt before ſhe is delivered of the fruit of her womb.</p>
+        <p rend="indent(1)">Wherefore your greatly diſtreſſed hand-maid doth again pour out her ſoul with renewed and
+<lb/>importunate requeſts, beſeeching your Honours to commiſerate her deplorable condition, by
+<lb/>putting on bowels of pity and compaſſion towards her dear and condemned Husband, that ſhe
+<lb/>may not grapple with the intollerable pains of Travell, and the unſupportable thoughts of her
+<lb/>Husbands death in one day. Oh that the life of your hand-maid and her babe might be a ran­
+          <lb/>ſome for the life of her condemned H<choice><sic><g ref="#invertedu"/></sic><corr>u</corr></choice>sband; ſhe had rather chuſe out of love to dye for him,
+<lb/>than for ſorrow of heart to dye with him. Now the good Lord incline your hearts to give him
+<lb/>his life for a prey, whereſoever it ſhall pleaſe your Honours to caſt him,</p>
+        <closer rend="align(right)">
+          <salute rend="right-indent(1)">And your Petitioner ſhall ever pray, <hi rend="slant(upright)">&amp;c.</hi></salute>
+          <signed><persName rend="slant(upright)case(allcaps)" ref="p:mlove.uko">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="petition">
+        <head>To the Supreme Authority, the <orgName rend="case(allcaps)">Parliament</orgName> of the 
+<lb/>Common-Wealth of <placeName rend="slant(italic)case(allcaps)">England</placeName>.</head>
+        <head type="sub" rend="slant(italic)">The humble Petition of <persName rend="slant(upright)" ref="p:mlove.uko">Mary</persName>, 
+the diſtreſſed Wife of <persName rend="slant(upright)" ref="p:clove.efe">Chriſtopher Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Humbly ſheweth,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>at your ſad and ſorrowfull Petitioner, in the multitude of her fears 
+wherewith her ſpirit is o­
+<lb/>verwhelmed within her; After ſundry applications and grievous diſappointments, more bit­
+<lb/>ter than death, cannot ceaſe to follow your Honours with ſtrong cries and ſupplications, as the im­
+<lb/>portunate <mcr rend="slant(italic)">Cannanitiſh</mcr> woman did the Lord Chriſt. 
+And O that now at laſt, you would ſuffer your
+<lb/>ſelves to be intreated, and let your bowels yearn within you, that ſo root and branch may not be cut off
+<mw type="sig">A3</mw> <mw type="catch" rend="break(no)align(right)">in</mw>
+
+<pb n="03"/>
+<milestone unit="sig" n="A3v"/>
+<mw type="pageNum">3</mw>
+<lb/>in one day. The great God hear the cries of Ravens! O that that God would open your hearts to
+<lb/>hear the cries and heart-breaking grones of the Mother with the tender Babes, that cannot keep ſi­
+<lb/>lence whileſt there is any hope.</p>
+        <p rend="indent(1)">Your deſolate Hand-maid waiteth with all humility and earneſt expectation (at your doors) be­
+<lb/>ſeeching you not to forget to ſhew mercy to your poor Petitioner and her tender Babes; Oh
+<lb/>make not your Hand-maid a widow, and her children fatherleſs; but be graciouſly pleaſed to
+<lb/>prevent this dreadfull blow, which your Petitioner trembleth to think upon, and earneſtly be­
+<lb/>ſeeches you, to change the ſentence of death into a ſentence of baniſhment; and whileſt you
+<lb/>are propagating the Goſpel in <placeName>New-<hi rend="slant(italic)">England</hi></placeName>, 
+let her dying husband (as a Prophet from the
+<lb/>dead) be ſent to endeavor the converſion of the poor <name rend="slant(italic)">Indians</name>, that ſo many ſouls may bleſs
+<lb/>God in your behalf; and ſhe ſhall receive it from your hands as a ſignall favour.</p>
+        <lb/>
+        <closer rend="align(right)">
+          <salute rend="right-indent(1)">And your Petitioner ſhall pray, <hi rend="slant(upright)">&amp;c.</hi></salute>
+          <lb/>
+          <signed><persName rend="slant(upright)case(allcaps)" ref="p:mlove.uko">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="letter" rend="pre(#ornament)">
+        <head><persName ref="p:jaquel.olf"><hi rend="slant(upright)">Mr.</hi> Jaquel</persName> his Letter to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>My dear friend, and beloved in the Lord,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">M</hi><hi rend="case(allcaps)">y</hi> bowels are troubled within me, I am pained, I am pained, even at the very heart, 
+The Lord
+<lb/>knows I want words to expreſs the thoughts of my heart to you, to you, I ſay, right Chriſti­
+<lb/>an Friend, and true Souldier of <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>. I was thinking to have been ſilent, 
+being even aſhamed 
+<lb/>to ſend you a line written by that hand, which is very much ſlackened and taken off from the 
+<lb/>plough; which I thought, not many weeks agoe, had been very faſt ſetled. Give me leave to breath
+<lb/>forth my heart to you in ſuch rude words and language as I can utter; and I pray you receive them,
+<lb/>and ſpell out my heart towards you, which at this time is ſo full, that I know not how to empty it,
+<lb/>but in tears before the Lord for you night and day. And oh, that the remembrance of the ſeventh and
+<lb/>one and twentieth of <name rend="slant(italic)">June</name> might often come into my thoughts, to keep my heart humble for my fol­
+<lb/>ly, in taking my own, and carnall friends counſell, and not the counſell of thoſe that are right godly;
+<lb/>which (as I now perceive) did help to bring forth that ſad, and never to be forgotten day, and Sen­
+<lb/>tence on the fifth of <name rend="slant(italic)">July</name>, againſt my dear friend. Truly, could I not appeal to God, 
+who knoweth all
+<lb/>things, what the intention of my heart was, thinking I might rather do you good than hurt, knowing
+<lb/>one had gone before me, and fearing he had much wronged you, made me willing to teſtifie what I 
+<lb/>did, being told and informed, it would do you good and not hurt, being but Miſpriſion at the moſt. I
+<lb/>ſay, were it not for the teſtification in mine own conſcience, I were not able to bear up my ſpirit,
+<lb/>but ſhould (I fear) even ſink under the burden. But when I conſider to whom I now write, who,
+<lb/>I know is full of charity, and doth believe what I ſay, and will forgive what wrong I have done him,
+<lb/>and I hope, will pray for me to your God and my God, to your Father and my Father, that he will
+<lb/>not lay this to my charge: for you may charge me to be as one of thoſe <persName ref="p:paul.pbe">Paul</persName> chargeth in 
+<bibl source="b:IT50019" xml:id="TR00482_b006"><regMe>2 <title xml:id="TR00482_t003">Tim.</title> 4.15</regMe></bibl>.
+<lb/>And deer Sir, If the Lord will be pleaſed to let me ſee your face once more, that I may open my ſelf
+<lb/>to you, I hope I ſhall ſtand right in your affections. Some promiſes I have met withall in the word,
+<lb/>that do (methinks) add wings to my faith, that God will not ſuffer you to fall by the hands of vio­
+<lb/>lence; as in <bibl source="b:IT50072" xml:id="TR00482_b007"><regMe><title xml:id="TR00482_t004">Pſal.</title> 79. <title xml:id="TR00482_t005">Pſal.</title> 91. <title xml:id="TR00482_t006">Pſal.</title> 94. 
+<title xml:id="TR00482_t007">Psal.</title> 3.</regMe></bibl> 
+<bibl source="b:IT50043" xml:id="TR00482_b008"><regMe><title xml:id="TR00482_t008">Iſa.</title> 41.10. <title xml:id="TR00482_t009">Iſa.</title> 66.5.</regMe></bibl> 
+and many others, that I know you
+<lb/>are better acquainted with than I am, and can beat them out, and lay them by you, as a glaſs of cor­
+<lb/>diall water for fainting times. But dear Sir, let me earneſtly beg of you, that you will uſe what means
+<lb/>you can for your own preſervation, and go as far as you can in your Petition to them, in whoſe pow­
+<lb/>er your life is, for many reaſons: As firſt, Becauſe if you ſhall fall, O! how would the enemies re­
+<lb/>joyce? Malignants and others would make ſongs at your death, and ſay, Where is all his Faſtings
+<lb/>and Prayers? His God will not help him: Oh Sir, it would be a day of reproach and blaſphemy.
+<lb/>And ſecondly, Conſider how would it ſadden the hearts of Gods people, and make them wring their
+<lb/>hands, if they ſhould miſs the fruit of their prayers in your deliverance; which (I am confident)
+<lb/>have been poured out in an extraordinary way for you? And thirdly, Conſider the ſervice you may
+<lb/>yet do in the <name>Church of Chriſt</name>: How many ſouls may God make you inſtrumentall to bring home to
+<lb/>Chriſt? And what ſervice may yet this poor bleeding Nation have by your life? 
+And fourthly, I need
+<mw type="catch" rend="align(right)">not</mw>
+
+<pb n="04"/>
+<milestone unit="sig" n="A4r"/>
+<mw type="pageNum">4</mw>
+<lb/>not remember you of your dear and precious Conſort, who, I am confident, is dear in the heart of
+<lb/>God, and alſo to you; and her life even bound up in yours, and her condition being as it is. And then
+<lb/>I humbly beg, you will conſider my condition; for ſurely, in that day I ſhould hear of your life be­
+<lb/>ing violently taken away, mine would be but little comfort to me, being inſtrumentall in taking yours
+<lb/>away, although (the Lord<choice><sic>s</sic><corr/></choice> knows) not intentionally, but accidentally. Therefore for theſe reaſons, I
+<lb/>humbly beg of you again and again, that you will do what you dare, and go as far as you can for your
+<lb/>preſervation; and the Lord will make you inſtrumentall for his glory, if not here, yet in ſome other
+<lb/>place; and (methinks) where ever the Lord caſt you, I could willingly make that promiſe, and per­
+<lb/>form it, that <persName ref="p:ruth.qkj">Ruth</persName> made to <persName ref="p:naomi.usf">Naomi</persName>; and ſo I am confident, could my dear wife, 
+whoſe heart (I know)
+<lb/>bleeds for you, and her eyes run down with tears to God for you. Good Sir, in your addreſſes, re­
+<lb/>member me to God, that I may learn to lean upon him more firmly, and rely upon the <name>Rock of Ages</name>,
+<lb/>and not upon broken reeds: And (I hope) through the ſtrength of Chriſt, and the ſupply of your pray­
+<lb/>ers, I ſhall be better fortified for the time to come, as <persName ref="p:peter.nex">Peter</persName> was after his fall.
+</p>
+        <p>I would fain be remembred to my good friend D<hi rend="sup()">r</hi> <persName ref="p:rdrake.zly"><abbr>Dr.</abbr></persName> 
+I hope I have got better armour of proof
+<lb/>than I had before; but I hope there will be no need of ſhewing it about him. For poor 
+<persName>P<unclear reason="obscured">o</unclear>.</persName> he hath
+<lb/>wronged himſelf more than any man can, for I hear, he hath ſent more Papers of his confeſſion ſince
+<lb/>he was there.</p>
+        <p>Good Sir, I have many things more to ſay, but will not preſume to be more burdenſome to you at
+<lb/>this time. Will the Lord let me ſee your face once more here? I hope he will. However, it will not
+<lb/>be long before we ſhall enjoy one another in that place, where violent hands ſhall not touch us; and
+<lb/>then eternity ſhall be little enough to praiſe and magnifie the Lord for his riches of mercy he ſhews
+<lb/>to us.</p>
+        <p>The Lord ſtand by you, The Lord preſerve you, and put his everlaſting arms under you, and deli­
+<lb/>ver you: Which ſhall be the earneſt groans and ſighs of him, who is (he hopes) a dear, yet a moſt un­
+<lb/>worthy Friend, not worthy to be look'd upon by you.</p>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:rdrake.zly"><hi rend="slant(upright)">Dr.</hi> Drake's</persName> Letter to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Dear and precious friend,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">c</hi>annot but congratulate your liberty, 
+and the ſingular honour God hath laid upon you. The Cap­
+<lb/>tain of our ſalvation is wiſe, and knows whom to call out for his Champion. He hath pleaſed to call
+<lb/>you to the forelorn-hope, we are leading up the van; our brethren in the black bill, are like to bring up
+<lb/>the body; and for our rear (bleſſed be God) we have armies of prayers and tears; yea, through mer­
+          <lb/>cy, we may ſay, <quote rend="slant(italic)" source="b:IT50043" xml:id="TR00482_q002">Our righteouſneſs goes before us, 
+and the glory of the Lord ſhall be our reward</quote>, <bibl source="b:IT50043" xml:id="TR00482_b009"><regMe>Isa. 58.8</regMe></bibl>.
+<lb/>Well might we fear, had we not a good God, a good Cauſe, and a good Conſcience; but where God
+<lb/>juſtifies, who ſhall condemn? Certainly, that God who hath done us ſo much good by a priſon,
+<lb/>(bleſſed be his name) can do us much more good by our tryall. He bids us not fear them who at
+          <lb/>worſt can but kill the body: <quote rend="slant(italic)" source="b:IT50043" xml:id="TR00482_q003">and why ſhould we be afraid of man that ſhall dye, &amp;c. 
+and forget the Lord
+<lb/>our Maker, yea, our Redeemer?</quote>  Its too much honour God laies upon us, to ſuffer any thing for his
+<lb/>Name and Covenants ſake; that hereby we are ſo indeared in the hearts of his Faithfull people,
+<lb/>and have been occaſions to blow up the ſpirit of prayer, that was almoſt extinct. Will not God in­
+<lb/>cline his ear when he hath prepared the heart? Did he ever ſet his children a begging, but he had a
+<lb/>boon for them? I need not ſtir up your Chriſtian reſolution, but deſire rather to light my candle at
+<lb/>your Lamp. Yet, when lately I looked upon <bibl source="b:IT50073" xml:id="TR00482_b010"><regMe><title xml:id="TR00482_t010">Rev.</title> 2, &amp; 3.</regMe></bibl> 
+I eſpied no leſs than ſeven rare Cordials to
+          <lb/>perſons in our condition, <bibl source="b:IT50073" xml:id="TR00482_b011"><regMe><title xml:id="TR00482_t011">Rev.</title> 2. <hi rend="slant(italic)">v.</hi> 7, 10, 17, 27. &amp; <hi rend="slant(italic)">c.</hi> 3. v. 5, 12, 21.</regMe></bibl> 
+1. A tree of Life. 2. Freedome from
+<lb/>hurt by the ſecond death. 3. The hidden Manna and white ſtone. 4. The morning ſtar and weild­
+<lb/>ing the rod of iron. 5. The white garments the <name>Book of life</name>, and owning us before his Father.
+<lb/>6. That we ſhall be pillars in his houſe, having his new name graven upon us. 7. That we ſhall ſit in
+<lb/>his throne, <hi rend="slant(italic)">&amp;c.</hi> and all this made over, not 
+<mentioned xml:lang="x-grc">πδ νικήσκι<unclear>σ</unclear>ι</mentioned>, or 
+<mentioned xml:lang="x-grc">πδ νενικηκόπ</mentioned>, but 
+          <quote source="b:IT50073" xml:lang="x-grc" xml:id="TR00482_q004">πδ νικ<unclear>ω</unclear>ν<unclear>τ</unclear>ι</quote>, 
+          <quote rend="slant(italic)" source="b:IT50073" xml:id="TR00482_q005">to him that
+<lb/>is overcoming</quote>. A <name>Chriſtian</name> is ſure to conquer, if he dare but fight, and no ſouldier but he can glory
+<lb/>when he puts on his harneſs. The Lord arm you with ſuch courage and wiſdom, that you may avoid
+<lb/>the ſnares, and be above the fury of your Adverſaries. God, Angels, and Men look upon you;
+<lb/>and while you are a fighting, Chriſt is weaving your Crown: He by your example, ſo hearten his peo­
+<mw type="catch" rend="align(right)">ple,</mw>
+
+<pb n="5"/>
+<milestone unit="sig" n="A4v"/>
+<mw type="pageNum">5</mw>
+<lb/>ple, and damp the adverſary, as they may rejoyce (and bleſs God) who favour your righteous dealing,
+<lb/>and all iniquity may ſtop her mouth. So prays</p>
+        <closer>
+          <signed rend="align(right)right-indent(1)slant(italic)">Your unworthy Brother and Companion in Tribulation,
+<lb rend="indent(1)"/> and in the Kingdome and patience of <persName ref="p:jchrist.hjn">Jeſus Chriſt</persName>.</signed>
+          <date rend="break(yes)slant(upright)align(left)" when="1651-06-01">June 1.――51.</date>
+          <lb/>
+          <foreign xml:lang="la" rend="align(right)right-indent(2)slant(upright)">I præ. ſequar.</foreign>
+        </closer>
+      </div>
+      <div type="undetermined">
+        <p rend="indent(1)slant(italic)">I beg your prayers, and preſent my beſt affections to your ſelf and 
+<persName ref="p:mlove.uko">Miſtris <abbr rend="slant(upright)">L.</abbr></persName>.</p>
+        <lg type="poem" rend="slant(upright)align(center)" subtype="indeterminate">
+          <lg type="indeterminate">
+            <l>I'd rather dye with grace, than live with blame;</l>
+            <l>Far better dye with <persName ref="p:clove.efe">Love</persName>, than live with ſhame.</l>
+          </lg>
+        </lg>
+        <closer rend="indent(2)slant(italic)">For my moſt honoured friend <persName ref="p:clove.efe">Mr. L.</persName></closer>
+      </div>
+      <div type="letter">
+        <head>Another of <persName ref="p:rdrake.zly"><hi rend="slant(upright)">Dr.</hi> Drakes</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>. <date when="1651-06-17"><name rend="slant(italic)">June</name> 17. 1651.</date></head>
+        <opener rend="indent(1)">
+          <salute>Dear Friend,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">c</hi>annot be unmindfull of your perſon and condition, as being not only in the body, but alſo in an
+<lb/>eſpeciall manner bound with you, <bibl source="b:IT50041" xml:id="TR00482_b012"><regMe><title xml:id="TR00482_t012">Heb.</title> 13.3</regMe></bibl>. And certainly, 
+if habituall and active grace be ſuch
+<lb/>motives of Chriſtian love, is not paſſive grace much more? To ſuffer for Chriſt 
+is a grace, as well as
+<lb/>to believe in him, <bibl source="b:IT50067" xml:id="TR00482_b013"><regMe><title xml:id="TR00482_t013">Phil.</title> 1.29</regMe></bibl> <foreign xml:lang="x-grc">υμιν 
+<unclear>εχαρίσθη</unclear></foreign>, <hi rend="slant(italic)">&amp;c.</hi> 
+Chriſt and his people are never more lovely than up­
+<lb/>on the Croſs. May we not under God, thank our priſon, that we are ſo gracious this day in the eyes
+<lb/>of Gods people, yea, and I am perſwaded, in the eyes of ſome enemies? Muſt not we by ſuffering en­
+<lb/>ter into glory, as our bleſſed Saviour? <bibl source="b:IT50057" xml:id="TR00482_b014"><regMe><title xml:id="TR00482_t014">Luk.</title> 24.26</regMe></bibl>. Doth not 
+Chriſt by this means ſet a higher rate up­
+<lb/>on reformation, the <name>Miniſtry</name>, and the <name>Government</name>? How do the Northern people prize the Sun, 
+who
+<lb/>ſee it but once in three or ſix moneths? and do not our dunghill-hearts ordinarily value bleſſings,
+<lb/>more by their want, than injoyment?</p>
+        <p>In particular, Sir, how are you indeared to God and man in this call, to be the <mcr rend="slant(italic)">Proto-Confeſſour</mcr> or
+<lb/><mcr rend="slant(italic)">Proto-Martyr</mcr>; the Lord inable you by grace, to bear the honour, as well as the burthen. I bleſs God
+<lb/>for your chearfullneſs and conſtancy, whoſe flame contributes much to the keeping of my poor ſpark
+<lb/>alive.</p>
+        <p>But my errand is, if it may be, to prevent the latter: and may it ſtand with Gods will, I would not
+<lb/>have you yet to be a Martyr. Haply you will ſay, I wiſh you worſe than your Adverſaries do; if ſo,
+<lb/>yet I am ſure it is with an honeſter heart, <hi rend="slant(italic)">&amp;c.</hi>—.</p>
+        <p>Sir, I have only one thing to adde, which I apprehend as a providence not to be ſlighted, namely,
+<lb/>that your day of tryall is your day of Jubilee, and your day of <name>Pentecoſt</name>, it being preciſely the fiftieth 
+<lb/>day from your apprehenſion: ordered ſo, I am confident, by eſpeciall providence, not by the intention
+<lb/>of the Adverſary: The Lord make it a Jubilee to you, for liberty of ſpirit, and a day of <name>Pentecoſt</name> for
+<lb/>effuſion of the Spirit of grace, wiſdom and utterance. I ſhall ſay <hi rend="slant(italic)">Amen</hi> to the 
+<name rend="slant(italic)">Omen</name>, and follow it with 
+<lb/>what poor intereſt I have in heaven; ſtill chooſing rather to dye with <persName ref="p:clove.efe">Love</persName>, 
+than to rule with <hi rend="slant(italic)">Luſt</hi>,
+which is the <name rend="slant(italic)">Magna charta</name> of theſe apoſtatizing times. My beſt affections to your ſelf, 
+and deareſt con­
+<lb/>ſort, I beg your prayers, and reſt,
+</p>
+        <closer rend="align(center)">
+          <salute>Yours, <hi rend="slant(upright)">&amp;c.</hi></salute>
+        </closer>
+      </div>
+      <div type="letter">
+        <head>Another of <persName ref="p:rdrake.zly"><hi rend="slant(upright)">Dr.</hi> Drakes</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <p><hi rend="class(#DIC)">M</hi><hi rend="case(allcaps)">y</hi> moſt dear and precious friend in the Lord, in whom I obſerved great reaſon, 
+both of love and
+<lb/>honour, from the firſt day that God bleſſed me with the knowledg of you; but never more than
+<lb/>at this time, when you are aſcending your triumphant chariot, and mounting into the cloud of wit­
+<lb/>neſſes, <bibl source="b:IT50041" xml:id="TR00482_b015"><regMe><title xml:id="TR00482_t015">Heb.</title> 12.1.</regMe></bibl> to guide and encourage us who are left yet behind, to 
+<mcr rend="slant(italic)">run with readineſs the race that
+<lb/>is ſet before us</mcr>. Sweet Sir, I wonder not you are ſo chearfull, being ſo near your journeys end, ſteered
+<lb/>by our great Pilot, out of a dangerous and troubleſome Sea, and entring into the harbour; putting off
+<lb/>your pilgrims weeds, that you may be cloathed with the white robes, as a free deniſon of the heaven­
+<lb/>ly <name rend="slant(italic)">Jeruſalem</name>. I miſtook in dreaming of an earthly <name>Pentecoſt</name> and Jubilee; that 
+50<hi rend="sup()">th</hi> day I now perceive
+<lb/>was an hint and ſummons to call you to the everlaſting Jubilee above, 
+<bibl source="b:IT50041" xml:id="TR00482_b016"><regMe><title xml:id="TR00482_t016">Heb.</title> 12.<hi rend="slant(italic)">v</hi>.22,24</regMe></bibl> a <mcr rend="slant(italic)">Paraſceve</mcr> to
+<lb/>the eternal <name>Sabbath</name>, <bibl source="b:IT50041" xml:id="TR00482_b017"><regMe><title xml:id="TR00482_t017">Heb.</title> 4.<hi rend="slant(italic)">v</hi>.9,10</regMe></bibl>. 
+How much are we beholding to our very enemies (rather to God)
+<mw type="catch" rend="align(right)">for</mw>
+
+<pb n="06"/>
+<milestone unit="sig" n="B1r"/>
+<mw type="pageNum">6</mw>
+<lb/>for them) who never did us more good, than when they think to do us the ſhrewdeſt turn. I wonder
+<lb/>not now at that <foreign xml:lang="la" rend="slant(italic)">Epinicium</foreign> of the <name>Apoſtles</name>, 
+<bibl source="b:IT50074" xml:id="TR00482_b018"><regMe><title xml:id="TR00482_t018">Rom.</title> 8. <hi rend="slant(italic)">ver.</hi> 28, &amp; 33.</regMe></bibl>
+ <hi rend="slant(italic)">to the end</hi>, &amp; <bibl source="b:IT50001" xml:id="TR00482_b019"><regMe>I <title xml:id="TR00482_t019">Cor.</title> 3. 
+<hi rend="slant(italic)">v</hi>. 21, 22, 23</regMe></bibl>.
+<lb/>Death is ſo far from ſeparating, that it brings us immediately to Chriſt, 
+<bibl source="b:IT50067" xml:id="TR00482_b020"><regMe><title xml:id="TR00482_t020">Phil.</title> I. 23.</regMe></bibl> and that by a 
+<lb/>ſtroke ſo honourable, ſo eaſie, ſo comfortable, ſo ſpeedy, that you need but wink and go to 
+Heaven.
+<lb/>The Lord is pleaſed to give you a writ of eaſe, and pay you your penny at the ſixth hour. Bleſſed 
+<lb/>be God, we ſerve a good Maſter, who puts us only upon honeſt and honourable imployments, makes
+<lb/>our task eaſie and ſhort, doth all our works for us and in us; and after all, rewards us freely and rich­
+<lb/>ly, as if we had earned our wages. Better be Gods hireling than the worlds darling, 
+<bibl source="b:IT50057" xml:id="TR00482_b021"><regMe><title xml:id="TR00482_t021">Luk.</title> 15.<hi rend="slant(italic)">v</hi>.17,19</regMe></bibl>.
+<lb/>Dear Sir, I bleſs God for your faithfullneſs, patience, courage, wiſdom, whereby you have both tryed
+<lb/>and diſcovered the policy and ſtrength of your Antagoniſts, and ſhewed to your poor unworthy
+<lb/>fellow-ſufferers that by grace they are conquerable. The Lord is with thee, thou mighty man of va­
+<lb/>lour; go in this thy might, and finite the hoſt of <name rend="slant(italic)">Midian</name> as one man, 
+<bibl source="b:IT50052" xml:id="TR00482_b022"><regMe><title xml:id="TR00482_t022">Judg.</title> 6. <hi rend="slant(italic)">v</hi>.12,14,16</regMe></bibl>. The Lord
+<lb/>make you a true <persName ref="p:samson.nkr">Samſon</persName>, that you may do the Devils kingdom more miſchief at your death, than ever
+<lb/>you did in all your life. God is now but in his old method, to make the blood of the Martyrs the ſeed
+<lb/>of his Church, <bibl source="b:IT50028" xml:id="TR00482_b023"><regMe><title xml:id="TR00482_t023">Col.</title> I.24</regMe></bibl> <persName ref="p:hiel.piu">Hiel</persName> deſerved a curſe for building 
+<placeName rend="slant(italic)">Jerico</placeName>, (<bibl source="b:IT50050" xml:id="TR00482_b024"><regMe><title xml:id="TR00482_t024">Joſh.</title> 6.26.</regMe></bibl>) 
+but God deſerves bleſ­
+<lb/>ſing for building the new <name rend="slant(italic)">Jeruſalem</name>, though he lay the foundation thereof in 
+<persName ref="p:abiram.akp">Abiram</persName> his firſt-born
+<lb/>(ſo is Chriſt, our high Father: compare 
+<bibl source="b:IT50038" xml:id="TR00482_b025"><regMe><title xml:id="TR00482_t025">Gen.</title> 17.5.</regMe></bibl> with <bibl source="b:IT50043" xml:id="TR00482_b026"><regMe><title xml:id="TR00482_t026">Iſa</title> 9.6.</regMe></bibl>) 
+and ſet up the gates thereof in his
+          <lb/>younger Son <persName ref="p:segub.nxr">Segub</persName>, (<bibl source="b:IT50004" xml:id="TR00482_b027"><regMe>1 <title xml:id="TR00482_t027">King.</title> 16 <hi rend="slant(italic)">laſt</hi>.</regMe></bibl>) 
+ſuch are we poor contemptible creatures, exalted and ſtrength­
+<lb/>ned by God, not only to do, but alſo to ſuffer for his Name, 
+(<bibl source="b:IT50023" xml:id="TR00482_b028"><regMe><title xml:id="TR00482_t028">Act.</title> 5.41.</regMe></bibl> <bibl source="b:IT50067" xml:id="TR00482_b029"><regMe><title xml:id="TR00482_t029">Phil.</title> 1.29.</regMe></bibl>) Cauſe, Church
+<lb/>and Covenant.  The Lord is making you ſuch a bleſſed <persName ref="p:segub.nxr">Segub</persName>: making that to be your honour
+<lb/>ſtrength and ſafety, which many judged to be your ſhame, weakneſs and danger. Dear Sir, God ho­
+<lb/>nours you to be the <persName ref="p:eliah.cku">Elias</persName>, and firſt to aſcend the fiery chariot; May I, without preſumption, be the
+<lb/><persName ref="p:elisha.gmw">Eliſha</persName>, and make two or three bold requeſts unto you: and firſt let me beg your prayers for a double
+<lb/>portion of your Spirit. Secondly, let me ſee you (if poſſible) before you aſcend, though it be but
+<lb/>through the latteſs, on your Nuptial morning. Thirdly, let fall your mantle, that I may by means of it
+<lb/>be inabled to divide <placeName rend="slant(italic)">Jordan</placeName>, yea, the <placeName>Red-ſea</placeName>, 
+if God call me through it, and not ſink like an <name rend="slant(italic)">Egyptian</name>
+<lb/>in the mighty waters, <bibl source="b:IT50072" xml:id="TR00482_b030"><regMe><title xml:id="TR00482_t030">Pſal.</title> 32.6</regMe></bibl>. Fourthly, if there be any remembrance 
+of things below, in heaven 
+<lb/>(<bibl source="b:IT50057" xml:id="TR00482_b031"><regMe><title xml:id="TR00482_t031">Luk.</title> 16. <hi rend="slant(italic)">v</hi>.24,25,28</regMe></bibl>) will you when you are in the bleſſed 
+Heaven, think of your poor friend, and 
+<lb/>the reſt of your fellow Souldiers left behind, and labouring in the ſtorme, till 
+Chriſt come to them as
+<lb/>he doth to you. Surely the Church triumphant doth not forget the Church militant: and prayer is
+<lb/>no paradox in heaven, (<bibl source="b:IT50073" xml:id="TR00482_b032"><regMe><title xml:id="TR00482_t032">Rev.</title> 6.<hi rend="slant(italic)">v</hi>.9,10</regMe></bibl>) 
+till the body of 
+Chriſt be perfected: If juſtice makes them
+<lb/>pray againſt enemies; why ſhould not charity draw out ſupplications for their friends: Surely,
+<lb/>there is a communion of Saints between the Church militant and triumphant; we may bleſs God
+<lb/>for them, and cannot they pray for us? The Martyrs would not pray to dead Saints, but ſome of
+<lb/>them deſired living Saints to pray for them, both on earth and in heaven: and I think therein they
+<lb/>were not ſuperſtitious. Sweet Sir, I know to whom I ſpeak, and am aſſured, that 
+<persName rend="slant(upright)" ref="p:clove.efe">Love</persName> will not be
+<lb/>puffed up with that which would ſoon burſt a bladder of pride: None higher in Gods eyes than
+<lb/>thoſe are who are loweſt in their own. I ſee your time is ſhort, and therefore though my affection be 
+<lb/>like <placeName rend="slant(italic)">Jordan</placeName> at the time of harveſt, I muſt ſet bounds and banks to my words, 
+leſt I divert and trou­
+<lb/>ble you in your paſſage.<choice><sic/><corr> </corr></choice>I doubt not but you remember that you muſt paſs through the 
+<placeName rend="slant(italic)">Jordan</placeName> to the
+<lb/>fiery <mcr rend="slant(italic)">Charist</mcr>. <placeName rend="slant(italic)">Jordan</placeName> was not more effectual to cleanſe 
+<persName ref="p:naaman.lja">Naaman's</persName> Leproſie, than the River of repen­
+<lb/>tant tears is to purge the leproſie of ſin (<bibl source="b:IT50072" xml:id="TR00482_b033"><regMe><title xml:id="TR00482_t033">Pſal.</title> 119.<hi rend="slant(italic)">v</hi>.136.</regMe></bibl>) 
+next after the the immenſe ocean of the bloud
+<lb/>of Chriſt. It's not <mcr rend="slant(italic)">Abanah</mcr> and 
+<mcr rend="slant(italic)">Parphar</mcr> will waſh away the <mcr rend="slant(italic)">Leproſie</mcr>, but 
+<placeName rend="slant(italic)">Jordan</placeName>; 
+not will every tear
+<lb/>waſh away ſin, but penitent tears. You have but little time to mourn, 
+Chriſt ſtands by with his tow­
+<lb/>el and handkerchief, <bibl source="b:IT50072" xml:id="TR00482_b034"><regMe><title xml:id="TR00482_t034">Pſal.</title> 56.8.</regMe></bibl> <bibl source="b:IT50073" xml:id="TR00482_b035"><regMe><title xml:id="TR00482_t035">Rev.</title> 7 
+<hi rend="slant(italic)">laſt</hi>.</regMe></bibl> &amp; 21.4. <bibl source="b:IT50043" xml:id="TR00482_b036"><regMe><title xml:id="TR00482_t036">Iſa.</title> 25.8</regMe></bibl>. 
+Spiritual ſorrow and joy are inſepara­
+<lb/>ble companions in this life; and the Dove-like ſpirit of comfort loves theſe ſtreams, 
+<bibl source="b:IT50076" xml:id="TR00482_b037"><regMe><title xml:id="TR00482_t037">Cant.</title> 3.12.</regMe></bibl> <bibl source="b:IT50060" xml:id="TR00482_b038"><regMe><title xml:id="TR00482_t038">Matth.</title><lb/>3-16</regMe></bibl>. Every true <name>Chriſtian</name> hath this 
+<foreign xml:lang="la" rend="slant(italic)">Baptiſmus fluminis</foreign> joyned with 
+<foreign xml:lang="la" rend="slant(italic)">Baptiſm. flaminis</foreign>: And now God
+<lb/>honours you with <foreign xml:lang="la" rend="slant(italic)">Baptiſ. Sanguinis</foreign> ſuperadded. 
+The cup of tears and cup of comfort may well go
+<lb/>together, and happy he who can mingle this drink with weeping, <bibl source="b:IT50072" xml:id="TR00482_b039"><regMe><title xml:id="TR00482_t039">Pſal.</title> 102. 9.</regMe></bibl> 
+ſuch need not fear
+<lb/>to pledge Chriſt in his cup of bloud; and undoubtedly ſhall ſit at 
+Chriſts right hand in his King­
+<lb/>dom, <bibl source="b:IT50060" xml:id="TR00482_b040"><regMe><title xml:id="TR00482_t040">Matt.</title> 20. <hi rend="slant(italic)">ver.</hi> 22, 23.</regMe></bibl> though not in the ſenſe of 
+the two ambitious Brethren. If we could
+<lb/>weep or repent for any thing in heaven, ſure i<unclear reason="obscured">t</unclear> would be, becauſe we wept and repented no
+<lb/>more nor no better on earth. The Lord enable you and us all to do much work in a little
+<lb/>time. If I ſee you no more, I muſt be forced here to take my long leave; yet why ſay I
+<mw type="sig">B</mw><mw type="catch" rend="break(no)align(right)">ſo?</mw>
+
+<pb n="07"/>
+<milestone unit="sig" n="B1v"/>
+<mw type="pageNum">7</mw>
+<lb/>ſo? it may prove but a ſhort leave, ſince in likelyhood (as things ſtand) few weeks, yea, dayes, may
+<lb/>bring me to a ſight of your bleſſed ſoul in the arms of Chriſt: 
+and ſurely, the communion of Saints in
+<lb/>heaven, is cumulative to their eſſential happineſs. The Lord enable me to imitate your graces, and
+<lb/>then I ſhall not doubt to inherit your happineſs, which is only God, the higheſt end, and the chiefeſt
+<lb/>good. The Lord be nearer to you than your danger, and ſupport you in the moſt needfull hour; and
+<lb/>when men have done their worſt, receive your ſoul to his mercy, 
+<bibl source="b:IT50023" xml:id="TR00482_b041"><regMe><title xml:id="TR00482_t041">Act.</title> 7. <hi rend="slant(italic)">v</hi>. 55,56,59.</regMe></bibl> 
+<bibl source="b:IT50057" xml:id="TR00482_b042"><regMe><title xml:id="TR00482_t042">Luk.</title> 2.29,30.</regMe></bibl> <lb/>&amp; <bibl source="b:IT50019" xml:id="TR00482_b043"><regMe>2 <title xml:id="TR00482_t043">Tim.</title>
+<add hand="#unknown.zzx">4</add> <hi rend="slant(italic)">v</hi>.7,8</regMe></bibl>. 
+So prays</p>
+        <closer rend="align(center)">
+          <salute>Your poor unworthy Friend, and Companion
+<lb rend="indent(1)"/>in the Kingdom and tribulation of <persName ref="p:jchrist.hjn">Jesus Chriſt</persName>.</salute>
+          <lb/>
+          <date when="1651-07-12">July 12. 1651.</date>
+        </closer>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:rrobinson.esr"><hi rend="slant(upright)">Mr.</hi> Robinſon's</persName> Letter to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Dear Friend,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>e loſs which the Church of God will ſuſtain by your death, 
+is a very great trouble to me, and I
+<lb/>doubt not, but a far greater to others, whoſe hearts God hath made more ſenſible to feel his
+<lb/>hand. This ſtroke I am confident will be your happineſs, but a great miſery, a ſad puniſhment to many:
+<lb/>when God hath a purpoſe to puniſh many at once, he uſeth to take this courſe. The extinguiſhing ſuch
+<lb/>a ſtar, (I do not flatter you, God knows) cannot but greatly afflict the whole world. I wiſh heartily
+<lb/>God would grant me the favour to ſee you before your wedding day, for I dare not call it a dying
+<lb/>day. I hope I ſhall be in your thoughts when you are at the throne of Grace. Good Sir, heap up as ma­
+<lb/>ny prayers as you can for the poor Church of God before you leave us, it ſhall be the beſt legacy you
+<lb/>can bequeath; what you ſhall ſow, ſome will live to reap, and will not be unrewarded. <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus
+<lb/>Chriſt</persName> had his thoughts on the Church even to his dying hour; good Sir, imitate your Maſter, I need
+<lb/>not ſay any thing to strengthen you againſt the fear of your approaching day, I doubt not, but you
+<lb/>have often overcome that fear through <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>. 
+<foreign xml:lang="la" rend="slant(italic)">Profectio eſt quam putas mortem</foreign>: 'Tis but the taking
+<lb/>of a journey, and though the way be deep, yet its but ſhort: God brings you the neareſt way. A ſhor­
+<lb/>ter c<unclear reason="obscured">u</unclear>t never had any to reſt. I know you have been often upon 
+<placeName rend="slant(italic)">Mount Nebo</placeName>, where you have ſeen
+<lb/><placeName rend="slant(italic)">Canaan</placeName>, whither you are going. The Myſticall head cannot be cut off; 
+you have finiſhed your teſtimo­
+<lb/>ny, and fear not to receive your recompence. Chriſt 
+hath transformed this black Meſſenger to you in­
+<lb/>to an Angel of Light. How ſoon others may follow you is known only to God; if we ſtay longer, 'tis
+<lb/>but to row in a ſtormy Sea. <persName ref="p:moses.znq">Moſes</persName> was very willing to dye, God ſaid, 
+          <quote rend="slant(italic)" source="b:IT50064" xml:id="TR00482_q006">Go up and dye</quote>; and he <quote rend="slant(italic)" source="b:IT50064" xml:id="TR00482_q007">went up and 
+            <lb/>died</quote>. Let not the care of your Relations afflict you, <quote rend="slant(italic)" source="b:IT50072" xml:id="TR00482_q008">The earth is the Lords 
+and the fullneſs thereof; Leave
+<lb/>your fatherleſs children, God will provide for them; Let your widdow truſt in God</quote>. Your dear yoke-fellow
+<lb/>is a partaker of the ſame grace with you; how rich are they that are heirs to the promiſes? You can
+<lb/>commend your ſpirit into Gods hands, much more your wife and children: Remember that promiſe,
+          <lb/><quote source="b:IT50038" xml:id="TR00482_q009">I will be thy God, and the God of thy ſeed</quote>; Sir, it is a richer portion than the Mines of 
+<placeName rend="slant(italic)">India</placeName>. You were
+<lb/>but a ciſter<unclear reason="obscured">n</unclear> to them, the fountain lives, and will live when you are dead: 
+God can provide without
+<lb/>you, you cannot without God. Good Sir, Chear up; I hear how full of joy you are, bleſſed be God;
+<lb/>all theſe are but little drops to the ocean. I have writ this to fill you more and more. An Ax, and a
+<lb/>ſeverer are all one; you ſhall dye without ſickneſs. When you think of the preſent ignomi
+<unclear reason="obscured">n</unclear>y, look on
+<lb/>the future glory; you ſhall be with God, Chriſt, Angels, 
+          <quote rend="slant(italic)" source="b:IT50041" xml:id="TR00482_q010">the ſouls of juſt men made perfect</quote>, in a ſhort
+<lb/>time. What a happineſs is it to have grace in perfection! to ſee God face to face, to be freed from the
+<lb/>being of ſin, Temptations of Devils, ſociety of wicked men! You have faught a good fight, you have fi­
+<lb/>niſhed your courſe, you have kept the faith, <hi rend="slant(italic)">&amp;c.</hi> and you are going to receive your Crown, a crown
+<lb/>of glory, that fadeth not away. You are now going to that place, where the voice of the oppreſſor
+<lb/>ſhall never be heard: You are going to your bed, the beſt and ſafeſt you ever ſlept on. The ſteps of
+<lb/>the ſcaffold will be a <mcr rend="slant(italic)">Jacobs Ladder</mcr>, upon which you ſhall aſcend to your loving Father: 
+The Scaf­
+<lb/>fold will be as <name rend="slant(italic)">mount Nebo</name>; The Ax of the Executioner will cut off the head of ſin, 
+and put an end to
+<lb/>all miſery. Be ſure, Sir, Not only the Angels of God, but the God of the Angels himſelf will mightily
+<lb/>ſtrengthen you. If your death, and this kind of death, were not moſt for the glory of God, and the
+<lb/>benefit of the Church, I am confident, God would have ſaved you from this hour.</p>
+        <p>I have writ thus, not becauſe you want advice, but to teſtifie my love, my dear love to you, and
+<lb/>to give you remembrance of me and mine, before your departure hence. Good Sir, accept of it as my
+<lb/>laſt farewell; farewell, farewell dear Friend. God, that hath bound up your ſoul in the bundle of life,
+<mw type="catch" rend="align(right)"><unclear reason="flawed-reproduction">be</unclear></mw>
+
+<pb n="08"/>
+<milestone unit="sig" n="B2r"/>
+<mw type="pageNum">8</mw>
+<lb/>be your comfort, joy, hope, peace, confidence in life and death to all eternity: Yea he will be your
+<lb/>guide unto death; He will be an Husband and head to your deareſt Wife; He will be a tender Father
+<lb/>to your little Babes. This is the confidence, this ſhall be the prayer of</p>
+        <closer>
+          <salute rend="slant(upright)case(allcaps)align(center)">Sir,</salute>
+          <dateline rend="break(yes)">
+            <date when="1651-08-19">Aug.19.1651.</date>
+          </dateline>
+          <signed rend="break(no)slant(italic)align(right)">Your dear Friend.</signed>
+        </closer>
+      </div>
+      <div type="letter">
+        <head>A brief Note from <persName ref="p:wjenkyn.zva"><hi rend="slant(upright)">Mr.</hi><vuji>I</vuji>enkyn</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>My dear, dear, Heart,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>ou art very near to my ſoul. The Lord 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName> ſmile with the pleaſanteſt face upon thee,
+<lb/>that ever he did upon <mcr rend="slant(italic)">Sufferer.</mcr> ―― I here ſend thee a Book that I have been much relieved
+<lb/>by, in my Impriſonment. What are ten thouſand Deaths, where Chriſt 
+is apprehended by faith!
+<lb/>Theſe conſiderations where the leaf is turn'd down, (<hi rend="slant(italic)">pag.</hi> 335.) do ſweetly ſupport faith. 
+――I am
+<lb/>afraid almoſt to ſend theſe thoughts, for fear over-many notions may diſturb thee. ――I judge
+<lb/>theſe more profitable than ſpeculative diſcourſes of death. ――The great God, that hangs the Earth
+<lb/>upon nothing but his Word, bear up thy ſoul on his promiſes. Oh ſweet, moſt ſure, ſure, ſure (oh
+<lb/>remember <emph rend="slant(italic)">ſure!</emph>) promiſes; as ſtable as the very Eſſence of God; 
+for the performances whereof
+<lb/>God hath pawn'd his Being: <mcr rend="slant(italic)">As I live</mcr>, &amp;c.</p>
+        <p>My Heart, I love thee, I kiſs thee, I weep upon thee, I rejoyce for thee, I ſhall see thee in glory. The
+<lb/>Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName> ſtrengten thee. He will.</p>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:wjenkyn.zva"><hi rend="slant(upright)">Mr.</hi><vuji>I</vuji>enkyn</persName> his Letter to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Mr.</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>My dear Heart,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">B</hi><hi rend="case(allcaps)">l</hi>ame me not of this backwardneſs to caſt in this mite. 
+I was hardly perſwaded of the fitneſs
+<lb/>thereof: your greatest danger is in the plenty of theſe tokens, conſidering your own ſtore. Though
+<lb/>your appetite be never ſo good, it's impoſſible you ſhould concoct all the food diſh'd up in 
+Books, Friends Papers, and your own Meditations by and for you. I ſhall deſire to make up my Paper-de­
+<lb/>fects by fervent prayer: and oh that I could pray ſo this once, as if I were not to do it a ſecond
+<lb/>time. My only counſell muſt be, that which I know hath been your only care, and will be your on­
+<lb/>ly comfort; namely, that you ſleep in <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName>. Thou ſhalt not ſleep 
+(though that were much) in the 
+<lb/>lap, bosome, and arms of <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName>; 
+but in this ſleep he looks upon thee as a piece of himſelf, even as a
+<lb/><anchor xml:id="TR00482_a001" corresp="#n001"/>member, a dear limb. In dying thou ſhalt not dye. They who are fallen aſleep
+<lb/>in Chriſt, periſh not. Chriſt 
+the firſt fruits (a moſt ſweet reſemblance) the happy
+<lb/>hanſell of the grave, the firſt born from the dead, the Head of the body, did riſe
+<lb/>from the dead as ſuch, and not as a private perſon: So that our reſurrection is
+<lb/>(even now) in its cauſe. The union 'twixt Chriſt and thee (and this union is not
+<lb/>only 'twixt Chriſt and thy ſoul, but thy body alſo; 
+and therefore he is the firſt fruits of the dead)
+<lb/>cannot be broken off by death. Chriſt ſhould rebell againſt the will of his Father, 
+(which were
+<lb/>blaſphemy to think) if he ſhould loſe any thing which his Father hath given him; as he ſhould,
+<lb/>were it not to be raiſed up at the laſt day. Chriſt is the very 
+<hi rend="case(allcaps)slant(italic)">resurrection</hi>, and he that
+<lb/>believeth in him, though dead, yet ſhall live. Oh, how hath Chriſt 
+perfumed the grave, and beauti­
+<lb/>fied the griſly face of Death! Death is (now) a priviledge, our beſt friend next to 
+Chriſt, and the
+<lb/>truth is, all our meanes and ſorrows in this life, are for want of that which we ſo much fear, death;
+<lb/>as the child that cries for want of ſleep, and yet cannot endure to undreſs and go to bed. My dear
+<lb/><anchor xml:id="TR00482_a002" corresp="#n002"/>heart! thou haſt better cloaths to put on in the morning of the Reſurrection: 
+<quote rend="slant(italic)" source="b:IT50001" xml:id="TR00482_q011">This
+<lb/>mortall ſhall put on immortality.</quote> Thy garment of grace hath had many ſpots, perhaps;
+<lb/>this day thou ſhalt take thy leave of mourning for them, and therefore the Lord help
+<lb/>thee to mourn more holily and meltingly than ever; but the garment of glory ſhall
+<lb/>not have one. Lord, is there a condition wherein I ſhall never ſin more, wherein I ſhall have as much
+<lb/>grace as I can hold, and wiſh, and will deſire; wherein I ſhall no more waſh the feet of 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>,
+<lb/>and now and then be ſuffered to give them a kiſs, but ſhall lye in his bleſſed boſome, and be claſped in
+<lb/>his glorious arms to eternity! This is thy approaching happineſs; and every comfort, by how much the
+<lb/>nearer, is the ſweeter. Now is thy ſalvation nearer than when thou firſt believedſt.</p>
+        <mw type="sig">B2</mw>
+        <mw type="catch" rend="break(no)align(right)">
+          <supplied reason="flawed-reproduction" resp="p:sconnell.yuw">Oh</supplied>
+        </mw>
+        <pb n="09"/>
+        <milestone unit="sig" n="B2v"/>
+        <mw type="pageNum">9</mw>
+        <p>Oh dear heart! Now for a ſtrong faith! oh wreſtle mightily with the great God, for ſtrength to
+<lb/>overcome him; cling about the promiſes, precious promiſes, not only for their fullneſs, but infalli­
+<lb/>bility; adventure thy ſoul upon them. The faithfullneſs of God is a foundation which bears the
+<lb/>heavieſt ſtructure, and the greateſt load of ſin and expectation. 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName> calls, beſeeches,
+<lb/>commands, threatens, and all to make thee believe. The Lord increaſe thy faith! thou art to go
+<lb/>through a very great work, but Chriſt hath laboured, 
+and thou art but to enter into his labours.
+<lb/>Death is but a nominall enemy when Chriſt hath diſarmed it; 
+there is more terror in the pomp of it
+<lb/>(as <persName ref="p:seneca.sfi">Seneca</persName> ſaid) the Scaffold, the Axe, Spectators, Reports, than in the thing it ſelf. Oh how may a
+<lb/><name>Chriſtian</name> inſult over it! <quote rend="slant(italic)" source="b:IT50001" xml:id="TR00482_q012">Oh Death, where is thy Sting</quote>! 
+Chriſt hath ſpoiled principalities and powers,
+<lb/>diſarmed, diſrobed them. His death is the death of Death; all its ſtings are left in his ſide. Say not
+<lb/>therefore (Dear heart) who ſhall role away the ſtone from the mouth of the ſepulchre? when thou
+<lb/>comeſt thither, thou ſhalt find it rol'd away to thy hand. Its difficulties and diſtreſſes are taken away
+<lb/>in Chriſt. ――To this dear Lord 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName> I commit thee, who in his due time will wipe away all tears
+<lb/>from the eyes, and ſin from the ſouls of his poor ſervants; and out of all our ſtorms, bring us to that
+<lb/>haven where we would be. I know not where to break off, and yet not where to leave thee ſo well
+<lb/>as there.</p>
+        <closer rend="align(right)">
+          <salute>Thine in the bowels of this Saviour.</salute>
+        </closer>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:tcase.wpa"><hi rend="slant(upright)">Maſter</hi> Caſe</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Heavenly Saint,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>ou art awaked out of thy laſt natural reſt, to go to thy eternall reſt: 
+the night is paſt, thou
+<lb/>ſhalt never know night any more, but God ſhall give thee light, and thou ſhalt reign for ever and
+<lb/>ever, <bibl source="b:IT50073" xml:id="TR00482_b044"><regMe><title xml:id="TR00482_t044">Rev.</title> 22.3,4,5</regMe></bibl>. Thou art now going where thou ſhalt be in a true ſenſe 
+above ordinances, and 
+<lb/>above Scripture, <bibl source="b:IT50001" xml:id="TR00482_b045"><regMe>1 Cor. 13.12,13</regMe></bibl> where God in 
+Chriſt ſhall be thy all in all. Thy priſon ſhall be turn­
+<lb/>ed into a Palace, and thy filthy garments ſhall be taken away, and thou ſhalt be cloathed with long
+<lb/>white Robes, and in the moment when thy body and head ſhall be ſevered, thou ſhalt be united to
+<lb/>Chriſt thy Head; in him thou ſhalt be crowned, 
+and with him thou ſhalt reign to eternity.
+<hi rend="align(center)">It is finiſhed.
+<lb/><bibl source="b:IT50046" xml:id="TR00482_b046"><regMe><title xml:id="TR00482_t045">Job.</title> 17.1,4,5,6,11,13,24.</regMe></bibl></hi></p>
+        <p>Let me ſee that face once more, which I ſhall ſee no more till the laſt day. Send up one ſigh before
+<lb/>thee for thy following Brother and Companion in tribulation, and in the Kingdom and Patience of
+<lb/><persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>.</p>
+      </div>
+      <div type="letter">
+        <head>Another of <persName ref="p:tcase.wpa"><hi rend="slant(upright)">Maſter</hi> Caſe's</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>Dear ſoul,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">T</hi><hi rend="case(allcaps)">h</hi>ou art now going to heaven: 
+to quicken thy deſires, put it into theſe notions, that are moſt ſu­
+<lb/>table to thy condition.</p>
+        <list rend="break(yes)indent(1)">
+          <item>To the weary it is reſt, <bibl source="b:IT50043" xml:id="TR00482_b047"><regMe><title xml:id="TR00482_t046">Iſa.</title> 57.2.</regMe></bibl> 
+<bibl source="b:IT50073" xml:id="TR00482_b048"><regMe><title xml:id="TR00482_t047">Rev.</title> 14.13.</regMe></bibl></item>
+          <item>To the baniſhed home, <bibl source="b:IT50011" xml:id="TR00482_b049"><regMe>2 <title xml:id="TR00482_t048">Cor.</title> 5.6.</regMe></bibl></item>
+          <item>To the reproached glory, <bibl source="b:IT50074" xml:id="TR00482_b050"><regMe><title xml:id="TR00482_t049">Rom,</title> 5.2.</regMe></bibl></item>
+          <item>To the moleſted and captived with corruption, it is the glorious liberty of the Sonnes of God,
+<lb/><hi rend="indent(2)"><bibl source="b:IT50074" xml:id="TR00482_b051"><regMe><title xml:id="TR00482_t050">Rom.</title> 8.21.</regMe></bibl></hi></item>
+          <item>To the reſiſter to bloud, it is conqueſt, <bibl source="b:IT50074" xml:id="TR00482_b052"><regMe><title xml:id="TR00482_t051">Rom.</title> 8.37.</regMe></bibl></item>
+          <item>To the vexed with ſin and ſorrow, it is the exſtinction of both.</item>
+          <item>To the hungry ſoul, it is the hidden Manna, <bibl source="b:IT50073" xml:id="TR00482_b053"><regMe><title xml:id="TR00482_t052">Rev.</title> 22.17.</regMe></bibl></item>
+          <item>To the thirſty, rivers of pleaſure, water of life, fountain of life, 
+<bibl source="b:IT50073" xml:id="TR00482_b054"><regMe><title xml:id="TR00482_t053">Rev.</title> 22.17.</regMe></bibl> <bibl source="b:IT50072" xml:id="TR00482_b055"><regMe><title xml:id="TR00482_t054">Pſal.</title> 36.8,9.</regMe></bibl></item>
+          <item>To the grieved ſoul, it is fulneſs of joy, and to the ſorrowfull heart pleaſures for ever more,
+<lb/><hi rend="indent(2)"><bibl source="b:IT50072" xml:id="TR00482_b056"><regMe><title xml:id="TR00482_t055">Psal.</title> 16.8</regMe></bibl></hi>.</item>
+        </list>
+        <p rend="indent(1)first-indent(0)">In a word, To them that have lien upon the dunghill here, and kept their integrity, it is a throne
+<lb/>upon which they ſhall ſit and reign with Chriſt for ever and ever, 
+<bibl source="b:IT50073" xml:id="TR00482_b057"><regMe><title xml:id="TR00482_t056">Rev.</title> 3.31 &amp; 22.5.</regMe></bibl></p>
+        <p>Dear heart chear up, a ſharp breakfaſt, but a bleſſed ſupper, the ſupper of the Lamb. The Bride­
+          <lb/>groom ſaith, <quote rend="slant(italic)" source="b:IT50073" xml:id="TR00482_q013">Loe I come quickly</quote>. Let thy rejoyced ſoul eccho back again, 
+          <quote rend="slant(italic)" source="b:IT50073" xml:id="TR00482_q014">Even ſo, come Lord <persName ref="p:jchrist.hjn">Jeſus</persName>.</quote>
+<mw type="catch" rend="align(right)">There</mw></p>
+        <pb n="10"/>
+        <milestone unit="sig" n="B3r"/>
+        <mw type="pageNum">10</mw>
+        <p>There is but a little time for prayer left, in that remember me, and then everlaſting <mcr rend="slant(italic)">halelujahs</mcr> will
+<lb/>be thy work, and reſt. Live for ever with thy God. <mcr rend="slant(italic)">Amen</mcr>.</p>
+        <p>I ſhall accompany thee with my prayers, though I cannot with my perſon.</p>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:mlove.uko"><hi rend="slant(upright)">Miſtreſs</hi> Loves</persName> Letter to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>My dear heart,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">B</hi><hi rend="case(allcaps)">e</hi>fore I write a word further, I beſeech thee think not that it is thy wife, 
+but a friend now that
+<lb/>writes to thee. I hope thou haſt freely given up thy wife and children to that God, who hath ſaid
+          <lb/>in the <bibl source="b:IT50045" xml:id="TR00482_b058"><regMe>49. of <title xml:id="TR00482_t057">Jer.</title> &amp; <hi rend="slant(italic)">v</hi>.11.</regMe></bibl> 
+          <quote rend="slant(italic)" source="b:IT50045" xml:id="TR00482_q015">Leave thy fatherleſs children, I will preſerve them alive, and let thy widdow truſt
+<lb/>in me</quote>: thy Maker will be my Husband, and a father to thy children. O that the Lord would keep thee
+<lb/>from having one troubled thought for thy relations. I deſire freely to give thee up into thy Fathers
+<lb/>hands, and not only look upon it as a crown of glory for thee to dye for Chriſt, 
+but as an honour to
+<lb/>me, that I ſhould have an husband to leave for Chriſt. 
+I dare not ſpeak to thee, nor have a thought
+<lb/>within my own heart, of my unſpeakable loſs, but wholly keep my eye fixed upon thy unexpreſſable
+<lb/>and unconceivable gain. Thou leaveſt but a ſinfull, morrall wife, to be everlaſtingly married to the
+<lb/>Lord of glory: Thou leaveſt but children, brothers, and ſiſters, to go to the Lord 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName> thy eldeſt
+<lb/>Brother: Thou leaveſt friends on earth, to go to the enjoyment of Saints and Angels, and the ſpirits
+<lb/>of juſt men made perfect in glory; Thou doſt but leave earth for heaven, and changeſt a priſon for a
+<lb/>Palace. And if naturall affections ſhould begin to ariſe, I hope that ſpirit of grace that is within thee,
+<lb/>will quell them; knowing that all things here below, are but dung and droſs in compariſon of thoſe
+<lb/>things that are above. I know thou keepeſt thine eye fixed on the hope of glory, which makes thy
+<lb/>feet trample on the loſs of earth. My Dear, I know God hath not only prepared glory for thee, and
+<lb/>thee for it; but I am perſwaded he will ſweeten the way for thee to come to the enjoyment of it.
+<lb/>When thou art putting on thy cloaths that morning, O think, I am now putting on my wedding gar­
+<lb/>ments, to go to be everlaſtingly married to my Redeemer. And when the meſſenger of death comes
+<lb/>to thee, let him not ſeem dreadfull to thee; but look on him as a meſſenger that brings thee tidings of
+<lb/>eternal life. When thou goeſt up the ſcaffold, think, (as thou ſaidſt to me) it is but thy fiery chariot, to
+<lb/>carry thee up to the Fathers houſe. And when thou layeſt down thy precious head to receive thy Fa­
+<lb/>thers ſtroke, remember what thou ſaidſt to me, Though thy head was ſevered from thy body, yet in
+<lb/>a moment, thy ſoul ſhould be united to thy Head the Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName> in 
+heaven. And though it may ſeem
+<lb/>ſomething bitter, that by the hands of men we are parted a little ſooner than otherwiſe we might
+<lb/>have been; yet let us conſider, it is the decree and will of our Father; and it will not be long ere we
+<lb/>ſhall enjoy one another in heaven again. Let us comfort one another with theſe ſaying
+<unclear reason="obscured">s.</unclear> Be comforted
+<lb/>my Dear heart, it is but a little ſtroke, and thou ſhalt be there where the weary ſhall be at reſt, and
+<lb/>where the wicked ſhall ceaſe from troubling<choice><sic/><corr>.</corr></choice> Remember, though thou maiſt eat thy dinner with bitter
+<lb/>herbs, yet thou ſhalt have a ſweet ſupper with Chriſt that night. 
+My Dear, by what I write unto thee,
+<lb/>I do not hereby undertake to teach thee; for theſe comforts I have received from the Lord by thee.
+<lb/>I will write no more, nor trouble thee any further, but commit thee into the arms of that God, with
+<lb/>whom ere long thee and I ſhall be. Farewel, my Dear, I ſhall never ſee thy face more, till we both be­
+<lb/>hold the face of the Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName> at the great Day.</p>
+        <closer>
+          <dateline rend="indent(1)">
+            <date when="1651-07-14">July 14. 1651.</date>
+          </dateline>
+          <signed rend="break(no)case(allcaps)align(right)"><persName rend="slant(upright)" ref="p:jchrist.hjn">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="letter">
+        <head>Another of <persName ref="p:mlove.uko"><hi rend="slant(upright)">Miſtreſs</hi> Loves</persName> to 
+<persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Love</persName>.</head>
+        <opener rend="indent(1)">
+          <salute>My heavenly Dear,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">c</hi>all thee ſo, becauſe God hath put heaven in thee, 
+before he hath taken thee to heaven. Thou now
+<lb/>beholdeſt God, Chriſt and Glory as in a glaſs; but to morrow, 
+heaven<choice><sic/><corr>s</corr></choice> gates will be opened, and
+<lb/>thou ſhalt be in the full enjoyment of all thoſe glories, which eye hath not ſeen, nor ear heard, neither
+<lb/>can the heart of man underſtand. God hath now ſwallowed up thy heart in the thoughts of heaven;
+<lb/>but ere long thou ſhal<unclear reason="obscured">t</unclear> be ſwallowed up in the enjoyment of 
+heaven: And no marvel there ſhould be
+<lb/>ſuch quietneſs and calmneſs in thy ſpirit, whileſt thou art ſailing in this tempeſtuous Sea; becauſe
+<lb/>thou perceiveſt by the eye of faith a haven of reſt, where thou ſhalt be richly laden with all the glo­
+<lb/>ries of heaven. O lift up thy heart with joy, when thou layeſt thy dear head on the block, in the thought
+<mw type="sig">B3</mw> <mw type="catch" rend="break(no)align(right)">of</mw>
+
+<pb n="11"/>
+<milestone unit="sig" n="B3v"/>
+<mw type="pageNum">11</mw>
+<lb/>of this, that thou art laying thy head to reſt in thy fathers boſome; which when thou doſt awake ſhall
+<lb/>be crowned, not with an earthly fading crown, but with an heavenly eternal crown of glory. And be
+<lb/>not diſcouraged, when thou ſhalt ſee a guard of ſouldiers triumphing with their trumpets about thee;
+<lb/>but lift up thy head, and thou ſhalt behold God with a guard of his holy Angels, triumphing to receive
+<lb/>thee to glory. Be not diſmayed at the ſcofs and reproaches that thou maiſt meet with in thy ſhort way
+<lb/>to heaven; for be aſſured, God will not only glorifie thy body and ſoul in 
+heaven, but he will alſo
+<lb/>make the memory of thee to be glorious on the earth! O let not one troubled thought for thy wife
+<lb/>and babes ariſe within thee; thy God will be our God, and our portion; he will be a husband to thy
+<lb/>widdow, and a father to thy children, the grace of thy God will be ſo ſufficient for us. Now, my
+<lb/>Dear, I deſire willingly and chearfully to reſign my right in thee to thy Father and my Father, who
+<lb/>hath the greateſt intereſt in thee. And confident I am, though men have ſeparated us for a time; yet
+<lb/>our God will ere long bring us together again, where we ſhall eternally enjoy one another, never to
+<lb/>part more. O let me hear, how God bears up thy heart, and let me taſte of thoſe comforts that ſup­
+<lb/>port thee, that they may be as pillars of marble to bear up my ſinking ſpirit. I can write no more,
+<lb/>Farewel, farewel my Dear, till we meet there where we ſhall never bid farewell more; till which
+<lb/>time I leave thee in the boſome of a loving tender hearted Father, and ſo I reſt,</p>
+        <closer rend="align(right)">
+          <salute rend="right-indent(1)">Till I ſhall for ever reſt in Heaven</salute>
+          <dateline>
+            <date when="1651-08-21"><name rend="slant(italic)">Auguſt</name> 21.1651.</date>
+          </dateline>
+          <signed rend="break(no)case(allcaps)"><persName rend="slant(upright)" ref="p:mlove.uko">Mary Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Love</persName> to his Wife, when he ſhould have firſt ſuffered.</head>
+        <opener rend="indent(1)">
+          <salute>My deareſt Beloved,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">a</hi>m now going to my long home, yet I muſt write thee a word before I go hence, 
+and ſhall be ſeen
+<lb/>no more; It is to beg thee to be comforted in my gain, and not to be troubled in thy loſs; Labour
+<lb/>to ſuppreſs thy inward fears, now thou art under outward ſorrows; as thy outward ſuffering
+<unclear reason="obscured">s</unclear> a­
+<lb/>bound, let thy conſolation in Chriſt abound alſo. 
+I know thou art a woman of a ſorrowful ſpirit. My
+<lb/>time is ſhort, I have but a few words of counſel to give thee, and then I ſhall leave thee to God, who
+<lb/>careth for thee and thine. <list><item>1.Whil<unclear reason="obscured">e</unclear>s thou art under deſertions, labour rather to ſtrengthen and clear up
+<lb/>thy evidences for heaven, than queſtion them.</item><item> 2. Remember a faith of adherence, or reliance on the
+<lb/>Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName>, bring<unclear reason="obscured">s</unclear> thee to 
+heaven, though thou want the faith of Evidence or Aſſurance.</item><item> 3. Labour to
+<lb/>find that (and more alſo) in God, which thou haſt loſt in the creature.</item><item> 4. Spend not thy days in hea­
+<lb/>vineſs for my death; if there were knowledg of things below, or ſorrow in heaven; I ſhould grieve to
+<lb/>think my beloved ſhould mourn on earth.</item><item> 5. Lye under a ſoul-ſearching Miniſtry: I know thou art
+<lb/>not a ſpungy hearer, to ſuck in foul water as well as fair. God hath given thee a good underſtanding,
+<lb/>to be able to diſcern things that differ; as the mouth taſts meat, thy ear tryeth words.</item><item> 6. Be conver­
+<lb/>ſant in Chriſtian meetings, and much in the exerciſes of the duties of mortification, in faſting and
+<lb/>prayers; yet have reſpect to the weakneſs of thy body and thy preſent condition.</item><item> 7. Have a care of
+<lb/>thy ſelf and babes, God will take care for thee and them.</item></list> I can write no more; farewell my Dear,
+<lb/>farewel, farewel. Theſe are the laſt words written by</p>
+        <closer>
+          <dateline rend="indent(1)">From the Tower,
+<lb/><date when="1651-07-15"><name rend="slant(italic)">July</name> 15. 1651</date></dateline>
+          <salute rend="align(right)right-indent(1)">Thy dying, yet comforted Husband,</salute>
+          <signed rend="align(right)case(allcaps)"><persName rend="slant(upright)" ref="p:clove.efe">Christopher Love</persName>.</signed>
+        </closer>
+        <postscript rend="break(yes)">
+          <p><hi rend="class(#DIC)">M</hi><hi rend="case(allcaps)">y</hi> Dear, I beg thee to be ſatiſfied: 
+my heart is greatly comforted in God; I can quietly ſubmit
+<lb/>to the good pleaſure of his will, and I hope thou doſt ſo alſo; I am delivered by the determi­
+<lb/>nate counſel of God, the will of the Lord be done. Read for thy comfort when I am dead and gone,
+<lb/><hi rend="align(center)"><bibl source="b:IT50045" xml:id="TR00482_b059"><regMe><title xml:id="TR00482_t058">Jer.</title> 49. 11</regMe></bibl><hi rend="slant(italic)">and the beginning of the</hi><bibl source="b:IT50043" xml:id="TR00482_b060"><regMe>12. <title xml:id="TR00482_t059">Iſa.</title> 54. <hi rend="slant(italic)">verſ.</hi>5, 6, 7, 8.</regMe></bibl><bibl source="b:IT50072" xml:id="TR00482_b061"><regMe><title xml:id="TR00482_t060">Pſalm</title> 146, 
+<hi rend="slant(italic)">ver.</hi> 9. 2</regMe></bibl><bibl source="b:IT50011" xml:id="TR00482_b062"><regMe><title xml:id="TR00482_t061">Cor.</title> 4.
+<lb/><hi rend="slant(italic)">ver.</hi> 17, 18.</regMe></bibl><bibl source="b:IT50041" xml:id="TR00482_b063"><regMe><title xml:id="TR00482_t062">Heb.</title> 12. 
+<hi rend="slant(italic)">ver.</hi> 6, 7.</regMe></bibl></hi></p>
+        </postscript>
+      </div>
+      <mw type="catch" rend="align(right)">Another</mw>
+      <pb n="12"/>
+      <milestone unit="sig" n="B4r"/>
+      <mw type="pageNum">12</mw>
+      <div type="letter" rend="pre()">
+        <head>Another of <persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Loves</persName> to his Wife.</head>
+        <opener rend="indent(1)">
+          <salute>More dear to me than ever,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">t</hi> adds to my rejoycing, that I have ſo good and gracious a wife to part with 
+for the Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus</persName>. In
+<lb/>thy grief, I have been grieved; but in thy joy, I have been comforted. Surely, nature could never
+<lb/>help thee to bear ſo heavy a ſtroke, with ſo much ſilence and ſubmiſſion to the hand of God! O dear­
+<lb/>eſt, every line thou writeſt, gladdeth my heart. I dare not think that there is ſuch a creature as <persName ref="p:mlove.uko">Mary
+<lb/>Love</persName> in the world; for <persName ref="p:klove.tgd">Kit</persName>, and <persName ref="p:mlove.nhh">Mall</persName>, 
+I can think of them without trouble, leaving them to ſo good a
+<lb/>God, and ſo good a Mother. Be comforted concerning thy Husband, who may more honour God in
+<lb/>his death than in his life; the will of the Lord be done, he is fully ſatisfied with the hand of God.
+<lb/>Though there be but little between him and death, he knows, there is but little between him and
+<lb/>heaven; and that raviſheth his heart. The Lord bleſs and requite thee for thy wiſe and good counſel;
+<lb/>thou haſt prevented me, the very things I thought to have written to thee, thou haſt written to me:
+<lb/>I have had more comfort from thy gracious letter, than from all the counſel I have had from any
+<lb/>elſe in the world; well, be aſſured, we ſhall meet in heaven. 
+I reſt, till I reſt in heaven.</p>
+        <closer>
+          <dateline rend="indent(1)">From the <name>Tower</name>,
+<lb/>the Lords Day.</dateline>
+          <salute rend="align(right)right-indent(1)">Thy dying, but comforted Friend,</salute>
+          <signed rend="align(right)case(allcaps)"><persName rend="slant(upright)" ref="p:clove.efe">Christopher Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="letter">
+        <head>Another of <persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Loves</persName> to his Wife.</head>
+        <opener rend="indent(1)">
+          <salute>My deareſt delight on Earth,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">w</hi>as faſt aſleep when thy Note came. I bleſs God, 
+I break not an hours ſleep for all my ſuffering<unclear reason="obscured">s</unclear>;
+<lb/>I know they work for me <mcr rend="slant(italic)">a more exceeding and eternal weight of glory</mcr>. I ſlept this night from ten at
+<lb/>night, till ſeven in the morning, and never waked. My Dear, I am ſo comforted in the gracious ſup­
+<lb/>ports God gives thee, that my burdens are the lighter on my ſhoulders, becauſe they are not ſo heavy
+<lb/>on thine; or if they be heavy, yet that God helps thee to bear them. The Lord keep it in the purpose
+<lb/>of our hearts for ever, to ſubmit to the good pleaſure of God. I bleſs God I do find my heart in as
+<lb/>quiet and compoſed a temper as ever I did in all my life. I am till I dye,</p>
+        <closer>
+          <dateline rend="indent(1)">From the <name>Tower</name>,
+<lb/><date when="1651-08-18"><name rend="slant(italic)">Auguſt</name> 18. 1651.</date></dateline>
+          <salute rend="align(right)right-indent(1)">Thy tender hearted Husband,</salute>
+          <signed rend="align(right)case(allcaps)"><persName rend="slant(upright)" ref="p:clove.efe">Christopher Love</persName>.</signed>
+        </closer>
+      </div>
+      <div type="letter">
+        <head><persName ref="p:clove.efe"><hi rend="slant(upright)">Maſter</hi> Loves</persName> laſt Letter to his Wife, 
+on the day he ſuffered.</head>
+        <opener rend="indent(1)">
+          <salute>My moſt gracious Beloved,</salute>
+        </opener>
+        <p><hi rend="class(#DIC)">I</hi><hi rend="case(allcaps)">a</hi>m now going from a Priſon to a Palace; 
+I have finiſhed my work, I am now to receive my wa­
+<lb/>ges; I am going to heaven, where are two of my children, and leaving thee on the earth where are
+<lb/>three of my babes; thoſe two above need not my care, but the three below need thine. It comforts
+<lb/>me to think two of my children are in the boſome of <persName ref="p:abraham.pub">Abraham</persName>, and three of them will be in the
+<lb/>arms and care of ſo tender and godly a Mother: I know thou art a woman of ſorrowfull ſpirit, yet
+<lb/>be comforted: though thy ſorrow be great for thy Husbands going out of the world; yet thy pains
+<lb/>ſhall be the leſs in bringing thy child into the world; thou ſhalt be a joyfull Mother, though thou beeſt
+<lb/>a ſad Widdow. God hath many mercies in ſtore for thee; the prayers of a dying Husband for thee
+<lb/>will not be loſt. To my ſhame I ſpeak it, I never pray'd ſo much for thee at liberty, as I have done
+<lb/>in priſon. I cannot write more, but I have a few practical counſels to leave with thee, <hi rend="slant(italic)">viz.</hi></p>
+        <list rend="indent(0)first-indent(1)">
+          <item>1. Keep under a ſound, orthodox, and ſoul-ſearching Miniſtry; 
+Oh there are many deceivers gone
+<lb/>out into the world, but Chriſts ſheep know his voice, 
+and a ſtranger will they not follow. Attend on
+<lb/>that Miniſtry that teaches the way of God in truth, and follow 
+<persName ref="p:solomon.yer">Solomons</persName> advice, 
+            <bibl source="b:IT50070" xml:id="TR00482_b064"><regMe><title rend="slant(upright)" xml:id="TR00482_t063">Prov.</title> 19.27.</regMe></bibl> <quote rend="slant(italic)" source="b:IT50070" xml:id="TR00482_q016">Ceaſe to
+<lb/>bear inſtruction that cauſes to erre from the ways of knowledg.</quote></item>
+          <item>2. Bring up thy children in the knowledg and admonition of the Lord: 
+the mother ought to be a
+<lb/>teacher in the fathers abſence, <bibl source="b:IT50070" xml:id="TR00482_b065"><regMe><title xml:id="TR00482_t064">Prov.</title> 19.27.</regMe></bibl> 
+            <quote rend="slant(italic)" source="b:IT50070" xml:id="TR00482_q017">The words which his mother taught him</quote>: and <persName ref="p:timothy.bad">Timothy</persName> was
+<lb/>inſtructed my his Grandmother <persName ref="p:lois.wdy">Lois</persName>, and his mother <persName ref="p:eunice.gsb">Eunice</persName>, 
+<bibl source="b:IT50019" xml:id="TR00482_b066"><regMe>2 <title rend="slant(upright)" xml:id="TR00482_t065">Tim.</title> 1.5.</regMe></bibl></item>
+          <mw type="catch" rend="align(right)">3. Pray</mw>
+          <pb n="13"/>
+          <milestone unit="sig" n="B4v"/>
+          <mw type="pageNum">13</mw>
+          <item>3. Pray in thy family daily, that thy dwelling may be in the number of the families that do call on
+<lb/>God.</item>
+          <item>4. Labour for a meek and quiet ſpirit, which is in the ſight of God of great price, 
+            <bibl source="b:IT50006" xml:id="TR00482_b067"><regMe>1 <choice><abbr>Pet.</abbr><expan><persName>Peter</persName></expan></choice> 3.4.</regMe></bibl></item>
+          <item>5. Pore not on the comforts thou wanteſt, but on the mercies thou haſt.</item>
+          <item>6. Look rather at Gods ends in afflicting, than at the meaſure and degree 
+of thy afflictions.</item>
+          <item>7. Labour to clear up thy evidences for heaven, when God takes from thee the comforts of earth,
+<lb/>that as thy ſufferings do abound, ſo thy conſolations in Chriſt 
+may abound much more, <bibl source="b:IT50011" xml:id="TR00482_b068"><regMe>2 <title xml:id="TR00482_t066">Cor.</title> 1.4.</regMe></bibl></item>
+          <item>8. Though it is good to maintain a holy jealouſie of the deceitfulneſs of thy heart, yet it is evill for
+<lb/>thee to cheriſh fears and doubts, about the truth of thy graces; If ever I had confidence touching the
+<lb/>grace of another, I have confidence of grace in thee; I can ſay of thee as <persName ref="p:peter.nex">Peter</persName> 
+did of <persName ref="p:silvanus.nut">Silvanus</persName>, I am
+<lb/>perſwaded that this is the grace of God wherein thou ſtandeſt, 
+            <bibl source="b:IT50006" xml:id="TR00482_b069"><regMe>1 <choice><abbr>Pet.</abbr><expan><persName>Peter</persName></expan></choice> 5.12.</regMe></bibl> Oh my dear ſoul, where­
+<lb/>fore doſt thou doubt, whoſe heart hath been upright, whoſe walkings have been holy,
+ <hi rend="slant(italic)">&amp;c.</hi> I could
+<lb/>venture my ſoul in thy ſouls ſtead, ſuch a confidence 
+have I of thee.</item>
+          <item>9. When thou findeſt thy heart ſecure, preſumptuous and proud, then pore upon corruption,
+<lb/>more than upon grace; but when thou findeſt thy heart doubting and unbelieving, then look on thy
+<lb/>graces, not on thy infirmities.</item>
+          <item>10. Study the covenant of grace and merits of Chriſt, 
+and then be troubled if thou canſt. Thou
+<lb/>art intereſted in ſuch a covenant that accepts purpoſes for performances, deſires for deeds, ſincerity
+<lb/>for perfection, the righteouſneſs of another, <hi rend="slant(italic)">viz.</hi> that of 
+<persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>, as if it were thine own. Oh my
+<lb/>Love! reſt, reſt then in the love of God, in the boſome of 
+Chriſt.</item>
+          <item>11. Swallow up thy will in the will of God; it is a bitter cup we are to drink, 
+but it is the cup our
+<lb/>Father hath put into our hands. When <persName ref="p:paul.pbe">Paul</persName> was to go to ſuffer at 
+<placeName rend="slant(italic)">Jeruſalem</placeName>, the <name>Chriſtians</name> could ſay,
+            <lb/><quote source="b:IT50023" xml:id="TR00482_q018">The will of the Lord be done</quote>; Oh, ſay thou, when I go to <placeName>Tower-hill</placeName>, The will of the Lord be
+<lb/>done.</item>
+          <item>12. Rejoyce in my joy; to mourn for me inordinately, argues that either thou envieſt, or ſuſpecteſt
+<lb/>my happineſs. The joy of the Lord is my ſtrength, oh let it be thine alſo. Dear wife, farewell; I will
+<lb/>call thee wife no more, I ſhall ſee thy face no more: yet I am not much troubled, for now I am going
+<lb/>to meet the Bridegroome the Lord <persName rend="slant(upright)" ref="p:jchrist.hjn">Jeſus Chriſt</persName>,
+ to whom I ſhall be eternally marryed.</item>
+        </list>
+        <closer><hi rend="slant(italic)">From the <name>Tower of <placeName>London</placeName></name></hi>,
+<lb/><dateline><date when="1651-08-22">22<hi rend="sup()">th</hi> 
+<name rend="slant(italic)">Auguſt</name>, 1651.</date><lb/>The day of my glorification.</dateline><salute rend="align(right)">Thy Dying, yet moſt
+<lb rend="indent(1)"/>Affectionate Friend till death,</salute><signed rend="align(right)case(allcaps)"><persName rend="slant(upright)" ref="p:clove.efe">Christopher Love</persName>.</signed></closer>
+      </div>
+      <trailer rend="case(allcaps)slant(italic)pre(#rule)post(#rule)">Finis.</trailer>
+    </body>
+  </text>
+</TEI>

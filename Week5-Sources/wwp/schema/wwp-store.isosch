@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+  <title>ISO Schematron rules</title>
+  <!-- This file generated 2022-03-01T23:56:31Z by 'extract-isosch.xsl'. -->
+  <!-- then modified by hand: namespace prefix decls trimmed to only     -->
+  <!-- those that are used: tei, TEI, wwp, and xi. But then, actually we -->
+  <!-- change "tei:" to "wwp:" passim, anyway, so it's not really used.  -->
+  <!-- (Note: remember to make that change CASE SENSITIVELY, as we use   -->
+  <!-- both "wwp:" and "TEI:", and we don't want to change the latter.)  -->
+  <!-- And I also may have removed several TEI tests that we don't want, -->
+  <!-- as they refer to constructs we don't allow anyway.  —Syd          -->
+  <!-- ********************* -->
+  <!-- namespaces, declared: -->
+  <!-- ********************* -->
+  <ns prefix="TEI" uri="http://www.tei-c.org/ns/1.0"/>
+  <ns prefix="wwp" uri="http://www.wwp.northeastern.edu/ns/textbase"/>
+  <ns prefix="xi" uri="http://www.w3.org/2001/XInclude"/>
+  <!-- ************ -->
+  <!-- constraints: -->
+  <!-- ************ -->
+  <pattern id="schematron-constraint-wwp-store-att.datable.w3c-att-datable-w3c-when-1">
+    <rule context="wwp:*[@when]">
+      <report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.datable.w3c-att-datable-w3c-from-2">
+    <rule context="wwp:*[@from]">
+      <report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.datable.w3c-att-datable-w3c-to-3">
+    <rule context="wwp:*[@to]">
+      <report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.datable-calendar_points_to_calendar-4">
+    <rule context="*[@calendar]">
+      <assert test="/wwp:TEI/wwp:teiHeader/wwp:profileDesc/wwp:calendarDesc/wwp:calendar/@xml:id = substring( normalize-space(@calendar), 2 )">The @calendar attribute of <value-of select="name(.)"/> should point to a calendar element, but this one ("<value-of select="normalize-space(@calendar)"/>") does not; this error will always occur unless you perform XInclude processing before validation (to do so in oXygen check “Enable XInclude Processing” in the XML / XML Parser / XInclude Options preferences pane)</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.datable-calendar-calendar-5">
+    <rule context="wwp:*[@calendar]">
+      <assert test="string-length(.) gt 0"> @calendar indicates one or more systems or calendars to
+      which the date represented by the content of this element belongs, but this
+      <name/> element has no textual content.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.global-xmlID-is-unique-6">
+    <rule context="@xml:id">
+      <let name="thisID" value="normalize-space(.)"/>
+      <report test="../(ancestor::*|preceding::*)/@xml:id[ normalize-space(.) eq $thisID ]                                  ">The @xml:id "<value-of select="$thisID"/>" on &lt;<value-of select="name(..)"/>&gt; duplicates an @xml:id found earlier in the document</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.measurement-att-measurement-unitRef-7">
+    <rule context="wwp:*[@unitRef]">
+      <report test="@unit" role="info">The @unit attribute may be unnecessary when @unitRef is present.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.typed-subtypeTyped-8">
+    <rule context="wwp:*[@subtype]">
+      <assert test="@type">The <name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.pointing-targetLang-targetLang-9">
+    <rule context="wwp:*[not(self::wwp:schemaSpec)][@targetLang]">
+      <assert test="@target">@targetLang should only be used on <name/> if @target is specified.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.spanning-spanTo-spanTo-to-anchor-10">
+    <rule context="wwp:*[@spanTo]">
+      <let name="spanTo" value="substring(@spanTo,2)"/>
+      <let name="spanEnd" value="id( $spanTo )"/>
+      <assert test="$spanEnd/self::wwp:anchor">
+        The @spanTo of <name/> must point to an anchor; this one (<value-of select="@spanTo"/>) points to a <value-of select="local-name($spanEnd)"/>.
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.styleDef-schemeVersion-schemeVersionRequiresScheme-11">
+    <rule context="wwp:*[@schemeVersion]">
+      <assert test="@scheme and not(@scheme = 'free')">
+        @schemeVersion can only be used if @scheme is specified.
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-p-abstractModel-structure-p-in-ab-or-p-12">
+    <rule context="wwp:p">
+      <report test="    (ancestor::wwp:ab or ancestor::wwp:p)                          and not( ancestor::wwp:floatingText                                 |parent::wwp:exemplum                                 |parent::wwp:item                                 |parent::wwp:note                                 |parent::wwp:q                                 |parent::wwp:quote                                 |parent::wwp:remarks                                 |parent::wwp:said                                 |parent::wwp:sp                                 |parent::wwp:stage                                 |parent::wwp:cell                                 |parent::wwp:figure                                )">
+        Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-p-abstractModel-structure-p-in-l-or-lg-13">
+    <rule context="wwp:p">
+      <report test="    (ancestor::wwp:l or ancestor::wwp:lg)                          and not( ancestor::wwp:floatingText                                 |parent::wwp:figure                                 |parent::wwp:note                                )">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-hi-some_must_have_rend-14">
+    <rule context="wwp:hi | wwp:mcr | wwp:emph">
+      <let name="myName" value="local-name(.)"/>
+      <let name="myDefaultRendition"
+           value="/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:tagsDecl/wwp:rendition[ $myName = tokenize( @selector,'[ ,]+') ]"/>
+      <let name="myRealRend" value="concat( $myDefaultRendition, @rend )"/>
+      <assert test="contains( $myRealRend, '(')">Wha? This <value-of select="$myName"/> element has no (usable) rendition</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:quote[ starts-with( @cit,'#' ) ]">
+      <assert test="//wwp:bibl[ @xml:id eq substring-after( current()/@cit,'#' ) ]">cit= attribute of ＜<name/>＞ does not point to a ＜bibl＞.</assert>
+    </rule>
+    <rule context="wwp:quote[ contains(@cit,'#') ]">
+      <assert test="document( substring-before( @cit,'#') )//wwp:bibl[ @xml:id = substring-after( current()/@cit,'#') ]">cit= attribute of ＜<name/>＞ does not point to a ＜bibl＞.</assert>
+    </rule>
+    <rule context="wwp:quote[ @cit ]">
+      <report test="not( contains( @cit,'#') )">cit= attribute of ＜<name/>＞ must point to particular ＜bibl＞ element via its xml:id=</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-desc-deprecationInfo-only-in-deprecated-16">
+    <rule context="wwp:desc[ @type eq 'deprecationInfo']">
+      <assert test="../@validUntil">Information about a
+      deprecation should only be present in a specification element
+      that is being deprecated: that is, only an element that has a
+      @validUntil attribute should have a child &lt;desc
+      type="deprecationInfo"&gt;.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-sic-no_correction_of_erroneous_metawork-17">
+    <rule context="wwp:sic[@type eq 'metawork']">
+      <report test="parent::wwp:choice or (preceding-sibling::*[1]|following-sibling::*[1])[self::wwp:corr]">At the WWP we do not correct metawork errors</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-sic-no_content_in_erroneous_metawork_flag-18">
+    <rule context="wwp:sic[@type eq 'metawork']">
+      <report test=".//* | .//text()[ normalize-space(.) != '']">Metawork error flags should not have content</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-orig-orig-not-belong-19">
+    <rule context="wwp:orig">
+      <report test="ancestor::wwp:mw">An orig should not be inside an mw</report>
+      <report test="ancestor::wwp:orig" role="warning">Generally speaking, an orig should not be within an orig</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-gap-gap-attr-combo-20">
+    <rule context="wwp:gap">
+      <report role="error"
+              test="                                 (                                   @reason = ('damaged','deleted','obscured','flawed-reproduction','excerpt','other')                                   and                                   @desc = ('attachment','embossing')                                 )                                 or                                 ( @reason eq 'obscured'  and  @desc eq 'unknown' )                                 ">reason="<value-of select="@reason"/>" and desc="<value-of select="@desc"/>" of ＜gap＞ is an invalid combination</report>
+      <report role="warning"
+              test="                                 (                                   @reason = ('deleted','flawed-reproduction','excerpt','omitted','other')                                   and                                   @desc eq 'unknown'                                 )                                 or                                 (                                   @reason eq 'other'  and  @desc = ('handwriting','printed')                                 )                                 ">are you sure the combination of reason="<value-of select="@reason"/>" and desc="<value-of select="@desc"/>" of ＜gap＞ makes sense?</report>
+      <assert role="error"
+              test="if ( @desc eq 'other' )                                 then id( substring( normalize-space( @corresp ), 2 ) )[self::wwp:note]                                   else true()">When the description is just "other", there should be a note explaining the gap (and @corresp should point to that note)</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="*[ starts-with( @hand,'#') ]">
+      <assert test="//wwp:handNote[ @xml:id = substring-after( current()/@hand,'#') ]">hand= attribute of ＜<name/>＞ does not point to a ＜handNote＞ (local)</assert>
+    </rule>
+    <rule context="*[ contains( @hand,'#') ]">
+      <assert test="document( substring-before( @hand,'#') )                                 //wwp:handNote[ @xml:id = substring-after( current()/@hand,'#') ]">hand= attribute of ＜<name/>＞ does not point to a ＜handNote＞ (external)</assert>
+    </rule>
+    <rule context="*[@hand]">
+      <report test="not(contains(@hand,'#'))">hand=
+      attribute of ＜<name/>＞ must point to particular
+      ＜handNote＞ element via its xml:id=</report>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:gap[@hand|@agent|@degree|@group]">
+      <assert test="substring-before( @reason, '-') ='damaged'"> The
+      hand=, agent=, degree=, and group= attributes of
+      ＜<name/>＞ should only be specified if the reason= attribute is one that
+      indicates damage in the source (i.e., starts with “damaged-”).</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:application                                   |wwp:date[not(@prev|@calendar)]                                   |wwp:time[not(@prev|@calendar)]">
+      <assert test="@when or @when-custom or @when-iso or                                     @notBefore or @notBefore-custom or @notBefore-iso or                                     @notAfter or @notAfter-iso or @notAfter-custom or                                     @from or @from-custom or @from-iso or                                     @to or @to-custom or @to-iso">At least one temporal normalization attribute should be specified on a ＜<value-of select="name(.)"/>＞.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-date-date_in_docDate-23">
+    <rule context="wwp:docDate/wwp:date">
+      <let name="dateLen" value="string-length(normalize-space(.) )"/>
+      <let name="docDateLen" value="string-length(normalize-space(..))"/>
+      <report test="$docDateLen - $dateLen gt 2" role="warn">Having a date element nested inside a docDate is rarely required</report>
+      <report test="$docDateLen - $dateLen le 2" role="error">The date element is not used inside docDate to represent the same date as the docDate — just use the attributes of docDate.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-date-cert_on_date-24">
+    <rule context="date/@cert">
+      <assert test="parent::publicationStmt">Here at the WWP we only indicate uncertain dates inside the ＜publicationStmt＞.</assert>
+      <report test="normalize-space(.) eq 'low'">The value of @cert on ＜date＞ should be "low" (or there should be no @cert).</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-ptr-ptrAtts-25">
+    <rule context="wwp:ptr">
+      <report test="@target and @cRef">Only one of the
+      attributes @target and @cRef may be supplied on <name/>.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-ref-refAtts-26">
+    <rule context="wwp:ref">
+      <report test="@target and @cRef">Only one of the
+      attributes @target' and @cRef' may be supplied on <name/>
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-list-gloss-list-must-have-labels-27">
+    <rule context="wwp:list[@type='gloss']">
+      <assert test="wwp:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:list[ not( @type = ('toc', 'reference', 'index' ) ) ]">
+      <report test="child::wwp:item/@target">＜item＞ elements should only have target= attributes if the list is a table of contents, index, or other reference list</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-item-target-items-point-internally-29">
+    <rule context="wwp:item/@target">
+      <assert test="id( substring( normalize-space( . ), 2 ) )">The @target attribute of an ＜item＞ in a "toc", "reference", or "index" list should point to an element in the same document.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-note-has-target-30">
+    <rule context="wwp:text//wwp:note[not(@target)]">
+      <report test="ancestor::wwp:hyperDiv | ancestor::wwp:div[@type='endnotes']">ERROR: <value-of select="if (@xml:id) then concat('the note with id=', @xml:id ) else concat('note #',count( preceding::wwp:note))"/> does not have a @target, but should (because it is an endnote or is inside ＜hyperDiv＞)</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-note-not-point-to-self-31">
+    <rule context="wwp:note[@target|@targetEnd]">
+      <let name="ptr2me" value="concat('#', @xml:id )"/>
+      <report test="//wwp:note[ tokenize( string-join( ( @target, @targetEnd ), ' '),' ') = $ptr2me ]">ERROR: the note element with id=<value-of select="@xml:id"/> refers to itself</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-textual-note-in-notesStmt-32">
+    <rule context="wwp:note[ @type eq 'textual']">
+      <assert test="parent::wwp:notesStmt">textual notes should be in the notesStmt in the TEI header.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-non-modern-note-not-in-notesStmt-33">
+    <rule context="wwp:note[ @type = ('editorial','authorial') ]">
+      <report test="parent::wwp:notesStmt">
+      <value-of select="@type"/> notes should not be in the notesStmt in the TEI header.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-target-points-back-34">
+    <rule context="wwp:note[ ( not(@type)  or  @type eq 'authorial' )  and  @target ]">
+      <let name="myID" value="@xml:id"/>
+      <let name="targets" value="tokenize( normalize-space( @target ), ' ')"/>
+      <let name="TARGETs"
+           value="for $t in $targets return substring-after( $t,'#')"/>
+      <let name="returnPointers_eq_me"
+           value="for $T in $TARGETs return substring-after( id( $T )/@corresp,'#') eq $myID"/>
+      <report test="$returnPointers_eq_me = false()">One or more of the values of target of the note with ID <value-of select="$myID"/> points to an element whose corresp does not point back</report>
+      <assert test="count( $targets ) &gt; 0">Empty @target of ＜note＞</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-note-note_with_only_add_should_be_add_with_note-35">
+    <rule context="wwp:note">
+      <report test="*/add                                 and                                 not( */text()[not( normalize-space(.) eq '' ) ] )">
+        note <value-of select="if (@xml:id)                 then concat('the note with id=', @xml:id ) else                 concat('note #',count( preceding::wwp:note))"/>
+        should probably be an add with a
+        note inside instead, as it seems to have no
+      content other than an add.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-milestone-idealSignature-36">
+    <rule context="wwp:milestone">
+      <let name="me" value="normalize-space(@n)"/>
+      <assert test="     matches( $me,'((facing|preceding) )?(\p{L}|\p{M}|\p{N}|\p{P}|\p{S})*[0-9]+[\])]?[rv]')">
+        The idealized signature “<value-of select="."/>” does not match the defintion thereof.
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-author-authors-have-refs-in-metadata-37">
+    <rule context="wwp:teiHeader//wwp:author/wwp:persName">
+      <assert test="@ref">Authors should have a reference to the personography.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-l-no-nested-metrical-line-38">
+    <rule context="wwp:l">
+      <report test="descendant::wwp:l">A metrical line should not contain a metrical line</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-l-abstractModel-structure-l-in-l-39">
+    <rule context="wwp:l">
+      <report test="ancestor::wwp:l[not(.//wwp:note//wwp:l[. = current()])]">
+        Abstract model violation: Lines may not contain lines or lg elements.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-lg-atleast1oflggapl-40">
+    <rule context="wwp:lg">
+      <assert test="count(descendant::wwp:lg|descendant::wwp:l|descendant::wwp:gap) &gt; 0">An lg element
+      must contain at least one child l, lg, or gap element.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-lg-abstractModel-structure-lg-in-l-41">
+    <rule context="wwp:lg">
+      <report test="ancestor::wwp:l[not(.//wwp:note//wwp:lg[. = current()])]">
+        Abstract model violation: Lines may not contain line groups.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-sp-who-who-points-to-role-42">
+    <rule context="wwp:sp[@who]">
+      <let name="whos" value="tokenize( normalize-space( @who ), ' ')"/>
+      <let name="WHOs" value="for $w in $whos return substring-after( $w,'#')"/>
+      <let name="points2something"
+           value="for $w in $WHOs return exists( id( $w ) )"/>
+      <let name="pointed2by_who" value="for $w in $WHOs return id($w)"/>
+      <report test="$points2something = false()">One or more of the pointers in this @who does not point to a local element.</report>
+      <assert test="count( $pointed2by_who ) eq count( $pointed2by_who[self::wwp:role] )">The @who of ＜sp＞ is supposed to point ＜role＞s, but this one points to: <value-of select="for $e in $pointed2by_who return concat('＜', $e/name(.), '＞ ')"/>.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-speaker-no_details_in_speaker-43">
+    <rule context="wwp:speaker">
+      <report test="wwp:persName" role="warning">We do not normally put persName inside of a speaker</report>
+      <report test="wwp:choice/wwp:abbr|wwp:abbr|wwp:expan" role="warning">We do not typically record or normalize abbreviations (or expansions) inside of a speaker</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-g-ref-g-points-to-char-44">
+    <rule context="wwp:g[@ref][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]">
+      <let name="ref" value="substring( normalize-space( @ref ), 2 )"/>
+      <let name="reffed"
+           value="if ( //wwp:charDecl )                                     then id( $ref )                                     else                                       document('../common-boilerplate.xml', /) // *[ @xml:id eq $ref ]"/>
+      <let name="test" value="$reffed[ self::wwp:char ]"/>
+      <assert test="$test">The @ref of ＜g＞ should point to a ＜char＞; this one (<value-of select="."/>) points to <value-of select="if ($reffed)                             then concat('a ＜', name($reffed),'＞')                             else 'nothing'"/>.</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:teiHeader">
+      <assert test="wwp:profileDesc/wwp:textClass">The WWP requires at least one ＜textClass＞ element be present.</assert>
+      <assert test="wwp:fileDesc/wwp:editionStmt                                     or                                     wwp:fileDesc/xi:include[                                       contains( @xpointer, 'WWPedition')                                     ]">The WWP requires at least one ＜editionStmt＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:projectDesc                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPprojectDescription')                                     ]">The WWP requires at least one ＜projectDesc＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:samplingDecl                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPsamplingDeclaration')                                     ]">The WWP requires at least one ＜samplingDecl＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:editorialDecl                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPeditorialDeclaration')                                     ]">The WWP requires at least one ＜editorialDecl＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:charDecl                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPcharacterDeclaration')                                     ]">The WWP requires at least one ＜charDecl＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:classDecl                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPclassificationDeclaration')                                     ]">The WWP requires at least one ＜classDecl＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:listPrefixDef                                     or                                     wwp:encodingDesc/xi:include[                                       contains( @xpointer, 'WWPlistPrefixDefinitions')                                     ]">The WWP requires at least one ＜listPrefixDef＞ element be present or included.</assert>
+      <assert test="wwp:encodingDesc/wwp:listPrefixDef">WARNING: ＜listPrefixDef＞ not found, so values of @ref will not be tested — if you are using the supraSchemas project, just ignore this warning; otherwise, to validate @refs, perform XInclude processing before validation (to do so in oXygen check “Enable XInclude Processing” in the XML / XML Parser / XInclude Options preferences pane)</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-quotation-quotationContents-46">
+    <rule context="wwp:quotation">
+      <report test="not(@marks) and not (wwp:p)">
+      On <name/>, either the @marks attribute should be used, or a paragraph of description provided</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-rendition-selector-required-if-pointed-at-47">
+    <rule context="wwp:rendition">
+      <let name="myIDref" value="concat('#', normalize-space( @xml:id ) )"/>
+      <assert test="@selector or ( @xml:id and                 /wwp:TEI/wwp:text//@rendition[ $myIDref = tokenize( normalize-space( . ),' ') ]                 )">default rendition #<value-of select="(@xml:id, count( preceding::wwp:rendition )+1 )[1]"/> is not the default for anything (no selector and not pointed to by rendition)</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.global.linking-both-next-and-prev-48">
+    <rule context="*[@xml:id]">
+      <let name="isAprev" value="//@prev/normalize-space(.) = concat('#',@xml:id)"/>
+      <let name="isAnext" value="//@next/normalize-space(.) = concat('#',@xml:id)"/>
+      <report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+              test="@next and not( $isAprev )"
+              sqf:fix="notpreved">Element <value-of select="@xml:id"/> has a next= but is not pointed at by a prev=</report>
+      <report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+              test="@prev and not( $isAnext )"
+              sqf:fix="notnexted">Element <value-of select="@xml:id"/> has a prev= but is not pointed at by a next=</report>
+      <report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+              test="not( @next ) and $isAprev"
+              sqf:fix="nextless">Element <value-of select="@xml:id"/> is pointed at by a prev= but does not have a next=</report>
+      <report xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+              test="not( @prev ) and $isAnext"
+              sqf:fix="prevless">Element <value-of select="@xml:id"/> is pointed at by a next= but does not have a prev=</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.global.linking-next-prev-point-appropriately-49">
+    <rule context="@prev|@next">
+      <let name="element" value=".."/>
+      <let name="me" value="normalize-space(.)"/>
+      <let name="ptr"
+           value="if ( starts-with( $me,'#') ) then substring-after( $me,'#') else 'ERROR!?!'"/>
+      <let name="hasSpace" value="contains( $me,' ')"/>
+      <let name="points2local" value="exists( id( $ptr ) )"/>
+      <let name="points2same" value="id( $ptr ) is $element"/>
+      <let name="points2sameGI" value="name( $element ) eq name( id( $ptr ) )"/>
+      <let name="pointsAfter" value="id( $ptr ) &gt;&gt; $element"/>
+      <let name="pointsBefore" value="$element &gt;&gt; id( $ptr )"/>
+      <let name="msg_part_1"
+           value="concat(                                   '@',                                   name(.),                                   ' of ＜',                                   name( $element ),                                   '＞ ',                                   if (../@xml:id)                                     then concat('(with @xml:id &#34;', ../@xml:id,'&#34;)')                                     else ''                                 )"/>
+      <report test="$hasSpace">
+      <value-of select="$msg_part_1"/> has more than 1 pointer (a space in a URI should be written '%20')</report>
+      <assert test="if ( not( $hasSpace ) ) then ( $points2local ) else true()">
+      <value-of select="$msg_part_1"/> does not point to a local element.</assert>
+      <report test="if ( not( $hasSpace ) ) then ( $points2same ) else false()">
+      <value-of select="$msg_part_1"/> points to itself.</report>
+      <assert test="if ( not( $hasSpace ) and $points2local ) then ( $points2sameGI ) else true()">
+      <value-of select="$msg_part_1"/> points to a ＜<value-of select="name( id( $ptr ) )"/>＞ (it should point to another ＜<value-of select="name( $element )"/>＞).</assert>
+      <assert test="if ( not( $hasSpace ) and $points2local and local-name(.) eq 'prev' and not( $points2same ) ) then ( $pointsBefore ) else 'true()'">
+      <value-of select="$msg_part_1"/> points to a ＜<value-of select="name( id( $ptr ) )"/>＞ that is after itself.</assert>
+      <assert test="if ( not( $hasSpace ) and $points2local and local-name(.) eq 'next' and not( $points2same ) ) then ( $pointsAfter ) else 'true()'">
+      <value-of select="$msg_part_1"/> points to a ＜<value-of select="name( id( $ptr ) )"/>＞ that is prior to itself.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-link-linkTargets3-50">
+    <rule context="wwp:link">
+      <assert test="contains(normalize-space(@target),' ')">You must supply at least two values for @target or  on <name/>
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-ab-abstractModel-structure-ab-in-ab-or-p-51">
+    <rule context="wwp:ab">
+      <report test="    (ancestor::wwp:p or ancestor::wwp:ab)                          and not( ancestor::wwp:floatingText                                  |parent::wwp:exemplum                                 |parent::wwp:item                                 |parent::wwp:note                                 |parent::wwp:q                                 |parent::wwp:quote                                 |parent::wwp:remarks                                 |parent::wwp:said                                 |parent::wwp:sp                                 |parent::wwp:stage                                 |parent::wwp:cell                                 |parent::wwp:figure                                )">
+        Abstract model violation: ab may not occur inside paragraphs or other ab elements.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-ab-abstractModel-structure-ab-in-l-or-lg-52">
+    <rule context="wwp:ab">
+      <report test="    (ancestor::wwp:l or ancestor::wwp:lg)                         and not( ancestor::wwp:floatingText                                 |parent::wwp:figure                                 |parent::wwp:note                                )">
+        Abstract model violation: Lines may not contain higher-level divisions such as p or ab, unless ab is a child of figure or note, or is a descendant of floatingText.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-dimensions-duplicateDim-53">
+    <rule context="wwp:dimensions">
+      <report test="count(wwp:width)&gt; 1">
+        The element <name/> may appear once only
+      </report>
+      <report test="count(wwp:height)&gt; 1">
+        The element <name/> may appear once only
+      </report>
+      <report test="count(wwp:depth)&gt; 1">
+        The element <name/> may appear once only
+      </report>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:persName[@ref][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]                                    | wwp:change[@who][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]                                    | *[@author][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]                                    | *[@resp][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]">
+      <let name="path" value="'https://www.wwp-test.neu.edu/wwo/texts/'"/>
+      <let name="att"
+           value="if      (self::wwp:persName and @resp) then 'UNDETERMINED'                                              else if (self::wwp:persName)           then 'ref'                                              else if (self::wwp:change and @resp)   then 'UNDETERMINED'                                              else if (self::wwp:change)             then 'who'                                              else if ( self::wwp:p                                                      | self::wwp:gloss                                                      | self::wwp:term                                                      | self::wwp:ptr                                                      | self::wwp:ref                                                      | self::wwp:graphic                                                      | self::wwp:lg                                                      | self::wwp:ab                                                      | self::wwp:text                                                      | self::wwp:body                                                      | self::wwp:group                                                      | self::wwp:floatingText                                                      | self::wwp:div                                                      | self::wwp:postscript                                                      | self::wwp:front                                                      | self::wwp:back  and  @resp)  then 'UNDETERMINED'                                              else if ( self::wwp:p                                                      | self::wwp:gloss                                                      | self::wwp:term                                                      | self::wwp:ptr                                                      | self::wwp:ref                                                      | self::wwp:graphic                                                      | self::wwp:lg                                                      | self::wwp:ab                                                      | self::wwp:text                                                      | self::wwp:body                                                      | self::wwp:group                                                      | self::wwp:floatingText                                                      | self::wwp:div                                                      | self::wwp:postscript                                                      | self::wwp:front                                                      | self::wwp:back)              then 'author'                                              else                                        'resp'                                              "/>
+      <let name="val"
+           value="normalize-space( string-join( ( @ref, @who, @resp, @author ), ' ') )"/>
+      <let name="gi" value="local-name(.)"/>
+      <let name="REFs" value="tokenize( normalize-space( $val ), ' ')"/>
+      <let name="PREFs" value="for $r in $REFs return substring-before( $r,':')"/>
+      <let name="URLs"
+           value="for $p in $PREFs return                                   concat( $path, substring-before( /wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef//wwp:prefixDef[ @ident eq $p ]/@replacementPattern, '#' ) )"/>
+      <let name="KEYs" value="for $r in $REFs return substring-after( $r,':')"/>
+      <let name="PERSONs"
+           value="for $k in $KEYs return                                     if ( count( index-of( $KEYs, $k ) ) eq 1 )                                     then                                        if ( doc-available( $URLs[ index-of( $KEYs, $k )] ) )                                       then                                         if ( document( $URLs[ index-of( $KEYs, $k )] )//TEI:*[ @xml:id eq $k ] )                                         then                                           document( $URLs[ index-of( $KEYs, $k )] )//TEI:*[ @xml:id eq $k ]                                         else .                                       else .                                     else ."/>
+      <report test="count( $REFs ) eq 0">Empty @<value-of select="$att"/> of ＜<value-of select="$gi"/>＞</report>
+      <report test="count( $PERSONs[ not( self::TEI:person ) ] ) gt 0">Each pointer in the <value-of select="$att"/> attribute of ＜<value-of select="$gi"/>＞ should point to a ＜person＞, but the pointers in this one ("<value-of select="$val"/>") point to: <value-of select="if ( not( $PERSONs ) )                           then 'nowhere'                           else for $p in $PERSONs return                             if ( $p is . )                             then ' nothing'                             else concat(' ＜', name($p), '＞')"/>.</report>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:placeName[@ref][/wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef]">
+      <let name="path" value="'https://www.wwp-test.neu.edu/wwo/texts/'"/>
+      <let name="val" value="normalize-space( @ref )"/>
+      <let name="gi" value="local-name(.)"/>
+      <let name="REFs" value="tokenize( $val, ' ')"/>
+      <let name="PREFs" value="for $r in $REFs return substring-before( $r,':')"/>
+      <let name="URLs"
+           value="for $p in $PREFs return                                   concat( $path, substring-before( /wwp:TEI/wwp:teiHeader/wwp:encodingDesc/wwp:listPrefixDef//wwp:prefixDef[ @ident eq $p ]/@replacementPattern, '#' ) )"/>
+      <let name="KEYs" value="for $r in $REFs return substring-after( $r,':')"/>
+      <let name="PLACEs"
+           value="for $k in $KEYs return                                     if ( doc-available( $URLs[ index-of( $KEYs, $k )] ) )                                     then                                       if ( document( $URLs[ index-of( $KEYs, $k )] )//TEI:*[ @xml:id eq $k ] )                                       then                                         document( $URLs[ index-of( $KEYs, $k )] )//TEI:*[ @xml:id eq $k ]                                       else .                                     else ."/>
+      <report test="count( $REFs ) eq 0">Empty @ref of ＜placeName＞</report>
+      <report test="count( $PLACEs[ not(                                     self::TEI:place ) ] ) gt 0">Each pointer in the @ref attribute of ＜placeName＞ should point to a ＜place＞, but the pointers in this one ("<value-of select="$val"/>") point to: <value-of select="if ( not( $PLACEs ) )                           then 'nowhere'                           else for $p in $PLACEs return                             if ( $p is . )                             then ' nothing'                             else concat(' ＜', name($p), '＞')"/>.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-text-sub-text-ID-matches-text-58">
+    <rule context="/wwp:TEI/wwp:teiHeader/wwp:text//wwp:text">
+      <let name="textID" value="normalize-space( /wwp:TEI/wwp:text/@xml:id )"/>
+      <assert test="substring( normalize-space( @xml:id ), 1, 7 ) eq substring( $textID, 1, 7 )">sub-text TR# <value-of select="@xml:id"/> does not match main text TR# <value-of select="$textID"/>.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-floatingText-floating-text-ID-matches-text-59">
+    <rule context="wwp:floatingText">
+      <let name="textID" value="normalize-space( /wwp:TEI/wwp:text/@xml:id )"/>
+      <assert test="substring( normalize-space( @xml:id ), 1, 7 ) eq substring( $textID, 1, 7 )">floatingText TR# <value-of select="@xml:id"/> does not match main text TR# <value-of select="$textID"/>.</assert>
+    </rule>
+  </pattern>
+  <pattern>
+    <rule context="wwp:div">
+      <assert test="descendant::wwp:div or                                     descendant::wwp:l[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:ab[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:p[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:floatingText[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:lg[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:sp[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:bibl[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:biblFull or                                     descendant::wwp:biblStruct[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:list[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:listBibl[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:table[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:listEvent or                                     descendant::wwp:quote[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:stage[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:castList[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:gap[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:join or                                     descendant::wwp:joinGrp or                                     descendant::wwp:advertisement[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:note[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:figure[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:unknown[ not( ancestor::wwp:epigraph )] or                                     descendant::wwp:trailer or                                     descendant::wwp:elision[ not( ancestor::wwp:epigraph )]">&lt;<name/>&gt; with no significant content (i.e., none of: ab advertisement bibl biblFull biblStruct castList div elision figure floatingText gap join joinGrp l lg list listBibl listEvent note p quote sp stage trailer unknown)</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-div-avoid_model.divTop_in_middle-61">
+    <rule context="wwp:div">
+      <let name="model.divTop_self"
+           value="self::wwp:argument  |  self::wwp:dateline |  self::wwp:desc |  self::wwp:docDate |  self::wwp:docRole |  self::wwp:epigraph |  self::wwp:head |  self::wwp:label |  self::wwp:opener |  self::wwp:respLine"/>
+      <let name="model.divTop_child"
+           value="child::wwp:argument | child::wwp:dateline | child::wwp:desc | child::wwp:docDate | child::wwp:docRole | child::wwp:epigraph | child::wwp:head | child::wwp:label | child::wwp:opener | child::wwp:respLine"/>
+      <let name="model.global_self"
+           value="self::wwp:add  |  self::wwp:addSpan |  self::wwp:advertisement |  self::wwp:alt |  self::wwp:anchor |  self::wwp:cb |  self::wwp:damageSpan |  self::wwp:delSpan |  self::wwp:elision |  self::wwp:figure |  self::wwp:gap |  self::wwp:lb |  self::wwp:link |  self::wwp:listTranspose |  self::wwp:metamark |  self::wwp:milestone |  self::wwp:mw |  self::wwp:note |  self::wwp:pb |  self::wwp:space |  self::wwp:substJoin |  self::wwp:unknown"/>
+      <let name="model.global_child"
+           value="child::wwp:add | child::wwp:addSpan | child::wwp:advertisement | child::wwp:alt | child::wwp:anchor | child::wwp:cb | child::wwp:damageSpan | child::wwp:delSpan | child::wwp:elision | child::wwp:figure | child::wwp:gap | child::wwp:lb | child::wwp:link | child::wwp:listTranspose | child::wwp:metamark | child::wwp:milestone | child::wwp:mw | child::wwp:note | child::wwp:pb | child::wwp:space | child::wwp:substJoin | child::wwp:unknown"/>
+      <let name="model.common_self"
+           value="self::wwp:ab  |  self::wwp:bibl |  self::wwp:biblStruct |  self::wwp:castList |  self::wwp:desc |  self::wwp:floatingText |  self::wwp:l |  self::wwp:label |  self::wwp:lg |  self::wwp:list |  self::wwp:listBibl |  self::wwp:p |  self::wwp:q |  self::wwp:quote |  self::wwp:said |  self::wwp:sp |  self::wwp:spGrp |  self::wwp:stage |  self::wwp:table"/>
+      <let name="model.common_child"
+           value="child::wwp:ab | child::wwp:bibl | child::wwp:biblStruct | child::wwp:castList | child::wwp:desc | child::wwp:floatingText | child::wwp:l | child::wwp:label | child::wwp:lg | child::wwp:list | child::wwp:listBibl | child::wwp:p | child::wwp:q | child::wwp:quote | child::wwp:said | child::wwp:sp | child::wwp:spGrp | child::wwp:stage | child::wwp:table"/>
+      <report test="( not( child::wwp:div | $model.common_child ) ) and ( $model.divTop_child )[last()]/preceding-sibling::*[ self::wwp:add |  self::wwp:addSpan |  self::wwp:advertisement |  self::wwp:alt |  self::wwp:anchor |  self::wwp:cb |  self::wwp:damageSpan |  self::wwp:delSpan |  self::wwp:elision |  self::wwp:figure |  self::wwp:gap |  self::wwp:lb |  self::wwp:link |  self::wwp:listTranspose |  self::wwp:metamark |  self::wwp:milestone |  self::wwp:mw |  self::wwp:note |  self::wwp:pb |  self::wwp:space |  self::wwp:substJoin |  self::wwp:unknown ]">This ＜div＞ seems to have a divTop element (e.g. ＜head＞) in the middle</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-div-abstractModel-structure-div-in-l-or-lg-62">
+    <rule context="wwp:div">
+      <report test="(ancestor::wwp:l or ancestor::wwp:lg) and not(ancestor::wwp:floatingText)">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-div-abstractModel-structure-div-in-ab-or-p-63">
+    <rule context="wwp:div">
+      <report test="(ancestor::wwp:p or ancestor::wwp:ab) and not(ancestor::wwp:floatingText)">
+        Abstract model violation: p and ab may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-addSpan-addSpan-requires-spanTo-64">
+    <rule context="wwp:addSpan">
+      <assert test="@spanTo">The @spanTo attribute of <name/> is required.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-damageSpan-damageSpan-requires-spanTo-66">
+    <rule context="wwp:damageSpan">
+      <assert test="@spanTo">The @spanTo attribute of <name/> is required.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-delSpan-delSpan-requires-spanTo-68">
+    <rule context="wwp:delSpan">
+      <assert test="@spanTo">The @spanTo attribute of <name/> is required.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-fw-catchword_delimiters_in_content-70">
+    <rule context="wwp:mw[@type eq 'catch']">
+      <report test="matches(@rend,'pre\([^#)]*\)')"> 
+        Generally speaking, delimters in a catchword are encoded as content, not on @rend.
+      </report>
+      <report test="matches(@rend,'post\([^#)]*\)')"> 
+        Generally speaking, delimters in a catchword are encoded as content, not on @rend.
+      </report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-subst-substContents1-71">
+    <rule context="wwp:subst">
+      <assert test="child::wwp:add and (child::wwp:del or child::wwp:surplus)">
+      <name/> must have at least one child add and at least one child del or surplus</assert>
+    </rule>
+  </pattern>
+  <pattern id="LessThan3InitialCharsDropped">
+    <rule context="*[ matches( @rend,'class\s*\(#DIC\)') ]">
+      <let name="len"
+           value="if ( .//wwp:sic | .//wwp:corr )                                 then max((                                   string-length( string-join(.//wwp:sic/normalize-space(), '') ),                                   string-length(string-join( .//wwp:corr/normalize-space(), ''))                                   ))                                 else string-length( normalize-space(.) )"/>
+      <assert test="$len lt 3">
+        A dropped initial capital is typically only 1 or at
+        most 2 characters long; this one is <value-of select="$len"/> characters long.
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="concrete_rend_keyword_checker"
+           is-a="abstract_rendition_keyword_checker">
+    <param name="rendLadderContext" value="wwp:rendition"/>
+  </pattern>
+  <pattern id="concrete_rendition_keyword_checker"
+           is-a="abstract_rendition_keyword_checker">
+    <param name="rendLadderContext" value="wwp:*/@rend"/>
+  </pattern>
+  <pattern id="abstract_rendition_keyword_checker" abstract="true">
+    <rule context="$rendLadderContext">
+      <let name="me" value="normalize-space(.)"/>
+      <let name="myself"
+           value="replace( replace( $me, ' ?\) ?',')'), ' ?\( ?','(')"/>
+      <let name="I" value="replace( replace( $myself,'\\\)','⸩'), '\\\(','⸨')"/>
+      <let name="we"
+           value="replace( $I,                                         'be(stow|queath)                                         \(                                           \(([a-z-]+\([^)]*\))+\)                                           \(([A-Za-z][A-Za-z0-9._-]*[ ]?)+\)                                         \)',                                         '','x')"/>
+      <let name="us" value="tokenize( $we, '\([^)]*\)')"/>
+      <assert test="every $ego in $us satisfies (                              $ego = ('align', 'bestow', 'border', 'braced', 'bracing', 'break', 'case', 'columns', 'face', 'fill', 'first-indent', 'indent', 'place', 'pos', 'post', 'pre', 'rotate', 'slant', 'space-above', 'sub', 'sup', 'underline', 'underscore')                             or                             $ego = ('', 'class', 'inverted', 'myAnchor', 'right-indent', 'rotate', 'rotate-y')                             )">
+        I parsed the <value-of select="if (self::wwp:rendition) then concat('content of ＜rendition＞ #', (@xml:id,count( preceding::wwp:rendition)+1)[1]) else concat('@rend of a ＜', local-name(..),'＞' )"/>,
+        "<value-of select="."/>", into the keywords "<value-of select="for $ego in ($us) return concat('{',$ego,'}')"/>",
+        at least one of which is not a proper keyword.
+      </assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-TR_and_OT_nums-74">
+    <rule context="/">
+      <let name="hdr"
+           value="substring-before( normalize-space( /wwp:TEI/wwp:teiHeader/@xml:id ),'.hdr')"/>
+      <let name="idno"
+           value="normalize-space( /wwp:TEI/wwp:teiHeader/wwp:fileDesc/wwp:publicationStmt/wwp:idno[@type eq 'WWP'] )"/>
+      <let name="textID" value="normalize-space( /wwp:TEI/wwp:text/@xml:id )"/>
+      <let name="sourceDescs"
+           value="/wwp:TEI/wwp:teiHeader/wwp:fileDesc/wwp:sourceDesc"/>
+      <let name="sourceDesc"
+           value="               if ( count( $sourceDescs ) eq 1 )                 then $sourceDescs                 else $sourceDescs[ not( @default eq 'false') ]                 "/>
+      <let name="source" value="normalize-space( $sourceDesc/@n )"/>
+      <assert test="matches( $hdr,   '^TR[0-9]{5}(\.[0-9]{2})?$')">TEI Header ID is not in correct format</assert>
+      <assert test="matches( $idno,  '^TR[0-9]{5}(\.[0-9]{2})?$')">WWP idno is not in correct format</assert>
+      <assert test="matches( $textID,'^TR[0-9]{5}(\.[0-9]{2})?$')">xml:id of text is not a proper TR number</assert>
+      <assert test="matches( $source,'^OT[0-9]{5}(\.[0-9]{2})?$')">n of sourceDesc is not a proper OT number</assert>
+      <assert test="$idno eq $textID                               and                               substring( $idno, 3 ) eq substring( $source, 3 )                               and                               $idno eq $hdr">TR and OT numbers do not all match.</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-filenames_match-75">
+    <rule context="/">
+      <let name="myfn" value="tokenize( document-uri(/),'/')[last()]"/>
+      <let name="mybase" value="substring-before( $myfn, '.xml')"/>
+      <let name="URLidno"
+           value="/wwp:TEI/wwp:teiHeader/wwp:fileDesc/wwp:publicationStmt/wwp:idno[@type eq 'URL']"/>
+      <let name="URLidnobase"
+           value="substring-before( tokenize( $URLidno,'/')[last()],'.html')"/>
+      <let name="svnIDnot"
+           value="exists( /comment()[contains( ., concat('$','Id','$') ) ] )"/>
+      <let name="SVN"
+           value="tokenize( normalize-space( /comment()[contains( .,'$Id:') ] ), ' ')"/>
+      <let name="SVNfn" value="$SVN[2]"/>
+      <let name="SVNbase" value="substring-before( $SVNfn,'.xml')"/>
+      <assert test="matches( $URLidno,'^https?://www\.wwp\.northeastern\.edu/texts/[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.html$')">URL idno is not in correct format</assert>
+      <assert test="if (normalize-space($myfn) eq '') then true() else $URLidnobase eq $mybase">URL idno does not match filename</assert>
+      <report test="count( $SVN ) eq 0  and  not( $svnIDnot )">Subversion 'Id' keyword comment not found</report>
+      <report test="count( $SVN ) eq 0  and  $svnIDnot">Subversion 'Id' keyword has not been substituted</report>
+      <assert test="if (normalize-space($myfn) eq '') then true() else $SVNfn eq $myfn">Subversion 'Id' filename does not match actual filename</assert>
+      <assert test="$SVNbase eq $URLidnobase">Subversion 'Id' filename does not match URL idno</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-corresp-not-point-to-self-76">
+    <rule context="*[ @corresp ]">
+      <let name="ptr2me" value="concat('#', @xml:id )"/>
+      <report test="tokenize( normalize-space( @corresp ),' ') = $ptr2me">ERROR: the <value-of select="name()"/> element with id=<value-of select="@xml:id"/> corresponds to itself</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-shyTests-77">
+    <rule context="text()[contains(.,'­')]">
+      <let name="len" value="43"/>
+      <let name="me" value="normalize-space(.)"/>
+      <let name="ellipsis" value="if (string-length($me) &gt; $len) then '…' else ''"/>
+      <let name="snippet" value="concat( substring( $me, 1, $len), $ellipsis )"/>
+      <report test="matches(.,'­.*­')">“<value-of select="$snippet"/>”: two shy!</report>
+      <assert test="matches(.,'­\s*$')">“<value-of select="$snippet"/>”: non-whitespace after shy!</assert>
+      <assert test="following::text()">“<value-of select="$snippet"/>”: nothing follows shy!</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-anagram-target-one_ptr_iff_content-78">
+    <rule context="anagram[normalize-space(.) eq '']">
+      <let name="targets" value="tokenize( normalize-space( @target ),' ')"/>
+      <assert test="count( $targets ) gt 1">An empty ＜anagram＞ element should point to 2 or more targets</assert>
+    </rule>
+    <rule context="anagram[normalize-space(.) ne '']">
+      <let name="targets" value="tokenize( normalize-space( @target ),' ')"/>
+      <assert test="count( $targets ) eq 1">An ＜anagram＞ element that contains an anagram should point to only 1 target</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-hyperDiv-adds_in_adds_have_note-79">
+    <rule context="wwp:adds/wwp:add/child::*">
+      <assert test="self::wwp:note">An ＜add＞ inside ＜adds＞ inside the ＜hyperDiv＞ should not have any children other than ＜note＞ (and there is a ＜<name/>＞ here).</assert>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.structuralCategorization-value-of-div-not-text-80">
+    <rule context="wwp:text">
+      <report test="@type = ('act',                                            'advert',                                            'argument',                                            'book',                                            'calendar',                                            'castlist',                                            'chapter',                                            'colophon',                                            'concluding',                                            'confession',                                            'contents',                                            'corrigenda',                                            'ded',                                            'docAuthorization',                                            'dramaPart',                                            'endnotes',                                            'entry',                                            'epigraph',                                            'epilogue',                                            'frontispiece',                                            'index',                                            'imprimatur',                                            'novelPart',                                            'placeholder',                                            'prefatory',                                            'prologue',                                            'scene',                                            'section',                                            'subsection',                                            'timeline')">warning: the "<value-of select="@type"/>" value of @type is not intended to be used on ＜text＞.</report>
+    </rule>
+  </pattern>
+  <pattern id="schematron-constraint-wwp-store-att.structuralCategorization-value-of-div-not-body-81">
+    <rule context="wwp:body">
+      <report test="@type = ('advert',                                            'argument',                                            'book',                                            'calendar',                                            'castlist',                                            'chapter',                                            'colophon',                                            'concluding',                                            'contents',                                            'corrigenda',                                            'ded',                                            'docAuthorization',                                            'endnotes',                                            'entry',                                            'epigraph',                                            'epilogue',                                            'frontispiece',                                            'index',                                            'imprimatur',                                            'novel',                                            'part',                                            'prefatory',                                            'prologue',                                            'scene',                                            'section',                                            'subsection',                                            'timeline',                                            'volume')">warning: the "<value-of select="@type"/>" value of @type is not intended to be used on ＜body＞.</report>
+    </rule>
+  </pattern>
+  <!-- *********************** -->
+  <!-- schematron quick fixes: -->
+  <!-- *********************** -->
+  <sqf:fixes xmlns="http://www.tei-c.org/ns/1.0"
+             xmlns:rng="http://relaxng.org/ns/structure/1.0"
+             xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+             xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+             xmlns:teix="http://www.tei-c.org/ns/Examples"
+             xmlns:xi="http://www.w3.org/2001/XInclude">
+    <sqf:fix id="notpreved">
+      <sqf:description>
+        <sqf:title>Point at me with a @prev</sqf:title>
+        <sqf:p>Add a @prev that points to me to the element I point to with @next</sqf:p>
+      </sqf:description>
+      <sch:let name="next" value="id( substring(@next,2) )"/>
+      <sch:let name="ptr2me" value="concat('#', @xml:id )"/>
+      <sqf:add target="prev"
+               node-type="attribute"
+               match="$next"
+               select="$ptr2me"/>
+    </sqf:fix>
+    <sqf:fix id="notnexted">
+      <sqf:description>
+        <sqf:title>Point at me with a @next</sqf:title>
+        <sqf:p>Add a @next that points to me to the element I point to with @prev</sqf:p>
+      </sqf:description>
+      <sch:let name="prev" value="id( substring(@prev,2) )"/>
+      <sch:let name="ptr2me" value="concat('#', @xml:id )"/>
+      <sqf:add target="next"
+               node-type="attribute"
+               match="$prev"
+               select="$ptr2me"/>
+    </sqf:fix>
+    <sqf:fix id="nextless">
+      <sqf:description>
+        <sqf:title>Add missing @next</sqf:title>
+        <sqf:p>For an element that is pointed to by a @prev but does not have an @next, add the @next</sqf:p>
+      </sqf:description>
+      <sch:let name="myID" value="@xml:id"/>
+      <sqf:add node-type="attribute"
+               target="next"
+               select="concat('#',//*[@prev/normalize-space(.) eq concat('#',$myID)][1]/@xml:id)"/>
+    </sqf:fix>
+    <sqf:fix id="prevless">
+      <sqf:description>
+        <sqf:title>Add missing @prev</sqf:title>
+        <sqf:p>For an element that is pointed to by a @next but does not have an @prev, add the @prev</sqf:p>
+      </sqf:description>
+      <sch:let name="myID" value="@xml:id"/>
+      <sqf:add node-type="attribute"
+               target="prev"
+               select="concat('#',//*[@next/normalize-space(.) eq concat('#',$myID)][1]/@xml:id)"/>
+    </sqf:fix>
+  </sqf:fixes>
+</schema>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:functx="http://www.functx.com" >
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en">Sour cherry puree</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>Semantic annotation of the recipe &quot;Sour cherry puree&quot; (b2.1)</edition>
+        <respStmt>
+          <resp>edition</resp>
+          <persName>Julia Eibinger</persName>
+          <persName>Helmut W. Klug</persName>
+        </respStmt>
+        <respStmt>
+          <resp>transcription</resp>
+          <persName>Astrid Böhm</persName>
+        </respStmt>
+        <respStmt>
+          <resp>digital processing</resp>
+          <persName>Christian Steiner</persName>
+        </respStmt>
+        <principal>
+          <persName>Helmut W. Klug</persName>
+        </principal>
+        <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </publisher>
+        <authority>
+          <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </authority>
+        <distributor>
+          <ref target="https://gams.uni-graz.at"></ref>
+          <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+        </distributor>
+        <availability>
+          <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+          <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
+        </availability>
+        <date when="2022-03-25"></date>
+        <pubPlace>Graz</pubPlace>
+        <idno type="PID">o:corema.b2.1</idno>
+      </publicationStmt>
+      <seriesStmt>
+        <ab>
+          <title ref="http://gams.uni-graz.at/corema">CoReMA - Cooking Recipes of the Middle Ages: Corpus, Analysis, Visualisation</title>
+          <ref target="http://gams.uni-graz.at/o:corema.about/TEI_SOURCE">About the project &quot;CoReMA&quot;</ref>
+          <ref target="http://gams.uni-graz.at/o:corema.imprint/TEI_SOURCE">Imprint of the project &quot;CoReMA&quot;</ref>
+        </ab>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl type="corresponding_manuscript">
+          <msIdentifier>
+            <country>Deutschland</country>
+            <settlement>Berlin</settlement>
+            <institution ref="https://staatsbibliothek-berlin.de/">Staatsbibliothek – Preußischer Kulturbesitz –</institution>
+            <repository>Handschriftenabteilung</repository>
+            <idno ref="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN771897928&amp;PHYSID=PHYS_0001&amp;DMDID=">Ms. germ. qu. 15</idno>
+            <altIdentifier type="abbr">
+              <idno>B2</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </bibl>
+        <bibl type="corresponding_collection">
+          <msIdentifier>
+            <altIdentifier type="collection">
+              <idno>B2</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </bibl>
+        <bibl type="manuscript_page">
+          <title>page in corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.b2#B2_094r" type="uri"></ref>
+        </bibl>
+        <bibl type="manuscript_tei_source">
+          <title>TEI source of corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.b2/TEI_SOURCE" type="uri"></ref>
+        </bibl>
+        <bibl type="manuscript_context">
+          <title>context of corresponding manuscript/collection</title>
+          <ref target="info:fedora/context:corema.b2" type="context">Context for all recipes in manuscript &quot;B2&quot;</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <ab>
+        <desc>References to the editorial principles and practices for this TEI file and the project CoReMA</desc>
+        <ref target="https://gams.uni-graz.at/o:corema.semanticdec/TEI_SOURCE">details of editorial principles and practices for the semantic annotation</ref>
+      </ab>
+    </encodingDesc>
+    <profileDesc>
+      <textClass ana="#b2.1">
+        <keywords>
+          <term>recipe</term>
+        </keywords>
+      </textClass>
+      <creation>
+        <origDate>
+          <date notAfter="1500" notBefore="1400" xml:lang="de">15. Jh.</date>
+          <date xml:lang="en">15th c.</date>
+        </origDate>
+        <origPlace>
+          <placeName xml:lang="de">Gegend von Öttingen</placeName>
+          <placeName xml:lang="en">area of Öttingen</placeName>
+        </origPlace>
+      </creation>
+      <langUsage>
+        <language ident="de-x-enh" source="http://medieval-plants.org/mps-daten/inhalt/">Swabian German</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body xml:space="preserve"><div n="1" type="recipe" xml:id="b2.1" xml:lang="de-x-enh">
+                    <title key="Sour cherry puree" type="none"></title>
+                    <instruction>Nym <ingredient commodity="Q68438267" en="sour cherry">weichsel</ingredient></instruction> vnd <instruction>thu sy In ein
+                            <tool commodity="Q15711817" en="pot">haffen</tool></instruction> vnd <instruction>secz auff ein <tool commodity="Q177257" en="ember">glut</tool></instruction> vnd
+                        <instruction>laß sy siden</instruction> vnd <instruction>lasz dann kalt
+                        werden</instruction> vnd <instruction>streich sy durch ein <tool commodity="Q2621157" en="cheesecloth">tuch</tool></instruction> vnd
+                        <instruction>thu sy wider in den <tool commodity="Q15711817" en="pot">hafen</tool></instruction> vnd <instruction>lasz syden</instruction>
+                    vnd <instruction>ruer sy wol daz sy sich nit an legen</instruction>
+                    <instruction>das tu <time>piß sy dick werd</time></instruction> vnd
+                        <instruction>thu dan <ingredient commodity="Q10987" en="honey">honig</ingredient> dar zu</instruction> vnd <instruction><ingredient commodity="Q42527" en="spice">wuercz</ingredient> als gestossen
+                            <ingredient commodity="Q15622897" en="clove">negelein</ingredient> vnd
+                            <ingredient commodity="Q15046077" en="ginger">yngwer</ingredient> vnd
+                        geriben <ingredient commodity="Q7802" en="bread">prot</ingredient></instruction> vnd <instruction>haltz in einem glasirten
+                            <tool commodity="Q15711817" en="pot">hafen</tool></instruction>
+                    <kitchenTip>Also magstu <alternative reason="dish">von andern sachen <dish commodity="Q178359" en="sauce">salssen</dish> vnd <dish commodity="Q2737588" en="electuary">lattwering</dish> machen</alternative></kitchenTip>
+                    <kitchenTip>dann zu der <dish commodity="Q2737588" en="electuary">lattwerig</dish> nym kain <ingredient ana="exclusion" commodity="Q7802" en="bread">prot</ingredient></kitchenTip></div></body>
+  </text>
+</TEI>
+
+

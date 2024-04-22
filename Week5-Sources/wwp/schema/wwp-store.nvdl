@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0">
+  <anyNamespace>
+    <validate schema="/Users/syd/Documents/WWP/textbase_schema/wwp-store.isosch"/>
+    <validate schema="/Users/syd/Documents/WWP/textbase_schema/wwp-store.rng"/>
+  </anyNamespace>
+</rules>

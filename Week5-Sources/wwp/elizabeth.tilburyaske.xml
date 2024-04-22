@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/wwp-store.rng"    type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/wwp-store.isosch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- $Id: elizabeth.tilburyaske.xml 44910 2022-02-24 16:50:36Z syd $ -->
+<TEI xmlns="http://www.wwp.northeastern.edu/ns/textbase" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+  <teiHeader xml:id="TR00420.hdr">
+    <fileDesc>
+      <titleStmt>
+        <title type="main">The Tilbury speech (Aske's version), 1588</title>
+        <author>
+          <persName ref="p:elizabeth.neu" type="person-female">Elizabeth I</persName>
+        </author>
+        <sponsor>Brown University</sponsor>
+        <sponsor>Northeastern University</sponsor>
+        <funder>U.S. National Endowment for the Humanities</funder>
+        <funder>The Andrew W. Mellon Foundation</funder>
+      </titleStmt>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPedition)"/>
+      <publicationStmt>
+        <publisher>Northeastern University Women Writers Project</publisher>
+        <address>
+          <addrLine>SL 213</addrLine>
+          <addrLine>Northeastern University</addrLine>
+          <addrLine>360 Huntington Avenue</addrLine>
+          <addrLine>Boston, MA  02115-5005</addrLine>
+          <addrLine>USA</addrLine>
+          <addrLine>url:mailto:wwp@neu.edu</addrLine>
+          <addrLine>url:http://www.wwp.northeastern.edu/</addrLine>
+        </address>
+        <idno type="WWP">TR00420</idno>
+        <idno type="URL">https://www.wwp.northeastern.edu/texts/elizabeth.tilburyaske.html</idno>
+        <xi:include href="../common-boilerplate.xml" xpointer="element(WWPavailability)"/>
+        <date when="2001-04-23"/>
+      </publicationStmt>
+      <notesStmt>
+        <note type="internal">
+          <p>The last three pages of the text from which this excerpt
+			was taken, are misnumbered ("33" is marked as p. "19";
+			"34" as "18"; and "35" as "23"(this section of the text
+			falls outside what I encoded). Nor did this affect  how I
+			filled in the gap extent value, which we decided was an
+			ideal projection.</p>
+        </note>
+      </notesStmt>
+      <sourceDesc n="OT00420">
+        <biblStruct>
+          <analytic>
+            <author>
+              <persName ref="p:elizabeth.neu" type="regularized">Elizabeth I</persName>
+            </author>
+            <title>[The Tilbury speech, Aske's version]</title>
+          </analytic>
+          <monogr>
+            <author>
+              <persName ref="p:jaske.nej" type="titlePage">I. A.</persName>
+              <persName ref="p:jaske.nej" type="regularized">Aske, James</persName>
+            </author>
+            <title>Elizabetha triumphans</title>
+            <idno type="csmh">31218</idno>
+            <idno type="STC">847</idno>
+            <imprint>
+              <pubPlace>London</pubPlace>
+              <publisher>
+                <persName ref="p:tgubbin.inz" type="titlePage">Thomas Gubbin</persName>
+                <persName ref="p:tgubbin.inz" type="regularized">Gubbin, Thomas</persName>
+              </publisher>
+              <date when="1588">1588</date>
+            </imprint>
+            <biblScope unit="part">[The Tilbury speech, Aske's version]</biblScope>
+            <biblScope unit="page">Title page; pp. 25-27</biblScope>
+            <extent>
+              <measure unit="page" quantity="4"/>
+            </extent>
+            <extent>
+              <dimensions>
+                <format>quarto</format>
+              </dimensions>
+            </extent>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPprojectDescription)"/>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPsamplingDeclaration)"/>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPeditorialDeclaration)"/>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPcharacterDeclaration)"/>
+      <tagsDecl>
+        <rendition xml:id="TR00420_rend.it" selector="placeName, persName">slant(italic)</rendition>
+        <rendition xml:id="TR00420_rend.romup" selector="name">slant(upright)face(roman)</rendition>
+        <rendition xml:id="TR00420_rend.break" selector="">break(yes)</rendition>
+        <rendition xml:id="TR00420_rend.nobreak" selector="">break(no)</rendition>
+        <rendition xml:id="TR00420_rend.placeout" selector="note">place(outside)</rendition>
+      </tagsDecl>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPclassificationDeclaration)"/>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPlistPrefixDefinitions)"/>
+    </encodingDesc>
+    <profileDesc>
+      <textClass>
+        <catRef type="main" target="#G.verse"/>
+        <catRef type="other" target="#G.verse.narrative"/>
+      </textClass>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPcalendarDescription)"/>
+      <xi:include href="../common-boilerplate.xml" xpointer="element(WWPlangUsage)"/>
+    </profileDesc>
+    <revisionDesc>
+      <change n="RCS-1.33" when="2010-12-07" who="p:npeterson.gwx">added <att>type</att> to docRole</change>
+      <change n="RCS:1.29" when="2008-12-10" who="p:mrymszapa.mvu">looked for persname placename nesteds</change>
+      <change n="RCS:1.17" when="1999-08-20" who="p:jflanders.lfw">fixed header errors</change>
+      <change n="RCS:1.16" when="1999-08-16" who="p:jrussom.zxg">Updated header names.</change>
+      <change n="RCS:1.14" when="1999-08-10" who="p:jflanders.lfw">updated sourcedesc; added analytic with Elizabeth as
+		  author</change>
+      <change when="1999-02-18" who="p:blandry.nua">Entered corrections.</change>
+      <change when="1999-02-10" who="p:pcaton.xzc">Altered tagging of printer and publishers to conform to new
+		  policy of using DOCROLE + PERSNAME. Validated against DTD
+		  1.1.23a, and supravalidated.</change>
+      <change when="1999-01-20" who="p:jrussom.zxg">Corrected author of monogr to Aske, James</change>
+      <change when="1999-01-15" who="p:jrussom.zxg">Revised TEI header FILEDESC element names, ordering, and
+		  contents.</change>
+      <change when="1998-05-19" who="p:pcaton.xzc">Made several changes including (incredibly) tagging the text
+		  as a poem instead of prose; also added reason attribute to
+		  'gap' tags. Revalidated file against DTD 1.1.10a</change>
+      <change when="1998-05-12" who="p:cmah.dci">Fixed tagging of NOTEs and GAP to correspond for validation
+		  against most current DTD, 1.1.10a</change>
+      <change when="1997-09-30" who="p:fhalpern.ahl">Entered the changes mandated by the encoding review.</change>
+      <change when="1997-09-30" who="p:fhalpern.ahl">Checked correx made from first proofing round.</change>
+      <change when="1997-09-16" who="p:fhalpern.ahl">Finished entering corrext from first proofing round and
+		  printed it out.</change>
+      <change when="1997-09-04" who="p:pcaton.xzc">Added id for header.</change>
+      <change when="1997-07-30" who="p:fhalpern.ahl">Finished capturing.</change>
+      <change when="1997-07-28" who="p:fhalpern.ahl">Began capture using psgml/emacs on Unix with version 1.1.4a
+		  of wwp-store DTD.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:id="TR00420">
+    <hyperDiv>
+      <notes>
+        <note target="#n01">
+          <p>The Queene
+<lb/>went out of 
+<lb/>the Campe.</p>
+        </note>
+        <note target="#n02">
+          <p>The Queene
+<lb/>called her Ser­
+<lb/><vuji>i</vuji>ant Ma<vuji>i</vuji>or <vuji>v</vuji>n­
+<lb/>to her, and deli­
+<lb/><vuji>u</vuji>ered a meſ­
+<lb/>ſage.</p>
+        </note>
+        <note target="#n03">
+          <p>The effect of 
+<lb/>the Queenes 
+<lb/>ſpeach.</p>
+        </note>
+      </notes>
+    </hyperDiv>
+    <front>
+      <titleBlock rend="slant(upright)face(roman)align(center)">
+        <titlePart rend="case(allcaps)border(#ornament)" type="main">Elizabetha Tri<vuji>v</vuji>mphans.</titlePart>
+        <titlePart type="desc">Conteyning
+<lb/>The
+<lb/>Damned practizes, that the di<vuji>u</vuji>eliſh
+<lb/><hi rend="slant(italic)">Popes of Rome ha<vuji>u</vuji>e
+<vuji>v</vuji>ſed e<vuji>u</vuji>er
+	      ſithence her</hi>
+<lb/>Highneſſe firſt comming to the Crowne, by
+<lb/><hi rend="slant(italic)">mo<vuji>u</vuji>ing her wicked and traiterous
+	      ſub<vuji>i</vuji>ects to</hi>
+<lb/>Rebellion and conſpiracies, thereby
+<lb/>to berea<vuji>u</vuji>e her Ma<vuji>i</vuji>eſtie both of her law­
+<lb/>full ſeate, and happy life.</titlePart>
+        <titlePart type="desc"><hi rend="slant(italic)"><vuji>VV</vuji>ith a declaration of the manner how
+	      her ex­</hi><lb/>cellency was entertained by her Souldyers into her
+<lb/>Campe Royall at <placeName>Tilbery</placeName> in
+	    <placeName>Eſſex</placeName>: and of the
+<lb/>o<vuji>u</vuji>erthrow had againſt the Spaniſh Fleete: briefly,
+<lb/>truly, and effectually ſet foorth.</titlePart>
+        <respLine>Declared, and handled 
+<lb/>by <persName ref="p:jaske.nej">I.A.</persName></respLine>
+        <epigraph rend="slant(italic)" xml:lang="la">
+          <said>Poſt victoriam
+	    gloria.</said>
+        </epigraph>
+        <docImprint rend="slant(italic)"><hi rend="case(allcaps)">At</hi><pubPlace rend="case(allcaps)">London</pubPlace><lb/>Printed by <docRole type="printer"><persName ref="p:torwin.mko">Thomas Orwin</persName></docRole>,
+	  for 
+	  <docRole type="publisher"><persName ref="p:tgubbin.inz">Thomas Gubbin</persName></docRole>,
+<lb/><hi rend="slant(upright)">and</hi><docRole type="publisher"><persName ref="p:tnewman.nev">Thomas Newman</persName></docRole>.
+<lb/><docDate when="1588" rend="slant(upright)">1588</docDate>.</docImprint>
+      </titleBlock>
+    </front>
+    <body>
+      <gap reason="excerpt" desc="printed" extent="A-D4; pp.i-viii,1-24"/>
+      <pb n="25"/>
+      <milestone unit="sig" n="E1r"/>
+      <mw type="pageNum">25</mw>
+      <lg type="para" rend="face(blackletter)">
+        <l><anchor xml:id="TR00420_n01"/><hi rend="class(#DIC)">W</hi>hen
+	  <name>Phæbus</name> lights were in the middle part</l>
+        <l>Twixt <mcr rend="face(roman)">Eaſt</mcr> and <mcr rend="face(roman)">Weſt</mcr> faſt haſting to his
+	  home:</l>
+        <l>Our So<vuji>u</vuji>eraigne (our ſacred bliſfull Queene)</l>
+        <l>Was readie to depart from out her Campe.</l>
+        <l>Agaynſt whoſe comming, e<vuji>u</vuji>ery Captaine was</l>
+        <l>There preſt to ſhew themſel<vuji>u</vuji>es in readines,</l>
+        <l>To do the will of their high <hi rend="face(roman)slant(upright)">Generall</hi>.</l>
+        <l>There might you ſee moſt bra<vuji>u</vuji>e and gallant men,</l>
+        <l>Who lately were beclad in <persName rend="face(roman)slant(upright)" ref="p:mars.tqa">Mars</persName> his cloathes,</l>
+        <l>Inranked then in <mcr rend="face(roman)slant(upright)">Court</mcr>-like
+	  coſtly ſuites.</l>
+        <l>Through whom did paſſe our Queene moſt <persName rend="face(roman)slant(upright)" ref="p:dido.nec">Dido</persName>-like,</l>
+        <l>(Whoſe ſtately heart doth ſo abound with lo<vuji>u</vuji>e,</l>
+        <l>As thouſand thanks it yeelds <vuji>v</vuji>nto them all)</l>
+        <l>To water-ſide to take her royall Barge.</l>
+        <l>Amidſt the way (which was the outward <hi rend="face(roman)slant(upright)">Ward</hi></l>
+        <l>Of that her Campe) her <hi rend="face(roman)slant(upright)">Ser<vuji>i</vuji>ant
+	    Ma<vuji>i</vuji>or</hi> ſtood</l>
+        <l>Among thoſe <hi rend="face(roman)slant(upright)">Squadrans</hi> which there
+	  then did ward.</l>
+        <l>Her eyes were ſet ſo earneſtly to view,</l>
+        <l>As him <vuji>v</vuji>nſeene ſhe would not paſſe along,</l>
+        <l><anchor xml:id="TR00420_n02"/>But calls him to her rich-built Couches ſides,</l>
+        <l>And thanking him (as oft before ſhe had)</l>
+        <l>Did will him do this meſſage from her mouth,</l>
+        <l>Deli<vuji>u</vuji>ered with full of wiſedome words.</l>
+        <l>Which that it may not altogether be</l>
+        <l>(Through unfit word hew'd from a ſtonie wit)</l>
+        <l>Obliterated to my <vuji>v</vuji>tter ſhame:</l>
+        <l>Ye ſacred <mcr rend="face(roman)slant(upright)">Dames</mcr>, ye
+	  ſea<vuji>u</vuji>en-fold <mcr rend="face(roman)slant(upright)">Nimphes</mcr> (I meane)</l>
+        <l>(Whoſe thickie gro<vuji>u</vuji>es reſound your hea<vuji>u</vuji>enly words:</l>
+        <l>Whence e<vuji>u</vuji>ery <hi rend="face(roman)slant(upright)">Arte</hi> had firſt
+	  their ſe<vuji>u</vuji>erall names)</l>
+        <l>Be-bathe my temples with thoſe peerl-like droppes</l>
+        <l>Which fall amaine from that your ſil<vuji>u</vuji>er ſtreame:</l>
+        <l>That through your ayde my wit now dulled ſore,</l>
+        <l>May quickned be with that your flowing <hi rend="face(roman)slant(upright)">Arte</hi>.</l>
+        <l>Then ſhall I write in theſe my lines too rude</l>
+        <l>Her royall ſpeech (though nothing like her ſpeech)</l>
+        <l>Which in effect was it that here enſues.</l>
+        <mw type="sig" rend="align(center)break(yes)face(blackletter)">E.</mw>
+        <mw type="catch" rend="break(no)align(right)face(blackletter)">We</mw>
+        <pb n="26"/>
+        <milestone unit="sig" n="E1v"/>
+        <mw type="pageNum" rend="align(right)">26</mw>
+        <anchor xml:id="TR00420_n03"/>
+        <l>
+          <said xml:id="TR00420_said002-1" rend="slant(upright)face(roman)" next="#said002-2">We will them know that now by proofe we ſee</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-2" rend="slant(upright)face(roman)" next="#said002-3" prev="#said002-1">Their loyall hearts to <vuji>v</vuji>s their lawfull Queene.</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-3" rend="slant(upright)face(roman)" next="#said002-4" prev="#said002-2">For ſure we are that none beneath the <hi rend="slant(italic)">Hea<vuji>u</vuji>ens</hi></said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-4" rend="slant(upright)face(roman)" next="#said002-5" prev="#said002-3">Ha<vuji>u</vuji>e readier Sub<vuji>i</vuji>ects to defend their right:</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-5" rend="slant(upright)face(roman)" next="#said002-6" prev="#said002-4">Which happines we coumpt to <vuji>v</vuji>s as cheefe.</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-6" rend="slant(upright)face(roman)" next="#said002-7" prev="#said002-5">And though of lo<vuji>u</vuji>e their dueties cra<vuji>u</vuji>e no leſſe,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-7" rend="slant(upright)face(roman)" next="#said002-8" prev="#said002-6">Yet ſay to them that we in like regarde,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-8" rend="slant(upright)face(roman)" next="#said002-9" prev="#said002-7">And eſtimate of this their deareſt zeale,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-9" rend="slant(upright)face(roman)" next="#said002-10" prev="#said002-8">(If time of neede ſhall e<vuji>u</vuji>er call them foorth</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-10" rend="slant(upright)face(roman)" next="#said002-11" prev="#said002-9">To dare in field their fearce and cruell foes)</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-11" rend="slant(upright)face(roman)" next="#said002-12" prev="#said002-10">Wilbe our ſelfe their noted <hi rend="slant(italic)">Generall</hi>.</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-12" rend="slant(upright)face(roman)" next="#said002-13" prev="#said002-11">Ne deare at all to <vuji>v</vuji>s ſhalbe our life,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-13" rend="slant(upright)face(roman)" next="#said002-14" prev="#said002-12">Ne Pallaces or Caſtles huge of ſtone</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-14" rend="slant(upright)face(roman)" next="#said002-15" prev="#said002-13">Shall hold as then our preſence from their view:</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-15" rend="slant(upright)face(roman)" next="#said002-16" prev="#said002-14">But in the midſt and very heart of them,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-16" rend="slant(upright)face(roman)" next="#said002-17" prev="#said002-15"><persName ref="p:bellona.ney">Bellona</persName>-like we meane as then to
+	  march;</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-17" rend="slant(upright)face(roman)" next="#said002-18" prev="#said002-16">On common lot of gayne or loſſe to both,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-18" rend="slant(upright)face(roman)" next="#said002-19" prev="#said002-17">They well ſhall ſee we recke ſhall then betide.</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-19" rend="slant(upright)face(roman)" next="#said002-20" prev="#said002-18">And as for honor with moſt large rewards,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-20" rend="slant(upright)face(roman)" next="#said002-21" prev="#said002-19">Let them not care they common there ſhalbe:</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-21" rend="slant(upright)face(roman)" next="#said002-22" prev="#said002-20">The meaneſt man who ſhall deſer<vuji>u</vuji>e a might,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-22" rend="slant(upright)face(roman)" next="#said002-23" prev="#said002-21">A mountaine ſhall for his deſart recei<vuji>u</vuji>e.</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-23" rend="slant(upright)face(roman)" next="#said002-24" prev="#said002-22">And this our ſpeach, and this our ſolemne vowe,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-24" rend="slant(upright)face(roman)" next="#said002-25" prev="#said002-23">In ſer<vuji>u</vuji>ent lo<vuji>u</vuji>e to thoſe our Sub<vuji>i</vuji>ects deare,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-25" rend="slant(upright)face(roman)" next="#said002-26" prev="#said002-24">Say <hi rend="slant(italic)">Ser<vuji>i</vuji>ant Ma<vuji>i</vuji>or</hi>, tell them from
+	  our ſelfe,</said>
+        </l>
+        <l>
+          <said xml:id="TR00420_said002-26" rend="slant(upright)face(roman)" prev="#said002-25">On Kingly faith we will performe it there.</said>
+        </l>
+        <l>Which ſayd, ſhe
+	  bow'd her princely bodie downe,
+</l>
+        <l>And paſſed thence <vuji>v</vuji>nto the water-ſide:
+</l>
+        <l>Where once imbarg'd the roring Cannons were
+</l>
+        <l>Diſcharg'd, both thoſe which were on <placeName rend="face(roman)slant(upright)">Tilb'rie hill</placeName>,
+</l>
+        <l>And alſo thoſe which at the <hi rend="face(roman)slant(upright)">Block-houſe</hi> were:
+</l>
+        <l>And there e<vuji>u</vuji>en then the fore-white mant'led <hi rend="face(roman)slant(upright)">Ayre</hi>,
+</l>
+        <l>From whence the <mcr rend="face(roman)slant(upright)">Sunne</mcr> ſhed foorth
+	  his brighteſt beames,
+</l>
+        <l>Did cloathe it ſelfe with darke and duſkie hue,
+</l>
+        <l>And with thick Clowdes bar'd <name>Phæbus</name> gladſome ſtreames
+</l>
+        <l>From lightning then the <hi rend="face(roman)slant(upright)">Earth</hi> with
+	  glorious ſhew.
+<mw type="catch" rend="align(right)break(yes)face(blackletter)">It</mw>
+<pb n="27"/>
+<milestone unit="sig" n="E2r"/>
+<mw type="pageNum" rend="align(right)">27</mw>
+</l>
+        <l>It powres foorth ſhowers in great and often droppes,
+</l>
+        <l>Signes of the griefe for her departure thence.</l>
+        <l>And <mcr rend="face(roman)slant(upright)">Terra</mcr> now her highneſſe
+	  foot-ſtoole late,</l>
+        <l>Refuſeth quite thoſe drops deſir'd before,</l>
+        <l>To moyſten her dri'd up and parched parts,</l>
+        <l>And of her ſelfe e<vuji>u</vuji>en then ſhe yeelded foorth</l>
+        <l>Great ſtore of waters from her late-dri'd heart,</l>
+        <l>Now deeply droun'd for this the parted loſſe</l>
+        <l>Of that her ſacred and renowned Queene.</l>
+        <l>But happie <placeName rend="face(roman)slant(upright)">Thames</placeName>
+	  (thriſe happie at this time)</l>
+        <l>Turnes backe with ſpeede his lately ebbing courſe:</l>
+        <l>He calmes his billowes raging ſore before,</l>
+        <l>And makes it flow with a ſwift running ſtreame.</l>
+        <l>And <persName ref="p:aeolus.nej" rend="face(roman)slant(upright)">Æolus</persName> to him a friendly King,</l>
+        <l>Recals his boyſterous <persName ref="p:boreas.yex" rend="face(roman)slant(upright)">Boreas</persName> to his
+	  den,</l>
+        <l>Sent late abroad with ſuch ſore thundring blaſts</l>
+        <l>As be the cracks which come, when angrie <persName ref="p:zeus.lxl" rend="face(roman)slant(upright)"><vuji>I</vuji>o<vuji>u</vuji>e</persName></l>
+        <l>Throwes from his ſeate his hurtfull Thunder-boults.</l>
+        <l>Him he tyes up within an hollow ca<vuji>u</vuji>e,</l>
+        <l>With three link'd chaines with huge and ſtrong-made locks</l>
+        <l>Leaſt that he ſhould annoy her ſacred ſelfe,</l>
+        <l>Who now was carried on the ri<vuji>u</vuji>er <placeName rend="face(roman)slant(upright)">Thames</placeName>.</l>
+      </lg>
+      <gap reason="excerpt" desc="printed" extent="13 lines"/>
+      <mw type="sig" rend="align(center)break(yes)face(blackletter)">E2</mw>
+      <mw type="catch" rend="break(no)align(right)face(blackletter)">Do</mw>
+      <gap reason="excerpt" desc="printed" extent="E2v-F2r; pp.28-35"/>
+    </body>
+  </text>
+</TEI>

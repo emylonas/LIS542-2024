@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecipeContents>
+    <Recipe>
+        <TitleOfRecipe>Homemade Blackberry Lemonade</TitleOfRecipe>
+        <Creator>Soup Loving Nicole</Creator>
+        <UsageDescription> This homemade lemonade is easy to make and gets a flavor boost from blackberries. The end result is light and refreshing which is perfect for those hot summer days.</UsageDescription>
+     <PreparationInformation> Prep Time: 5 Minutes, Cook Time: 5 Minutes, Total Time 10 Minutes, Serving 4</PreparationInformation>
+        <ListofIngredients>
+            <Ingredient>3/4 cup white sugar</Ingredient>
+            <Ingredient>4 1/2 cups water, divided</Ingredient>
+            <Ingredient>1 cup blackberries</Ingredient>
+            <Ingredient>1 cup freshly squeezed lemon juice</Ingredient>
+            <Ingredient>ice cubes</Ingredient>
+        </ListofIngredients>
+        <ListofInstructions>
+            <Step>Heat 3/4 cup sugar and 1/2 cup water in a small saucepan over medium heat. Cook and stir until sugar has dissolved, about 2 minutes. Let cool</Step>
+            <Step>Place blackberries and remaining 2 tablespoons of sugar in a blender. Blend until smooth</Step>
+            <Step>Combine simple syrup, blended blackberries, remaining 4 cups of water, and lemon juice. Place a fine-mesh sieve over a pitcher and pour lemonade into the pitcher; discard solids. Serve over ice</Step>
+        </ListofInstructions>
+        <NutritionFacts>200 Calories, 0g Fat, 53g Carbs, 1g Protein</NutritionFacts>
+    </Recipe>
+</RecipeContents>

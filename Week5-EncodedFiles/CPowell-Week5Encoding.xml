@@ -1,0 +1,82 @@
+<?xml-model href="https://www.stoa.org/epidoc/schema/9.1/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://www.stoa.org/epidoc/schema/9.1/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xml:lang="en" xml:base="ex-epidoctemplate.xml" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Funerary Inscriptions</title>
+                <respStmt>
+                    <resp>Creator</resp>
+                    <name xml:id="CP3">Carrington Powell</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Database of Military Inscriptions and Papyri of Early Roman Palestine</authority>
+                <idno type="filename"/>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>museum/archive</repository>
+                        <idno>0029</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="9"><p/></layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>The inscription is carved into stone</p>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Judaea</region>
+                                <settlement>Emmaus</settlement>
+                                <geogName type="village">Amwas</geogName>
+                            </origPlace>
+                            <origDate><date notBefore="0068" notAfter="0070">68-70 CE</date></origDate>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="photograph of text or monument"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/>P(ublius) Oppi[us … f(ilius)] 
+                    <lb n="2"/> Camilia […] 
+                    <lb n="3"/> -cio Rave[n(n)a], 
+                    <lb n="4"/> miles leg(ionis) [V] 
+                    <lb n="5"/> Mac(edonicae), optio, 
+                    <lb n="6"/> vixit an(n)os 
+                    <lb n="7"/> XXX, milita(vit) 
+                    <lb n="8"/> annos VIIII. 
+                    <lb n="9"/> H(ic) s(itus) e(st). 
+                    <lb n="10"/> H(eres) f(ecit).
+                </ab>
+            </div>
+            <div type="translation">
+                <p>Publius Oppius [son of …], of the tribe Camilia. […]cio of Ravenna, soldier in legio V Macedonica, optio. He lived 30 years, soldier for 9 years. He rests here. His heir made erected this tombstone. </p>
+            </div>
+            <div type="commentary">
+                <p>As a legionary who died in combat, Publius Oppius’ heir was presumably either a freedperson or a relative, as he was ineligible to be married. Legio V Macedonica did not remain in Judaea after the Judaean War, so he must have settled Emmaus in the late stages of the War.</p>
+            </div>
+            <div type="bibliography">
+                <p>CIIP 3094; J. H. Landau, “Two Inscribed Tombstones,” Atiqot 11 (1976): 89-90; Moshe Fischer, Benjamin Isaac and Israel Roll, Roman Roads in Judaea II: The Jaffa-Jerusalem Roads, BARIS 628 (Oxford: Tempvs Reparatvm, 1996), 156.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

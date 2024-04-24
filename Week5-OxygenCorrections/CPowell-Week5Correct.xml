@@ -23,9 +23,9 @@
            they should appear is in Canvas.
         -->  
             
-            <div xml:id="div">
+            <div xml:id="div001">
                 
-                <head xml:id="head">A Silly Memo</head>
+                <head xml:id="head001">A Silly Memo</head>
                 
                 <opener>From: <name type="personRoleName">The Professor</name>
                     To: <name type="personRoleName">The Scientist</name>
@@ -33,7 +33,7 @@
                 
                 <salute>Good news.</salute>
                 
-                <p xml:id="text">We have discovered the source of the high pitched sound. It glows blue in direct sunlight. We suspect it will taste of blueberries.</p>
+                <p xml:id="text001">We have discovered the source of the high pitched sound. It glows blue in direct sunlight. We suspect it will taste of blueberries.</p>
                 <closer><signed>Yours ever, in science</signed></closer>
                 
             </div>

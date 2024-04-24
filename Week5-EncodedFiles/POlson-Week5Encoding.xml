@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://briancroxall.net/w20dh/cbml.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:cbml="http://www.cbml.org/ns/1.0"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      
+      <fileDesc>
+         <!-- Documemt metadata -->
+         <titleStmt>
+            <title>Calvin and Hobbes 1987-01-31 (digital transcription)</title>
+            <respStmt>
+               <resp>encoder</resp>
+               <persName ref="#r-PO">Pel Olson</persName>
+            </respStmt>
+            <respStmt>
+               <resp>oversight</resp>
+               <persName ref="https://orcid.org/0000-0001-5602-6830">Brian Croxall</persName>
+            </respStmt>
+         </titleStmt>
+         
+         <publicationStmt> 
+            <publisher>
+               <orgName ref="https://briancroxall.net/w21dh">Digital Humanities 315, Winter 2022</orgName>
+            </publisher>
+            <availability status="free">
+               <!-- availability info -->
+               <licence>
+                  This work is licensed under a Creative Commons Attribution 4.0 International License. <ref target="https://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons licence Attribution-BY 4.0</ref>
+               </licence>
+            </availability>
+            <!-- project assigned ID -->
+            <idno type="local">CalvinAndHobbes1987-01-31</idno>
+         </publicationStmt>
+
+         <!-- Source Metadata -->
+         <sourceDesc>
+            <bibl><title level="a">Calvin and Hobbes 1987-01-31</title>. In <author ref="https://viaf.org/viaf/73875998">Bill Watterson</author>, <title>The Complete Calvin and Hobbes Book 1 1985 to 1987</title>. <publisher>Andrews McMeel Publishing, L.L.C.</publisher>, <date>2012</date>.</bibl>
+         </sourceDesc>   
+      </fileDesc>
+      
+      <!-- Taxonomy used, which is specialised for Peanuts. Taxonomy not changed, but characters ignored. -->
+      <encodingDesc>
+         <classDecl>
+            <xi:include href="https://raw.githubusercontent.com/briancroxall/peanuts-taxonomy/master/peanuts-taxonomy.xml">
+               <xi:fallback>
+                  <p>ERROR: could not find taxonomies file, which should appear in this space.</p>
+               </xi:fallback>
+               </xi:include> 
+         </classDecl>
+      </encodingDesc>
+      
+      <revisionDesc>
+         <change who="#r-EM" when="2020-01-27">Made template</change>
+         <change who="#r-BC" when="2020-02-05">Updated template</change>
+         <change who="#r-BC" when="2020-02-07">Updated template</change>
+         <change who="#r-BC" when="2020-02-10">Updated template</change>
+         <change who="#r-BC" when="2020-02-13">Updated template</change>
+         <change who="#r-BC" when="2020-02-18">Updated template</change>
+         <change who="#r-BC" when="2021-02-08">Updated template</change>
+         <change who="#r-BC" when="2021-02-18">Updated template</change>
+         <change who="#r-BC" when="2022-02-10">Updated template</change>
+         <change who="Pel Olson" when="2024-04-24">Initial encoding</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <!-- Digital representation of the original comic-->
+   
+   <facsimile>
+      <graphic url="https://www.gocomics.com/calvinandhobbes/1987/01/31"/>
+   </facsimile>
+   
+   <text>
+      <body>
+         
+         <div type="panelGrp" ana="#w-snow" xml:id="CalvinAndHobbes1987-01-31">
+            
+            <cbml:panel n="1" characters="#c-Calvin">
+               <note resp="#r-PO" type="panelDesc">Calvin looks out the window, happily noting heavy snowfall.</note>
+               <cbml:balloon type="speech" who="#c-Calvin">HEY! IT SNOWED LAST NIGHT!</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="2" characters="#c-Calvin" ana="#tr-m2m">
+               <note resp="#r-PO" type="panelDesc">Calvin turns around excitedly expecting schools to close for the day due to snow.</note>
+               <cbml:balloon type="speech" who="#c-Calvin">OH,BOY! LOOK AT IT ALL! THEY'LL HAVE TO CLOSE THE SCHOOLS!</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="3" characters="#c-Calvin" ana="#tr-act2act">
+               <note resp="#r-PO" type="panelDesc">Calvin excitedly runs, looking forward to his day off from school</note>
+               <cbml:balloon type="speech" who="#c-Calvin">SNOW EVERYWHERE! IT MUST BE WAIST DEEP!</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="4" characters="#" ana="#tr-act2act #s-bus_stop">
+               <note resp="#r-PO" type="panelDesc">Calvin angrily trudges through snow that goes to his waist, towards the waiting schoolbus</note>
+               <cbml:balloon type="speech" who="#c-Calvin">UNFORTUNATELY, THAT'S A RELATIVE MEASURE.</cbml:balloon>
+               <docAuthor>WATTERSON</docAuthor>
+               <docDate>1-31</docDate>
+            </cbml:panel>
+            
+         </div>
+      </body>
+   </text>
+</TEI>

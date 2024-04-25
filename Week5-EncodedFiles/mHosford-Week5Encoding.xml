@@ -79,18 +79,18 @@
          
          <div type="panelGrp" xml:id="Peanuts1993-05-19"><!-- Make sure that the value of this xml:id matches the idno from line 35 above. If there is a setting, weather, activities, or Bechdel test, tag them in the <div> with ana="" -->
             
-            <cbml:panel n="1" characters="Linus, Snoopy"><!-- In each of the four panel blocks, record the characters that appear in the panel.   -->
+            <cbml:panel n="1" characters="#Linus #Snoopy"><!-- In each of the four panel blocks, record the characters that appear in the panel.   -->
                <note resp="#r-MH" type="panelDesc">Linus and Snoopy sit on a bench. Linus talks at Snoopy, Snoopy thinks his reply.</note><!-- Put your r-name from the taxonomy (e.g., #r-HJ, #r-DM, #r-AL, #r-KS) as the value of the resp attribute. Give a quick description of what happens in this panel -->
-               <cbml:balloon type="speech" who="Linus">As a world famous attorney, would you ever be interested in becoming a member of the Supreme Court?</cbml:balloon><!-- Put in the character who is speaking. If there are no speech bubbles, remove this line. If it's a different type of bubble than a speech bubble, change the @type value.-->
+               <cbml:balloon type="speech" who="#Linus">As a world famous attorney, would you ever be interested in becoming a member of the Supreme Court?</cbml:balloon><!-- Put in the character who is speaking. If there are no speech bubbles, remove this line. If it's a different type of bubble than a speech bubble, change the @type value.-->
                <!-- Add a second (or third!) <cbml:balloon> if there are multiple speech bubbles in a panel -->
-               <cbml:balloon type="thought" who="Snoopy">Why not?</cbml:balloon>
+               <cbml:balloon type="thought" who="#Snoopy">Why not?</cbml:balloon>
                <docDate>5-19</docDate><!-- Include the date as written in the comic. Move to a different panel if needed. Move it above the signature if need be. -->
             </cbml:panel>
             
-            <cbml:panel n="2" characters="Linus, Snoopy" ana="moment-to-moment"><!-- In panels 2, 3, and 4, also record the transition type according to McCloud using the tr- value from the taxonomy -->
+            <cbml:panel n="2" characters="#Linus #Snoopy" ana="moment-to-moment"><!-- In panels 2, 3, and 4, also record the transition type according to McCloud using the tr- value from the taxonomy -->
                <note resp="#r-MH" type="panelDesc">Linus and Snoopy still on bench. Linus continues to speak at Snoopy, who continues to think his response.</note>
-               <cbml:balloon type="speech" who="Linus">Of course, you'd have to move to Washington..</cbml:balloon>
-               <cbml:balloon type="thought" who="Snoopy">Where's that?</cbml:balloon>
+               <cbml:balloon type="speech" who="#Linus">Of course, you'd have to move to Washington..</cbml:balloon>
+               <cbml:balloon type="thought" who="#Snoopy">Where's that?</cbml:balloon>
                <docAuthor>SCHULZ</docAuthor><!-- Include Schulz's signature. If rendered differently, encode with a <hi rend=""> element. Move this to a different panel if need be. -->
             </cbml:panel>
                

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:functx="http://www.functx.com">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en">Baked Beans</title>
+      </titleStmt>
+      <editionStmt>
+
+        <!-- Principal and Funder information left intact so as to keep file valid, even though they don't apply to this project -->
+        <edition>Semantic annotation of the recipe &quot;Baked Beans&quot; </edition>
+        <respStmt>
+          <resp>markup</resp>
+          <persName>August W. Guszkowski</persName>
+        </respStmt>
+        <respStmt>
+          <resp>transcription</resp>
+          <persName>Elli Mylonas</persName>
+        </respStmt>
+        <principal>
+          <persName>Helmut W. Klug</persName>
+        </principal>
+        <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+      </editionStmt>
+
+      <!-- The publicationStmt element will have information prepopulated for the University of Graz, which is the home of CoReMa, but 
+          this could be changed as needed. Not required for this exercise.
+    -->
+      <publicationStmt>
+        <publisher>
+          <ref target="https://informationsmodellierung.uni-graz.at"/>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </publisher>
+        <authority>
+          <ref target="https://informationsmodellierung.uni-graz.at"/>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </authority>
+        <distributor>
+          <ref target="https://gams.uni-graz.at"/>
+          <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+        </distributor>
+        <availability>
+          <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+            4.0</licence>
+          <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >Creative Commons BY-NC-SA 4.0 </licence>
+        </availability>
+        <date when="2022-03-25"/>
+        <pubPlace>Graz</pubPlace>
+        <idno type="PID">o:corema.b2.1</idno>
+      </publicationStmt>
+
+      <!-- The seriesStmt is also part of the Graz metadata. Best to just leave it there.  -->
+      <seriesStmt>
+        <ab>
+          <title ref="http://gams.uni-graz.at/corema">CoReMA - Cooking Recipes of the Middle Ages:
+            Corpus, Analysis, Visualisation</title>
+          <ref target="http://gams.uni-graz.at/o:corema.about/TEI_SOURCE">About the project
+            &quot;CoReMA&quot;</ref>
+          <ref target="http://gams.uni-graz.at/o:corema.imprint/TEI_SOURCE">Imprint of the project
+            &quot;CoReMA&quot;</ref>
+        </ab>
+      </seriesStmt>
+
+      <!-- This section is where source info goes, such as bibliography. Because this is a manuscript encoding project, they require a lot of the bibliographic information you would have for a manuscript. Best to leave as is or the file may be invalid.  -->
+      <sourceDesc>
+        <bibl type="corresponding_manuscript">
+          <msIdentifier>
+            <country>Deutschland</country>
+            <settlement>Berlin</settlement>
+            <institution ref="https://staatsbibliothek-berlin.de/">Staatsbibliothek – Preußischer
+              Kulturbesitz –</institution>
+            <repository>Handschriftenabteilung</repository>
+            <idno
+              ref="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN771897928&amp;PHYSID=PHYS_0001&amp;DMDID="
+              >Ms. germ. qu. 15</idno>
+            <altIdentifier type="abbr">
+              <idno>B2</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </bibl>
+        <bibl type="manuscript_page">
+          <title>page in corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.b2#B2_094r" type="uri"/>
+        </bibl>
+        <bibl type="manuscript_tei_source">
+          <title>TEI source of corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.b2/TEI_SOURCE" type="uri"/>
+        </bibl>
+        <bibl type="manuscript_context">
+          <title>context of corresponding manuscript/collection</title>
+          <ref target="info:fedora/context:corema.b2" type="context">Context for all recipes in
+            manuscript &quot;B2&quot;</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+
+    <!-- This section provides a link to the encoding documentation -->
+    <encodingDesc>
+      <ab>
+        <desc>References to the editorial principles and practices for this TEI file and the project
+          CoReMA</desc>
+        <ref target="https://gams.uni-graz.at/o:corema.semanticdec/TEI_SOURCE">details of editorial
+          principles and practices for the semantic annotation</ref>
+      </ab>
+    </encodingDesc>
+
+    <!-- This section provides metadata about the recipe, where it comes from and what its dates are. -->
+    <profileDesc>
+      <textClass ana="#b2.1">
+        <keywords>
+          <term>recipe</term>
+        </keywords>
+      </textClass>
+      <creation>
+        <origDate>
+          <date notAfter="1919" notBefore="1919" xml:lang="en">1919</date>
+          <date xml:lang="en">20th c.</date>
+        </origDate>
+        <origPlace>
+          <placeName xml:lang="en">Chicago, Il.</placeName>
+        </origPlace>
+      </creation>
+      <!-- Despite my best Googling I couldn't figure out where the source attribute here should come from, and the file is invalid without a langUsage attribute, so I left that as is. -->
+      <langUsage>
+        <language ident="en-US" source="http://medieval-plants.org/mps-daten/inhalt/">English</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+
+  <!-- Enter the recipe below -->
+
+  <!-- This is my best attempt at encoding Mrs. A. Smith's baked beans recipe. -->
+  
+  <text>
+    <body xml:space="preserve"><div n="1" type="recipe" xml:id="b2.1" xml:lang="en-US">
+                    <title key="Baked Beans" type="none"/>
+
+                    <instruction>Wash and soak <ingredient commodity="Q17141829" en="navy beans">one pound navy beans</ingredient>over night.</instruction>
+                    <instruction>Boil slowly twenty minutes and drain.</instruction>
+                    <instruction>Add <ingredient commodity="Q7406005" en="salt pork">1/2 pound salt pork</ingredient>cut in thick slices, <ingredient commodity="Q154389" en="molasses">1/4 cup molasses</ingredient>or<ingredient commodity="Q11190742" en="brown sugar">brown sugar,</ingredient><ingredient commodity="Q11254" en="table salt">salt</ingredient>to taste.</instruction>
+                    <instruction>Cover with water and bake in slow <tool commodity="Q36539" en="oven">oven</tool>about six hours.</instruction>
+                    <instruction>Add water a little at a time, as needed.</instruction>
+                    </div></body>
+  </text>
+</TEI>

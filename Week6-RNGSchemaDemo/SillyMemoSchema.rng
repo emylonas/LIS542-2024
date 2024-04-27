@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <start>
+        <element name="memo">
+
+<!-- Header part -->
+            <element name="header">
+                <choice>
+                    <ref name="p-element"/>
+                    <group>
+                        <element name="title">
+                            <text/>
+                        </element>
+                        <element name="author">
+                            <ref name="who-element"/>
+                        </element>
+                    </group>
+                </choice>
+            </element>
+            
+            <!-- body definitions start here -->
+
+            <element name="body">
+                <element name="head">
+                    <text/>
+                </element>
+                <element name="div">
+
+                    <element name="opener">
+                        <interleave>
+                            <text/>
+                            <oneOrMore>
+                                <ref name="who-element"/>
+                            </oneOrMore>
+                            <ref name="date-element"/>
+                        </interleave>
+                    </element>
+
+                    <oneOrMore>
+                        <ref name="p-element"/>
+                    </oneOrMore>
+
+                    <element name="closer">
+                        <text/>
+                    </element>
+                </element>
+            </element>
+        </element>
+    </start>
+    
+    <!-- Named Pattern Definitions Start Here -->
+
+    <define name="who-element">
+        <element name="who">
+            <optional>
+                <attribute name="type"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+
+    <define name="date-element">
+        <element name="date">
+            <attribute name="when">
+                <data type="date"/>
+            </attribute>
+            <text/>
+        </element>
+    </define>
+
+    <define name="p-element">
+        <element name="p">
+            <text/>
+        </element>
+    </define>
+
+</grammar>

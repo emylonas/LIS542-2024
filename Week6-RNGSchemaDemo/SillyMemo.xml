@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="SillyMemoSchema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<memo>
+    <header>
+        <title>Practice Validation and Some more XML explanations</title>
+        <author><who type="person">Elli Mylonas</who></author>    
+    </header>
+    
+    <body>    
+        <head>A Silly Memo</head>
+        
+        <div>
+            
+            <opener>From: <who>The Professor</who>
+                To: <who>The Scientist</who>
+                Date: <date when="2023-04-01">April 1, 2023</date></opener>
+            
+            <p>Good news.</p>
+            <p>We have discovered the source of the high pitched sound. It glows blue in direct sunlight. We suspect it will taste of <fruit>blueberries</fruit>.
+            </p>
+            
+            <closer> <signed>Yours ever, in science</signed> <who>Professor Calculus</who></closer>
+            
+        </div>
+        
+    </body>
+</memo>

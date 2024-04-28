@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns:cbml="http://www.cbml.org/ns/1.0">
+<facsimile>
+    <graphic url="https://www.gocomics.com/peanuts/1967/07/20"/>
+</facsimile>
+
+<text>
+    <body>
+        
+        <head><emph>Peanuts</emph>, <date when="1967-20-07">20 July 1967</date></head>
+        
+        <div type="panelGrp" ana="s-outside">
+            
+            <cbml:panel n="1" characters="#c-snoopy #c-bug">
+                <note resp="#r-JG" type="panelDesc">Snoopy is sitting outside thinking about the life of a bug, there is a bug on the ground</note>
+                <cbml:balloon type="thought" who="#c-snoopy">I'm glad I'm not a bug... Bugs have a terrible life..</cbml:balloon>
+            </cbml:panel>
+                            
+            <cbml:panel n="2" characters="#c-snoopy #c-bug" ana="tr-moment-to-moment"><!-- In panels 2, 3, and 4, also record the transition type according to McCloud using the tr- value from the taxonomy -->
+                <note resp="#r-JG" type="panelDesc">Snoopy continues sitting outside thinking about the life of a bug with the bug on the ground</note>
+                <cbml:balloon type="thought" who="#c-snoopy">I'm sure that this bug wishes he were me...</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="3" characters="#c-snoopy #c-bug" ana="tr-moment-to-moment">
+                <note resp="#r-JO" type="panelDesc">Snoopy is still sitting outside and the bug sighs</note>
+                <cbml:balloon type="speech" who="#c-bug">
+                    <sound>*SIGH*</sound>
+                </cbml:balloon>
+                <docDate>7-20</docDate><!-- Include the date as written in the comic. Move to a different panel if needed. Move it above the signature if need be. -->
+            </cbml:panel>
+            
+            <cbml:panel n="4" characters="#c-snoopy #c-bug" ana="tr-moment-to-moment">
+                <note resp="#r-JG" type="panelDesc">The bug leaves the scene</note>
+                <cbml:balloon type="thought" who="#c-snoopy">I knew it... That was a sign of envy!</cbml:balloon>
+                <docAuthor>SCHULZ</docAuthor>
+            </cbml:panel>
+
+        </div>
+    </body>
+</text>
+</TEI>

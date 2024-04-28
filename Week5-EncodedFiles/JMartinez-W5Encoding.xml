@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://briancroxall.net/w20dh/cbml.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:cbml="http://www.cbml.org/ns/1.0"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      
+      <fileDesc>
+         <titleStmt>
+            <title>Elizabeth I the most eligible (digital transcription)</title>
+            <respStmt>
+               <resp>encoder</resp>
+               <persName ref="j-MR">Javier Martinez</persName>
+            </respStmt>
+            <respStmt>
+               <resp>oversight</resp>
+               <persName ref="https://orcid.org/0000-0001-5602-6830">Brian Croxall</persName>
+            </respStmt>
+         </titleStmt>
+         
+         <publicationStmt> 
+            <publisher>
+               <orgName ref="https://briancroxall.net/w21dh">Digital Humanities 315, Winter 2022</orgName>
+            </publisher>
+            <availability status="free">
+               <!-- alternative values are "restricted" and "unknown" -->
+               <licence>
+                  All content (c)2006-2018 Kate Beaton
+               </licence>
+            </availability>
+            <!-- project assigned ID -->
+            <idno type="local">ElizabethI001</idno>
+         </publicationStmt>
+
+         <!-- This is about the source -->
+         <sourceDesc>
+            <bibl><title level="a">Elizabeth I the most eligible</title> In <author ref="http://viaf.org/viaf/169380203">Kate Beaton</author>, <title>Hark! A Vagrant</title> <publisher>Self-Published</publisher>, <date>2006</date><!-- Change this publication date if working in a different volume -->.</bibl>
+         </sourceDesc>   
+      </fileDesc>
+      
+      <!-- This is a call to the external taxonomy that we're using: https://github.com/briancroxall/peanuts-taxonomy/blob/master/peanuts-taxonomy.xml. -->
+      <encodingDesc>
+         <classDecl>
+            <xi:include href="https://raw.githubusercontent.com/briancroxall/peanuts-taxonomy/master/peanuts-taxonomy.xml">
+               <xi:fallback>
+                  <p>ERROR: could not find taxonomies file, which should appear in this space.</p>
+               </xi:fallback>
+               </xi:include> 
+         </classDecl>
+      </encodingDesc>
+   </teiHeader>
+
+   <facsimile>
+      <graphic url="http://www.harkavagrant.com/index.php?id=20"/>
+   </facsimile>
+   
+   <text>
+      <body>
+         
+         <head><emph>Elizabeth I Comics</emph></head>
+         
+         <div type="panelGrp" xml:id="ElizabethI001">
+            
+            <cbml:panel n="1" characters="#ElizabethI #anon_man">
+               <note resp="j-MR" type="panelDesc">Elizabeth I asks what is the sound that she hears, a man responds.</note>
+               <cbml:balloon type="speech" who="#ElizabethI">What is that racket!</cbml:balloon>
+               <cbml:balloon type="speech" who="#anon_man">Charles of Austria here to woo you again, Majesty</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="2" characters="#ElizabethI #anon_man #CharlesAustria" ana="moment-to-moment">
+               <note resp="#j-MR" type="panelDesc">Elizabeth I expresses her dislike for Charles of Austria as the man asks her to consider the match. Charles of Austria sings for Elizabeth I</note>
+               <cbml:balloon type="speech" who="#ElizabethI">Ugh! I can't stand him!</cbml:balloon>
+               <cbml:balloon type="speech" who="#anon_man">Your majesty would be wise to consider such an alliance</cbml:balloon>
+               <cbml:caption type="audio" subtype="singing" who="CharlesAustria">Elizabethhh your eyes are like giant moon cakes</cbml:caption>
+            </cbml:panel>
+            
+            <cbml:panel n="3" characters="#ElizabethI #anon_man #CharlesAustria" ana="#moment-to-moment">
+               <note resp="#j-MR" type="panelDesc">Elizabeth chooses to take action and shows further irritation. Charles continues singing and the man is confused about Elizabeth's statement</note>
+               <cbml:balloon type="speech" who="#ElizabethI">Bollox on your alliance! I'll go tell him I have SARS or something</cbml:balloon>
+               <cbml:caption type="speech" who="anon_man">SARS?</cbml:caption>
+               <cbml:caption type="audio" subtype="singing" who="CharlesAustria">Your hair is like a giant muffin</cbml:caption>
+            </cbml:panel>
+            
+            <cbml:panel n="4" characters="#ElizabethI #CharlesAustria" ana="#moment-to-moment">
+               <note resp="#j-MR" type="panelDesc">Elizabeth I tells Charles of Austria to stop singing</note>
+               <cbml:balloon type="speech" who="#Elizabeth I">You!</cbml:balloon>
+               <cbml:balloon type="speech" who="#CharlesAustria">My dove!</cbml:balloon>
+               <cbml:balloon type="speech" who="#Elizabeth I">Knock it off with the bloody singing!</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="5" characters="#ElizabethI #CharlesAustria" ana="#moment-to-moment">
+               <note resp="#j-MR" type="panelDesc">Charles of Austria continues to plead with Elizabeth the I, she continues to refuse</note>
+               <cbml:balloon type="speech" who="#CharlesAustria">Be my wife!</cbml:balloon>
+               <cbml:balloon type="speech" who="#Elizabeth I">I don't marry tone deaf inbreds!</cbml:balloon>
+               <cbml:balloon type="speech" who="#CharlesAustria">But I bought new poofy pantaloons to impress you!</cbml:balloon>
+               <cbml:balloon type="speech" who="#Elizabeth I">Those are impressive but I still don't want to get married!</cbml:balloon>
+               <cbml:caption type="speech" who="CharlesAustria">I don't follow you</cbml:caption>
+            </cbml:panel>
+            
+            <cbml:panel n="6" characters="#ElizabethI" ana="#scene-to-scene">
+               <note resp="#j-MR" type="panelDesc">Elizabeth is shown in a game show setting with three unnamed men</note>
+               <cbml:caption>Later, Elizabeth gets tricked into appearing on a dating program!</cbml:caption>
+               <floatingText type="diegetic" subtype="sign"><body><p>The Bachelorette!</p></body></floatingText>
+               <cbml:balloon type="speech" who="#Elizabeth I">Piss it!</cbml:balloon>
+              
+              <floatingText><body><p>www.katebeaton.com</p></body></floatingText>
+            </cbml:panel>
+            
+         </div>
+      </body>
+   </text>
+</TEI>

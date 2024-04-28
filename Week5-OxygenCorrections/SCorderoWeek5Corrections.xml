@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
+                  <?xml version="1.0" encoding="UTF-8"?>
 
 <?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2024/main/Week5-Sources/tei_validation_practice.rng" type="application/xml"   schematypens="http://relaxng.org/ns/structure/1.0"?>
 
@@ -7,7 +8,7 @@
         <fileDesc>
             <titleStmt>
                 <title>Practice Validation and Some more XML explanations</title>
-                <author>Elli Mylonas</author>
+                <author ref= "https://orcid.org/0000-0002-0215-4324">Elli Mylonas</author>
             </titleStmt>
         </fileDesc>
     </teiHeader>
@@ -24,12 +25,12 @@
            they should appear is in Canvas.
         -->  
             
-            <div>
+            <div xml:id="d1">
                 
                 <head>A Silly Memo</head>
                 
-                <opener>From: The Professor
-                    To: The Scientist
+                <opener>From: <name type="person"></name>The Professor
+                    To: <name type="person"></name>The Scientist
                     Date: <date when="2022-04-01">April 1, 2022</date></opener>
                 
                 

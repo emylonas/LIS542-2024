@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:functx="http://www.functx.com">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en">Almond rice pancake, white, with sugar crust</title>
+        <title xml:lang="de-x-enh">Torten Vonn Reysz</title>
+      </titleStmt>
+      <editionStmt>
+
+        <!-- Fill names and roles as necessary -->
+        <edition>Semantic annotation of the recipe &quot;Almond rice pacake, white, with sugar crust&quot; (wo7a.52)</edition>
+        <respStmt>
+          <resp>edition</resp>
+          <persName>Barbara Denicolò</persName>
+        </respStmt>
+        <respStmt>
+          <resp>transcription</resp>
+          <persName>Astrid Böhm</persName>
+        </respStmt>
+        <respStmt>
+          <resp>digital processing</resp>
+          <persName>Helmut W. Klug</persName>
+        </respStmt>
+        <principal>
+          <persName>Helmut W. Klug</persName>
+        </principal>
+        <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+      </editionStmt>
+
+      <!-- The publicationStmt element will have information prepopulated for the University of Graz, which is the home of CoReMa, but 
+          this could be changed as needed. Not required for this exercise.
+    -->
+      <publicationStmt>
+        <publisher>
+          <ref target="https://informationsmodellierung.uni-graz.at"/>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </publisher>
+        <authority>
+          <ref target="https://informationsmodellierung.uni-graz.at"/>
+          <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+        </authority>
+        <distributor>
+          <ref target="https://gams.uni-graz.at"/>
+          <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+        </distributor>
+        <availability>
+          <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+            4.0</licence>
+          <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >Creative Commons BY-NC-SA 4.0 </licence>
+        </availability>
+        <date when="2022-03-25"/>
+        <pubPlace>Graz</pubPlace>
+        <idno type="PID">o:corema.wo7a.52</idno>
+      </publicationStmt>
+
+      <!-- The seriesStmt is also part of the Graz metadata. Best to just leave it there.  -->
+      <seriesStmt>
+        <ab>
+          <title ref="http://gams.uni-graz.at/corema">CoReMA - Cooking Recipes of the Middle Ages:
+            Corpus, Analysis, Visualisation</title>
+          <ref target="http://gams.uni-graz.at/o:corema.about/TEI_SOURCE">About the project
+            &quot;CoReMA&quot;</ref>
+          <ref target="http://gams.uni-graz.at/o:corema.imprint/TEI_SOURCE">Imprint of the project
+            &quot;CoReMA&quot;</ref>
+        </ab>
+      </seriesStmt>
+
+      <!-- This section is where source info goes, such as bibliography. Because this is a manuscript encoding project, they require a lot of the bibliographic information you would have for a manuscript. Best to leave as is or the file may be invalid.  -->
+      <sourceDesc>
+        <bibl type="corresponding_manuscript">
+          <msIdentifier>
+            <country>Germany</country>
+            <settlement>Wolfenbüttel</settlement>
+            <institution>Herzog August Bibliothek</institution>
+            <repository>Handschriftenabteilung</repository>
+            <idno>Cod. Guelf. 42.6 Aug. 4°</idno>
+            <msName>Ain künstlichs vnndt nützliches Kochbuch</msName>
+            <altIdentifier type="abbr">
+              <idno>Wo7</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </bibl>
+        <bibl type="manuscript_page">
+          <title>page in corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.wo7#Wo7_024v" type="uri"/>
+        </bibl>
+        <bibl type="manuscript_tei_source">
+          <title>TEI source of corresponding manuscript</title>
+          <ref target="https://gams.uni-graz.at/o:corema.wo7/TEI_SOURCE" type="uri"/>
+        </bibl>
+        <bibl type="manuscript_context">
+          <title>context of corresponding manuscript/collection</title>
+          <ref target="info:fedora/context:corema.wo7a" type="context">Context for all recipes in
+            manuscript &quot;Wo7&quot;</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+
+    <!-- This section provides a link to the encoding documentation -->
+    <encodingDesc>
+      <ab>
+        <desc>References to the editorial principles and practices for this TEI file and the project
+          CoReMA</desc>
+        <ref target="https://gams.uni-graz.at/o:corema.semanticdec/TEI_SOURCE">details of editorial
+          principles and practices for the semantic annotation</ref>
+      </ab>
+    </encodingDesc>
+
+    <!-- This section provides metadata about the recipe, where it comes from and what its dates are. -->
+    <profileDesc>
+      <textClass ana="#wo7a.52">
+        <keywords>
+          <term>recipe</term>
+        </keywords>
+      </textClass>
+      <creation>
+        <origDate>
+          <date notAfter="1600" notBefore="1500" xml:lang="de">16. Jh.</date>
+          <date xml:lang="en" notAfter="1600" notBefore="1500">16th c.</date>
+        </origDate>
+        <origDate corresp="#1r">1590</origDate>
+        <origPlace>
+          <placeName xml:lang="de">Entstehungsort ubekannt.</placeName>
+          <placeName xml:lang="en">place of origin unknown.</placeName>
+        </origPlace>
+      </creation>
+      <langUsage>
+        <language ident="de-x-enh" source="http://medieval-plants.org/mps-daten/inhalt/">High German languages, High German languages</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+
+  <!-- Enter the recipe below -->
+  <text>
+    <body xml:space="preserve"><div n="52" type="recipe" xml:id="wo7a.52" xml:lang="de-x-enh">
+        <title key="Almond rice pancake, white, with sugar crust">
+          <dish commodity="Q5090" en="rice">Torten</dish> Vonn
+        </title>
+        <instruction>Seuedt denn <ingredient commodity="Q5090" en="rice">reyß</ingredient>vnnd</instruction>
+        vndd
+        <instruction>trieb in durch ein <ingredient commodity="Q381155" en="sieve">Sieblein</ingredient>Allß vil allß der <ingredient commodity="Q184357" en="almond">mandl</ingredient></instruction>
+        <instruction>nimb Souil alß deß <ingredient commodity="Q796758" en="egg white">weißen vonn Aym</ingredient></instruction>
+        vnd
+        <instruction><ingredient commodity="Q57656231" en="unrefined cane sugar">zuckhers</ingredient> wie <ref target="wo7a.51">oben stehet</ref> so wirts weiß wie die weißen <dish commodity="Q0" en="flat cake">Torten</dish></instruction>
+        <closer>etc.</closer>
+        <pb n="025r" xml:id="Wo7_025r"/>
+        <title key="Almond rice pancake, white, with sugar crust">Zu machen di Obgescriben <dish commodity="Q0" en="flat cake">Tortenn</dish></title>
+        <opener>So</opener>
+        <instruction>Nim souil allß oben steet</instruction>
+        <instruction><ingredient commodity="Q57656231" en="unrefined cane sugar">zuckhers</ingredient> fein wann sie gesoten ist</instruction>
+        <instruction>So nun <ingredient commodity="Q0" en="unsolved">Amraßien</ingredient> <ingredient commodity="Q975952" en="almond milk">Mandlsaft</ingredient> die durchtriben seind durch ein <ingredient commodity="Q381155" en="sieve">Sieb</ingredient> mit <ingredient commodity="Q57656231" en="unrefined cane sugar">zuckher</ingredient> gemischt</instruction>
+        und
+        <instruction><ingredient commodity="Q57656231" en="unrefined cane sugar">zuckhers</ingredient> fein mit <ingredient commodity="Q900450" en="rose water">roßen waßer</ingredient></instruction>
+        vnnd
+        <instruction>vberzeuch die <dish commodity="Q0" en="flat cake">Torten</dish> damit Subtill</instruction>
+        <instruction>hitz whol die <ingredient commodity="Q262515" en="dutch oven">eyßnen hafenwerckh</ingredient> oder <tool commodity="Q2488579" en="lid">deckh</tool></instruction>
+        <instruction>die thu vber die <dish commodity="Q0" en="flat cake">Torten</dish> so machts Ein rinden wie <ref target=""><dish commodity="Q106252" en="marzipan">marcipan</dish></ref></instruction>
+        <ab n="1" subtype="subrecipe" type="recipe" xml:id="wo7z.52.sub.1" xml:lang="de-x-enh">
+          <title key="Almond pancake, white">guet <dish commodity="Q0" en="flat cake">tortten</dish></title>
+          <instruction>Nim ein zimlichs von <ingredient commodity="Q43436" en="pearl">Boerlen</ingredient> <ingredient commodity="Q188774" en="ambergris">Ambra</ingredient></instruction>
+          vnd
+          <instruction>thu es in die vhorgeschriebennen <dish commodity="Q0" en="flat cake">Torten</dish></instruction>
+          <closer>so werden die vbertreflich gueth zu Eßenn</closer>
+        </ab>
+      </div>
+    </body>
+  </text>
+
+</TEI>

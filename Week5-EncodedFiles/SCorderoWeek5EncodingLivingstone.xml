@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000877"><!-- Change @xml:id -->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Letter to Hamilton M Dyke,</title>
+                <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
+                <author>David Livingstone</author>
+                <principal>Adrian S. Wisnicki</principal>
+                <respStmt xml:id="SC">
+                    <name>Skye Cordero </name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+				<respStmt xml:id="HB">
+                    <name>Elli Mylonas</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="AW">
+                    <name>Adrian S. Wisnicki</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+            </titleStmt>	
+            <publicationStmt>
+                <authority>Livingstone Online</authority>
+                <publisher>University of Maryland Libraries</publisher>
+                <pubPlace>College Park, MD, USA</pubPlace>
+                <date>2024 04-28</date>
+                <idno type="LEAP-ID">liv_000877</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>South Africa</country>
+                        <settlement>Capetown</settlement>
+                        <repository>National Library of South Africa</repository>
+                        <idno type="shelfmark">MS. 1003</idno>
+                        <altIdentifier>
+                            <idno type="ccnumber">Letters, 0394</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <handDesc>
+                            <handNote xml:id="U"><label>Unknown Hand</label> This hand is unknown
+                                but thought not David Livingstone's.</handNote>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+                <bibl type="sourceMetadata">
+                    <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title>
+                    <author xml:id="DL">David Livingstone</author>
+                    <date type="composition" when="1856-03-02">2 March 1856</date><!-- Change -->
+                    <placeName type="compositionPlace">Near Tete or Nyunkwe-Tete</placeName>
+                    <persName type="addressee">Thomas Maclear</persName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+				
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+			
+            <change when="2018-01-22" who="#AW">Transcription and TEI encoding</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div>
+              
+	<pb facs="liv_000877_0001" n="0001"/>
+
+                <lb/><p><!-- My Dear Brother
+                                I was very much gratified
+indeed by the reception of the kind favour you
+5sent by Mr Lennie &[ ]s I am just about
+to cross the boundary of comparative civilizat
+-ion in order to visit the Interior I should be
+sorry did I not give you a word in
+passing by way of acknowledgment.
+10An answer it cannot be for I have
+unfortunately left yours behind at Kuru
+-man But I hope you will receive it such
+as it is with forbearance
+I am most happy to hear the heart
+15enlivening accounts of the state of your
+missions among the Bassoutos, you
+have been very highly favoured, May the
+Lord grant that you be blessed still
+more & that you may not only become
+20the benefactors of the people among
+whom you at present are But that
+by means of them you may become
+blessings to many beyond you in the
+Interior. Many being raised up by your
+25[      ] instrumentality to spread the knowledge
+
+I expect to return (D[ ]) in about 4 months. If you kindly write
+so that I receive it on my return & I shall be glad,     My friend you
+try & decipher putting in words awanting try & leaving out those which ought
+                                                                                                                            never to have
+30                                                                                                                            been in
+                                                                                                                                  D.L.--></p>
+
+                <!-- of the everlasting gospel.     Mrs L has no
+doubt given you an account of the state
+of affairs here & at K.    The aspect of
+The\Mission is not so wanting as one might
+5expect   But still the change which has been
+affected in a portion of this people is very
+great indeed.     It is not such as would
+strike a visitor from Europe or the Colony
+with any thing but disapointment, particular[  ]
+10if he had heard the accounts of it which
+the good Christians in England by usually
+do   But after one sees the depths from
+which they have been elevated exemplified
+in the Interior tribes there is considerable
+15cause for Thanksgiving     By the way when
+I think of the degradation of these people I shall
+be glad if you wil let me know if you
+believe they are really so very far sunk
+as has been represented, I heard Mr Moffat
+20say in England that the Bechuanas had
+really no conscience until it was formed
+by the missionaries, Now although the
+statement excited my risible faculties a
+little at the time   thinking it was only a
+25poetical figure expressive of the wonderful
+creative powers of us Sentelings   The same
+statement nearly appearing in his book -->
+
+            </div>
+        </body>
+    </text>
+
+</TEI>

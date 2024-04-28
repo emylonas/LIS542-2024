@@ -1,0 +1,89 @@
+<?xml-model href="https://www.stoa.org/epidoc/schema/9.1/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://www.stoa.org/epidoc/schema/9.1/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xml:lang="en"
+ xml:base="ex-epidoctemplate.xml" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+             <titleStmt>
+                <title>LIS 542 Encoding 2</title>
+                <respStmt>
+                    <resp>Creator</resp>
+                    <persName ref="https://orcid.org/0009-0008-8864-6143">Cypress Payne</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority/>
+                <idno type="filename"/>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>museum/archive</repository>
+                        <idno>inventory number</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc ana="slab">
+                            <supportDesc ana="stone">
+                                <support>
+                                    <material>stone</material>
+                                    <objectType>memorial</objectType>
+                                    <dimensions type="surface" unit="cm">
+                                        <height>120</height>
+                                        <width>60</width>
+                                        <depth>15</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="Complete.intact"/>
+                            </supportDesc>
+                           <layoutDesc>
+                                <layout columns="1" writtenLines="11"/>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                           <handNote ana="inscribed"/>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote>
+                                <ab>The family crest: a dog on either side of a shield with a banner underneath.</ab>
+                                <locus>Located across the top of the tombstone.</locus>
+                            </decoNote>
+                        </decoDesc> 
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>St. Mary Magdalene Church, Hucknall</origPlace>
+                            <origDate>1852</origDate>
+                        </origin>
+                        <provenance type="found">
+                            <placeName>in situ</placeName>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="photograph of text or monument"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/>IN THE BYRON VAULT BELOW
+                    <lb n="2"/>LIE THE REMAINS OF
+                    <lb n="3"/>AUGUSTA ADA,
+                    <lb n="4"/>ONLY DAUGHTER OF 
+                    <lb n="5"/>GEORGE GORDON NOEL,
+                    <lb n="6"/><num value="6">6</num><hi rend="superscript">TH</hi> LORD BYRON,
+                    <lb n="7"/>AND WIFE OF
+                    <lb n="8"/>WILLIAM, EARL OF LOVELACE.
+                    <lb n="9"/>BORN <num value="10">10</num><hi rend="superscript">TH</hi> DEC <num value="1815">1815</num>,
+                    <lb n="10"/>DIED <num value="27">27</num><hi rend="superscript">TH</hi> NOV <num value="1852">1852</num>.
+                    <lb n="11"/>R.I.P.
+                </ab>
+            </div>
+        </body>
+    </text>
+</TEI>

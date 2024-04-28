@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000521"><!-- Change @xml:id -->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Letter to Hamilton M. Dyke,</title><!-- Change -->
+                <title type="alternative">Letter to Hamilton M. Dyke, 24 February 1843</title><!-- Change -->
+                <author>David Livingstone</author>
+                <principal>Adrian S. Wisnicki</principal>
+                <respStmt xml:id="VW"><!-- Add or remove individuals from the list as appropriate -->
+                    <name>Viktorina White</name><!-- Change -->
+                    <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+            </titleStmt>	
+            <publicationStmt>
+                <authority>Livingstone Online</authority>
+                <publisher>University of Maryland Libraries</publisher>
+                <pubPlace>College Park, MD, USA</pubPlace>
+                <date>2017</date><!-- Change if necessary -->
+                <idno type="LEAP-ID">liv_000521</idno><!-- Change -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>South Africa</country><!-- Change as needed. Country of repository. -->
+                        <settlement>Grahamstown</settlement><!-- Change as needed. City of repository. -->
+                        <repository>Cory Library for Historical Research</repository><!-- Change as needed -->
+                        <idno type="shelfmark">unknown</idno><!-- Change as needed -->
+                        <altIdentifier>
+                            <idno type="ccnumber">unknown</idno><!-- This the CC number; change, as appropriate -->
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <handDesc>
+                            <handNote xml:id="U"><label>Unknown Hand</label> This hand is unknown
+                                but thought not David Livingstone's.</handNote>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+                <bibl type="sourceMetadata">
+                    <title type="alternative">Letter to Hamilton M. Dyke, 24 February 1843</title><!-- Change -->
+                    <author xml:id="DL">David Livingstone</author>
+                    <date type="composition" when="1856-03-02">24 February 1843</date><!-- Change -->
+                    <placeName type="compositionPlace">Motito</placeName><!-- Change. Where DL composed. -->
+                    <persName type="addressee">Hamilton M. Dyke</persName><!-- Change. Person to whom DL wrote. -->
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+				<!-- For language abbreviations, see https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry --> 
+				<!-- English should be first, then add all other languages in alphabetical order. -->
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+			<!-- Change @when, @who, and work description below. -->
+			<!-- Note that @who initials are taken from <respStmt> above -->
+			<!-- Add new <change> elements below as needed. -->
+			<!-- Note that the most recent <change> should always be placed first, at the top -->
+            <change when="2024-04-27" who="#VW">Transcription and TEI encoding</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div>
+
+	<!-- Start each page with a <pb> formatted as below and indented as below -->               
+                <pb facs="liv_000521_0001" n="0001"/><!-- Change both @facs and @n -->
+                
+<opener>     
+    <dateline><placeName>Motito</placeName><date when="1843-02-24">24 Feb 1843</date></dateline>
+           <lb/><salute>My Dear Brother</salute>
+</opener>
+
+                <lb/><p>  I was very much gratified
+                    <lb/>indeed by the reception of the kind favour you
+                    <lb/>5sent by Mr Lennie <del rend="dashed">[&amp;]</del><add place="above">and</add> I am just about
+                    <lb/>to cross the boundary of comparative civilizat
+                    <lb/>-ion in order to visit the Interior I should be
+                    <lb/>sorry did I not give you a word in
+                    <lb/>passing by way of acknowledgment.</p>
+                <lb/><p>An answer it cannot be for I have
+                    <lb/>unfortunately left yours behind at Kuru
+                    <lb/>-man But I hope you will receive it such
+                    <lb/>as it is with forbearance</p>
+                <lb/><p>I am most happy to hear the heart
+                    <lb/>enlivening accounts of the state of your
+                    <lb/>missions among the Bassoutos, you
+                    <lb/>have been very highly favoured, May the
+                    <lb/>Lord grant that you be blessed still
+                    <lb/>more &amp; that you may not only become
+                    <lb/>20the benefactors of the people among
+                    <lb/>whom you at present are But that
+                    <lb/>by means of them you may become
+                    <lb/>blessings to many beyond you in the
+                    <lb/>Interior. Many being raised up by your
+                    <lb/>instrumentality to spread the knowledge</p>
+
+                <closer>
+                    <lb/><salute>Yours affectionately,</salute>
+                    <lb/><signed>D.L.</signed>
+                </closer>
+                
+            </div>
+        </body>
+    </text>
+
+</TEI>

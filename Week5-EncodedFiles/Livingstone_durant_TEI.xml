@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000521">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Letter to Hamilton M. Dyke</title>
+                <title type="alternative">Letter to Hamilton M. Dyke, 21 February 1843</title>
+                <author>David Livingstone</author>
+                <principal>Adrian S. Wisnicki</principal>
+                <principal>Megan Ward</principal>
+                <respStmt xml:id="MB">
+                    <name>Mary Bongo</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+				<respStmt xml:id="EAM">
+                    <name>E. Alexander Munson</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="AW">
+                    <name>Adrian S. Wisnicki</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="KS">
+                    <name>Kate Simpson</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="MR">
+                    <name>Matthew Ruberry</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Coding Review</resp>
+                </respStmt>
+                
+                
+            </titleStmt>	
+            <publicationStmt>
+                <authority>Livingstone Online</authority>
+                <publisher>University of Maryland Libraries</publisher>
+                <pubPlace>College Park, MD, USA</pubPlace>
+                <date>2017</date>
+                <idno type="LEAP-ID">liv_000521</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>South Africa</country>
+                        <settlement>Grahamstown</settlement>
+                        <repository>Cory Library for Historical Research</repository>
+                        <idno type="shelfmark">MS. 10777</idno>
+                        <altIdentifier>
+                            <idno type="ccnumber">Letters, 0066</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <handDesc>
+                            <handNote xml:id="U"><label>Unknown Hand</label> This hand is unknown
+                                but thought not David Livingstone's.</handNote>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+                <bibl type="sourceMetadata">
+                    <title type="alternative">Letter to Hamilton M. Dyke, 21 February 1843</title>
+                    <author xml:id="DL">David Livingstone</author>
+                    <date type="composition" when="1856-03-02">221 February 1843</date><!-- Change -->
+                    <placeName type="compositionPlace">Motito</placeName>
+                    <persName type="addressee">Hamilton M. Dyke</persName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+			<!-- Change @when, @who, and work description below. -->
+			<!-- Note that @who initials are taken from <respStmt> above -->
+			<!-- Add new <change> elements below as needed. -->
+			<!-- Note that the most recent <change> should always be placed first, at the top -->
+            <change when="2018-11-06" who="#MB">Transcription and TEI encoding</change>
+            <change when="2018-10" who="#KS">Transcription and TEI encoding</change>
+            <change when="2018-08-28" who="#MB">Transcription and TEI encoding</change>
+            <change when="2017-04-26" who="#AW">Transcription and TEI encoding</change>
+            <change when="2017-04-21" who="#MR">Transcription and TEI encoding</change>
+            <change when="2015-12-14" who="#KS">Transcription and TEI encoding</change>
+            <change when="2015-12-07" who="#MB">Transcription and TEI encoding</change>
+            <change when="2015-11-19" who="#EAM">Transcription and TEI encoding</change>
+            <change when="2015-10-26" who="#AW">Transcription and TEI encoding</change>
+            
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div>
+
+	<!-- Start each page with a <pb> formatted as below and indented as below -->               
+	<pb facs="liv_000877_0521" n="10777"/>
+
+                <lb/><p> Motito <date>24 Feb 1843</date><lb/>
+                    My Dear Brother<lb/>
+                    I was very much gratified<lb/>
+                    indeed by the reception of the kind favour you<lb/>
+                    sent by <name type="personal">Mr Lennie</name> &amp;[ ]s I am just about <lb/>
+                    to cross the boundary of comparative civilizat<lb/>
+                    -ion in order to visit the Interior I should be<lb/>
+                    sorry did I not give you a word in <lb/>
+                    passing by way of acknowledgment. <lb/>
+                    An answer it cannot be for I have<lb/>
+                    unfortunately left yours behind at <name type="place">Kuru <lb/>
+                    -man</name> But I hope you will receive it such <lb/>
+                    as it is with forbearance<lb/></p>
+                <p>I am most happy to hear the heart <lb/>
+                    enlivening accounts of the state of your <lb/>
+                    missions among the <name type="place">Bassoutos</name>, you <lb/>
+                    have been very highly favoured, May the<lb/>
+                    Lord grant that you be blessed still <lb/>
+                    more &amp; that you may not only become<lb/>
+                    the benefactors of the people among <lb/>
+                    whom you at present are But that <lb/>
+                    by means of them you may become <lb/>
+                    blessings to many beyond you in the <lb/>
+                    Interior. Many being raised up by your<lb/>
+                    <gap extent="6 characters" reason="illegible"></gap> instrumentality to spread the knowledge<lb/></p>
+
+                <pb facs="liv_000877_0521" n="10777"/>
+            </div>
+        </body>
+    </text>
+
+</TEI>

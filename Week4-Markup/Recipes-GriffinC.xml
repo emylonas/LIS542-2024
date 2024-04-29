@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipecompilation>
+    <recipe>
+        <title>Baked Beans</title>
+        <action step="1"> Wash and soak <ingredient_quantity>one pound navy beans</ingredient_quantity> over night. </action> 
+        <action step="2">Boil slowly twenty minutes and drain.</action>
+        <action step="3">Add <ingredient_quantity>1/2 pound salt pork cut in thick slices</ingredient_quantity>, <ingredient_quantity>1/4 cup molasses or brown sugar</ingredient_quantity>, <ingredient_quantity>salt to taste</ingredient_quantity>.</action>
+        <action step="4">Cover with <ingredient_quantity>water</ingredient_quantity> and bake in slow oven about six hours.</action>
+        <action step="5">Add <ingredient_quantity>water</ingredient_quantity>, a little at a time as needed.</action> 
+        <source>Mrs. A. Smith.</source> 
+        <source>Order of the Eastern Star. Logan Square Chapter No. 560 (Chicago, Ill.). Original recipes of good things to eat. Chicago, 1919
+            https://archive.org/details/originalrecipeso00orde/page/45/mode/2up
+            <!--CG: Changed from author to source to include recipe source and copyright info.--> </source>
+    </recipe>
+    <recipe>
+        <title>Butter Beans, Paprika and Piquillo Peppers</title>
+        <narrative>These beans are great in salads. Let the mix cool and then toss through a selection of salad leaves and herbs. Perk up the leaves with a little olive oil and vinegar and some crispy lavash on top.</narrative>
+        <header_ingredients>Ingredients <!--CG: Added to distinguish between the actual ingredients and the sub-header for ingredients--></header_ingredients>
+        <servings>Serves 4</servings>
+        <ingredient_quantity n="1">3 red onions, diced</ingredient_quantity>
+        <ingredient_quantity>125 ml (about ½ cup) extra-virgin olive oil, divided</ingredient_quantity>
+        <ingredient_quantity>4 garlic cloves, finely sliced</ingredient_quantity>
+        <ingredient_quantity>1 Tbsp. dried chile flakes (preferably pul biber)</ingredient_quantity>
+        <ingredient_quantity>1 1⁄2 Tbsp. sweet smoked paprika</ingredient_quantity>
+        <ingredient_quantity>1 Tbsp. tomato purée</ingredient_quantity>
+        <ingredient_quantity>2 14-oz. cans butter beans or lima beans, drained and rinsed</ingredient_quantity>
+        <ingredient_quantity>5 Tbsp. sherry vinegar</ingredient_quantity>
+        <ingredient_quantity>300g (10 1⁄2-oz.) jarred piquillo peppers, rinsed and sliced</ingredient_quantity>
+        <ingredient_quantity>Kosher salt</ingredient_quantity>
+        <action step="1">In a wide-based pan over a medium heat, caramelize the red onions in 5 Tbsp. of the olive oil for 15 minutes or until they turn golden and soft. Add a little fine salt, the garlic and spices and continue to cook for 2–3 minutes. Add the tomato purée and cook for another minute. <!--CG: Actions listed in their original step formatting, not broken down further.--></action> 
+        <action step="2">Add the beans and sherry vinegar and reduce the liquid by half over a medium heat. Turn the heat off. Add the piquillo peppers and the remaining olive oil and season with salt to serve.  <!--CG: Actions listed in their original step formatting, not broken down further.--></action>
+        <source>From Three: Acid, Texture, Contrast by Selin Kiazim. Copyright © December 2021 by Selin Kiazim. Excerpted by permission of Quadrille. Buy the book from Amazon or Bookshop.</source>
+    </recipe>
+</recipecompilation>
+    

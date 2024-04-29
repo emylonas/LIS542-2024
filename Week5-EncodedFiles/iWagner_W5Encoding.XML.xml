@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/zimgraz/corema/main/schema_relaxng_schematron/corema_single_recipe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:functx="http://www.functx.com">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="en">Almond cinnamon tart</title>
+            </titleStmt>
+            <editionStmt>
+                
+                <!-- Fill names and roles as necessary -->
+                <edition>Semantic annotation of the recipe &quot;Almond cinnamon tart&quot; </edition>
+                <respStmt>
+                    <resp>edition</resp>
+                    <persName>Julia Eibinger</persName>
+                    <persName>Helmut W. Klug</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>transcription</resp>
+                    <persName>Astrid Böhm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>digital processing</resp>
+                    <persName>Christian Steiner</persName>
+                </respStmt>
+                <principal>
+                    <persName>Helmut W. Klug</persName>
+                </principal>
+                <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+            </editionStmt>
+         
+            <!-- The publicationStmt element will have information prepopulated for the University of Graz, which is the home of CoReMa, but 
+          this could be changed as needed. Not required for this exercise.
+    -->
+            <publicationStmt>
+                <publisher>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+                </publisher>
+                <authority>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, University of Graz</orgName>
+                </authority>
+                <distributor>
+                    <ref target="https://gams.uni-graz.at"/>
+                    <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+                        4.0</licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                        >Creative Commons BY-NC-SA 4.0 </licence>
+                </availability>
+                <date when="2022-03-25"/>
+                <pubPlace>Graz</pubPlace>
+                <idno type="PID">o:corema.m11.77</idno>
+            </publicationStmt>
+            
+            <!-- The seriesStmt is also part of the Graz metadata. Best to just leave it there.  -->
+            <seriesStmt>
+                <ab>
+                    <title ref="http://gams.uni-graz.at/corema">CoReMA - Cooking Recipes of the Middle Ages:
+                        Corpus, Analysis, Visualisation</title>
+                    <ref target="http://gams.uni-graz.at/o:corema.about/TEI_SOURCE">About the project
+                        &quot;CoReMA&quot;</ref>
+                    <ref target="http://gams.uni-graz.at/o:corema.imprint/TEI_SOURCE">Imprint of the project
+                        &quot;CoReMA&quot;</ref>
+                </ab>
+            </seriesStmt>
+            
+            <!-- This section is where source info goes, such as bibliography. Because this is a manuscript encoding project, they require a lot of the bibliographic information you would have for a manuscript. Best to leave as is or the file may be invalid.  -->
+            <sourceDesc>
+                <bibl type="corresponding_manuscript">
+                    <msIdentifier>
+                        <country>Germany</country>
+                        <settlement>Wolfenbüttel</settlement>
+                        <institution>Herzog August Bibliothek</institution>
+                        <repository>Handschriftenabteilung</repository>
+                        <idno>Cod. Guelf. 42.6 Aug. 4°</idno>
+                        <msName>Ain künstlichs vnndt nützliches Kochbuch</msName>
+                        <altIdentifier type="abbr">
+                            <idno>Wo7</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                </bibl>
+                <bibl type="manuscript_page">
+                    <title>page in corresponding manuscript</title>
+                    <ref target="https://gams.uni-graz.at/o:corema.wo7#Wo7_024v" type="uri"/>
+                </bibl>
+                <bibl type="manuscript_tei_source">
+                    <title>TEI source of corresponding manuscript</title>
+                    <ref target="https://gams.uni-graz.at/o:corema.wo7/TEI_SOURCE" type="uri"/>
+                </bibl>
+                <bibl type="manuscript_context">
+                    <title>context of corresponding manuscript/collection</title>
+                    <ref target="info:fedora/context:corema.wo7a" type="context">Context for all recipes in
+                        manuscript &quot;Wo7&quot;</ref>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        
+        <!-- This section provides a link to the encoding documentation -->
+        <encodingDesc>
+            <ab>
+                <desc>References to the editorial principles and practices for this TEI file and the project
+                    CoReMA</desc>
+                <ref target="https://gams.uni-graz.at/o:corema.semanticdec/TEI_SOURCE">details of editorial
+                    principles and practices for the semantic annotation</ref>
+            </ab>
+        </encodingDesc>
+        
+        <!-- This section provides metadata about the recipe, where it comes from and what its dates are. -->
+        <profileDesc>
+            <textClass ana="#m11.77">
+                <keywords>
+                    <term>recipe</term>
+                </keywords>
+            </textClass>
+            <creation>
+                <origDate>
+                    <date notAfter="1608" notBefore="1608" xml:lang="de">1608</date>
+                    <date notAfter="1608" notBefore="1608" xml:lang="en">1608</date>
+                </origDate>
+                <origPlace>
+                    <placeName xml:lang="de">Süddeutschland</placeName>
+                    <placeName xml:lang="en">Süddeutschland</placeName>
+                </origPlace>
+            </creation>
+            <langUsage>
+                <language ident="de-x-enh" source="http://medieval-plants.org/mps-daten/inhalt/">High German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+   
+    <!-- Enter the recipe below -->
+    <text>
+        <body xml:space="preserve">
+            <div n="52" type="recipe" xml:id="wo7a.52" xml:lang="de-x-enh">
+        <title key="Almond cinnamon tart">Zimmet dortten</title>
+         <instruction>Nimb ein 1/2 pfundt gestossnen <ingredient commodity="Q184357" en="almond">Mandell</ingredient> vnd ein wenig <ingredient commodity="Q34172" en="butter">butter</ingredient> 7 <ingredient commodity="Q796758" en="egg white">Ayer klar</ingredient> ein lott <ingredient commodity="Q28165" en="cinnamon">zimet </ingredient>vnd <ingredient commodity="Q57656231" en="unrefined cane sugar">zucker</ingredient> Misch alles vndteinander machs wie ein dortten</instruction>
+      </div>
+    </body>
+    </text>
+    
+</TEI>

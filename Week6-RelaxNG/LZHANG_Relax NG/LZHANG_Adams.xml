@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="LZHANG_diaries.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<journal>
+    <metadata>
+        <sourceInfo>
+            <title>Diary of John Adams: September 1775 - January 1776</title>
+            <author>
+                <name role="diarist">John Adams</name>
+            </author>
+            <publisher>Massachusetts Historical Society</publisher>
+        </sourceInfo>
+        <revisions>
+            <change who="EM" when="2022-05-10">Added markup</change>
+            <!-- Additional <change> elements as required -->
+        </revisions>
+    </metadata>    
+    <entries>
+        <entry xml:id="e17750915">
+            <!-- Entry for September 15, 1775 -->
+            <p><name role="delegate">Dr. Zubly</name> is a Native of <place>Switzerland</place>, and a Clergyman of the Independent <alternates><sic>Perswasion</sic><corr>Persuasion</corr></alternates>, settled in a Parish in Georgia...</p>
+            <p><name role="delegate">Houstoun</name> is a young Gentleman, by Profession a Lawyer, educated under a Gentleman of Eminence in <place>South Carolina</place>...</p>
+            <p><name role="delegate">Bullock</name> is cloathed in American Manufacture.</p>
+            <p><name role="delegate">Thomas Nelson</name> Esquire, <name role="delegate">George Wythe</name> Esqr., and <name role="delegate">Francis Lightfoot Lee</name> Esq. appeared as Delegates from <place>Virginia</place>.</p>
+            <p><name role="delegate">Nelson</name> is a fat Man, like the late <name role="colonel">Col. Lee</name> of Marblehead. He is a speaker, and alert and lively, for his weight.</p>
+            <p><name role="delegate">Wythe</name> is a lawyer, it is said of the first eminence.</p>
+            <p><name role="delegate">Lee</name> is a brother of <name>Dr. Arthur</name>, the late Sheriff of London, and our old friend <name>Richard Henry</name>, sensible, and patriotic, as the rest of the family.</p>  
+            <p>Deane says, that two persons, of the name of De Witt of Dutch extraction, one in Norwich the other in Windham, have made Salt Petre with success -- and propose to make a great deal. That there is a mine of lead at Middletown, which will afford a great quantity. That works are preparing to smelt and refine it, which will go in a fortnight. There is a mine at Northampton, which Mr. W. Bowdoin spent much money in working, with much effect, though little profit.</p>
+            <p>Langdon and Bartlett came in this evening, from Portsmouth. 400 men are building a fort on Pierce's Island to defend the town against ships of war.</p>
+            <p>Upon recollecting the debates of this day in Congress, there appears to me a remarkable want of judgment in some of our members. Chace is violent and boisterous, asking his pardon. He is tedious upon frivolous points. So is E. Rutledge. Much precious time is indiscreetly expended. Points of little consequence are started and debated with warmth. Rutledge is a very uncouth, and ungraceful speaker. He shrugs his shoulders, distorts his body, nods and wriggles with his head, and looks about with his eyes, from side to side, and speaks through his nose, as the Yankees sing. His brother John dodges his head too, rather disagreeably, and both of them spout out their language in a rough and rapid torrent, but without much force or effect.</p>
+            <p>Dyer is long-winded and roundabout -- obscure and cloudy. Very talkative and very tedious, yet an honest, worthy man, means and judges well.</p>
+            <p>Sherman's air is the reverse of grace. There cannot be a more striking contrast to beautiful action, than the motions of his hands. Generally, he stands upright with his hands before him. The fingers of his left hand clenched into a fist, and the wrist of it, grasped with his right hand. But he has a clear head and sound judgment. But when he moves a hand, in anything like action, Hogarth's genius could not have invented a motion more opposite to grace. It is stiffness, and awkwardness itself. Rigid as starched linen or buckram. Awkward as a junior bachelor, or a sophomore.</p>
+            <p>Mr. Dickinson's air, gate, and action are not much more elegant.</p>
+        </entry>
+        <pb n="p04"/>
+        <entry xml:id="e17750916">
+            <!-- Entry for September 16, 1775 -->
+            <p>Walking to the Statehouse this morning, I met Mr. Dickinson, on foot in Chesnut Street. We met, and passed near enough to touch elbows. He passed without moving his hat, or head or hand. I bowed and pulled off my hat. He passed haughtily by. The cause of his offense, is the letter no doubt which Gage has printed in Draper's paper.</p>
+            <p>I shall for the future pass him, in the same manner. But I was determined to make my bow, that I might know his temper.</p>
+            <p>We are not to be upon speaking terms, nor bowing terms, for the time to come.</p>
+            <p>This evening had conversation with Mr. Bullock of Georgia. -- I asked him, whether Georgia had a charter? What was the extent of the province? What was their constitution? How justice was administered? Who was chancellor, who ordinary? and who judges?</p>
+            <p>He says they have county courts for the trial of civil causes under 8. -- and a C. [Chief] Justice, appointed from home and 3 other judges appointed by the governor, for the decision of all other causes civil and criminal, at Savannah. That the governor alone is both chancellor and ordinary.</p>
+            <pb n="p05"/>
+            <p>Parson Gordon of Roxbury, spent the evening here. -- I fear his indiscreet prate will do harm in this city. He is an eternal talker, and somewhat vain, and not accurate nor judicious. Very zealous in the cause, and a well-meaning man, but incautious, and not sufficiently tender of the character of our province, upon which at this time much depends. Fond of being thought a man of influence, at headquarters, and with our council and house, and with the general officers of the army, and also with gentlemen in this city, and other colonies. -- He is a good man, but wants a guide.</p>
+        </entry>
+        <entry xml:id="e17750917">
+            <!-- Entry for September 17, 1775 -->
+            <p>Mr. Smith, Mr. Imlay and Mr. Hanson, breakfasted with us. Smith is an Englishman, Imlay and Hanson New Yorkers.</p>
+            <p>Heard <quote><cite>3 Tit. 5. Not by Works of Righteousness, which We have done, but according to his Mercy he saved us, through the Washing of Regeneration and the Renewing of the Holy Ghost.</cite></quote></p>
+            <p>There is a great deal of Simplicity and Innocence in this worthy Man, but <deletion>very little Elegance or Ingenuity</deletion>...</p>
+            <p><pb n="p06"/> A variety of indecent postures. Bends his body, points his fingers, and throws about his arms, without any rule or meaning at all. He is totally destitute of the genius and eloquence of Duffil [Duffield], has no imagination, no passions, no wit, <deletion>and very little</deletion> no taste and very little learning, but a great deal of goodness of heart.</p>
+        </entry>
+    </entries>
+  </journal>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+  <!-- This is a schema for entries in diaries and journals.  -->
+
+  <!-- This is the basic structure of the file. The root (outermost) element is called "journal" and it contains a "metadata" element and an "entries" element. 
+    The "entries" element can contain  "pb" (pagebreak) amd "entry" elements.
+    Any element that is included in a pattern using the "ref" syntax is defined in detail further down, below the "start" element
+  -->
+  <start>
+
+    <element name="journal" xmlns="http://relaxng.org/ns/structure/1.0">
+
+      <ref name="metadata-element"/>
+
+      <element name="entries">
+        <oneOrMore>
+          <choice>
+            <ref name="pb-element"/>
+            <ref name="entry-element"/>
+          </choice>
+        </oneOrMore>
+      </element>
+
+    </element>
+  </start>
+
+  <!-- ************************************************************ Element Definitions ************************************************************ -->
+  <!-- The definitions below use the "define" syntax. "define" is a way to name a pattern or part of a pattern so you can avoid repeating it. You can refer to everything
+        inside a "define" element with the using "ref".   -->
+
+
+  <!-- METADATA This is the first of the two main elements in this schema. It is called "metadata" and contains information about the source material and how the file was encoded -->
+  <define name="metadata-element">
+    <element name="metadata">
+      <element name="sourceInfo">
+        <element name="title">
+          <text/>
+        </element>
+        <element name="author">
+          <choice>
+            <ref name="name-element"/>
+            <text/>
+          </choice>
+        </element>
+        <element name="publisher">
+          <text/>
+        </element>
+      </element>
+      <!-- Reference the <revisions> element within <metadata> -->
+      <ref name="revisions"/>
+    </element>
+  </define>
+  
+  <define name="name-element">
+    <element name="name">
+      <optional>
+        <attribute name="role">
+          <text/>
+        </attribute>
+      </optional>     
+      <text/>
+    </element>
+  </define>
+  
+  <define name="revisions">
+    <element name="revisions">
+      <oneOrMore>
+        <element name="change">
+          <attribute name="who">
+            <text/>
+          </attribute>
+          <attribute name="when">
+            <data type="date"/>
+          </attribute>
+          <text/>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>  
+
+  <!-- Place Element -->
+  <define name="place-element">
+    <element name="place">
+      <attribute name="type">
+        <text/> <!-- Type can be 'home', 'school', 'event-location', etc. -->
+      </attribute>
+      <text/> <!-- The name or description of the place -->
+    </element>
+  </define>
+
+  <!-- Combined Quotation Element for citations and direct quotes -->
+  <define name="quote-element">
+    <element name="quote">
+      <choice>
+        <!-- For direct spoken content with speaker attribute -->
+        <group>
+          <attribute name="speaker">
+            <text/> <!-- Name of the person speaking -->
+          </attribute>
+          <text/> <!-- The spoken content -->
+        </group>
+        <!-- For citations within a quote -->
+        <element name="cite">
+          <text/>
+        </element>
+      </choice>
+    </element>
+  </define>
+
+  <!-- Quotation Element for direct quotes -->
+  <define name="direct-quote-element">
+    <element name="direct-quote">
+      <attribute name="speaker">
+        <text/> <!-- Name of the person speaking -->
+      </attribute>
+      <text/> <!-- The spoken content -->
+    </element>
+  </define>
+  
+  <!-- Dialogue Element for detailed conversations -->
+  <define name="dialogue-element">
+    <element name="dialogue">
+      <oneOrMore>
+        <element name="line">
+          <attribute name="speaker">
+            <text/> <!-- Name of the person speaking in the dialogue -->
+          </attribute>
+          <text/> <!-- The actual line spoken in the dialogue -->
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <!-- ENTRIES This is the second of the two main elements in this schema. It is called "entries" and contains information about the source material and how the file was encoded -->
+
+  <define name="entry-element">
+    <element name="entry">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <!-- This uses the XML namespace as it is defining the xml:id attribute which is defined for all elements in XML itself -->
+        <data type="NCName"/>
+      </attribute>
+
+      <oneOrMore>
+        <choice>
+          <text/>
+
+          <ref name="pb-element"/>
+
+          <element name="date">
+            <attribute name="when">
+              <data type="date"/>
+            </attribute>
+            <text/>
+          </element>
+
+          <ref name="p-element"/>
+        </choice>
+      </oneOrMore>
+
+    </element>
+  </define>
+
+  <!-- P and its contents -->
+
+  <define name="p-element">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="deletion"/>
+          <ref name="quote-element"/>
+          <element name="place">
+            <text/>
+          </element>
+          <!-- Add other elements as needed -->
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+ 
+  <define name="deletion">
+    <element name="deletion">
+      <text/>
+    </element>
+  </define>
+  
+  <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
+  <define name="pb-element">
+    <element name="pb">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+
+  <define name="alternates-element">
+    <element name="alternates">
+      <choice>
+
+        <group>
+          <element name="abbr">
+            <text/>
+          </element>
+          <element name="expan">
+            <text/>
+          </element>
+        </group>
+
+        <group>
+          <element name="sic">
+            <text/>
+          </element>
+          <element name="corr">
+            <text/>
+          </element>
+        </group>
+
+      </choice>
+    </element>
+  </define>
+
+
+</grammar>

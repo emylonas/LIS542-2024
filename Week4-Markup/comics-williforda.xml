@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Comics_database>
+    <comic1 title="Peanuts">
+    <author>Schulz, Charles</author>
+    <date_published>1957-05-11</date_published>
+    <panel_count>4</panel_count>
+    <comic_color>FALSE</comic_color>
+    <character_count>2</character_count>
+    <perspective>Third Person</perspective>
+    <Source_included>TRUE</Source_included>
+    <composition>
+        <Panel_1>2 characters in the middle ground</Panel_1> 
+        <Panel_2> 2 characters in the foreground</Panel_2>
+        <Panel_3>2 characters in the middle ground</Panel_3>
+        <Panel_4>2 characters in the foreground </Panel_4> 
+    </composition>
+        <notes comic="Peanuts">Title and copyright information in panel 1. Month and day (no year) and author’s signature in panel 4. URL included.</notes>
+    </comic1>
+    <comic2 title="For Better or For Worse">
+        <author>Johnston, Lynn</author>
+        <date_published>2018-05-28</date_published>
+        <panel_count>4</panel_count>
+        <comic_color>TRUE</comic_color>
+        <character_count>2</character_count>
+        <perspective>Third Person</perspective>
+        <Source_included>TRUE</Source_included>
+        <composition>
+            <Panel_1>2 characters in the foreground</Panel_1> 
+            <Panel_2> 2 characters in the middle ground</Panel_2>
+            <Panel_3>2 2 characters in the foreground</Panel_3>
+            <Panel_4>2 characters in the foreground </Panel_4> 
+        </composition>
+        <notes comic="For Better or For Worse">Information such as the publication date, the source website, and copyright information can be found between each panel. </notes>
+    </comic2>
+    <comic3 title="Nancy Classics">
+        <author>Bushmiller, Ernie</author>
+        <date_published>2021-08-16</date_published>
+        <panel_count>4</panel_count>
+        <comic_color>FALSE</comic_color>
+        <character_count>2</character_count>
+        <perspective>Third Person</perspective>
+        <Source_included>FALSE</Source_included>
+        <composition>
+            <Panel_1>2 characters in the foreground</Panel_1> 
+            <Panel_2> 1 character in the foreground and one character in the background</Panel_2>
+            <Panel_3>2 characters in the middle ground</Panel_3>
+            <Panel_4>1 character in the foreground and one character in the background</Panel_4> 
+        </composition>
+        <notes comic="Nancy Classics">The date is in Panel 2, the Author's name is in Panel 3, and the copyright information is in Panel 3. The URL is supplied but needs to be fixed. </notes>
+    </comic3>
+    <comic4 title="Spiderman">
+        <author1>Lee, Stan</author1>
+        <author2>Lieber, Larry</author2>
+        <date_published>1980-11-30</date_published>
+        <panel_count>4</panel_count>
+        <comic_color>TRUE</comic_color>
+        <character_count>2</character_count>
+        <perspective>Third Person</perspective>
+        <Source_included>FALSE</Source_included>
+        <composition>
+            <Panel_1>2 characters in the foreground, from above</Panel_1> 
+            <Panel_2>2 characters in the foreground and 2 characters in the background</Panel_2>
+            <Panel_3>2 characters in the foreground, 1 character in the middle ground, and 3 characters in the background</Panel_3>
+            <Panel_4>1 character in the middle ground</Panel_4> 
+        </composition>
+        <notes comic="Spiderman"> Panel 1 contains the authors' names and the date (MM/DD). A narrator is introduced in the fourth panel. This Spider-Man comic is not on the internet so there is no URL included.</notes>
+    </comic4>
+</Comics_database>

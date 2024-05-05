@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="file:/D:/OneDrive/alli/MLIS%20stuff/MLIS%20student/MLIS%20Spring%202024/LIS%20542/assignments/RelaxNG%20assignments/diaries.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<!--https://archive.org/details/mms_221/page/n67/mode/1up image 68ff.  -->
+
+<journal>
+    <metadata>
+        <sourceInfo>
+            <title/>
+            <author/>
+            <publisher/>
+        </sourceInfo>
+        <revisions>
+            <change when="2022-05-12" who="EM">Started stub file</change>
+            <change who="AP" when="2024-05-04">added markeup</change>
+        </revisions>
+    </metadata>
+
+    <!-- This extract is pages 3-10 of Emma Wormwood's diary, written in 1896. She was a school teacher in Illinois. The digitiized pages and crowdsourced transcription may be found here:  https://archive.org/details/mms_221/page/n67/mode/1up This begins at page image 68
+   Wormwood mentions a lot of names of students and acquantances, book and song titles. She also quotes bits of conversations. 
+    -->
+    <entries>
+        <entry xml:id="e18960128">
+            <pb n="p01"/>
+            <date when="1896-01-28">January 28th. Tuesday.</date> 
+            <p>Got up early. <weather>Pretty day, – thawed considerably</weather>. Had full school. Good lessons. 
+            After supper had discussion on "Negro" and "Indian" question. Laughed about <name>Dollie</name> 
+            and me goin' (Gowin). <name role="student">Roy</name> ate an onion, and I went in the other room and drew map of 
+            <place><country>Italy.</country></place> <weather>Beautiful night, not very cold</weather>. Went to bed early. I rode home from school, 
+            <name>Jennie Dyer</name> and I stood up.</p>
+        </entry>
+
+        <entry xml:id="e18960129">
+            <date when="1896-01-29">January 29th. Wednesday.</date> 
+            <p><weather>Pretty day</weather>. Had good school. <name role="student">Lou</name> went home at last recess. They laughed about "Scratch" 
+            bringing <name>Rose</name> home. A. class drew map of Italy, on board. In B. Geog. I asked how high is the highest peak in 
+            <pb n="p02"/>
+            the <place><country>U.S.</country></place>, and had to laugh. We walkd to meeting at the Baptist church. 
+            <name role="preacher">King</name> preached about <quote>"The light of the world."</quote> Three boys went forward. 
+            I got letter from <name role="acquaintance">Miss Riefenberg</name>.</p>
+        </entry>
+
+        <entry xml:id="e18960130">
+            <date when="1896-01-30">January 30th. Thursday</date> 
+            <p>Had good school. <weather>Sunny in the morning – clouded in afternoon</weather>. At noon 
+            <name role="student">Irwin</name> and <name role="student">Roy</name> tried to see who could act the
+            "biggest monkey." Rode horse, rubbed him down, jumped rope (buggy line) and so-forth.
+            <name role="student">Lou</name> and <name>Lillie</name> fixed minutes of last evening Society met. – Turned 
+            <name>Lillie</name>'s watch back with mine. – <name>Jesse</name> laughs at me about being always hungry. 
+            <name>Nellie</name> and <name>Mary</name> went to church. <name>J</name> called us "Back woodsers" I replied, that I would rather be 
+            <pb n="p03"/> 
+            a "backwoodser" than a "heathen". We went down to the school house. Not many there; had no
+            meeting. Went to <name>Mr. Strate</name>'s. Had music. Laughed at <name>Joe</name> and <name>Charlie</name> about going to
+            "Hunt"('s) <name>Charlie</name> has concluded he would rather Hunt than fish, so he's not been lately
+            seen going up the creek. – We suppose it is because the fish are all "Young." When we
+            started home it was <weather>raining</weather>. <name>John</name> <name>Dollie</name> and I came across the pasture. (<name>Dollie</name> thought
+            we were going to <place><country>China</country></place>.) <name>Joe</name> asked what I had been saying about Kentuckians. <name>Peek</name>'s
+            brought <name>Mary</name> and <name>Nellie</name> home. <name>John Whitehouse</name> was converted. (<name>John W.</name> came to school
+            this evening for <name role="student">Lou</name> and <name>Lillie</name>. </p></entry>
+
+        <entry xml:id="e18960131">
+            <pb n="p04"/>
+            <date when="1896-01-31">January 31st. Friday.</date> 
+            <p><weather>Dark and rainy</weather>. Had twenty pupils. <name role="student">Irwin</name>, <name role="student">Walter</name>, 
+            <name role="student">Charlie</name>, <name role="student">Roy</name> + <name role="student">John</name> went 
+            down the road and came back after school had called. <name role="student">Roy</name> and 
+            <name role="student">John</name> tried themselves. – I was doubly kind, in my actions, but, inwardly,
+            I burned with anger. After school I traced pencil marks in register. As I started, I
+            asked if I had made any missteps, or done the least thing to cause such actions as had
+            transpired. The reply, <quote>"Nothing. Not a thing, they just took a notion to be mean."</quote> As I
+            came across the bridge I sat on the banister and watched the water flow over the rocks.
+            I read the <place>Modesto</place> paper. <name>Jesse</name> tried to make us believe he could not read. 
+            After supper he brought up "scripture 
+            <pb n="p05"/> 
+            argument; read two chapters from the Testament, asked our opinions, then gave us his 
+            explanation. Calls us "backwoodsers." We went to bed early. <name>Lillie</name> did not come to school. </p></entry>
+
+        <entry xml:id="e18960201">
+            <date when="1896-02-01">February 1st. Saturday</date> 
+            <p><weather>Dark and gloomy</weather>. Wish I could be at <place>Nilwood</place> to the Local Institute. I straightened 
+            up books and papers, put most of them in my valise. Had a talk with <name>Nellie</name> about school. 
+            (a perfect jewel, to be so good.) I fixed my tan skirt. <name>Jesse</name> went to <place>Modesto</place>. 
+            <name role="student">Roy</name> cut wood. <name>Mary</name> baked all morning. (Had
+            baked chicken for dinner, and I ate so much dinner that I was not hungry for supper.
+            <name>Jess</name> said it was the first time he ever saw me not hungry) <name>Ed</name> came in the evening. He
+            got letters from Mamma, <name>Ida</name> and <name>Katie</name> M. got school journal and circular from <name>supt.
+            McClure</name>. 
+            <pb n="p06"/> 
+            <illegible>(Jermin)?</illegible> told about hauling one of my pupils around in the big wagon. 
+            Laughed about him going to <place>Carlinville</place> on Tues., following the wagon-ride. 
+            <name>Joe</name> came home with <name>Jess</name>. Argued about "Back woodsers" and
+            "Mountain heathens". They said <name>Dolly</name> got mad. The boys went to town. As they were
+            starting, <name>Joe</name> was going to make me take back something; I made a certain remark which
+            caused him to take sudden leave. Gave us oranges. <name>Dolly</name> and I went to church with <name>Ed</name>.
+            Roads were very bad, and we went through the fields. <name role="preacher">Rhoads</name> preached, but got sick and
+            <name role="preacher">King</name> took the meeting. Excellent meeting. Got home about eleven. Boys came before we
+            went to bed. After noon <name role="student">Lillie</name> came to tell us about going over 
+            <pb n="p07"/> 
+            to <place>Scottsville</place> to wait on her sick cousin. Wanted <name>Dollie</name> to take her part in the dialogue.
+            Asked <name>Dollie</name> to bring her books. (Rocking chair proved to hold two)</p></entry>
+
+        <entry xml:id="e18960202">
+            <date when="1896-02-02">February 2nd. Sunday.</date> 
+            <p><weather>Rainy and dark</weather>. <name>Jess</name> went away. <name>Charie Crawford</name> came. I read story of 
+            <title>"Howard and his Teacher"</title>. Laughed about "Love in the Kitchen"; also 
+            "Love in the Front-room." ("I'd get it and keep it".) <name role="student">Roy</name> and I took
+            down items; and <name role="student">Joe</name> started for the book, I screamed, jumped straight up and ran in the
+            bed room. threw the book to <name role="student">Roy</name> but <name role="student">Charlie</name> got it. They 
+            went in little bed room to read but we would not let them alone: they went out by the milk house and read, then gave us
+            the book. <name>Mary</name> called on everybody to help put the hogs in the 
+            <pb n="p08"/> 
+            <marginal><name role="student">Irwin Baptist</name> is 16 years old today.</marginal> <!-- this appears to be written in the top margin -->
+            lot. <name>Dolly</name> went to put <name role="student">Joe</name>'s hat on him and had to stand on the bench. 
+            Had dispute as to whether pancakes were baked, or fried: proved that bake is right. <name>Jess</name> says <name>Flo</name> is the
+            only good looking girl in <place><usState>Illinois</usState></place>. <name>Mr. Essex</name>, the best looking man. 
+            <place><usState>Kentucky</usState></place> is noted for tobacco, whiskey and and big feet. <name>Jess</name> says 
+            "<name>Dollie</name> is - is - is, all right." "She's too smart to be called a backwoodser." <name role="student">Roy</name>, 
+            <name>Nellie</name> and I are "Smart alecks." I went to bed at seven o clock. <weather>It snowed, rained, sleeted and what not, 
+            all day. ground not at all frozen but covered with snow and sleet</weather>. </p></entry>
+
+
+        <entry xml:id="e18960203">
+            <date when="1896-02-03">February 3rd. Monday.</date> 
+            <p><weather>Two or three inches of snow and still snowing. Trees and bushes look like Christmas trees. 
+            Snowed all day, but thawed more than it snowed</weather> 
+            <pb n="p09"/> 
+            Had a very small school, only eleven. Stopped to see <name>Mr. Strate</name>. Made short talk about conduct 
+            of Friday. Better results, but far from perfect. At noon, the girls were getting locks of everybody's hair. 
+            (If you'll come over after school is out, I'll give you a lock of my hair.) I was tired all day: about sick.
+            After supper I wrote to mamma and to the girls. Talked of suicides. <name>Jess</name> said he had no
+            sympathy for such people. Would not grieve if his own father committed suicide. </p></entry>
+    </entries>
+</journal>

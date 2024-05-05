@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <start>
+        
+        <element name="journal" xmlns="http://relaxng.org/ns/structure/1.0">
+            
+            <ref name="metadata-element"/>
+            
+            <element name="entries">
+                <oneOrMore>
+                    <choice>
+                        <ref name="pb-element"/>
+                        <ref name="entry-element"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+            
+        </element>
+    </start>
+    
+    <define name="metadata-element">
+        <element name="metadata">
+            <element name="sourceInfo">
+                <element name="title">
+                    <text/>
+                </element>
+                <element name="author">
+                    <element name="name">
+                        <text/>
+                    </element>
+                </element>
+                <element name="publisher">
+                    <text/>
+                </element>
+            </element>
+            
+            <element name="revisions">
+                <element name="change">
+                    <attribute name="when">
+                        <data type="date"/>
+                    </attribute>
+                    <attribute name="who"/>
+                    <text/>
+                </element>
+                <optional>
+                    <element name="change">
+                        <attribute name="when">
+                            <data type="date"/>
+                        </attribute>
+                        <attribute name="who"/>
+                        <text/>
+                    </element>
+                </optional>
+            </element>
+            
+        </element>
+    </define>
+
+    <define name="entry-element">
+        <element name="entry">
+            <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                <data type="NCName"/>
+            </attribute>
+            
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    
+                    <ref name="pb-element"/>
+                    
+                    <element name="date">
+                        <attribute name="when">
+                            <data type="date"/>
+                        </attribute>
+                        <text/>
+                    </element>
+                    
+                    <ref name="p-element"/>
+                </choice>
+            </oneOrMore>
+            
+        </element>
+    </define>
+    
+    <define name="p-element">
+        <element name="p">
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="pb-element"/>
+                    <ref name="alternates-element"/>
+                    <ref name="name-element"/>
+                    <ref name="deletion-element"/>
+                    <ref name="quote-element"/>
+                    <ref name="cite-element"/>
+                    <ref name="title-element"/>
+                    <element name="place">
+                        <text/>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="name-element">
+        <element name="name">
+            <attribute name="role">
+            </attribute>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="deletion-element">
+        <!-- I'd imagine some kind of CSS would be necessary to format this with a "strikethrough" when rendered -->
+        <element name="deletion">
+            <text/>
+        </element>
+    </define>
+    
+    <define name="quote-element">
+        <element name="quote">
+            <text/>
+            <optional>
+                <ref name="cite-element"></ref>
+            </optional>
+        </element>
+    </define>
+    
+    <!-- Reasoning for this being that you could supposedly have the need to add a source/citation to something that wasn't a quote. Quotes can be citable though don't have to be (i.e. the source could be clearly stated in the text or noted elsewhere). -->
+    
+    <define name="cite-element">
+        <element name="cite">
+            <text/>
+        </element>
+    </define>
+    
+    <define name="title-element">
+        <element name="title">
+            <text/>
+            <attribute name="sourcetype">
+            </attribute>
+        </element>
+    </define>
+   
+    <define name="pb-element">
+        <element name="pb">
+            <attribute name="n">
+                <data type="NCName"/>
+            </attribute>
+        </element>
+    </define>
+    
+    <define name="alternates-element">
+        <element name="alternates">
+            <choice>
+                
+                <group>
+                    <element name="abbr">
+                        <text/>
+                    </element>
+                    <element name="expan">
+                        <text/>
+                    </element>
+                </group>
+                
+                <group>
+                    <element name="sic">
+                        <text/>
+                    </element>
+                    <element name="corr">
+                        <text/>
+                    </element>
+                </group>
+                
+            </choice>
+        </element>
+    </define>
+    
+    
+</grammar>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/livingstoneonline/LEAP-ODD/gh-pages/leap.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/livingstoneonline/LEAP-ODD/gh-pages/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Letter to Hamilton M. Dyke</title>
+                <author>David Livingstone</author>
+                <respStmt xml:id="LZ">
+                    <name>Luming Zhang</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+                    <resp>Proofing</resp>
+                    <resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="EM">
+                    <name>Elli Mylonas</name>
+                    <resp>Project Direction</resp>
+                    <resp>Supervision</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Livingstone Online</authority>
+                <pubPlace>Web</pubPlace>
+                <date>2024</date>
+                <idno type="shelfmark">liv:000521</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>South Africa</country>
+                        <settlement>Motito</settlement>
+                        <repository>Livingstone Online Archive</repository>
+                        <idno type="shelfmark">liv:000521</idno>
+                        <altIdentifier>
+                            <idno type="ccnumber">Letters, 0521</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <handDesc>
+                            <handNote xml:id="DL"><label>David Livingstone's Hand</label> This hand is identified as David Livingstone's based on comparison with other known samples.</handNote>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+                <bibl type="sourceMetadata">
+                    <title type="alternative">Letter to Hamilton M. Dyke</title>
+                    <author ref="#DL">David Livingstone</author>
+                    <date type="composition" when="1843-02-24">24 February 1843</date>
+                    <placeName type="compositionPlace">Motito</placeName>
+                    <persName type="addressee">Hamilton M. Dyke</persName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2024-04-22" who="#LZ">Initial transcription and TEI encoding</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <pb facs="liv_000521_0001" n="0001"/>
+                    <opener>
+                        <dateline>
+                            <placeName>Motito</placeName> <date when="1843-02-24">24 Feb 1843</date>
+                        </dateline>
+                        <lb/><salute>My Dear Brother</salute>
+                    </opener>
+                    <lb/><p>I was very much gratified
+                        <lb/>indeed by the reception of the kind favour you
+                        <lb/>sent by <persName>M<hi rend="sup">r</hi> Lennie</persName> &amp;<gap extent="1" unit="chars" agent="blot"/>s I am just about 
+                        <lb/>to cross the boundary of comparative civilizat
+                        <lb/>ion in order to visit the Interior I should be
+                        <lb/>sorry did I not give you a word in
+                        <lb/>passing by way of acknowledgment.</p>
+                    <lb/><p>An answer it cannot be for I have
+                        <lb/>unfortunately left yours behind at Kuru
+                        <lb/>man But I hope you will receive it such
+                        <lb/>as it is with forbearance</p>
+                    <lb/><p>I am most happy to hear the heart
+                        <lb/>enlivening accounts of the state of your
+                        <lb/>missions among the Bassoutos, you
+                        <lb/>have been very highly favoured, May the
+                        <lb/>Lord grant that you be blessed still
+                        <lb/>more &amp; that you may not only become
+                        <lb/>the benefactors of the people among
+                        <lb/>whom you at present are But that
+                        <lb/>by means of them you may become
+                        <lb/>blessings to many beyond you in the
+                        <lb/>Interior. Many being raised up by your
+                        <lb/><add place="above" type="superscript">[instrumentality]</add> to spread the knowledge</p>
+                    <lb/><p>I expect to return <del type="strikethrough">[D]</del><add place="above" type="superscript">[Dr]</add> in about 4 months. If you kindly write
+                        <lb/>so that I receive it on my return &amp; I shall be glad, 
+                        <lb/>My friend you
+                        <lb/>try &amp; decipher putting in words <del type="strikethrough">[wanting]</del> try &amp; leaving out those which ought
+                        <lb/>never to have been in</p>
+                    <closer>
+                        <lb/><salute>Yours affectionately,</salute>
+                        <lb/><signed>D.L.</signed>
+                    </closer>
+            </div>
+        </body>
+    </text>
+    
+</TEI>

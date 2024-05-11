@@ -53,9 +53,11 @@
         <text></text>
       </element>
       <element name="revisions">
-        <element name= "change">
-        <text/>
-        </element>
+        <oneOrMore>
+          <element name="change"> 
+            <attribute name="when"></attribute>
+          </element>
+        </oneOrMore>
         
         <oneOrMore>
       
@@ -118,11 +120,20 @@
           <ref name="pb-element"/>
           <ref name="alternates-element"/>
           <ref name="name-element"/>
+          <ref name="deletion-element"/>
+          <ref name="quote"></ref>
           <element name="place">
             <text/>
           </element>
         </choice>
       </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="quote">
+    <element name="quote"> 
+    <text/>
+<element name="cite"> <text></text></element>
     </element>
   </define>
   
@@ -136,7 +147,17 @@
     </optional>
     </element>
   </define>
-  
+  <define name="deletion-element">
+    <element name="deletion">
+      <text></text>
+    </element>
+  </define>
+
+  <define name="cite">
+    <element name="cite">
+      <text></text>
+    </element>
+  </define>
   <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
   <define name="pb-element">
     <element name="pb">
@@ -148,6 +169,7 @@
   
   <define name="alternates-element">
     <element name="alternates">
+      
       <choice>
         
         <group>

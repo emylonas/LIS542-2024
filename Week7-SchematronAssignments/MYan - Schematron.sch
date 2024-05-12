@@ -98,11 +98,11 @@
        8. If you are enjoying this so far, think of something else that you might want to check using Schematron. Try to write the rule.
    -->
 
-        <!--Matt: Having a bit of trouble with this one, using "substring-before" affects <l n="000x"> - "The first word in the line of a poem must begin with a capital letter"-->
+        <!--Matt: Is there a way to correct this to flag the text itself, rather than the element <l n="000x"> ? - "The first word in the line of a poem must begin with a capital letter"-->
 
 <pattern>
     <rule context="tei:l">
-        <assert test="matches(normalize-space(text()),'[A-Z]')">The first word in a line must begin with a capital letter</assert>
+        <assert test="matches(substring-before(normalize-space(), ' '), '^[A-Z]')">The first word in a line must begin with a capital letter</assert>
     </rule>
 </pattern>
 

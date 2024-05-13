@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_simplePrint.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_simplePrint.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of Sonnet 15: When I consider everything that grows</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>LIS452A</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>From the internet</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2023-05-07" who="EM">Initial File Creation</change>
+         <change when="2023-05-10" who="EM"></change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!-- first page starts here -->
+         <div type="foo" n="poem01">
+            <head>Sonnet 15: When I consider everything that grows (William Shakespeare)</head>
+            <lg>
+               <l n="0001" rhyme="a" ><lb/>When I consider everything that grows</l>
+               <l n="0002"><lb/>Holds in perfection but a little moment,</l>
+               <l n="0003"><lb/>That this huge stage presenteth nought but shows</l>
+               <l n="0004">Whereon the stars in secret influence comment;</l>
+               <l n="0005"><lb/>When I perceive that men as plants increase,</l>
+               <l n="0006"><lb/>Cheered and check'd even by the selfsame sky,</l>
+               <l n="0007"><lb/>Vaunt in their youthful sap, at height decrease,</l>
+               <l n="0008"><lb/>And wear their brave state out of memory;</l>
+               <l n="0009"><lb/>Then the conceit of this inconstant stay</l>
+               <l n="010"><lb/>Sets you most rich in youth before my sight,</l>
+               <l n="0011"><lb/>Where wasteful Time debateth with Decay</l>
+               <l n="0012"><lb/>To change your day of youth to sullied night;</l>
+               <l n="13"><lb/>And all in war with Time for love of you,</l>
+               <l n="0014"><lb/>As he takes from you, I engraft you new.</l>
+            </lg>
+         </div>
+         <div type="limerick" n="02">
+            <head>Limerick by Edward Lear</head>
+            <lg >
+               <l n="1" ><lb/>An epicure, dining at Crewe</l>
+               <l n="2"><lb/>Found quite a large mouse in his stew.</l>
+               <l n="3"><lb/>Said the waiter. “Don’t shout</l>
+               <l n="4"><lb/>And wave it about</l>
+               <l n="5"><lb/>For the rest will be wanting one, too!</l>
+            </lg>
+         </div>
+      </body>
+   </text>
+</TEI>

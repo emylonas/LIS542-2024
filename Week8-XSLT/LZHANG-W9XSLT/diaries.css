@@ -1,0 +1,80 @@
+/*
+ * CSS for John Adams Diaries XSLT practice
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * Updated by LZ with new styles for enhanced presentation and interactivity 2024-05-13
+ */
+
+@page {
+    margin-top: 1in;
+}
+
+body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.place {
+    color: violet;
+}
+
+.name {
+    color: green;
+}
+
+.modern {
+    display:none;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    body {
+        width: 95%;
+        margin: 0.5in;
+        font-size: larger; /* Increase text size for smaller devices */
+    }
+}
+
+/* Highlight quotations */
+q {
+    font-style: italic;
+    margin-left: 20px;
+    display: block; /* or inline-block depending on preference */
+}
+
+/* Specific styles for roles */
+.name[role="lawyer"] {
+    font-weight: bold;
+    color: blue;
+}
+
+.name[role="clergyman"] {
+    color: darkred;
+}
+
+/* Interactive elements styling */
+.button, .toggle {
+    padding: 5px 10px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover, .toggle:hover {
+    background-color: gray;
+}
+
+/* Enhance headings */
+h1, h2, h3 {
+    font-family: "Arial", sans-serif;
+    color: navy;
+}

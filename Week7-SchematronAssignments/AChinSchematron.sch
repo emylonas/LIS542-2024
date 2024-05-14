@@ -49,7 +49,7 @@
         4. Write a rule to flag when a <change> element in <RevisionDesc> has no content.
         HInt: One way to figure out if there is any text content in an element is to measure the length of the content. 
      -->
-   
+
     <pattern id="flag_change_element">
         <rule context="tei:revisionDesc/tei:change">
             <assert test="string-length() ne 0">change element has no content</assert>

@@ -98,7 +98,7 @@
    
    <!-- 
        8. If you are enjoying this so far, think of something else that you might want to check using Schematron. Try to write the rule.
-        Find the lines that have you and count them
+        Find the lines that have you
    -->
    
     <pattern>

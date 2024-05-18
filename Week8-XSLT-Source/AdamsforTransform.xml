@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2024/main/W9-XSLT-Source/diaries.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/emylonas/LIS542-2024/main/Week8-XSLT-Source/diaries.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <journal xmlns="http://UW-LIS-diaries/ns/1.0">
     <metadata>
        <sourceInfo>

@@ -1,0 +1,53 @@
+/*
+ * CSS for John Adams Diaries XSLT practice
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * 
+ */
+
+@page {
+    margin-top: 100px;
+}
+
+body {
+    margin-top: 50px;
+    width: 75%;
+    margin-left: 50px;
+    margin-right: .50px;
+    line-height: 175%;
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+}
+
+ol {
+    border: 1px solid grey;
+    text-align: left;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.place {
+    color: #ee82ee;
+}
+
+.name {
+    color: #ff1c7d;
+}
+
+h1 {
+    color: #4a360d;
+    font-family: "Gill Sans", sans-serif;
+}
+
+h2 {
+    color: #898282;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.modern {
+    display:none;
+    
+}

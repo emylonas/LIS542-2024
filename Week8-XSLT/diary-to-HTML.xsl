@@ -48,25 +48,7 @@
                         <ol>
                                                        <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
                                                                 <li>
-                                                                      <xsl:value-of select="."/> 
-<xsl:if
-test="@role">
-
-   (<xsl:value-of select="@role"/>)
-
-</xsl:if>
-                                                                    </li>
-                                                            </xsl:for-each>
-                        </ol>
-                    </p>
-                </div>
-                <div>
-                    <h1>List of Place</h1>
-                    <p>
-                        <ol>
-                                                       <xsl:for-each select="//d:entries//d:place" xml:space="preserve">
-                                                                <li>
-                                                                      <xsl:value-of select="."/>
+                                                                      <xsl:value-of select="."/> (<xsl:value-of select="@role"/>)
                                                                     </li>
                                                             </xsl:for-each>
                         </ol>
@@ -143,15 +125,9 @@ test="@role">
     </xsl:template>
     
     <xsl:template match="d:cite">
-        <a href="https://en.wikipedia.org/wiki/Women_in_STEM_fields">
-            <xsl:apply-templates/>
-        </a> 
-        
+       <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="d:q"> <!-- Match <alternate> and keep going. -->
-        "<xsl:apply-templates/>"
-    </xsl:template>   
 
     <xsl:template match="d:original | d:abbr"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
         <span class="original"><xsl:apply-templates/></span>
@@ -166,9 +142,6 @@ test="@role">
     </xsl:template>
 
     <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] </xsl:template>
-    
-    <xsl:template match="d:p"> [<xsl:value-of select="@n"/>] <xsl:apply-templates/>
-    </xsl:template>
     <!--  or  select="concat('page ',translate(@n, 'page0', ''))"  for a more elegant display -->
 
     <!-- Catch all to see what we aren't handling -->

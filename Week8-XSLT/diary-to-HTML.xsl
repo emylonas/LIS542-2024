@@ -20,7 +20,6 @@
     </xsl:variable>
 
     <xsl:output method="xml" encoding="UTF-8" indent="no"/>
-
     <xsl:template match="/">
 
         <!-- The following matchest the root element, and sets up the overall HTML structure. -->
@@ -45,10 +44,25 @@
                 <div>
                     <h1>List of Names</h1>
                     <p>
-                        <ol>
-                                                       <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
+                        <ol>                          
+                             <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
                                                                 <li>
-                                                                      <xsl:value-of select="."/> (<xsl:value-of select="@role"/>)
+                                                                      <xsl:value-of select="."/>
+                                    <xsl:if test="@role and @role!='null'">
+                                        <xsl:text></xsl:text>
+                                        (<xsl:value-of select="@role"/>)</xsl:if>               
+                                                                    </li>
+                                                            </xsl:for-each>
+                        </ol>
+                    </p>
+                </div>
+                    <div>
+                    <h1>List of Places</h1>
+                    <p>
+                        <ol>                          
+                             <xsl:for-each select="//d:entries//d:place" xml:space="preserve">
+                                                                <li>
+                                                                      <xsl:value-of select="."/>
                                                                     </li>
                                                             </xsl:for-each>
                         </ol>
@@ -58,9 +72,7 @@
         </html>
 
     </xsl:template>
-
-
-    <!-- **********************************************************************  Metadata elements ********************************************************************** -->
+  
     <xsl:template match="d:journal">
         <xsl:apply-templates/>
     </xsl:template>
@@ -80,25 +92,31 @@
     <!--   ******************************************************************** Diary Entries Strcture ******************************************************************** -->
 
 
-    <xsl:template match="d:entries"> <!-- Match <entries> and keep going  -->
-       
+    <xsl:template match="d:entries">
+        <!-- Match <entries> and keep going  -->
+
         <xsl:apply-templates/>
-       
+
     </xsl:template>
 
-    <xsl:template match="d:entry"> <!-- Match <entry>, surround each one with an HTML <div> element and keep going  -->
+    <xsl:template match="d:entry">
+        <!-- Match <entry>, surround each one with an HTML <div> element and keep going  -->
         <div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
-    <xsl:template match="d:p"> <!-- Match <entry>, surround each one with an HTML <p> element and keep going  -->
-        <p>
-            <xsl:apply-templates/>
-        </p>
+    <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] <xsl:apply-templates/>
     </xsl:template>
+ 
+    <xsl:template match="d:p">
+        <p>
+            [<xsl:value-of select="replace(@n, '^p0*', '')"/>]<xsl:apply-templates/>
+        </p>
+       
+    </xsl:template>
+    
 
-    <!--   ******************************************************* Phrase level elements and Milestone Elements *************************************************** -->
 
     <xsl:template match="d:entry/d:date">
         <!-- Match the <date> which is at the beginning of each entry. It is the child of <entry> -->
@@ -112,36 +130,56 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:template match="d:name"> <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
-        <span class="name"><xsl:apply-templates/></span>
+    <xsl:template match="d:name">
+        <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
+        <span class="name">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
-    <xsl:template match="d:place"> <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
-        <span class="place"><xsl:apply-templates/></span>
+    <xsl:template match="d:place">
+        <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
+        <span class="place">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
-    <xsl:template match="d:alternates"> <!-- Match <alternate> and keep going. -->
+    <xsl:template match="d:alternates">
+        <!-- Match <alternate> and keep going. -->
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="d:cite">
-       <xsl:apply-templates/>
+        <a href="https://www.kingjamesbibleonline.org/Titus-3-5/"><xsl:apply-templates/></a>
     </xsl:template>
     
-
-    <xsl:template match="d:original | d:abbr"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
-        <span class="original"><xsl:apply-templates/></span>
+    <xsl:template match="d:q">
+        "<xsl:apply-templates/>"
     </xsl:template>
 
-    <xsl:template match="d:corr | d:expan"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
-        <span class="modern"><xsl:apply-templates/></span>
+
+    <xsl:template match="d:original | d:abbr">
+        <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
+        <span class="original">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
-    
+
+    <xsl:template match="d:corr | d:expan">
+        <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
+        <span class="modern">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
     <xsl:template match="d:del">
-        <span class="del"><xsl:apply-templates/></span>
+        <span class="del">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
-    <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] </xsl:template>
+  
+    
     <!--  or  select="concat('page ',translate(@n, 'page0', ''))"  for a more elegant display -->
 
     <!-- Catch all to see what we aren't handling -->

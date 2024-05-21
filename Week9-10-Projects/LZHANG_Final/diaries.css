@@ -1,0 +1,124 @@
+/*
+ * CSS for John Adams Diaries XSLT practice
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * Updated by LZ with new styles for enhanced presentation and interactivity 2024-05-16
+ */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #eaf4e2;
+  color: #2f4f2f;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #2e8b57;
+}
+
+h2 {
+  font-size: 1.75em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #2e8b57;
+}
+
+h3 {
+  font-size: 1.25em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #2e8b57;
+}
+
+/* Entry Styles */
+.entry {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #8fbc8f;
+  padding-bottom: 10px;
+  background-color: #f5fff5;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  page-break-after: always;
+}
+
+.entry h2 {
+  border-bottom: 2px solid #3cb371;
+  padding-bottom: 5px;
+}
+
+.entry p {
+  margin: 10px 0;
+  color: #4a4a4a;
+}
+
+.entry p.highlight {
+  background-color: #e0ffe0;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.entry p.italic {
+  font-style: italic;
+}
+
+/* Attribute Styles */
+.complete {
+  color: #006400;
+  font-weight: bold;
+}
+
+.incomplete {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+/* Element Styles */
+.weather, .mood, .pagebreak, .date {
+  font-style: italic;
+  color: #2e8b57;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.weather {
+  color: #66cdaa;
+}
+
+.mood {
+  color: #8fbc8f;
+}
+
+.pagebreak {
+  color: #555;
+  text-align: center;
+  font-size: 0.9em;
+  page-break-after: always;
+}
+
+/* Additional Styles */
+.metadata {
+  margin-bottom: 20px;
+}
+
+.metadata p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+strong {
+  font-weight: bold;
+  color: #2e8b57;
+}

@@ -6,15 +6,12 @@
   <!-- This is a schema for entries in diaries and journals.  -->
   
   <!-- This is the basic structure of the file. The root (outermost) element is called "journal" and it contains a "metadata" element and an "entries" element. 
-    The "entries" element can contain  "pb" (pagebreak) and "entry" elements.
+    The "entries" element can contain "pb" (pagebreak) and "entry" elements.
     Any element that is included in a pattern using the "ref" syntax is defined in detail further down, below the "start" element
   -->
   <start>
-    
     <element name="journal" xmlns="http://relaxng.org/ns/structure/1.0">
-      
       <ref name="metadata-element"/>
-      
       <element name="entries">
         <oneOrMore>
           <choice>
@@ -23,14 +20,12 @@
           </choice>
         </oneOrMore>
       </element>
-      
     </element>
   </start>
   
   <!-- ************************************************************ Element Definitions ************************************************************ -->
   <!-- The definitions below use the "define" syntax. "define" is a way to name a pattern or part of a pattern so you can avoid repeating it. You can refer to everything
         inside a "define" element with the using "ref".   -->
-  
   
   <!-- METADATA This is the first of the two main elements in this schema. It is called "metadata" and contains information about the source material and how the file was encoded -->
   <define name="metadata-element">
@@ -103,11 +98,6 @@
     <element name="quote">
       <interleave>
         <optional>
-          <element name="cite">
-            <text/>
-          </element>
-        </optional>
-        <optional>
           <attribute name="source">
             <text/> <!-- Source of the quote -->
           </attribute>
@@ -117,17 +107,34 @@
             <text/> <!-- Who is being quoted -->
           </attribute>
         </optional>
+        <optional>
+          <attribute name="about">
+            <text/> <!-- What the quote is about -->
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="speaker">
+            <text/> <!-- Who is speaking -->
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="context">
+            <text/> <!-- Context of the quote -->
+          </attribute>
+        </optional>
         <text/>
       </interleave>
     </element>
   </define>
   
-  <!-- Quotation Element for direct quotes -->
+  <!-- Direct Quotation Element for capturing speech -->
   <define name="direct-quote-element">
     <element name="direct-quote">
-      <attribute name="speaker">
-        <text/> <!-- Name of the person speaking -->
-      </attribute>
+      <optional>
+        <attribute name="speaker">
+          <text/> <!-- Name of the person speaking -->
+        </attribute>
+      </optional>
       <text/> <!-- The spoken content -->
     </element>
   </define>
@@ -137,9 +144,11 @@
     <element name="dialogue">
       <oneOrMore>
         <element name="line">
-          <attribute name="speaker">
-            <text/> <!-- Name of the person speaking in the dialogue -->
-          </attribute>
+          <optional>
+            <attribute name="speaker">
+              <text/> <!-- Name of the person speaking in the dialogue -->
+            </attribute>
+          </optional>
           <text/> <!-- The actual line spoken in the dialogue -->
         </element>
       </oneOrMore>
@@ -147,7 +156,6 @@
   </define>
   
   <!-- ENTRIES This is the second of the two main elements in this schema. It is called "entries" and contains information about the source material and how the file was encoded -->
-  
   <define name="entry-element">
     <element name="entry">
       <attribute name="complete">
@@ -190,6 +198,7 @@
             <text/>
           </element>
           <ref name="p-element"/>
+          <ref name="note-element"/> <!-- Added for notes -->
         </choice>
       </oneOrMore>
       
@@ -197,9 +206,11 @@
   </define>
   
   <!-- P and its contents -->
-  
   <define name="p-element">
     <element name="p">
+      <attribute name="line">
+        <data type="positiveInteger"/> <!-- Line number for paragraphs -->
+      </attribute>
       <oneOrMore>
         <choice>
           <text/>
@@ -214,6 +225,9 @@
           <ref name="mood-element"/> 
           <ref name="weather-element"/> 
           <ref name="date-element"/> 
+          <ref name="theme-element"/> <!-- Added for theme -->
+          <ref name="person-element"/> <!-- Added for person -->
+          <ref name="note-element"/> <!-- Ensure note element can be inside p -->
         </choice>
       </oneOrMore>
     </element>
@@ -237,7 +251,6 @@
   <define name="alternates-element">
     <element name="alternates">
       <choice>
-        
         <group>
           <element name="abbr">
             <text/>
@@ -246,7 +259,6 @@
             <text/>
           </element>
         </group>
-        
         <group>
           <element name="sic">
             <text/>
@@ -255,7 +267,6 @@
             <text/>
           </element>
         </group>
-        
       </choice>
     </element>
   </define>
@@ -284,4 +295,52 @@
     </element>
   </define>
   
+  <!-- Note Element -->
+  <define name="note-element">
+    <element name="note">
+      <optional>
+        <attribute name="placement">
+          <text/> <!-- Placement of the note, e.g., 'top margin' -->
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="possibleName">
+          <text/> <!-- Possible name if the note contains a name that is uncertain -->
+        </attribute>
+      </optional>
+      <text/> <!-- The content of the note -->
+    </element>
+  </define>
+  
+  <!-- Theme Element -->
+  <define name="theme-element">
+    <element name="theme">
+      <attribute name="term">
+        <text/> <!-- Theme term or keyword -->
+      </attribute>
+      <text/> <!-- Description or context of the theme -->
+    </element>
+  </define>
+  
+  <!-- Person Element -->
+  <define name="person-element">
+    <element name="person">
+      <attribute name="name">
+        <text/> <!-- Name of the person -->
+      </attribute>
+      <optional>
+        <attribute name="relation">
+          <text/> <!-- Relationship of the person to the diarist -->
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="gender">
+          <text/> <!-- Gender of the person -->
+        </attribute>
+      </optional>
+      <text/> <!-- Additional details or context -->
+    </element>
+  </define>
+
 </grammar>
+

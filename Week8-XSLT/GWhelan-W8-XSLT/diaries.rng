@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://UW-LIS-diaries/ns/1.0">
+  
+
+  <!-- This is a schema for entries in diaries and journals.  -->
+
+  <!-- This is the basic structure of the file. The root (outermost) element is called "journal" and it contains a "metadata" element and an "entries" element. 
+    The "entries" element can contain  "pb" (pagebreak) amd "entry" elements.
+    Any element that is included in a pattern using the "ref" syntax is defined in detail further down, below the "start" element
+  -->
+  <start>
+
+    <element name="journal" >
+
+      <ref name="metadata-element"/>
+
+      <element name="entries">
+        <oneOrMore>
+          <choice>
+            <ref name="pb-element"/>
+            <ref name="entry-element"/>
+          </choice>
+        </oneOrMore>
+      </element>
+
+    </element>
+  </start>
+
+  <!-- ************************************************************ Element Definitions ************************************************************ -->
+  <!-- The definitions below use the "define" syntax. "define" is a way to name a pattern or part of a pattern so you can avoid repeating it. You can refer to everything
+        inside a "define" element with the using "ref".   -->
+
+
+  <!--  METADATA This is the first of the two main elements in this schema. It is called "metadata" and contains information about the source material and how the file was encoded -->
+  <define name="metadata-element">
+    <element name="metadata">
+      <element name="sourceInfo">
+        <element name="title">
+          <text/>
+        </element>
+
+        <element name="author">
+          <element name="name">
+            <text/>
+          </element>
+        </element>
+
+        <element name="publisher">
+          <text/>
+        </element>
+
+        <ref name="date-element"></ref>
+
+      </element>
+
+
+      <element name="revisions">
+
+        <element name="change">
+          <attribute name="when">
+            <data type="date"/>
+          </attribute>
+          <attribute name="who"/>
+          <text/>
+        </element>
+
+      </element>
+
+    </element>
+  </define>
+
+  <!--  ENTRIES This is the second of the two main elements in this schema. It is called "entries" and contains information about the source material and how the file was encoded -->
+
+  <define name="entry-element">
+    <element name="entry">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <!-- This uses the XML namespace as it is defining the xml:id attribute which is defined for all elements in XML itself -->
+        <data type="NCName"/>
+      </attribute>
+
+      <oneOrMore>
+        <choice>
+          <text/>
+
+          <ref name="pb-element"/>
+          <ref name="date-element"></ref>
+          <ref name="p-element"/>
+        </choice>
+      </oneOrMore>
+
+    </element>
+  </define>
+
+  <!-- P and its contents -->
+
+  <define name="p-element">
+    <element name="p">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="q-element"/>
+          <element name="place">
+            <text/>
+          </element>
+          <element name="del">
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="name-element">
+    <element name="name">
+      <optional>
+        <attribute name="role">
+        <text/>
+      </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="q-element">
+    <element name="q">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="cite-element"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="cite-element">
+    <element name="cite">
+      <optional>
+        <attribute name="ref">
+         <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  
+
+  <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
+  <define name="pb-element">
+    <element name="pb">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+
+  <define name="alternates-element">
+    <element name="alternates">
+      <choice>
+
+        <group>
+          <element name="abbr">
+            <text/>
+          </element>
+          <element name="expan">
+            <text/>
+          </element>
+        </group>
+
+        <group>
+          <element name="original">
+            <text/>
+          </element>
+          <element name="corr">
+            <text/>
+          </element>
+        </group>
+
+      </choice>
+    </element>
+  </define>
+  
+  <define name="date-element">
+    <element name="date">
+      <choice>
+        <attribute name="when">
+          <data type="date"/>
+        </attribute>
+        <group>
+          <attribute name="from">
+            <data type="date"/>
+          </attribute>
+          <attribute name="to">
+            <data type="date"/>
+          </attribute>
+        </group>
+      </choice>
+      <text/>
+    </element>
+  </define>
+
+
+</grammar>

@@ -15,7 +15,7 @@
                 <xsl:for-each select="journal/entries/entry">
                     <div class="entry">
                         <h2>
-                            <xsl:apply-templates select="date"/>
+                            <xsl:apply-templates select="p/date"/>
                         </h2>
                         <p><strong>Mood:</strong> <xsl:value-of select="@mood"/></p>
                         <p><strong>Weather:</strong> <xsl:value-of select="@weather"/></p>
@@ -37,14 +37,6 @@
                             </p>
                         </xsl:for-each>
                         
-                        <xsl:for-each select="weather">
-                            <p class="weather">Weather: <xsl:value-of select="."/></p>
-                        </xsl:for-each>
-                        
-                        <xsl:for-each select="mood">
-                            <p class="mood">Mood: <xsl:value-of select="."/></p>
-                        </xsl:for-each>
-                        
                         <xsl:for-each select="pb">
                             <p class="pagebreak">Page Break: <xsl:value-of select="@n"/></p>
                         </xsl:for-each>
@@ -62,6 +54,26 @@
     <!-- Template for date elements -->
     <xsl:template match="date">
         <span class="date"><xsl:value-of select="."/></span>
+    </xsl:template>
+    
+    <!-- Template for person elements -->
+    <xsl:template match="person">
+        <span class="person"><xsl:value-of select="@name"/> (<xsl:value-of select="@relation"/>)</span>
+    </xsl:template>
+    
+    <!-- Template for quote elements -->
+    <xsl:template match="quote">
+        <span class="quote"><xsl:value-of select="."/></span>
+    </xsl:template>
+    
+    <!-- Template for theme elements -->
+    <xsl:template match="theme">
+        <span class="theme"><xsl:value-of select="."/></span>
+    </xsl:template>
+    
+    <!-- Template for note elements -->
+    <xsl:template match="note">
+        <span class="note"><xsl:value-of select="."/></span>
     </xsl:template>
     
 </xsl:stylesheet>

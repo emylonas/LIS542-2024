@@ -1,0 +1,45 @@
+/*
+ * CSS for John Adams Diaries XSLT practice
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * AG additional styling 2024-05-27
+ * 
+ */
+
+@page {
+    margin-top: 1in;
+}
+
+body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.place {
+    color: SteelBlue;
+}
+
+.name {
+    color: SeaGreen;
+}
+
+.quote {
+    color: IndianRed;
+}
+
+.margin-note { 
+position: relative; top: -0.5em; font-size: 80%;
+}
+
+.modern {
+    display:none;
+    
+}

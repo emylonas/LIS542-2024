@@ -1,4 +1,4 @@
-# Week 9 XSLT Assignment
+# Week 8 XSLT Assignment
 Information Structures Using XML Spring 2023 class assignments
 
 To submit your work:

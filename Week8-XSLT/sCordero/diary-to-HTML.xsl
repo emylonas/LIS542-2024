@@ -94,7 +94,6 @@
 
     <xsl:template match="d:p"> <!-- Match <entry>, surround each one with an HTML <p> element and keep going  -->
         <p>
-            ––<xsl:value-of select="@n"/>––
             <xsl:apply-templates/>
         </p>
     </xsl:template>
@@ -104,7 +103,7 @@
     <xsl:template match="d:entry/d:date">
         <!-- Match the <date> which is at the beginning of each entry. It is the child of <entry> -->
         <h2>
-            <xsl:apply-templates/> [<xsl:value-of select="@when"/>]
+            <xsl:apply-templates/>
         </h2>
     </xsl:template>
 
@@ -129,10 +128,6 @@
        <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="d:q">
-        “<xsl:apply-templates/>
-    </xsl:template>
-    
 
     <xsl:template match="d:original | d:abbr"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
         <span class="original"><xsl:apply-templates/></span>
@@ -146,11 +141,7 @@
         <span class="del"><xsl:apply-templates/></span>
     </xsl:template>
 
-    <xsl:template match="d:pb"> 
-  
-        [<xsl:value-of select="@n"/>]
-   
-    </xsl:template>
+    <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] </xsl:template>
     <!--  or  select="concat('page ',translate(@n, 'page0', ''))"  for a more elegant display -->
 
     <!-- Catch all to see what we aren't handling -->

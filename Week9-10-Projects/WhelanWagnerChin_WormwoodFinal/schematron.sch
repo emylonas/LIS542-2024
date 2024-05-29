@@ -64,9 +64,10 @@
         6. p must have a line attribute
     -->
     
-   
     <pattern>
-        
+        <rule context="tei:p"> 
+            <assert test="tei:p[@line]">All p elements must have a @line attribute.</assert> 
+        </rule>
     </pattern>
 
  

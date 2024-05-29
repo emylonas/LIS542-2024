@@ -111,11 +111,84 @@
           <ref name="name-element"/>
           <ref name="deletion-element"/>
           <ref name="quote-element"/>
-          <element name="place">
-            <text/>
-          </element>
+          <ref name="weather-element"/>
+          <ref name="age-element"/>
+          <ref name="profession-element"/>
+          <ref name="note-element"/>
+          <ref name="story-element"/>
+          <ref name="food-element"/>
+          <ref name="talking-element"/>
+          <ref name="trait-element"/>
+          <ref name="emotion-element"/>
+          <ref name="place-element"/>
         </choice>
       </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="weather-element">
+    <element name="weather">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="place-element">
+    <element name="place">
+      <optional>
+        <attribute name="state">
+          <text/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  
+  
+  <define name="age-element">
+    <element name="age">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="profession-element">
+    <element name="profession">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="note-element">
+    <element name="note">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="story-element">
+    <element name="story">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="food-element">
+    <element name="food">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="talking-element">
+    <element name="talking">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="trait-element">
+    <element name="trait">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="emotion-element">
+    <element name="emotion">
+      <text/>
     </element>
   </define>
   

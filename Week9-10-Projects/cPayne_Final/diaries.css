@@ -1,0 +1,70 @@
+/*
+ * CSS for Diaries and Journals
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * CP additionnal styling 2024-05-31
+ */
+
+@page {
+    margin-top: 1in;
+}
+
+body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif;
+    font-size: medium; 
+}
+
+/* main diary entries */
+.main {
+    width: 80%; 
+}
+
+/* sidebar with name authority list */
+.sidebar {
+  height: 100%;
+  width: 20%; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  right: 0;
+  overflow-x: hidden; 
+  padding-top: 10px;
+  padding-left: 10px; 
+  background-color: #EADACE; 
+}
+
+/* h3 used for page numbers */
+h3 {
+    font-style: italic; 
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.place {
+    color: #92195D;
+}
+
+.name {
+    color: #C64D6E;
+}
+
+.modern {
+    display:none;
+    
+}
+
+/* put marginalia in superscript, with small italic font */
+.marginalia{
+    vertical-align: super;
+     font-style: italic; 
+     font-size: small; 
+}
+
+

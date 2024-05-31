@@ -43,20 +43,20 @@ The metadata element must include:
 * A `<revisions>` element, which may contain `<change>` elements as needed. 
    * `<change>` elements are used to indicate that a file has been updated, and should include a `@when` attribute with the date of the change and a `@who` attribute with the initials of the person who made these changes. Any `<change>` element should also include a brief description of the changes made to the document. 
 
-## The Entries
+### The Entries
 The `<entries>` element consists of `<entry>` elements and page break elements (`<pb>`).
 
-### Page breaks
+#### Page breaks
 Page breaks, seen as `<pb>` elements, are empty elements with the attribute `@n`. These elements are used to indicate a new page, and may be used within the `<entry>` or `<p>` levels. 
 
 The `@n` attribute indicates the page number and is in the format "pageXX". Page numbers must begin with "page01" and should appear in order. 
 
-### `<entry>` elements and children
+#### `<entry>` elements and children
 `<entry>` elements surround the text of the journal or diary. Within the entry, the following elements are used: 
 * `<date>` - used for dated journal or diary entries, with an `@when` attribute where the date should appear in ISO date format
 * `<p>` - used to indicate paragraphs. `<p>` may include `<pb>` and the descriptive elements below. 
 * `<marginalia>` - see the description below.
-### Descriptive elements
+#### Descriptive elements
 The following elements are used to encode and highlight specific aspects of the text. 
 
 * `<alternates>` - used to indicate spelling differences (with `<sic>` and `<corr>`) or abbreviations (with `<abbr>` and `<expan>`)
@@ -66,7 +66,7 @@ The following elements are used to encode and highlight specific aspects of the 
 * `<place>` - used to identify a place. 
 * `<number>` - used to identify a number. Numbers must have a `@value` attribute with the numeric value of the number represented.`@type` is optional, but may only be "quantity", "time", or "age". 
 
-## The Authority List
+### The Authority List
 Names are an important aspect that are highlighted within this schema, using an `<authorityList>` with `<nameAuthority>` elements. 
 
 Each `<nameAuthority>` must have a unique `@xml:id` and a `<standard>` child element containing a standard version of the name. Additional `<alternate>` elements are used to record other versions of this person's name as they appear within the text. 

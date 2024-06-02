@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns="http://purl.oclc.org/dsdl/schematron" >
-    <ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
+    <ns uri="http://UW-LIS-diaries/ns/1.0" prefix="tei"/>
     
     <!-- 
      Schematron Wormwood XML
@@ -23,7 +23,7 @@
     
     <pattern>
         <rule context="tei:date"> 
-            <assert test="tei:date[@when]">All date elements must have a @when attribute.</assert> 
+            <assert test="@when">All date elements must have a @when attribute.</assert> 
         </rule>  
     </pattern>
     
@@ -33,7 +33,7 @@
     -->
     
     <pattern>
-        <rule context="tei:l/@n">
+        <rule context="tei:p/@n">
             <assert test="string-length(@n) =2">@n has to contain more than one digit</assert>
         </rule>
         
@@ -42,22 +42,30 @@
     
     
     <!-- 
-        4. count how many roles of students there are 
+        4. date must have text content like "January 29th. Wednesday"
      -->
-    
+    <pattern>
+        <rule context="tei:date">
+        <assert test="text()"><name/> date must have text content.</assert>
+        </rule>
+    </pattern>
     
     <pattern>
-        
+        <rule context="tei:date"> 
+            <assert test="@when">All date elements must have a @when attribute.</assert> 
+        </rule>  
     </pattern>
     
     
     
     <!-- 
-        5. count how many roles of friends there are 
+        5. lines that don't contain 'school' 
     -->
     
     <pattern>
-        
+        <rule context="tei:p">
+            <assert test="contains(., 'school')">lines that don't contain 'school'</assert>
+        </rule>
     </pattern>
     
     <!-- 

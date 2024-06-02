@@ -158,7 +158,26 @@
   
   <define name="note-element">
     <element name="note">
-      <text/>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="deletion-element"/>
+          <ref name="quote-element"/>
+          <ref name="weather-element"/>
+          <ref name="age-element"/>
+          <ref name="profession-element"/>
+          <ref name="note-element"/>
+          <ref name="story-element"/>
+          <ref name="food-element"/>
+          <ref name="talking-element"/>
+          <ref name="trait-element"/>
+          <ref name="emotion-element"/>
+          <ref name="place-element"/>
+        </choice>
+      </oneOrMore>
     </element>
   </define>
   

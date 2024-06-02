@@ -34,6 +34,22 @@ body {
     color: blue;
 }
 
+.note {
+    color: orange;
+}
+
+.story {
+    color: pink;
+}
+
+.emotion {
+    color: purple;
+}
+
+.trait {
+    color: green;
+}
+
 
 .modern {
     display:none;

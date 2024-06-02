@@ -41,15 +41,20 @@
           <text/>
         </element>
         <element name="author">
+          <element name="name">
             <text/>
+          </element>
         </element>
-        
         <element name="publisher">
           <empty/>
+        </element>
+        <element name="description">
+          <text/>
         </element>
       </element>
 
       <element name="revisions">
+        <oneOrMore>
           <element name="change">
             <attribute name="when">
               <data type="date"/>
@@ -57,6 +62,7 @@
             <attribute name="who"/>
             <text/>
           </element>
+        </oneOrMore>
       </element>
 
     </element>
@@ -75,8 +81,8 @@
       <oneOrMore>
         <choice>
           <text/>
-          <ref name="pb-element"/>
 
+          <ref name="pb-element"/>
           <element name="date">
             <attribute name="when">
               <data type="date"/>
@@ -101,12 +107,12 @@
           <ref name="pb-element"/>
           <ref name="alternates-element"/>
           <ref name="name-element"/>
-          <ref name="identity-element"/>
-          <ref name="quote-element"></ref>
-          
-          <element name="place">
-            <text/>
-          </element>
+          <ref name="cite-element"/>
+          <ref name="quote-element"/>
+          <ref name="place-element"/>
+          <ref name="margin-element"/>
+          <ref name="weather-element"/>
+          <ref name="parenth-element"/>
         </choice>
       </oneOrMore>
     </element>
@@ -117,28 +123,43 @@
       <text/>
     </element>
   </define>
-  <define name="quote-element">
-    <element name="quote">
-      <attribute name="type">
-      </attribute>
-      <text/>
-    </element>
-  </define>
 
-  <define name="identity-element">
-    <element name="identity">
-      <attribute name="type"/>
-      <text/>
-    </element>
-  </define>
-
-  
   <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
   <define name="pb-element">
     <element name="pb">
       <attribute name="n">
         <data type="NCName"/>
       </attribute>
+    </element>
+  </define>
+  
+  <define name="cite-element">
+    <element name="citation"><text/></element>
+  </define>
+  
+  <define name="quote-element">
+    <element name="quote">
+      <optional><ref name="cite-element"/></optional>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="margin-element">
+    <element name="margin">  
+      <attribute name="note">
+        <text/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="cite-element"/>
+          <ref name="quote-element"/>
+          <ref name="place-element"/>
+        </choice>
+      </oneOrMore>
     </element>
   </define>
 
@@ -168,5 +189,36 @@
     </element>
   </define>
 
+<define name="place-element">
+  <element name="place">
+    <text/>
+  </element>
+</define>
+  
+  <define name="weather-element">
+    <element name="weather">
+      <attribute name="weather">
+        <text/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="parenth-element">
+    <element name="parentheses">
+      <text/>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="cite-element"/>
+          <ref name="quote-element"/>
+          <ref name="place-element"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
 
 </grammar>

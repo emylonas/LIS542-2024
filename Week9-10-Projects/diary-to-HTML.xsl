@@ -7,7 +7,7 @@
             <xd:p> Stylesheet to convert the a diary marked up according to the diaries.rng schema
                 to HTML.</xd:p>
             <xd:p><xd:b>Created on:</xd:b> May 10, 2022</xd:p>
-            <xd:p><xd:b>Author:</xd:b> Skye</xd:p>
+            <xd:p><xd:b>Author:</xd:b> elli</xd:p>
 
         </xd:desc>
     </xd:doc>
@@ -39,35 +39,66 @@
                 <h1>
                     <xsl:value-of select="/d:journal/d:metadata/d:sourceInfo/d:author"/>
                 </h1>
-                <xsl:apply-templates/> 
+                <img class="diaryimage" src="DiaryImage.jpg"/>
+               
+                    <div class="select-menu">
+                        <button>Entries</button>
+                        <div class="dropdown-content">
+                            <ol class="drop-list">
+                                  <xsl:for-each select="//d:entries//d:entry" xml:space="preserve">
+                                 <li class="drop-list-list">
+                                    <a href="#{@xml:id}">
+                                        <xsl:value-of select="concat('Entry ',translate(@xml:id, 'xx', ''))"/>
+                                    </a>
+                                 </li>
+                            </xsl:for-each>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="select-menu">
+                        <button>Names</button>
+                        <div class="dropdown-content">
+                            <ol class="drop-list">
+                                  <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
+                                 <li class="drop-list-list">
+                                    <a href="#name{id}">
+                                        <xsl:value-of select="."/> <xsl:if test="@role">(<xsl:value-of select="@role"/>)</xsl:if>
+                                    </a>
+                                 </li>
+                            </xsl:for-each>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="select-menu">
+                        <button>Places</button>
+                        <div class="dropdown-content">
+                            <ol class="drop-list">
+                                <xsl:for-each select="//d:entries//d:place" xml:space="preserve">
+                                <li class="drop-list-list">
+                                    <a><xsl:value-of select="."/></a>
+                                </li>
+                            </xsl:for-each>
+                            </ol>
+                        </div>
+                    </div>
+
+                <xsl:apply-templates/>
 
 
                 <div>
-                    <h1>List of Names in Entries</h1>
+                    <h1>List of Names</h1>
                     <p>
-                        <ol>
-                                                       <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
-                                                                <li>
-                                                                      <xsl:value-of select="."/> (<xsl:value-of select="@role"/>)
-                                                                    </li>
-                                                            </xsl:for-each>
-                        </ol>
+                        
                     </p>
                 </div>
                 <div>
-                    <h1>List of Identities Ascribed in Jounral Entries</h1>
+                    <h1>List of Places</h1>
                     <p>
-                        <ol>
-                                                       <xsl:for-each select="//d:entries//identities" xml:space="preserve">
-                                                                <li>
-                                                                      <xsl:value-of select="."/> (<xsl:value-of select="@role"/>)
-                                                                    </li>
-                                                            </xsl:for-each>
-                        </ol>
+
                     </p>
                 </div>
-                
-                
             </body>
         </html>
 
@@ -101,14 +132,13 @@
     </xsl:template>
 
     <xsl:template match="d:entry"> <!-- Match <entry>, surround each one with an HTML <div> element and keep going  -->
-        <div>
+        <div id="{@xml:id}">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
     <xsl:template match="d:p"> <!-- Match <entry>, surround each one with an HTML <p> element and keep going  -->
         <p>
-            [<xsl:value-of select="@n"/>]
             <xsl:apply-templates/>
         </p>
     </xsl:template>
@@ -128,17 +158,18 @@
     </xsl:template>
 
     <xsl:template match="d:name"> <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
-        <span class="name"><xsl:apply-templates/></span>
+        <span class="name" id="name{position()}"><xsl:apply-templates/></span>
     </xsl:template>
 
     <xsl:template match="d:place"> <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
         <span class="place"><xsl:apply-templates/></span>
     </xsl:template>
-    <xsl:template match="d:identity"> <!-- Enclosing in HTML span element with class attribute so CSS formatting can be applied. -->
-        <span class="identity"><xsl:apply-templates/></span> <xsl:value-of select="@type"/>
-        
-    </xsl:template>
+
     <xsl:template match="d:alternates"> <!-- Match <alternate> and keep going. -->
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="d:quote">
         <xsl:apply-templates/>
     </xsl:template>
     
@@ -146,27 +177,34 @@
        <xsl:apply-templates/>
     </xsl:template>
     
+    <xsl:template match="d:margin">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="d:weather">
+        <span class="weather"><xsl:apply-templates/></span>
+    </xsl:template>
 
     <xsl:template match="d:original | d:abbr"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
         <span class="original"><xsl:apply-templates/></span>
     </xsl:template>
 
     <xsl:template match="d:corr | d:expan"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->
-        <span class="modern"><xsl:apply-templates/></span>
+        <span class="modern">(<xsl:apply-templates/>)</span>
     </xsl:template>
     
     <xsl:template match="d:del">
         <span class="del"><xsl:apply-templates/></span>
     </xsl:template>
 
-    <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] </xsl:template>
+    <xsl:template match="d:pb"> <br/>[<xsl:value-of select="concat('Page ',translate(@n, 'p', ''))"/>] </xsl:template>
     <!--  or  select="concat('page ',translate(@n, 'page0', ''))"  for a more elegant display -->
-
+    
     <!-- Catch all to see what we aren't handling -->
 
-    <!-- <xsl:template match='*'>
+    <xsl:template match='*'>
         QQQ-element: <xsl:value-of select="name()"/>
         <xsl:apply-templates></xsl:apply-templates>
-    </xsl:template>-->
+    </xsl:template>
 
 </xsl:stylesheet>

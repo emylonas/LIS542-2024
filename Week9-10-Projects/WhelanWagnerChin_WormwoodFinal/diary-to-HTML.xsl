@@ -167,6 +167,58 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    
+    <!-- here is where we have the new css stuff-->
+  
+    
+    <xsl:template match="d:age">
+        <span class="age">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:profession">
+        <span class="profession">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:note">
+        <span class="note">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:story">
+        <span class="story">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:food">
+        <span class="good">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:talking">
+        <span class="talking">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:trait">
+        <span class="trait">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="d:emotion">
+        <span class="emotion">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
 
     <xsl:template match="d:pb"> [<xsl:value-of select="@n"/>] </xsl:template>
     <!--  or  select="concat('page ',translate(@n, 'page0', ''))"  for a more elegant display -->

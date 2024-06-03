@@ -183,6 +183,9 @@
   
   <define name="story-element">
     <element name="story">
+      <optional>
+        <ref name="quote-element"/>
+      </optional>
       <text/>
     </element>
   </define>
@@ -237,7 +240,9 @@
   
   <define name="quote-element">
     <element name="quote">
-      <optional><ref name="cite-element"/></optional>
+      <optional>
+        <ref name="cite-element"/>
+      </optional>
       <text/>
     </element>
   </define>

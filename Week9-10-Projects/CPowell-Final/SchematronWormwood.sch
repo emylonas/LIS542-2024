@@ -10,6 +10,12 @@
     </pattern>
     
     <pattern>
+        <rule context="tei:date/@when">
+            <assert test="starts-with(.,'1896')">When attribute of Date element must start with "1896".</assert>
+        </rule>
+    </pattern>
+    
+    <pattern>
         <rule context="tei:entry">
             <assert test="starts-with(@xml:id, 'xx')">The xml:id must start with "xx"</assert>
         </rule>

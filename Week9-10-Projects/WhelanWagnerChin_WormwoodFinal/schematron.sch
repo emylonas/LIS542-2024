@@ -52,12 +52,12 @@
     
     
     <!-- 
-        5. flag names that don't have @role attribute
+        5. flag names that don't have @role attribute in the entries
     -->
     
     <pattern>
-        <rule context="tei:name">
-            <assert test="@role">names that don't have @role attribute</assert>
+        <rule context="tei:name[ancestor::tei:entry]">
+            <assert test="@role">names that don't have @role attribute in the entry</assert>
         </rule>
     </pattern>
     

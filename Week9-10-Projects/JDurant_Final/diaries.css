@@ -1,0 +1,57 @@
+/*
+ * CSS for John Adams Diaries XSLT practice
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * JD modifications 2024-06-01
+ */
+
+h1 {
+  text-decoration-line: underline;
+}
+
+@page {
+    margin-top: 1in;
+}
+
+body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.place {
+    color: violet;
+}
+
+.name {
+    color: green;
+}
+
+.activity {
+    color: red;
+}
+
+.citation {
+    color: aliceblue;
+}
+
+.dialog {
+    color: darkcyan;
+}
+
+.terminology {
+    color: darkgoldenrod;
+}
+
+
+.modern {
+    display:none;
+    
+}

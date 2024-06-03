@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
-  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
-  ns="http://UW-LIS-diaries/ns/1.0">
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://UW-LIS-diaries/ns/1.0">
 
   <!-- This is a schema for entries in diaries and journals.  -->
 
@@ -109,7 +108,7 @@
           <ref name="name-element"/>
           <ref name="cite-element"/>
           <ref name="quote-element"/>
-          <ref name="place-element"/>
+          <ref name="place-element"/> 
           <ref name="margin-element"/>
           <ref name="weather-element"/>
           <ref name="parenth-element"/>
@@ -132,20 +131,24 @@
       </attribute>
     </element>
   </define>
-  
+
   <define name="cite-element">
-    <element name="citation"><text/></element>
-  </define>
-  
-  <define name="quote-element">
-    <element name="quote">
-      <optional><ref name="cite-element"/></optional>
+    <element name="citation">
       <text/>
     </element>
   </define>
-  
+
+  <define name="quote-element">
+    <element name="quote">
+      <optional>
+        <ref name="cite-element"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
   <define name="margin-element">
-    <element name="margin">  
+    <element name="margin">
       <attribute name="note">
         <text/>
       </attribute>
@@ -189,12 +192,15 @@
     </element>
   </define>
 
-<define name="place-element">
-  <element name="place">
+  <define name="place-element">
+    <element name="place">
+      <attribute name="placeType">
+        <text/>
+      </attribute>
     <text/>
-  </element>
-</define>
-  
+    </element>
+  </define>
+
   <define name="weather-element">
     <element name="weather">
       <attribute name="weather">
@@ -203,7 +209,7 @@
       <text/>
     </element>
   </define>
-  
+
   <define name="parenth-element">
     <element name="parentheses">
       <text/>

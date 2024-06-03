@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://UW-LIS-diaries/ns/1.0">
+
+  <!-- This is a schema for entries in diaries and journals.  -->
+
+  <!-- This is the basic structure of the file. The root (outermost) element is called "journal" and it contains a "metadata" element and an "entries" element. 
+    The "entries" element can contain  "pb" (pagebreak) and "entry" elements.
+    Any element that is included in a pattern using the "ref" syntax is defined in detail further down, below the "start" element
+  -->
+  <start>
+
+    <element name="journal" xmlns="http://relaxng.org/ns/structure/1.0">
+
+      <ref name="metadata-element"/>
+
+      <element name="entries">
+        <oneOrMore>
+          <choice>
+            <ref name="pb-element"/>
+            <ref name="entry-element"/>
+          </choice>
+        </oneOrMore>
+      </element>
+
+    </element>
+  </start>
+
+  <!-- ************************************************************ Element Definitions ************************************************************ -->
+  <!-- The definitions below use the "define" syntax. "define" is a way to name a pattern or part of a pattern so you can avoid repeating it. You can refer to everything
+        inside a "define" element with the using "ref".   -->
+
+
+  <!--  METADATA This is the first of the two main elements in this schema. It is called "metadata" and contains information about the source material and how the file was encoded -->
+  <define name="metadata-element">
+    <element name="metadata">
+      <element name="sourceInfo">
+        <element name="title">
+          <text/>
+        </element>
+        <element name="author">
+          <choice>
+            <ref name="name-element"/>
+            <text/>
+          </choice>
+        </element>
+        <element name="publisher">
+          <text/>
+        </element>
+      </element>
+
+      <element name="revisions">
+        <oneOrMore>
+          <element name="change">
+            <attribute name="when">
+              <data type="date"/>
+            </attribute>
+            <attribute name="who"/>
+            <text/>
+          </element>
+        </oneOrMore>
+      </element>
+
+    </element>
+  </define>
+
+  <!--  ENTRIES This is the second of the two main elements in this schema. It is called "entries" and contains information about the source material and how the file was encoded -->
+
+  <define name="entry-element">
+    <element name="entry">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <!-- This uses the XML namespace as it is defining the xml:id attribute which is defined for all elements in XML itself -->
+        <data type="NCName"/>
+      </attribute>
+
+      <oneOrMore>
+        <choice>
+          <text/>
+
+          <ref name="pb-element"/>
+
+          <element name="date">
+            <attribute name="when">
+              <data type="date"/>
+            </attribute>
+            <text/>
+          </element>
+
+          <ref name="p-element"/>
+        </choice>
+      </oneOrMore>
+
+    </element>
+  </define>
+
+  <!-- P and its contents -->
+
+  <define name="p-element">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="deletion-element"/>
+          <ref name="quote-element"/>
+          <ref name="convo-element"/>
+          <ref name="place-element"/>
+          <ref name="weather-element"/>
+          <ref name="profession-element"/>
+          <ref name="margin-element"/>
+          <ref name="date-element"/>
+          <ref name="religion-element"/>
+          <ref name="style-element"/>
+          
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="name-element">
+    <element name="name">
+      <optional><attribute name="role"/></optional>
+      <text/>
+    </element>
+  </define>
+
+  <define name="deletion-element">
+    <element name="deletion">
+      <text/>
+    </element>
+  </define>
+  
+<!-- this is for non-conversational quotes, such as published works. -->
+  <define name="quote-element">
+    <element name="quote">
+      <text/>
+      <optional>
+        <attribute name="cite"/>
+      </optional>
+    </element>
+  </define>
+
+
+  <define name="place-element">
+    <element name="place">
+      <optional>
+        <attribute name="state"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+<define name="weather-element">
+  <element name="weather">
+    <text/>
+  </element>
+</define>
+
+ <!-- this element is for quoted conversation: slang terms, colloquisms, dialogues etc. @reference is used to indicate mentioned proper nouns (especially speakers) --> 
+<define name="convo-element">
+  <element name="convo">
+    <text/>
+    <optional>
+      <ref name="style-element"/></optional>
+    <text/>
+    <optional> <attribute name="reference"/> </optional>
+    <text/>
+  </element>
+  
+</define>
+  <define name="profession-element">
+    <element name="prof">
+      <text/>
+    </element>
+  </define>
+  
+<!-- for marginalia writings. @where refers to where on the page it is written: should only be values top, bottom, left, or right -->
+  
+<define name="margin-element">
+  <element name="margin">
+    <attribute name="where"/>
+    <optional> <zeroOrMore> <choice>
+      <ref name="name-element"/>
+      <text/>
+    </choice> </zeroOrMore> </optional>
+   <optional> <attribute name="location"></attribute></optional>
+    <text/>
+    
+  </element>
+</define>
+  
+  <define name="date-element">
+    <element name="date">
+      <attribute name="when"/>
+      <text/>
+    </element>
+  </define>
+  
+ <!-- this element describes religious topics. @aspect is used to describe which part of religion: scripture, meeting, theology, or calling -->
+<define name="religion-element">
+  <element name="religion">
+     <optional> <oneOrMore> <attribute name="aspect"/> </oneOrMore></optional>
+     <optional> <zeroOrMore> <choice> 
+       <ref name="name-element"/> 
+       <text/> 
+     </choice></zeroOrMore></optional>
+    <text/>
+  </element>
+</define>
+  
+<!-- this element is for additional style formats such as underlining, diacritics, doodles/sketches, italics, and bolding -->
+<define name="style-element">
+  <element name="style">
+    <attribute name="type"/>
+    <text/>
+  </element>
+</define>  
+  
+  <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
+  
+  <define name="pb-element">
+    <element name="pb">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+
+  <define name="alternates-element">
+    <element name="alternates">
+      <choice>
+
+        <group>
+          <element name="abbr">
+            <text/>
+          </element>
+          <element name="expan">
+            <text/>
+          </element>
+        </group>
+
+        <group>
+          <element name="sic">
+            <text/>
+          </element>
+          <element name="corr">
+            <text/>
+          </element>
+        </group>
+
+      </choice>
+    </element>
+  </define>
+
+
+</grammar>

@@ -1,0 +1,52 @@
+/*
+ * CSS for WW Diaries XSLT
+ *
+ * HISTORY
+ * EM initial styling 2022-05-20
+ * AJ recent changes 2024-06-02
+ */
+
+@page {
+    margin-top: 1in;
+}
+
+body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif;
+}
+
+
+.del {
+    text-decoration: line-through;
+}
+
+
+
+.place {
+    color: green;
+}
+
+.name {
+    color: blue;
+}
+
+.style {
+    text-decoration:underline;
+}
+
+.margin {
+     color: gray;
+}
+
+.religion {
+    color: violet;
+}
+
+
+.modern {
+    display:none;
+    
+}

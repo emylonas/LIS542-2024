@@ -1,0 +1,42 @@
+Encoding Guide
+
+Elements and Attributes
+
+Metadata
+- `<metadata>`: Contains metadata about the diary.
+  - `<sourceInfo>`: Information about the source.
+    - `<title>`: Title of the diary.
+    - `<author>`: Author of the diary.
+    - `<publisher>`: Publisher information.
+  - `<revisions>`: Information about revisions.
+    - `<change>`: Each change entry.
+      - `when`: Date of the change.
+      - `who`: Person who made the change.
+
+Entries
+- `<entries>`: Contains all diary entries.
+  - `<entry>`: A single diary entry.
+    - `xml:id`: Unique identifier for the entry.
+    - `<date>`: Date of the entry.
+      - `when`: Date in YYYY-MM-DD format.
+      - `weather`: Weather description.
+    - `<p>`: A paragraph within an entry.
+
+Inline Elements
+- `<name>`: A name mentioned in the diary.
+  - `standard`: Standardized name.
+- `<place>`: A place mentioned in the diary.
+  - `type`: Type of place (e.g., country, town).
+- `<quote>`: Quoted text.
+  - `type`: Type of quote (e.g., terminology, dialogue, title).
+- `<marginalia>`: Marginal notes.
+- `<pb>`: Page break.
+  - `n`: Page number.
+
+About This Project
+
+This project aims to create a simple HTML publication of the Emma Woodward Diary using XML, Relax NG, XSLT, and CSS. The goal is to model the diary accurately with descriptive markup and provide a web-based view of the content.
+
+The XML encoding captures key features of the diary, including names, places, quotes, and editorial notes. Attributes provide additional context, such as standardized names and weather descriptions. The Relax NG schema ensures the structure and content are validated, while Schematron rules enforce specific encoding practices.
+
+The XSLT transforms the XML into a readable HTML format, and CSS styles the HTML to highlight different elements.

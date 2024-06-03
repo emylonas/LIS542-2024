@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    ns="http://UW-LIS-diaries/ns/1.0">
+    
+    <!-- This is a schema for entries in diaries and journals.  -->
+    
+    <!-- This is the basic structure of the file. The root (outermost) element is called "journal" and it contains a "metadata" element and an "entries" element. 
+    The "entries" element can contain  "pb" (pagebreak) amd "entry" elements.
+    Any element that is included in a pattern using the "ref" syntax is defined in detail further down, below the "start" element
+  -->
+    <start>
+        
+        <element name="journal" xmlns="http://relaxng.org/ns/structure/1.0">
+            
+            <ref name="metadata-element"/>
+            
+            <element name="entries">
+                <oneOrMore>
+                    <choice>
+                        <ref name="pb-element"/>
+                        <ref name="entry-element"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+            
+        </element>
+    </start>
+    
+    <!-- ************************************************************ Element Definitions ************************************************************ -->
+    <!-- The definitions below use the "define" syntax. "define" is a way to name a pattern or part of a pattern so you can avoid repeating it. You can refer to everything
+        inside a "define" element with the using "ref".   -->
+    
+    
+    <!--  METADATA This is the first of the two main elements in this schema. It is called "metadata" and contains information about the source material and how the file was encoded -->
+    <define name="metadata-element">
+        <element name="metadata">
+            <element name="sourceInfo">
+                <element name="title">
+                    <empty/>
+                </element>
+                <element name="author">
+                    <text/>
+                </element>
+                <element name="publisher">
+                    <empty/>
+                </element>
+            </element>
+<!-- Changed it so there could be more than one -->
+            <element name="revisions">
+                <oneOrMore>
+                    <element name="change">
+                        <attribute name="when">
+                            <data type="date"/>
+                        </attribute>
+                        <attribute name="who"/>
+                        <text/>
+                    </element>
+                </oneOrMore>
+            </element>
+            
+        </element>
+    </define>
+    
+    <!--  ENTRIES This is the second of the two main elements in this schema. It is called "entries" and contains information about the source material and how the file was encoded -->
+    
+    <define name="entry-element">
+        <element name="entry">
+            <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                <!-- This uses the XML namespace as it is defining the xml:id attribute which is defined for all elements in XML itself -->
+                <data type="NCName"/>
+            </attribute>
+            
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    
+                    <ref name="pb-element"/>
+                    
+                    <element name="date">
+                        <attribute name="when">
+                            <data type="date"/>
+                        </attribute>
+                        <text/>
+                    </element>
+                    
+                    <ref name="p-element"/>
+                </choice>
+            </oneOrMore>
+            
+        </element>
+    </define>
+    
+    <!-- P and its contents -->
+    
+    <define name="p-element">
+        <element name="p">
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="pb-element"/>
+                    <ref name="alternates-element"/>
+                    <ref name="name-element"/>
+                    <ref name="date-element"/>
+                    <ref name="weather-element"/>
+                    <ref name="quote-element"/>
+                    <ref name="place-element"/>
+                    <ref name="marginalia-element"/>
+                    <ref name="title-element"/>
+                    <ref name="person-element"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="name-element">
+        <element name="name">
+            <text/>
+        </element>
+    </define>
+    
+<!-- Added date element, with specifier for day of the week which has an optional normalization into ISO -->
+    <define name="date-element">
+        <element name='date'>
+            <attribute name='normal'>
+                <data type="date"/>
+            </attribute>
+            <optional>
+                <!-- Enforcement of this normalization is not done through dataTypes because it is unsupported -->
+                <attribute name='alt-weekday-normal'/>
+            </optional>
+            <optional>
+                <ref name="certainty-attribute"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    
+<!-- Added the weather element, with attribute for normalized World Meteorological Organization codes -->
+    
+    <define name="weather-element">
+        <element name='weather'>
+            <optional>
+                <!-- Enforced through Schematron -->
+                <attribute name='wmo'/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    
+<!-- Added the quote element, which distinguishes between direct (speech) and scare (commentary) quotes -->
+    
+    <define name='quote-element'>
+        <element name='quote'>
+            <zeroOrMore>
+                <choice>
+                    <ref name="place-element"/>
+                    <ref name="alternates-element"/>
+                </choice>
+            </zeroOrMore>
+            <attribute name='type'>
+                <choice>
+                    <value>direct</value>
+                    <value>indirect</value>
+                    <value>so-called</value>
+                </choice>
+            </attribute>
+            <!-- When quotes run across paragraph breaks, ensures they complete each other. Convention is the @n of the two paragraphs it runs between -->
+            <optional>
+                <choice>
+                    <attribute name='running-quote'/>
+                    <attribute name='source'/>
+                </choice>
+            </optional>
+            <text/>
+        </element>
+    </define>
+
+<!-- Broke <place> out of <p> for better control, specifically to -->
+
+    <define name="place-element">
+        <element name="place">
+            <optional>
+                <ref name="alternates-element"/>
+            </optional>
+            <optional>
+                <ref name="person-element"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    
+<!-- Added marginalia element for extratextual content -->
+
+    <define name="marginalia-element">
+        <element name='marginalia'>
+            <attribute name='location'>
+                <choice>
+                    <value>top margin right</value>
+                    <value>top margin left</value>
+                    <value>left flanking preceding</value>
+                    <value>right flanking preceding</value>
+                    <value>bottom margin right</value>
+                    <value>bottom margin left</value>
+                </choice>
+            </attribute>
+            <attribute name='refword'/>
+            <optional>
+                <ref name="certainty-attribute"/>
+            </optional>
+            <optional>
+                <ref name="person-element"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    
+    <!-- Added title element, for media or corporation titles which may or may not have authority records -->
+    
+    <define name="title-element">
+        <element name='title'>
+            <attribute name='type'>
+                <choice>
+                    <value>manuscript</value>
+                    <value>periodical</value>
+                    <value>musical composition</value>
+                    <value>reference</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="auth-normal"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    
+    <!-- Added person element, with optional role attributes -->
+    
+    <define name='person-element'>
+        <element name='person'>
+            <attribute name='role'>
+                <choice>
+                    <value>student</value>
+                    <value>coworker</value>
+                    <value>friend/family</value>
+                    <text/>
+                </choice>
+            </attribute>
+            <text/>
+        </element>
+    </define>
+
+    <!-- PB Definition of the pagebreak element. It is an empty element with a @n attribute to indicate the page number.  -->
+    <define name="pb-element">
+        <element name="pb">
+            <attribute name="n">
+                <data type="NCName"/>
+            </attribute>
+        </element>
+    </define>
+    
+<!-- Referenced the certainty-attribute definition within <expan> and <corr> (see below) -->
+ 
+    <define name="alternates-element">
+        <element name="alternates">
+            <choice>
+                
+                <group>
+                    <element name="abbr">
+                        <text/>
+                    </element>
+                    <element name="expan">
+                        <ref name="certainty-attribute"/>
+                        <text/>
+                    </element>
+                </group>
+                
+                <group>
+                    <element name="sic">
+                        <text/>
+                    </element>
+                    <element name="corr">
+                        <ref name="certainty-attribute"></ref>
+                        <text/>
+                    </element>
+                </group>
+                
+            </choice>
+        </element>
+    </define>
+    
+<!-- Added certainty attribute to measure reliability of correction or expansion -->    
+    
+<define name='certainty-attribute'>
+    <attribute name='certainty'>
+        <choice>
+            <value>certain</value>
+            <value>approximate</value>
+        </choice>
+    </attribute>
+</define>
+    
+</grammar>

@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ABOUT\
+\
+The Wormwood Diaries were encoded to provide the greatest specificity possible among the concepts provided. Users will be able to search among standard weather codes, names, places mentioned, and by multiple kinds of date formats, alongside quotes, titles, and other media mentions. The goal with this encoding strategy is to allow a corresponding webpage transformation the power to distill this information into tangible formats for users (e.g., a timeline of weather throughout the journals\'92 span).\
+\
+\
+DOCUMENTATION\
+\
+Added date element, with specifier for day of the week which has an optional normalization into ISO.\
+Added the weather element, with attribute for normalized World Meteorological Organization codes.\
+Added the quote element, which distinguishes between direct (speech) and scare (commentary) quotes.\
+Added the optional @running-quote to <quote> for when quotes run across paragraph breaks, to ensure they complete each other. Naming convention is the @n of the two paragraphs it runs between (i.e., p002/p003)\
+Broke <place> out of <p> for better control, specifically to add in alternate spellings via <alternate>.\
+Added marginalia element for extratextual content. Controlled attributes for location of content.\
+Added title element, for media or corporation titles which may or may not have authority records.\
+Added person element, with optional role attributes.\
+Added certainty attribute to measure reliability of correction or expansion. Referenced the certainty-attribute definition within <expan> and <corr> as part of <alternates>.\
+Nested the above within <p> as child elements for formatting.\
+Removed page number designator text in lieu of <pb>.}

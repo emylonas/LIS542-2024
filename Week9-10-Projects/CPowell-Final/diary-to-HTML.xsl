@@ -56,33 +56,6 @@
                         </div>
                     </div>
                     
-                    <div class="select-menu">
-                        <button>Names</button>
-                        <div class="dropdown-content">
-                            <ol class="drop-list">
-                                  <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
-                                 <li class="drop-list-list">
-                                    <a href="#name{id}">
-                                        <xsl:value-of select="."/> <xsl:if test="@role">(<xsl:value-of select="@role"/>)</xsl:if>
-                                    </a>
-                                 </li>
-                            </xsl:for-each>
-                            </ol>
-                        </div>
-                    </div>
-                    
-                    <div class="select-menu">
-                        <button>Places</button>
-                        <div class="dropdown-content">
-                            <ol class="drop-list">
-                                <xsl:for-each select="//d:entries//d:place" xml:space="preserve">
-                                <li class="drop-list-list">
-                                    <a><xsl:value-of select="."/></a>
-                                </li>
-                            </xsl:for-each>
-                            </ol>
-                        </div>
-                    </div>
 
                 <xsl:apply-templates/>
 
@@ -90,13 +63,25 @@
                 <div>
                     <h1>List of Names</h1>
                     <p>
-                        
+                        <ol class="ol-listicle">
+                              <xsl:for-each-group select="//d:entries//d:name" xml:space="preserve" group-by=".">
+                                 <li class="listicle">
+                                        <xsl:value-of select="current-grouping-key()"/> <xsl:if test="@role">(<xsl:value-of select="@role"/>)</xsl:if>
+                                 </li>
+                            </xsl:for-each-group>
+                        </ol>
                     </p>
                 </div>
                 <div>
                     <h1>List of Places</h1>
                     <p>
-
+                        <ol>
+                            <xsl:for-each select="//d:entries//d:place" xml:space="preserve">
+                                <li class="listicle">
+                                    <xsl:value-of select="."/>
+                                </li>
+                            </xsl:for-each>
+                        </ol>
                     </p>
                 </div>
             </body>
@@ -183,6 +168,14 @@
     
     <xsl:template match="d:weather">
         <span class="weather"><xsl:apply-templates/></span>
+    </xsl:template>
+    
+    <xsl:template match="d:parentheses">
+        (<xsl:apply-templates/>)
+    </xsl:template>
+    
+    <xsl:template match="d:favQuote">
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="d:original | d:abbr"> <!-- Enclosing in HTML span element with class attribute to allow js to hide and show orig/new spelling. -->

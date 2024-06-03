@@ -47,6 +47,17 @@ h1 {
     color: blue;
 }
 
+.ol-listicle {
+    display: inline;
+}
+
+.listicle {
+    display: inline;
+     padding: 12px 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 .modern {
     display:none;
     

@@ -112,6 +112,7 @@
           <ref name="margin-element"/>
           <ref name="weather-element"/>
           <ref name="parenth-element"/>
+          <ref name="favoriteQuote-element"/>
         </choice>
       </oneOrMore>
     </element>
@@ -222,6 +223,29 @@
           <ref name="cite-element"/>
           <ref name="quote-element"/>
           <ref name="place-element"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="favoriteQuote-element">
+    <element name="favQuote">
+      <attribute name="contributor">
+        <text/>
+      </attribute>
+      <text/>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb-element"/>
+          <ref name="alternates-element"/>
+          <ref name="name-element"/>
+          <ref name="cite-element"/>
+          <ref name="quote-element"/>
+          <ref name="place-element"/>
+          <ref name="weather-element"/>
+          <ref name="margin-element"/>
+          <ref name="parenth-element"/>
         </choice>
       </oneOrMore>
     </element>

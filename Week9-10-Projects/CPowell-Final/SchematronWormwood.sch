@@ -57,6 +57,11 @@
 
         </rule>
     </pattern>
-
-
+<pattern>
+    <rule context='favQuote'>
+        <assert test="matches(@Contributor,'^[A-Z]{2}$')">
+            The "favQuote" element must contain a Contributor attribute in the format "XX" (two uppercase letters).
+        </assert>
+    </rule>
+    </pattern>
 </sch:schema>
